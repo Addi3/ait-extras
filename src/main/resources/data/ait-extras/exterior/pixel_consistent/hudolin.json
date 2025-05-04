@@ -1,0 +1,7 @@
+{
+    "id": "ait-extras:pixel_consistent_hudolin",
+    "category": "ait-extras:pixel_consistent",
+    "parent": "ait-extras:exterior/pixel_consistent",
+    "texture": "ait-extras:textures/blockentities/exteriors/pixel_consistent/pixel_consistent_hudolin.png",
+    "emission": "ait-extras:textures/blockentities/exteriors/pixel_consistent/pixel_consistent_hudolin_emission.png"
+}

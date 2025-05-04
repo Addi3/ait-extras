@@ -17,6 +17,7 @@ public class AITExtras implements ModInitializer {
     public static AddonExterior POSTBOX;
     public static AddonExterior VANILLA;
     public static AddonExterior CLOCK;
+    public static AddonExterior PIXELCONSISTENT;
 
     public static Identifier id(String path) {
         return new Identifier(MOD_ID, path);
@@ -152,6 +153,38 @@ public class AITExtras implements ModInitializer {
                 case SOUTH -> pos.add(0, -0.2, 0.4);
                 case WEST -> pos.add(-0, -0.2, 0);
                 case EAST -> pos.add(0, -0.2, 0);
+            };
+        });
+
+
+
+        //PIXELCONSISTENT
+        PIXELCONSISTENT = new AddonExterior(new Identifier(MOD_ID, "pixel_consistent"), MOD_ID, "pixel_consistent").register();
+        PIXELCONSISTENT.setDoor(new AddonExterior.Door(
+                        PIXELCONSISTENT, true, AITExtrasSounds.CLASSIC_BOX_DOOR_OPEN,
+                        AITExtrasSounds.CLASSIC_BOX_DOOR_CLOSE))
+                .toDoor().register();
+        PIXELCONSISTENT.hasPortals();
+        PIXELCONSISTENT.setPortalTranslations((pos, b) -> {
+            return switch(b) {
+                case 0 -> pos.add(0, -0.08, -0.6); // NORTH
+                case 1, 2, 3 -> pos.add(0, -0.08, -0.6); // NORTH EAST p n
+                case 4 -> pos.add(0, -0.08, 0.6); // EAST
+                case 5, 6, 7 -> pos.add(0, -0.08, 0.6); // SOUTH EAST p p
+                case 8 -> pos.add(0, -0.08, 0.685); // SOUTH
+                case 9, 10, 11 -> pos.add(-0, -0.08, 0.6); // SOUTH WEST n p
+                case 12 -> pos.add(-0, -0.08, 0.6); // WEST
+                case 13, 14, 15 -> pos.add(-0, -0.08, -0.6); // NORTH WEST n n
+                default -> pos;
+            };
+        });
+        PIXELCONSISTENT.toDoor().setPortalTranslations((pos, b) -> {
+            return switch(b) {
+                case DOWN, UP -> pos;
+                case NORTH -> pos.add(0, -0, -0.4);
+                case SOUTH -> pos.add(0, -0, 0.4);
+                case WEST -> pos.add(-0, -0, 0);
+                case EAST -> pos.add(0, -0, 0);
             };
         });
     }

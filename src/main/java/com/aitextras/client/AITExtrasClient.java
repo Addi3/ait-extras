@@ -1,14 +1,8 @@
 package com.aitextras.client;
 
 import com.aitextras.AITExtras;
-import com.aitextras.client.models.doors.ClockDoorModel;
-import com.aitextras.client.models.doors.EctoDoorModel;
-import com.aitextras.client.models.doors.PostBoxDoorModel;
-import com.aitextras.client.models.doors.VanillaDoorModel;
-import com.aitextras.client.models.exteriors.ClockExteriorModel;
-import com.aitextras.client.models.exteriors.EctoExteriorModel;
-import com.aitextras.client.models.exteriors.PostBoxExteriorModel;
-import com.aitextras.client.models.exteriors.VanillaExteriorModel;
+import com.aitextras.client.models.doors.*;
+import com.aitextras.client.models.exteriors.*;
 import com.aitextras.client.renderers.decor.SunDialRenderer;
 import com.aitextras.client.renderers.monitors.ExtrasMonitorRenderer;
 import com.aitextras.client.renderers.monitors.ExtrasScreenMonitorRenderer;
@@ -41,7 +35,7 @@ public class AITExtrasClient implements ClientModInitializer {
         POSTBOX.setPortalHeight(2f);
         POSTBOX.toDoor().setModel(new PostBoxDoorModel(PostBoxDoorModel.getTexturedModelData().createModel())).toClient().register();
 
-        VANILLA.setModel(new VanillaExteriorModel()).toClient().register();
+        VANILLA.setModel(new VanillaExteriorModel<>()).toClient().register();
         VANILLA.setSonicItemTranslations(new Vector3f(0.7f, 1f, 3f));
         VANILLA.setPortalWidth(1f);
         VANILLA.setPortalHeight(2.5f);
@@ -53,6 +47,12 @@ public class AITExtrasClient implements ClientModInitializer {
         CLOCK.setPortalWidth(1f);
         CLOCK.setPortalHeight(2f);
         CLOCK.toDoor().setModel(new ClockDoorModel(ClockDoorModel.getTexturedModelData().createModel())).toClient().register();
+
+        PIXELCONSISTENT.setModel(new PixelConsistentModel()).toClient().register();
+        PIXELCONSISTENT.setSonicItemTranslations(new Vector3f(0.7f, 1f, 2f));
+        PIXELCONSISTENT.setPortalWidth(1.2f);
+        PIXELCONSISTENT.setPortalHeight(2.2f);
+        PIXELCONSISTENT.toDoor().setModel(new PixelConsistentDoorModel(PixelConsistentDoorModel.getTexturedModelData().createModel())).toClient().register();
     };
     public static void blockEntityRendererRegister() {
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.EXTRAS_MONITOR_BLOCK_ENTITY_TYPE, ExtrasMonitorRenderer::new);

@@ -211,6 +211,14 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation("exterior.ait-extras.clock_birch", "Clock (Birch)");
                     provider.addTranslation("exterior.ait-extras.clock_jungle", "Clock (Jungle)");
 
+                        //pixel consistent
+                    provider.addTranslation("exterior.ait-extras.pixel_consistent", "Pixel Consistent");
+                    provider.addTranslation("exterior.ait-extras.pixel_consistent_definitive", "Pixel Consistent (Definitive)");
+                    provider.addTranslation("exterior.ait-extras.pixel_consistent_exile", "Pixel Consistent (Exile)");
+                    provider.addTranslation("exterior.ait-extras.pixel_consistent_hudolin", "Pixel Consistent (Hudolin)");
+                    provider.addTranslation("exterior.ait-extras.pixel_consistent_retro", "Pixel Consistent (Retro)");
+                    provider.addTranslation("exterior.ait-extras.pixel_consistent_yeti", "Pixel Consistent (Yeti)");
+
                     //sonics
                     provider.addTranslation("sonic.ait-extras.cane", "Cane");
                     provider.addTranslation("sonic.ait-extras.fob_pink", "Fob (Pink)");
