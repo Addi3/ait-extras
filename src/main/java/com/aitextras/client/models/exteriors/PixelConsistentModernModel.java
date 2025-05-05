@@ -37,7 +37,7 @@ public class PixelConsistentModernModel extends ExteriorModel {
 
 		ModelPartData left_door = Doors.addChild("left_door", ModelPartBuilder.create().uv(128, 25).cuboid(-9.0F, -17.0F, -1.0F, 9.0F, 33.0F, 1.0F, new Dilation(0.0F))
 				.uv(2, 53).cuboid(-9.0F, -17.0F, -1.3F, 1.0F, 33.0F, 0.0F, new Dilation(0.0F))
-				.uv(0, 0).cuboid(-7.9F, -1.0F, -1.7F, 1.0F, 2.0F, 1.0F, new Dilation(0.0F))
+				.uv(0, 0).cuboid(-7.9F, -5.0F, -1.7F, 1.0F, 2.0F, 1.0F, new Dilation(0.0F))
 				.uv(4, 3).cuboid(-7.9F, -1.2F, -1.7F, 1.0F, 2.0F, 1.0F, new Dilation(0.0F)), ModelTransform.pivot(10.0F, -15.0F, -9.8F));
 
 		ModelPartData cube_r1 = left_door.addChild("cube_r1", ModelPartBuilder.create().uv(46, 136).cuboid(-0.55F, -14.75F, -0.05F, 1.0F, 33.0F, 0.0F, new Dilation(0.0F))
