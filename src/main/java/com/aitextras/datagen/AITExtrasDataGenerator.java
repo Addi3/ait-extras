@@ -213,11 +213,13 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
 
                         //pixel consistent
                     provider.addTranslation("exterior.ait-extras.pixel_consistent", "Pixel Consistent");
-                    provider.addTranslation("exterior.ait-extras.pixel_consistent_definitive", "Pixel Consistent (Definitive)");
-                    provider.addTranslation("exterior.ait-extras.pixel_consistent_exile", "Pixel Consistent (Exile)");
-                    provider.addTranslation("exterior.ait-extras.pixel_consistent_hudolin", "Pixel Consistent (Hudolin)");
-                    provider.addTranslation("exterior.ait-extras.pixel_consistent_retro", "Pixel Consistent (Retro)");
-                    provider.addTranslation("exterior.ait-extras.pixel_consistent_yeti", "Pixel Consistent (Yeti)");
+                            //classic
+                    provider.addTranslation("exterior.ait-extras.pixel_consistent_classic", "Prime");
+                    provider.addTranslation("exterior.ait-extras.pixel_consistent_definitive", "Definitive");
+                    provider.addTranslation("exterior.ait-extras.pixel_consistent_exile", "Exile");
+                    provider.addTranslation("exterior.ait-extras.pixel_consistent_hudolin", "Hudolin");
+                    provider.addTranslation("exterior.ait-extras.pixel_consistent_retro", "Retro");
+                    provider.addTranslation("exterior.ait-extras.pixel_consistent_yeti", "Yeti");
 
                     //sonics
                     provider.addTranslation("sonic.ait-extras.cane", "Cane");

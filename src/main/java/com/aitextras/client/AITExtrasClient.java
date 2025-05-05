@@ -1,16 +1,13 @@
 package com.aitextras.client;
 
-import com.aitextras.AITExtras;
 import com.aitextras.client.models.doors.*;
 import com.aitextras.client.models.exteriors.*;
 import com.aitextras.client.renderers.decor.SunDialRenderer;
 import com.aitextras.client.renderers.monitors.ExtrasMonitorRenderer;
 import com.aitextras.client.renderers.monitors.ExtrasScreenMonitorRenderer;
 import com.aitextras.core.AITExtrasBlockEntityTypes;
-import dev.amble.ait.client.models.doors.CapsuleDoorModel;
 import net.fabricmc.api.ClientModInitializer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
-import net.minecraft.util.math.Vec3d;
 import org.joml.Vector3f;
 
 import static com.aitextras.AITExtras.*;
@@ -48,7 +45,7 @@ public class AITExtrasClient implements ClientModInitializer {
         CLOCK.setPortalHeight(2f);
         CLOCK.toDoor().setModel(new ClockDoorModel(ClockDoorModel.getTexturedModelData().createModel())).toClient().register();
 
-        PIXELCONSISTENT.setModel(new PixelConsistentModel()).toClient().register();
+        PIXELCONSISTENT.setModel(new PixelConsistentClassicModel()).toClient().register();
         PIXELCONSISTENT.setSonicItemTranslations(new Vector3f(0.7f, 1f, 2f));
         PIXELCONSISTENT.setPortalWidth(1.2f);
         PIXELCONSISTENT.setPortalHeight(2.2f);

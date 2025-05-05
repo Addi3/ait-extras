@@ -13,10 +13,10 @@ import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.Entity;
 
 
-public class PixelConsistentModel extends ExteriorModel {
+public class PixelConsistentModernModel extends ExteriorModel {
 	private final ModelPart root;
 
-	public PixelConsistentModel() {
+	public PixelConsistentModernModel() {
 		super();
 		this.root = getTexturedModelData().createModel().getChild("bone");
 	}

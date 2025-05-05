@@ -159,7 +159,7 @@ public class AITExtras implements ModInitializer {
 
 
         //PIXELCONSISTENT
-        PIXELCONSISTENT = new AddonExterior(new Identifier(MOD_ID, "pixel_consistent"), MOD_ID, "pixel_consistent").register();
+        PIXELCONSISTENT = new AddonExterior(new Identifier(MOD_ID, "pixel_consistent"), MOD_ID, "pixel_consistent_classic").register();
         PIXELCONSISTENT.setDoor(new AddonExterior.Door(
                         PIXELCONSISTENT, true, AITExtrasSounds.CLASSIC_BOX_DOOR_OPEN,
                         AITExtrasSounds.CLASSIC_BOX_DOOR_CLOSE))
