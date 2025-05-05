@@ -38,7 +38,8 @@ public class PixelConsistentCrystallineDoorModel extends DoorModel {
                 .uv(0, 0).cuboid(-7.9F, -1.0F, -1.7F, 1.0F, 2.0F, 1.0F, new Dilation(0.0F))
                 .uv(4, 3).cuboid(-7.9F, -1.2F, -1.7F, 1.0F, 2.0F, 1.0F, new Dilation(0.0F)), ModelTransform.pivot(10.0F, -15.0F, -9.8F));
 
-        ModelPartData cube_r1 = left_door.addChild("cube_r1", ModelPartBuilder.create().uv(46, 136).cuboid(-0.55F, -14.75F, -0.05F, 1.0F, 33.0F, 0.0F, new Dilation(0.0F))
+        ModelPartData cube_r1 = left_door.addChild("cube_r1", ModelPartBuilder.create().uv(48, 136).cuboid(-1.55F, -14.75F, -0.05F, 1.0F, 33.0F, 0.0F, new Dilation(0.0F))
+                .uv(46, 136).cuboid(-0.55F, -14.75F, -0.05F, 1.0F, 33.0F, 0.0F, new Dilation(0.0F))
                 .uv(4, 3).cuboid(-2.45F, 1.05F, -0.45F, 1.0F, 2.0F, 1.0F, new Dilation(0.0F))
                 .uv(0, 0).cuboid(-2.45F, -2.75F, -0.45F, 1.0F, 2.0F, 1.0F, new Dilation(0.0F)), ModelTransform.of(-9.45F, -2.25F, 0.15F, -3.1416F, 0.0F, 3.1416F));
 
@@ -48,25 +49,24 @@ public class PixelConsistentCrystallineDoorModel extends DoorModel {
                 .uv(0, 3).cuboid(6.1F, -5.5F, -1.4F, 1.0F, 2.0F, 1.0F, new Dilation(0.0F))
                 .uv(4, 0).cuboid(1.0F, -4.5F, -1.4F, 1.0F, 2.0F, 1.0F, new Dilation(0.0F)), ModelTransform.pivot(-8.0F, -15.0F, -9.8F));
 
-        ModelPartData cube_r2 = right_door.addChild("cube_r2", ModelPartBuilder.create().uv(48, 136).cuboid(-1.55F, -14.75F, -0.05F, 1.0F, 33.0F, 0.0F, new Dilation(0.0F)), ModelTransform.of(8.55F, -2.25F, 0.15F, -3.1416F, 0.0F, 3.1416F));
-
         ModelPartData phone = right_door.addChild("phone", ModelPartBuilder.create().uv(0, 12).cuboid(-0.5F, 0.3F, -0.8F, 2.0F, 2.0F, 1.0F, new Dilation(-0.1F))
                 .uv(0, 8).cuboid(0.5F, -1.0F, -0.5F, 2.0F, 3.0F, 1.0F, new Dilation(0.0F))
                 .uv(6, 8).cuboid(-0.5F, -1.0F, -0.5F, 1.0F, 2.0F, 1.0F, new Dilation(-0.1F)), ModelTransform.pivot(3.0F, -5.5F, 0.5F));
 
         ModelPartData TARDIS = bone.addChild("TARDIS", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 1.0F, 0.0F));
 
-        ModelPartData allexteriors = TARDIS.addChild("allexteriors", ModelPartBuilder.create().uv(0, 53).cuboid(-11.0F, -35.001F, -10.0F, 22.0F, 0.0F, 21.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
+        ModelPartData allexteriors = TARDIS.addChild("allexteriors", ModelPartBuilder.create().uv(0, 53).cuboid(-11.0F, -35.001F, -10.0F, 22.0F, 0.0F, 21.0F, new Dilation(0.0F))
+                .uv(99, 203).cuboid(-11.0F, -37.001F, -10.0F, 22.0F, 0.0F, 21.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
 
         ModelPartData upperlip = allexteriors.addChild("upperlip", ModelPartBuilder.create().uv(38, 130).cuboid(-9.0F, 0.0F, 10.5F, 18.0F, 2.0F, 1.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, -36.0F, 0.0F));
 
-        ModelPartData cube_r3 = upperlip.addChild("cube_r3", ModelPartBuilder.create().uv(38, 130).cuboid(-9.0F, -1.0F, 10.5F, 18.0F, 2.0F, 1.0F, new Dilation(0.0F)), ModelTransform.of(1.0F, 0.5F, 0.0F, 0.0F, -1.5708F, 0.0F));
+        ModelPartData cube_r2 = upperlip.addChild("cube_r2", ModelPartBuilder.create().uv(38, 130).cuboid(-9.0F, -1.0F, 10.5F, 18.0F, 2.0F, 1.0F, new Dilation(0.0F)), ModelTransform.of(1.0F, 0.5F, 0.0F, 0.0F, -1.5708F, 0.0F));
 
-        ModelPartData cube_r4 = upperlip.addChild("cube_r4", ModelPartBuilder.create().uv(38, 130).cuboid(-9.0F, -1.0F, -0.5F, 18.0F, 2.0F, 1.0F, new Dilation(0.0F)), ModelTransform.of(10.0F, 0.5F, 0.0F, 0.0F, 1.5708F, 0.0F));
+        ModelPartData cube_r3 = upperlip.addChild("cube_r3", ModelPartBuilder.create().uv(38, 130).cuboid(-9.0F, -1.0F, -0.5F, 18.0F, 2.0F, 1.0F, new Dilation(0.0F)), ModelTransform.of(10.0F, 0.5F, 0.0F, 0.0F, 1.5708F, 0.0F));
 
-        ModelPartData cube_r5 = upperlip.addChild("cube_r5", ModelPartBuilder.create().uv(38, 130).cuboid(-9.0F, -0.05F, 0.0F, 18.0F, 2.0F, 1.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, -0.95F, -9.6F, -3.1416F, 0.0F, 3.1416F));
+        ModelPartData cube_r4 = upperlip.addChild("cube_r4", ModelPartBuilder.create().uv(38, 130).cuboid(-9.0F, -0.05F, 0.0F, 18.0F, 2.0F, 1.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, -0.95F, -9.6F, -3.1416F, 0.0F, 3.1416F));
 
-        ModelPartData cube_r6 = upperlip.addChild("cube_r6", ModelPartBuilder.create().uv(38, 130).cuboid(-9.0F, -1.0F, -0.5F, 18.0F, 2.0F, 1.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.5F, -10.0F, 0.0F, 3.1416F, 0.0F));
+        ModelPartData cube_r5 = upperlip.addChild("cube_r5", ModelPartBuilder.create().uv(38, 130).cuboid(-9.0F, -1.0F, -0.5F, 18.0F, 2.0F, 1.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.5F, -10.0F, 0.0F, 3.1416F, 0.0F));
 
         ModelPartData pillars = allexteriors.addChild("pillars", ModelPartBuilder.create().uv(76, 125).cuboid(19.5F, -16.5F, -1.5F, 3.0F, 36.0F, 3.0F, new Dilation(0.0F))
                 .uv(76, 125).mirrored().cuboid(19.5F, -18.5F, 19.5F, 3.0F, 38.0F, 3.0F, new Dilation(0.0F)).mirrored(false)
@@ -75,9 +75,9 @@ public class PixelConsistentCrystallineDoorModel extends DoorModel {
                 .uv(244, 3).mirrored().cuboid(-1.5F, -20.5F, -1.5F, 3.0F, 40.0F, 3.0F, new Dilation(0.01F)).mirrored(false)
                 .uv(244, 3).cuboid(19.5F, -20.5F, -1.5F, 3.0F, 40.0F, 3.0F, new Dilation(0.01F)), ModelTransform.pivot(-10.5F, -21.0F, -10.5F));
 
-        ModelPartData cube_r7 = pillars.addChild("cube_r7", ModelPartBuilder.create().uv(244, 3).cuboid(-1.5F, -20.5F, -1.5F, 3.0F, 40.0F, 3.0F, new Dilation(0.01F)), ModelTransform.of(21.0F, 0.0F, 21.0F, 0.0F, -1.5708F, 0.0F));
+        ModelPartData cube_r6 = pillars.addChild("cube_r6", ModelPartBuilder.create().uv(244, 3).cuboid(-1.5F, -20.5F, -1.5F, 3.0F, 40.0F, 3.0F, new Dilation(0.01F)), ModelTransform.of(21.0F, 0.0F, 21.0F, 0.0F, -1.5708F, 0.0F));
 
-        ModelPartData cube_r8 = pillars.addChild("cube_r8", ModelPartBuilder.create().uv(244, 3).mirrored().cuboid(-1.5F, -20.5F, -1.5F, 3.0F, 40.0F, 3.0F, new Dilation(0.01F)).mirrored(false), ModelTransform.of(0.0F, 0.0F, 21.0F, 0.0F, 1.5708F, 0.0F));
+        ModelPartData cube_r7 = pillars.addChild("cube_r7", ModelPartBuilder.create().uv(244, 3).mirrored().cuboid(-1.5F, -20.5F, -1.5F, 3.0F, 40.0F, 3.0F, new Dilation(0.01F)).mirrored(false), ModelTransform.of(0.0F, 0.0F, 21.0F, 0.0F, 1.5708F, 0.0F));
 
         ModelPartData walls = allexteriors.addChild("walls", ModelPartBuilder.create().uv(80, 74).cuboid(10.0F, -16.5F, -9.0F, 1.0F, 33.0F, 18.0F, new Dilation(0.0F))
                 .uv(80, 74).mirrored().cuboid(-11.0F, -16.5F, -9.0F, 1.0F, 33.0F, 18.0F, new Dilation(0.0F)).mirrored(false)
@@ -92,7 +92,7 @@ public class PixelConsistentCrystallineDoorModel extends DoorModel {
 
         ModelPartData sign9 = coral.addChild("sign9", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, -38.3F, 0.0F));
 
-        ModelPartData cube_r9 = sign9.addChild("cube_r9", ModelPartBuilder.create().uv(144, 126).cuboid(-10.0F, -2.5F, -1.0F, 20.0F, 5.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.0F, 12.0F, 0.0F, 3.1416F, 0.0F));
+        ModelPartData cube_r8 = sign9.addChild("cube_r8", ModelPartBuilder.create().uv(144, 126).cuboid(-10.0F, -2.5F, -1.0F, 20.0F, 5.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.0F, 12.0F, 0.0F, 3.1416F, 0.0F));
 
         ModelPartData roof9 = coral.addChild("roof9", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, -56.7F, 0.0F));
 
@@ -104,7 +104,7 @@ public class PixelConsistentCrystallineDoorModel extends DoorModel {
 
         ModelPartData signs11 = toyota.addChild("signs11", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, -38.3F, 0.0F));
 
-        ModelPartData cube_r10 = signs11.addChild("cube_r10", ModelPartBuilder.create().uv(0, 221).cuboid(-10.0F, -2.5F, -1.0F, 20.0F, 5.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.0F, 12.0F, 0.0F, 3.1416F, 0.0F));
+        ModelPartData cube_r9 = signs11.addChild("cube_r9", ModelPartBuilder.create().uv(0, 221).cuboid(-10.0F, -2.5F, -1.0F, 20.0F, 5.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.0F, 12.0F, 0.0F, 3.1416F, 0.0F));
 
         ModelPartData lamp11 = toyota.addChild("lamp11", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, -47.25F, 0.0F));
 
@@ -112,9 +112,9 @@ public class PixelConsistentCrystallineDoorModel extends DoorModel {
 
         ModelPartData sign13 = latest.addChild("sign13", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, -37.9F, 0.0F));
 
-        ModelPartData cube_r11 = sign13.addChild("cube_r11", ModelPartBuilder.create().uv(78, 0).cuboid(-10.0F, -2.5F, -1.0F, 20.0F, 5.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.0F, 12.0F, 0.0F, 3.1416F, 0.0F));
+        ModelPartData cube_r10 = sign13.addChild("cube_r10", ModelPartBuilder.create().uv(78, 0).cuboid(-10.0F, -2.5F, -1.0F, 20.0F, 5.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.0F, 12.0F, 0.0F, 3.1416F, 0.0F));
 
-        ModelPartData cube_r12 = sign13.addChild("cube_r12", ModelPartBuilder.create().uv(214, 0).cuboid(-10.0F, -3.44F, -0.5F, 20.0F, 0.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.95F, -9.6F, -3.1416F, 0.0F, 3.1416F));
+        ModelPartData cube_r11 = sign13.addChild("cube_r11", ModelPartBuilder.create().uv(214, 0).cuboid(-10.0F, -3.44F, -0.5F, 20.0F, 0.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.95F, -9.6F, -3.1416F, 0.0F, 3.1416F));
         return TexturedModelData.of(modelData, 256, 256);
     }
 
