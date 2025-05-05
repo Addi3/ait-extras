@@ -115,7 +115,9 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(AITItems.WAYPOINT_CARTRIDGE), conditionsFromItem(AITItems.WAYPOINT_CARTRIDGE))
                     .criterion(hasItem(AITItems.PLASMIC_MATERIAL), conditionsFromItem(AITItems.PLASMIC_MATERIAL)));
 
-            ;provider.addShapelessRecipe(ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, AITExtrasItems.JELLY_BABIES, 1)
+            ;
+            ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, AITExtrasItems.JELLY_BABIES, 1);
+            provider.addShapelessRecipe(ShapelessRecipeJsonBuilder
                     .create(RecipeCategory.FOOD, AITExtrasItems.JELLY_BABIES, 4)
                     .input(Items.PAPER)
                     .input(Items.SUGAR)
@@ -220,6 +222,13 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation("exterior.ait-extras.pixel_consistent_hudolin", "Hudolin");
                     provider.addTranslation("exterior.ait-extras.pixel_consistent_retro", "Retro");
                     provider.addTranslation("exterior.ait-extras.pixel_consistent_yeti", "Yeti");
+                            //modern
+                    provider.addTranslation("exterior.ait-extras.pixel_consistent_modern", "Coral");
+                    provider.addTranslation("exterior.ait-extras.pixel_consistent_copper", "Copper");
+                    provider.addTranslation("exterior.ait-extras.pixel_consistent_toyota", "Toyota");
+                    provider.addTranslation("exterior.ait-extras.pixel_consistent_renaissance", "Renaissance");
+                            //Crystalline
+                    provider.addTranslation("exterior.ait-extras.pixel_consistent_crystalline", "Crystalline");
 
                     //sonics
                     provider.addTranslation("sonic.ait-extras.cane", "Cane");

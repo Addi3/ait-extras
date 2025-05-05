@@ -18,6 +18,8 @@ public class AITExtras implements ModInitializer {
     public static AddonExterior VANILLA;
     public static AddonExterior CLOCK;
     public static AddonExterior PIXELCONSISTENT;
+    public static AddonExterior PIXELCONSISTENTMODERN;
+    public static AddonExterior PIXELCONSISTENTCRYSTALLINE;
 
     public static Identifier id(String path) {
         return new Identifier(MOD_ID, path);
@@ -179,6 +181,70 @@ public class AITExtras implements ModInitializer {
             };
         });
         PIXELCONSISTENT.toDoor().setPortalTranslations((pos, b) -> {
+            return switch(b) {
+                case DOWN, UP -> pos;
+                case NORTH -> pos.add(0, -0, -0.4);
+                case SOUTH -> pos.add(0, -0, 0.4);
+                case WEST -> pos.add(-0, -0, 0);
+                case EAST -> pos.add(0, -0, 0);
+            };
+        });
+
+
+
+        //PIXELCONSISTENTMODERN
+        PIXELCONSISTENTMODERN = new AddonExterior(new Identifier(MOD_ID, "pixel_consistent"), MOD_ID, "pixel_consistent_modern").register();
+        PIXELCONSISTENTMODERN.setDoor(new AddonExterior.Door(
+                        PIXELCONSISTENTMODERN, true, AITSounds.POLICE_BOX_DOOR_OPEN,
+                        AITSounds.POLICE_BOX_DOOR_CLOSE))
+                .toDoor().register();
+        PIXELCONSISTENTMODERN.hasPortals();
+        PIXELCONSISTENTMODERN.setPortalTranslations((pos, b) -> {
+            return switch(b) {
+                case 0 -> pos.add(0, -0.08, -0.6); // NORTH
+                case 1, 2, 3 -> pos.add(0, -0.08, -0.6); // NORTH EAST p n
+                case 4 -> pos.add(0, -0.08, 0.6); // EAST
+                case 5, 6, 7 -> pos.add(0, -0.08, 0.6); // SOUTH EAST p p
+                case 8 -> pos.add(0, -0.08, 0.685); // SOUTH
+                case 9, 10, 11 -> pos.add(-0, -0.08, 0.6); // SOUTH WEST n p
+                case 12 -> pos.add(-0, -0.08, 0.6); // WEST
+                case 13, 14, 15 -> pos.add(-0, -0.08, -0.6); // NORTH WEST n n
+                default -> pos;
+            };
+        });
+        PIXELCONSISTENTMODERN.toDoor().setPortalTranslations((pos, b) -> {
+            return switch(b) {
+                case DOWN, UP -> pos;
+                case NORTH -> pos.add(0, -0, -0.4);
+                case SOUTH -> pos.add(0, -0, 0.4);
+                case WEST -> pos.add(-0, -0, 0);
+                case EAST -> pos.add(0, -0, 0);
+            };
+        });
+
+
+
+        //PIXELCONSISTENTCRYSTALLINE
+        PIXELCONSISTENTCRYSTALLINE = new AddonExterior(new Identifier(MOD_ID, "pixel_consistent"), MOD_ID, "pixel_consistent_crystalline").register();
+        PIXELCONSISTENTCRYSTALLINE.setDoor(new AddonExterior.Door(
+                        PIXELCONSISTENTCRYSTALLINE, true, AITSounds.POLICE_BOX_DOOR_OPEN,
+                        AITSounds.POLICE_BOX_DOOR_CLOSE))
+                .toDoor().register();
+        PIXELCONSISTENTCRYSTALLINE.hasPortals();
+        PIXELCONSISTENTCRYSTALLINE.setPortalTranslations((pos, b) -> {
+            return switch(b) {
+                case 0 -> pos.add(0, -0.08, -0.6); // NORTH
+                case 1, 2, 3 -> pos.add(0, -0.08, -0.6); // NORTH EAST p n
+                case 4 -> pos.add(0, -0.08, 0.6); // EAST
+                case 5, 6, 7 -> pos.add(0, -0.08, 0.6); // SOUTH EAST p p
+                case 8 -> pos.add(0, -0.08, 0.6); // SOUTH
+                case 9, 10, 11 -> pos.add(-0, -0.08, 0.6); // SOUTH WEST n p
+                case 12 -> pos.add(-0, -0.08, 0.6); // WEST
+                case 13, 14, 15 -> pos.add(-0, -0.08, -0.6); // NORTH WEST n n
+                default -> pos;
+            };
+        });
+        PIXELCONSISTENTCRYSTALLINE.toDoor().setPortalTranslations((pos, b) -> {
             return switch(b) {
                 case DOWN, UP -> pos;
                 case NORTH -> pos.add(0, -0, -0.4);

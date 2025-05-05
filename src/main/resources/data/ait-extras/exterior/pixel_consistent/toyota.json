@@ -1,0 +1,7 @@
+{
+    "id": "ait-extras:pixel_consistent_toyota",
+    "category": "ait-extras:pixel_consistent",
+    "parent": "ait-extras:exterior/pixel_consistent_modern",
+    "texture": "ait-extras:textures/blockentities/exteriors/pixel_consistent_modern/pixel_consistent_toyota.png",
+    "emission": "ait-extras:textures/blockentities/exteriors/pixel_consistent_modern/pixel_consistent_toyota_emission.png"
+}

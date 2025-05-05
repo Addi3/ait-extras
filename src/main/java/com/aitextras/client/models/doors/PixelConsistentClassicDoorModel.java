@@ -18,10 +18,10 @@ import net.minecraft.client.render.entity.animation.Animation.Builder;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.math.RotationAxis;
 
-public class PixelConsistentDoorModel extends DoorModel {
+public class PixelConsistentClassicDoorModel extends DoorModel {
     private final ModelPart bone;
 
-    public PixelConsistentDoorModel(ModelPart root) {
+    public PixelConsistentClassicDoorModel(ModelPart root) {
         super(RenderLayer::getEntityCutoutNoCull);
         this.bone = root.getChild("bone");
     }

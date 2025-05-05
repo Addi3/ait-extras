@@ -49,7 +49,19 @@ public class AITExtrasClient implements ClientModInitializer {
         PIXELCONSISTENT.setSonicItemTranslations(new Vector3f(0.7f, 1f, 2f));
         PIXELCONSISTENT.setPortalWidth(1.2f);
         PIXELCONSISTENT.setPortalHeight(2.2f);
-        PIXELCONSISTENT.toDoor().setModel(new PixelConsistentDoorModel(PixelConsistentDoorModel.getTexturedModelData().createModel())).toClient().register();
+        PIXELCONSISTENT.toDoor().setModel(new PixelConsistentClassicDoorModel(PixelConsistentClassicDoorModel.getTexturedModelData().createModel())).toClient().register();
+
+        PIXELCONSISTENTMODERN.setModel(new PixelConsistentModernModel()).toClient().register();
+        PIXELCONSISTENTMODERN.setSonicItemTranslations(new Vector3f(0.7f, 1f, 2f));
+        PIXELCONSISTENTMODERN.setPortalWidth(1.2f);
+        PIXELCONSISTENTMODERN.setPortalHeight(2.2f);
+        PIXELCONSISTENTMODERN.toDoor().setModel(new PixelConsistentModernDoorModel(PixelConsistentModernDoorModel.getTexturedModelData().createModel())).toClient().register();
+
+        PIXELCONSISTENTCRYSTALLINE.setModel(new PixelConsistentCrystallineModel()).toClient().register();
+        PIXELCONSISTENTCRYSTALLINE.setSonicItemTranslations(new Vector3f(0.7f, 1f, 2f));
+        PIXELCONSISTENTCRYSTALLINE.setPortalWidth(1.2f);
+        PIXELCONSISTENTCRYSTALLINE.setPortalHeight(2.2f);
+        PIXELCONSISTENTCRYSTALLINE.toDoor().setModel(new PixelConsistentCrystallineDoorModel(PixelConsistentCrystallineDoorModel.getTexturedModelData().createModel())).toClient().register();
     };
     public static void blockEntityRendererRegister() {
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.EXTRAS_MONITOR_BLOCK_ENTITY_TYPE, ExtrasMonitorRenderer::new);
