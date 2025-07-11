@@ -1,4 +1,4 @@
-// 1.20.1	2025-07-11T20:02:58.1558254	AIT Extras/Block Loot Tables
+// 1.20.1	2025-07-11T20:39:48.9768939	AIT Extras/Block Loot Tables
 695e2a68ba619ee291d1611f123bc3468cf13fc2 data\ait-extras\loot_tables\blocks\hudolin_support_base_block.json
 1a685f7c2d346241a847eed4629c3634b51455a8 data\ait-extras\loot_tables\blocks\hat_stand_dark_oak_block.json
 189a1d32c7789f98fd9ad6580a50ab33c4e74162 data\ait-extras\loot_tables\blocks\hat_stand_spruce_block.json
@@ -26,5 +26,5 @@ e2172bfde943ccee0f5c5c76d3dce4e173976b1f data\ait-extras\loot_tables\blocks\comp
 70a9577a9662218022384889f66913209b3d4a34 data\ait-extras\loot_tables\blocks\sun_dial_block.json
 644154d61fdfcbcea7bcd3ab88746d693201d4b2 data\ait-extras\loot_tables\blocks\crystalline_shard_block.json
 a0db52cc46964c5f5679f46b5490533736b28274 data\ait-extras\loot_tables\blocks\hat_stand_cherry_block.json
-3c090c9cd34d84cdcf57400afaa8e5842f5089bf data\ait-extras\loot_tables\blocks\hat_stand_crimson_block.json
 479d66f5336270bca1d84a4fdc378b4f2cfb04dd data\ait-extras\loot_tables\blocks\crystal_block.json
+3c090c9cd34d84cdcf57400afaa8e5842f5089bf data\ait-extras\loot_tables\blocks\hat_stand_crimson_block.json

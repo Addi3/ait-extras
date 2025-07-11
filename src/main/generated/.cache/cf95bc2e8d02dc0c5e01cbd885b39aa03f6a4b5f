@@ -1,4 +1,4 @@
-// 1.20.1	2025-07-11T20:02:58.1588179	AIT Extras/Model Definitions
+// 1.20.1	2025-07-11T20:39:48.9803976	AIT Extras/Model Definitions
 a736cdd125c248680bd5e0b298f2db9d33a4b472 assets\ait\blockstates\anorthosite_brick_stairs.json
 992ea616e5115cf8d7ad1d9c5bae0ddf669d1ddc assets\ait\models\block\anorthosite_iron_ore.json
 09055dfaa7d8ab4fc64cfc340ae6c0c26991d9db assets\ait-extras\models\block\compact_zeiton_brick_wall_side_tall.json
@@ -261,8 +261,8 @@ de48da81ec91517e15a135f58f414025c27069a1 assets\ait\models\block\martian_sandsto
 9c479e50a623a589229176c80f9f3115acf6e8b9 assets\ait\models\block\martian_sandstone_stairs_inner.json
 a309ecca5648bd2cf2e93d83e3a47efc884828a4 assets\ait-extras\models\item\rice_pudding.json
 e86b7516a3bb3df3b32c21fe7f5996a7b18bc73f assets\ait\models\item\martian_brick_wall.json
-287de41d914b87688e2a30ba8f5a89cb95d8d31a assets\ait\blockstates\martian_diamond_ore.json
 59063aeadfb6116fffe2d04d118070c5dbbf21d4 assets\ait\blockstates\anorthosite_lapis_ore.json
+287de41d914b87688e2a30ba8f5a89cb95d8d31a assets\ait\blockstates\martian_diamond_ore.json
 4b50eaa2ebdf09925022d531d1aab2f72426c580 assets\ait-extras\models\block\polished_compact_zeiton_stairs.json
 66f1ec0419dc564f1d40fea75f08e488371efa3d assets\ait-extras\blockstates\compact_zeiton_brick_slab.json
 c3e5aed6d07422ddf522982000372fed44ec4968 assets\ait-extras\models\block\extras_crystalline_block.json
