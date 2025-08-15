@@ -89,7 +89,7 @@
 </h2>
 
 ### Developers:
-- [Addi3_Astarr](https://addieastarr.carrd.co/) (Lead Developer)
+- [Addi3_Astarr](https://addi3.github.io/) (Lead Developer)
 
 ### Thank You's:
 
