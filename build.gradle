@@ -69,24 +69,16 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
     include(implementation "net.objecthunter:exp4j:0.4.8")
-    include(modApi("dev.drtheo:multidim:${project.multidim_version}")) {
-        exclude(group: "net.fabricmc.fabric-api")
-    }
-    include(modImplementation("dev.drtheo:scheduler:${project.scheduler_version}")) {
-        exclude(group: "net.fabricmc.fabric-api")
-    }
-    include(modImplementation("dev.drtheo:queue:${project.queue_version}")) {
-        exclude(group: "net.fabricmc.fabric-api")
-    }
+    modImplementation "dev.drtheo:multidim:${project.multidim_version}"
+    modImplementation "dev.drtheo:scheduler:${project.scheduler_version}"
+    modImplementation "dev.drtheo:queue:${project.queue_version}"
 
     // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
     modImplementation "com.github.amblelabs:ait:${project.ait_version}"
     modImplementation "dev.isxander:yet-another-config-lib:${project.yacl_version}"
 
-    modApi("com.github.amblelabs:modkit:v${project.amblekit_version}") {
-        exclude(group: "net.fabricmc.fabric-api")
-    }
+    modImplementation("com.github.amblelabs:modkit:v${project.amblekit_version}")
 }
 
 
