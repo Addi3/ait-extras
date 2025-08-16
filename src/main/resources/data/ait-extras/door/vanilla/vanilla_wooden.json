@@ -1,9 +1,9 @@
 {
-  "id": "ait-extras:vanilla_beacon",
+  "id": "ait-extras:vanilla",
   "model": "ait-extras:vanilla_door",
   "is_double": false,
-  "open_sound": "minecraft:block.iron_door.open",
-  "close_sound": "minecraft:block.iron_door.close",
+  "open_sound": "minecraft:block.wooden_door.open",
+  "close_sound": "minecraft:block.wooden_door.close",
   "left_animation": "vanilla:open",
   "has_transparent_doors": true,
   "portal_info": {

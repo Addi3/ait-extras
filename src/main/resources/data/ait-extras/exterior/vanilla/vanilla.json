@@ -13,6 +13,7 @@
     "demat": "vanilla:flight",
     "mat": "vanilla:flight"
   },
+  "seat_translation": [0, 0, 0],
   "portal_info": {
   "enabled": true,
   "width": 1,

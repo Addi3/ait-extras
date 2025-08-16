@@ -513,10 +513,6 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
 
                         //clock
                     provider.addTranslation("exterior.ait-extras.clock", "Clock");
-                    provider.addTranslation("exterior.ait-extras.clock_oak", "Clock (Oak)");
-                    provider.addTranslation("exterior.ait-extras.clock_spruce", "Clock (Spruce)");
-                    provider.addTranslation("exterior.ait-extras.clock_birch", "Clock (Birch)");
-                    provider.addTranslation("exterior.ait-extras.clock_jungle", "Clock (Jungle)");
 
                         //origin
                     provider.addTranslation("exterior.ait-extras.origin", "Origin");
