@@ -12,19 +12,20 @@
     "demat": "clock:flight",
     "mat": "clock:flight"
   },
+  "sonic_position": [3, 8, -1],
   "seat_translation": [0, 0, 0],
   "portal_info": {
   "enabled": true,
   "width": 1,
   "height": 2,
-  "north": [0,0,-0],
-  "north_east": [0,0,-0],
-  "east": [0,0,-0],
-  "south_east": [0,0,-0],
-  "south": [0,0,-0],
-  "south_west": [0,0,-0],
-  "west": [0,0,-0],
-    "north_west": [0,0,-0]
+  "north": [0,-0.4,-0.3],
+  "north_east": [0,-0.4,-0.3],
+  "east": [0,-0.4,-0.3],
+  "south_east": [0,-0.4,-0.3],
+  "south": [0,-0.4,-0.3],
+  "south_west": [0,-0.4,-0.3],
+  "west": [0,-0.4,-0.3],
+    "north_west": [0,-0.4,-0.3]
   }
 }
 
