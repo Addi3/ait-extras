@@ -1,13 +1,14 @@
 {
-  "id": "ait-extras:clock",
+  "id": "ait-extras:clock_master",
   "category": "ait-extras:clock",
   "parent": "ait:exterior/capsule/default",
-  "texture": "ait-extras:textures/blockentities/exteriors/clock/clock.png",
+  "texture": "ait-extras:textures/blockentities/exteriors/clock/clock_master.png",
   "model": "ait-extras:clock",
   "door": "ait-extras:clock",
   "left_animation": "clock:open",
   "has_transparent_doors": false,
   "animations": {
+    "landed": "clock:idle",
     "demat": "clock:flight",
     "mat": "clock:flight"
   },

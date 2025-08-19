@@ -93,6 +93,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
 
 
             provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.EXTRAS_MONITOR_BLOCK, 1)
+                            .group("monitor")
                     .pattern("DDD")
                     .pattern("DED")
                     .pattern("DCD")
@@ -104,6 +105,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(Items.ENDER_EYE), conditionsFromItem(Items.ENDER_EYE)));
 
             provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.EXTRAS_SCREEN_MONITOR_BLOCK, 1)
+                    .group("monitor")
                     .pattern("BBB")
                     .pattern("BEB")
                     .pattern("BBB")
@@ -167,6 +169,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(Items.BOWL), conditionsFromItem(Items.BOWL)));
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.HAT_STAND_OAK_BLOCK, 1)
+                    .group("hat_stand")
                     .pattern("FFF")
                     .pattern(" F ")
                     .pattern(" F ")
@@ -174,6 +177,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(Items.OAK_FENCE), conditionsFromItem(Items.OAK_FENCE)));
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.HAT_STAND_ACACIA_BLOCK, 1)
+                    .group("hat_stand")
                     .pattern("FFF")
                     .pattern(" F ")
                     .pattern(" F ")
@@ -181,6 +185,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(Items.ACACIA_FENCE), conditionsFromItem(Items.ACACIA_FENCE)));
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.HAT_STAND_BAMBOO_BLOCK, 1)
+                    .group("hat_stand")
                     .pattern("FFF")
                     .pattern(" F ")
                     .pattern(" F ")
@@ -188,6 +193,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(Items.BAMBOO_FENCE), conditionsFromItem(Items.BAMBOO_FENCE)));
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.HAT_STAND_BIRCH_BLOCK, 1)
+                    .group("hat_stand")
                     .pattern("FFF")
                     .pattern(" F ")
                     .pattern(" F ")
@@ -195,6 +201,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(Items.BIRCH_FENCE), conditionsFromItem(Items.BIRCH_FENCE)));
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.HAT_STAND_CHERRY_BLOCK, 1)
+                    .group("hat_stand")
                     .pattern("FFF")
                     .pattern(" F ")
                     .pattern(" F ")
@@ -202,6 +209,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(Items.CHERRY_FENCE), conditionsFromItem(Items.CHERRY_FENCE)));
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.HAT_STAND_CRIMSON_BLOCK, 1)
+                    .group("hat_stand")
                     .pattern("FFF")
                     .pattern(" F ")
                     .pattern(" F ")
@@ -209,6 +217,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(Items.CRIMSON_FENCE), conditionsFromItem(Items.CRIMSON_FENCE)));
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.HAT_STAND_DARK_OAK_BLOCK, 1)
+                    .group("hat_stand")
                     .pattern("FFF")
                     .pattern(" F ")
                     .pattern(" F ")
@@ -216,6 +225,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(Items.DARK_OAK_FENCE), conditionsFromItem(Items.DARK_OAK_FENCE)));
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.HAT_STAND_JUNGLE_BLOCK, 1)
+                    .group("hat_stand")
                     .pattern("FFF")
                     .pattern(" F ")
                     .pattern(" F ")
@@ -223,6 +233,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(Items.JUNGLE_FENCE), conditionsFromItem(Items.JUNGLE_FENCE)));
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.HAT_STAND_MANGROVE_BLOCK, 1)
+                    .group("hat_stand")
                     .pattern("FFF")
                     .pattern(" F ")
                     .pattern(" F ")
@@ -230,6 +241,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(Items.MANGROVE_FENCE), conditionsFromItem(Items.MANGROVE_FENCE)));
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.HAT_STAND_SPRUCE_BLOCK, 1)
+                    .group("hat_stand")
                     .pattern("FFF")
                     .pattern(" F ")
                     .pattern(" F ")
@@ -237,6 +249,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(Items.SPRUCE_FENCE), conditionsFromItem(Items.SPRUCE_FENCE)));
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.HAT_STAND_WARPED_BLOCK, 1)
+                    .group("hat_stand")
                     .pattern("FFF")
                     .pattern(" F ")
                     .pattern(" F ")
@@ -244,6 +257,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(Items.WARPED_FENCE), conditionsFromItem(Items.WARPED_FENCE)));
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.CRYSTAL_ZEITON_BLOCK, 1)
+                    .group("crystal")
                     .pattern(" Z ")
                     .pattern(" B ")
                     .pattern(" Z ")
@@ -252,6 +266,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(AITBlocks.ZEITON_BLOCK), conditionsFromItem(AITBlocks.ZEITON_BLOCK)));
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.CRYSTAL_MASTER_BLOCK, 1)
+                    .group("crystal")
                     .pattern(" A ")
                     .pattern(" B ")
                     .pattern(" Z ")
@@ -260,7 +275,8 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .input('A',Items.AMETHYST_SHARD)
                     .criterion(hasItem(Blocks.AMETHYST_BLOCK), conditionsFromItem(Blocks.AMETHYST_BLOCK)));
 
-            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.CRYSTAL_BLOCK, 1)
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.CRYSTAL_BLOCK, 1)
+                    .group("crystal")
                     .pattern(" C ")
                     .pattern(" B ")
                     .pattern(" C ")
@@ -285,6 +301,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
 
             provider.addShapelessRecipe(ShapelessRecipeJsonBuilder
                     .create(RecipeCategory.MISC, AITExtrasItems.ZIRCONIUM_INGOT, 4)
+                    .group("zirconium")
                     .input(Items.IRON_INGOT)
                     .input(AITExtrasItems.RAW_ZIRCONIUM)
                     .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
@@ -292,11 +309,13 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
 
             provider.addShapelessRecipe(ShapelessRecipeJsonBuilder
                     .create(RecipeCategory.MISC, AITExtrasItems.MERCURY_DISC, 1)
+                    .group("zirconium")
                     .input(ItemTags.MUSIC_DISCS)
                     .input(AITExtrasItems.RAW_ZIRCONIUM)
                     .criterion(hasItem(AITExtrasItems.RAW_ZIRCONIUM), conditionsFromItem(AITExtrasItems.RAW_ZIRCONIUM)));
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.HUDOLIN_SUPPORT_BASE_BLOCK, 1)
+                    .group("hudolin")
                     .pattern("III")
                     .pattern(" IA")
                     .pattern("   ")
@@ -305,6 +324,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(AITExtrasItems.RAW_ZIRCONIUM), conditionsFromItem(AITExtrasItems.RAW_ZIRCONIUM)));
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.HUDOLIN_SUPPORT_TOP_BLOCK, 1)
+                    .group("hudolin")
                     .pattern("AI ")
                     .pattern(" II")
                     .pattern(" IA")
@@ -313,6 +333,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(AITExtrasItems.RAW_ZIRCONIUM), conditionsFromItem(AITExtrasItems.RAW_ZIRCONIUM)));
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.POLISHED_COMPACT_ZEITON, 4)
+                    .group("polished_compact_zeiton")
                     .pattern("ZZ")
                     .pattern("ZZ")
                     .input('Z',AITBlocks.COMPACT_ZEITON)
@@ -320,6 +341,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
 
             provider.addShapedRecipe(
                     ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.POLISHED_COMPACT_ZEITON_STAIRS, 4)
+                            .group("polished_compact_zeiton")
                             .pattern("  X")
                             .pattern(" XX")
                             .pattern("XXX")
@@ -328,18 +350,21 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
 
             provider.addShapedRecipe(
                     ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.POLISHED_COMPACT_ZEITON_SLAB, 6)
+                            .group("polished_compact_zeiton")
                             .pattern("XXX")
                             .input('X', AITExtrasBlocks.POLISHED_COMPACT_ZEITON)
                             .criterion(hasItem(AITExtrasBlocks.POLISHED_COMPACT_ZEITON), conditionsFromItem(AITExtrasBlocks.POLISHED_COMPACT_ZEITON)));
 
             provider.addShapedRecipe(
                     ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.POLISHED_COMPACT_ZEITON_WALL, 6)
+                            .group("polished_compact_zeiton")
                             .pattern("XXX")
                             .pattern("XXX")
                             .input('X', AITExtrasBlocks.POLISHED_COMPACT_ZEITON)
                             .criterion(hasItem(AITExtrasBlocks.POLISHED_COMPACT_ZEITON), conditionsFromItem(AITExtrasBlocks.POLISHED_COMPACT_ZEITON)));
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.COMPACT_ZEITON_BRICKS, 4)
+                    .group("compact_zeiton_bricks")
                     .pattern("PP")
                     .pattern("PP")
                     .input('P',AITExtrasBlocks.POLISHED_COMPACT_ZEITON)
@@ -347,6 +372,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
 
             provider.addShapedRecipe(
                     ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.COMPACT_ZEITON_BRICK_STAIRS, 4)
+                            .group("compact_zeiton_bricks")
                             .pattern("  X")
                             .pattern(" XX")
                             .pattern("XXX")
@@ -355,12 +381,14 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
 
             provider.addShapedRecipe(
                     ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.COMPACT_ZEITON_BRICK_SLAB, 6)
+                            .group("compact_zeiton_bricks")
                             .pattern("XXX")
                             .input('X', AITExtrasBlocks.COMPACT_ZEITON_BRICKS)
                             .criterion(hasItem(AITExtrasBlocks.COMPACT_ZEITON_BRICKS), conditionsFromItem(AITExtrasBlocks.COMPACT_ZEITON_BRICKS)));
 
             provider.addShapedRecipe(
                     ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.COMPACT_ZEITON_BRICK_WALL, 6)
+                            .group("compact_zeiton_bricks")
                             .pattern("XXX")
                             .pattern("XXX")
                             .input('X', AITExtrasBlocks.COMPACT_ZEITON_BRICKS)
@@ -368,6 +396,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
 
             provider.addShapedRecipe(
                     ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.SEAL_BLOCK , 1)
+                            .group("seal")
                             .pattern("NIN")
                             .pattern("I I")
                             .pattern("NIN")
@@ -378,11 +407,13 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
 
             provider.addShapelessRecipe(ShapelessRecipeJsonBuilder
                     .create(RecipeCategory.DECORATIONS, AITExtrasBlocks.SEAL_SMALL_BLOCK, 1)
+                    .group("seal")
                     .input(AITExtrasBlocks.SEAL_BLOCK)
                     .criterion(hasItem(AITExtrasBlocks.SEAL_BLOCK), conditionsFromItem(AITExtrasBlocks.SEAL_BLOCK)));
 
             provider.addShapedRecipe(
                     ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.CANDLE_STAND_SINGLE_BLOCK , 2)
+                            .group("candle_stand")
                             .pattern(" C ")
                             .pattern(" Z ")
                             .pattern(" Z ")
@@ -393,6 +424,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
 
             provider.addShapedRecipe(
                     ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.CANDLE_STAND_SMALL_BLOCK , 2)
+                            .group("candle_stand")
                             .pattern("CSC")
                             .pattern("Z Z")
                             .input('C', Items.CANDLE)
@@ -404,6 +436,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
 
             provider.addShapedRecipe(
                     ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.CANDLE_STAND_LARGE_BLOCK , 2)
+                            .group("candle_stand")
                             .pattern("CSC")
                             .pattern("Z Z")
                             .input('C', Items.CANDLE)
