@@ -12,7 +12,7 @@
     "demat": "clock:flight",
     "mat": "clock:flight"
   },
-  "sonic_position": [3, 8, -1],
+
   "seat_translation": [0, 0, 0],
   "portal_info": {
   "enabled": true,
