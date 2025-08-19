@@ -13,7 +13,7 @@
 [<img alt="modrinth" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/modrinth_vector.svg">](https://modrinth.com/mod/ait-extras) <!-- SVG version -->
 [<img alt="amble" height="56" src="https://raw.githubusercontent.com/amblelabs/modkit/refs/heads/main/promo/cozy_vector_requires.svg">](https://modrinth.com/mod/amblekit)
 [<img alt="fabric" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/supported/fabric_vector.svg">](https://fabricmc.net/) <!-- SVG version -->
-
+![Replace this with a description](https://cdn.modrinth.com/data/cached_images/9eac87b58331af401c559133e1438798e88a55d6.png)
 -------------
 <h2>
   <img src="https://cdn.modrinth.com/data/cached_images/b18b275a0e9bb4000e015b935b65037166301538.png"
