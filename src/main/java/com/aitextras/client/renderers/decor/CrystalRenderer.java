@@ -5,6 +5,9 @@ import com.aitextras.client.models.decor.CrystalModel;
 import com.aitextras.client.models.decor.SunDialModel;
 import com.aitextras.core.blockentities.CrystalBlockEntity;
 import com.aitextras.core.blockentities.SunDialBlockEntity;
+import dev.amble.ait.core.tardis.Tardis;
+import dev.amble.ait.core.tardis.handler.travel.TravelHandler;
+import dev.amble.ait.core.world.TardisServerWorld;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.SkullBlock;
 import net.minecraft.client.render.RenderLayer;
@@ -29,23 +32,26 @@ public class CrystalRenderer<T extends CrystalBlockEntity> implements BlockEntit
     }
 
     @Override
-    public void render(T entity, float tickDelta, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay) {
-
-matrices.push();
-
+    public void render(CrystalBlockEntity entity, float tickDelta, MatrixStack matrices,
+                       VertexConsumerProvider vertexConsumers, int light, int overlay) {
+        if (!entity.isLinked() && TardisServerWorld.isTardisDimension(entity.getWorld())) return;
+        CrystalModel model = new CrystalModel(CrystalModel.getTexturedModelData().createModel());
+        Tardis tardis = entity.tardis().get();
+        TravelHandler travel = tardis.travel();
+        boolean hasPower = tardis.fuel().hasPower();
+        model.animateBlockEntity(entity, travel.getState(), hasPower);
+        matrices.push();
+        matrices.scale(1f, 1f, 1f);
         matrices.translate(0.5f, 1.5f, 0.5f);
+        matrices.multiply(RotationAxis.POSITIVE_Z.rotationDegrees(180));
 
-        // Retrieve scale dynamically and apply it
-        float scale = entity.getScale();
-        matrices.scale(scale, scale, scale);
+        model.renderWithAnimations(entity, model.getPart(), matrices, vertexConsumers.getBuffer(RenderLayer.getEntityTranslucent(CRYSTAL_TEXTURE)),
+                light, overlay, 1.0F, 1.0F, 1.0F, 1.0F);
 
-        this.crystalModel.render(matrices,
-                vertexConsumers.getBuffer(RenderLayer.getEntityTranslucent(CRYSTAL_TEXTURE)), light, overlay, 1.0F,
-                1.0F, 1.0F, 1.0F);
-        this.crystalModel.render(matrices,
-                vertexConsumers.getBuffer(RenderLayer.getEntityTranslucentEmissive(EMISSIVE_CRYSTAL_TEXTURE)),
-                0xF000F00, overlay, 1.0F, 1.0F, 1.0F, 1.0F);
+        model.renderWithAnimations(entity, model.getPart(), matrices, vertexConsumers.getBuffer(RenderLayer.getEntityCutoutNoCullZOffset(EMISSIVE_CRYSTAL_TEXTURE)),
+                0xf000f0, overlay, 1.0F, 1.0F, 1.0F, 1.0F);
 
         matrices.pop();
+
     }
 }
