@@ -56,4 +56,12 @@ public class AITExtrasItems extends ItemContainer {
 
     @NoEnglish
     public static final Item ATOMIC_SHREDDER = new AtomicShredderItem(new AItemSettings().group(AITExtrasItemGroups.MAIN));
+
+    @AutomaticModel
+    @NoEnglish
+    public static final Item METAL_MESH_ITEM = new Item(new AItemSettings().group(AITExtrasItemGroups.MAIN));
+
+    @AutomaticModel
+    @NoEnglish
+    public static final Item METAL_GRATE_ITEM = new Item(new AItemSettings().group(AITExtrasItemGroups.MAIN));
 }

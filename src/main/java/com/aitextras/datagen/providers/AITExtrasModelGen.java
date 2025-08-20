@@ -1,6 +1,7 @@
 package com.aitextras.datagen.providers;
 
 import com.aitextras.core.AITExtrasBlocks;
+import com.aitextras.core.AITExtrasItems;
 import dev.amble.ait.AITMod;
 import dev.amble.ait.core.AITBlocks;
 import dev.amble.ait.core.AITItems;
@@ -13,6 +14,7 @@ import net.minecraft.item.Item;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
+import net.minecraft.world.BlockCollisionSpliterator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -71,6 +73,17 @@ public class AITExtrasModelGen extends AmbleModelProvider {
         polished_zeiton_pool.stairs(AITExtrasBlocks.POLISHED_COMPACT_ZEITON_STAIRS);
         polished_zeiton_pool.slab(AITExtrasBlocks.POLISHED_COMPACT_ZEITON_SLAB);
         polished_zeiton_pool.wall(AITExtrasBlocks.POLISHED_COMPACT_ZEITON_WALL);
+
+        BlockStateModelGenerator.BlockTexturePool metal_grate_pool = generator.registerCubeAllModelTexturePool(AITExtrasBlocks.METAL_GRATE);
+        metal_grate_pool.stairs(AITExtrasBlocks.METAL_GRATE_STAIRS);
+        metal_grate_pool.slab(AITExtrasBlocks.METAL_GRATE_SLAB);
+        metal_grate_pool.wall(AITExtrasBlocks.METAL_GRATE_WALL);
+
+        BlockStateModelGenerator.BlockTexturePool metal_mesh_pool = generator.registerCubeAllModelTexturePool(AITExtrasBlocks.METAL_MESH);
+        metal_mesh_pool.stairs(AITExtrasBlocks.METAL_MESH_STAIRS);
+        metal_mesh_pool.slab(AITExtrasBlocks.METAL_MESH_SLAB);
+        metal_mesh_pool.wall(AITExtrasBlocks.METAL_MESH_WALL);
+
 
         super.generateBlockStateModels(generator);
     }

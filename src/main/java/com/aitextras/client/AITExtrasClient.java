@@ -60,5 +60,15 @@ public class AITExtrasClient implements ClientModInitializer {
             ResourceManagerHelper.registerBuiltinResourcePack(id("controllabels"), modContainer, ResourcePackActivationType.NORMAL);
         });
 
+        BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.METAL_GRATE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.METAL_GRATE_SLAB, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.METAL_GRATE_STAIRS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.METAL_GRATE_WALL, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.METAL_GRATE_TRAPDOOR, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.METAL_MESH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.METAL_MESH_SLAB, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.METAL_MESH_STAIRS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.METAL_MESH_WALL, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.METAL_MESH_TRAPDOOR, RenderLayer.getCutout());
     }
 }
