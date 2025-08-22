@@ -22,8 +22,8 @@ public class AITExtrasClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         blockEntityRendererRegister();
-        BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.SEAL_BLOCK, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.SEAL_SMALL_BLOCK, RenderLayer.getCutout());
+        resourcepackRegister();
+        BlockRenderLayerMapRegister();
     }
 
 
@@ -52,14 +52,26 @@ public class AITExtrasClient implements ClientModInitializer {
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.CANDLE_STAND_SINGLE_BLOCK_ENTITY_TYPE, CandleStandSingleRenderer::new);
 
 
-        // Register builtin resourcepacks
-        FabricLoader.getInstance().getModContainer("ait-extras").ifPresent(modContainer -> {
-            ResourceManagerHelper.registerBuiltinResourcePack(id("logo"), modContainer, ResourcePackActivationType.DEFAULT_ENABLED);
-            ResourceManagerHelper.registerBuiltinResourcePack(id("darkgui"), modContainer, ResourcePackActivationType.NORMAL);
-            ResourceManagerHelper.registerBuiltinResourcePack(id("lowresitems"), modContainer, ResourcePackActivationType.NORMAL);
-            ResourceManagerHelper.registerBuiltinResourcePack(id("controllabels"), modContainer, ResourcePackActivationType.NORMAL);
-        });
+    }
 
+    public static void resourcepackRegister() {
+
+        // Register builtin resourcepacks
+        FabricLoader.getInstance().
+
+                getModContainer("ait-extras").
+
+                ifPresent(modContainer ->
+
+                {
+                    ResourceManagerHelper.registerBuiltinResourcePack(id("logo"), modContainer, ResourcePackActivationType.DEFAULT_ENABLED);
+                    ResourceManagerHelper.registerBuiltinResourcePack(id("darkgui"), modContainer, ResourcePackActivationType.NORMAL);
+                    ResourceManagerHelper.registerBuiltinResourcePack(id("lowresitems"), modContainer, ResourcePackActivationType.NORMAL);
+                    ResourceManagerHelper.registerBuiltinResourcePack(id("controllabels"), modContainer, ResourcePackActivationType.NORMAL);
+                });
+    }
+
+    public static void BlockRenderLayerMapRegister() {
         BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.METAL_GRATE, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.METAL_GRATE_SLAB, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.METAL_GRATE_STAIRS, RenderLayer.getCutout());
@@ -70,5 +82,7 @@ public class AITExtrasClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.METAL_MESH_STAIRS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.METAL_MESH_WALL, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.METAL_MESH_TRAPDOOR, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.SEAL_BLOCK, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.SEAL_SMALL_BLOCK, RenderLayer.getCutout());
     }
 }
