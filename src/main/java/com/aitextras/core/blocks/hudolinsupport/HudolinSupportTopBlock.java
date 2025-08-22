@@ -24,7 +24,7 @@ public class HudolinSupportTopBlock extends BlockWithEntity implements BlockEnti
     public static final int MAX_ROTATION_INDEX = RotationPropertyHelper.getMax();
     private static final int MAX_ROTATIONS = MAX_ROTATION_INDEX + 1;
     public static final IntProperty ROTATION = Properties.ROTATION;
-    protected static final VoxelShape SHAPE = Block.createCuboidShape(4.0, 0.0, 4.0, 12.0, 8.0, 12.0);
+    protected static final VoxelShape SHAPE = Block.createCuboidShape(3, 0, 3, 13, 10, 13);
 
     public HudolinSupportTopBlock(Settings settings) {
         super(settings);
