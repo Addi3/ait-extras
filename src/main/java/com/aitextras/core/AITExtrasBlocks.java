@@ -2,7 +2,9 @@ package com.aitextras.core;
 
 import com.aitextras.core.blocks.*;
 import com.aitextras.core.blocks.hudolinsupport.HudolinSupportBaseBlock;
+import com.aitextras.core.blocks.hudolinsupport.HudolinSupportPillarsBlock;
 import com.aitextras.core.blocks.hudolinsupport.HudolinSupportTopBlock;
+import com.aitextras.core.blocks.hudolinsupport.HumanSupportPillarsBlock;
 import dev.amble.lib.block.ABlockSettings;
 import dev.amble.lib.container.impl.BlockContainer;
 import dev.amble.lib.datagen.util.AutomaticModel;
@@ -45,6 +47,18 @@ public class AITExtrasBlocks extends BlockContainer {
     @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
     @NoEnglish
     public static final Block HUDOLIN_SUPPORT_TOP_BLOCK = new HudolinSupportTopBlock(ABlockSettings.create()
+            .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).nonOpaque().requiresTool()
+            .strength(1.5F, 6.0F).pistonBehavior(PistonBehavior.IGNORE).sounds(BlockSoundGroup.METAL));
+
+    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
+    @NoEnglish
+    public static final Block HUDOLIN_SUPPORT_PILLARS_BLOCK = new HudolinSupportPillarsBlock(ABlockSettings.create()
+            .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).nonOpaque().requiresTool()
+            .strength(1.5F, 6.0F).pistonBehavior(PistonBehavior.IGNORE).sounds(BlockSoundGroup.METAL));
+
+    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
+    @NoEnglish
+    public static final Block HUMAN_SUPPORT_PILLARS_BLOCK = new HumanSupportPillarsBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).nonOpaque().requiresTool()
             .strength(1.5F, 6.0F).pistonBehavior(PistonBehavior.IGNORE).sounds(BlockSoundGroup.METAL));
 

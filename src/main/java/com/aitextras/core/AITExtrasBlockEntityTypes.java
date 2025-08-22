@@ -3,7 +3,9 @@ package com.aitextras.core;
 
 import com.aitextras.core.blockentities.*;
 import com.aitextras.core.blockentities.hudolinsupport.HudolinSupportBaseBlockEntity;
+import com.aitextras.core.blockentities.hudolinsupport.HudolinSupportPillarsBlockEntity;
 import com.aitextras.core.blockentities.hudolinsupport.HudolinSupportTopBlockEntity;
+import com.aitextras.core.blockentities.hudolinsupport.HumanSupportPillarsBlockEntity;
 import dev.amble.lib.container.impl.BlockEntityContainer;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 
@@ -68,6 +70,12 @@ public class AITExtrasBlockEntityTypes implements BlockEntityContainer{
 
     public static BlockEntityType<HudolinSupportTopBlockEntity> HUDOLIN_SUPPORT_TOP_BLOCK_ENTITY_TYPE = FabricBlockEntityTypeBuilder
             .create(HudolinSupportTopBlockEntity::new, AITExtrasBlocks.HUDOLIN_SUPPORT_TOP_BLOCK).build();
+
+    public static BlockEntityType<HudolinSupportPillarsBlockEntity> HUDOLIN_SUPPORT_PILLARS_BLOCK_ENTITY_TYPE = FabricBlockEntityTypeBuilder
+            .create(HudolinSupportPillarsBlockEntity::new, AITExtrasBlocks.HUDOLIN_SUPPORT_PILLARS_BLOCK).build();
+
+    public static BlockEntityType<HumanSupportPillarsBlockEntity> HUMAN_SUPPORT_PILLARS_BLOCK_ENTITY_TYPE = FabricBlockEntityTypeBuilder
+            .create(HumanSupportPillarsBlockEntity::new, AITExtrasBlocks.HUMAN_SUPPORT_PILLARS_BLOCK).build();
 
     public static BlockEntityType<CandleStandSingleBlockEntity> CANDLE_STAND_SINGLE_BLOCK_ENTITY_TYPE = FabricBlockEntityTypeBuilder
             .create(CandleStandSingleBlockEntity::new, AITExtrasBlocks.CANDLE_STAND_SINGLE_BLOCK).build();

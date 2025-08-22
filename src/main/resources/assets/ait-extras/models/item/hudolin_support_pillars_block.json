@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "ait-extras:item/hudolin_support_pillars_item"
+  }
+}

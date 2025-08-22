@@ -558,6 +558,27 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                             .pattern("MM")
                             .input('M', AITExtrasItems.METAL_GRATE_ITEM)
                             .criterion(hasItem(AITExtrasItems.METAL_GRATE_ITEM), conditionsFromItem(AITExtrasItems.METAL_GRATE_ITEM)));
+
+
+            provider.addShapedRecipe(
+                    ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.HUDOLIN_SUPPORT_PILLARS_BLOCK, 1)
+                            .group("hudolin")
+                            .pattern("YZY")
+                            .pattern("Y Y")
+                            .input('Z', AITExtrasItems.ZIRCONIUM_INGOT)
+                            .input('Y', AITExtrasBlocks.HUDOLIN_SUPPORT_TOP_BLOCK)
+                            .criterion(hasItem(AITExtrasItems.ZIRCONIUM_INGOT), conditionsFromItem(AITExtrasItems.ZIRCONIUM_INGOT))
+                            .criterion(hasItem(AITExtrasBlocks.HUDOLIN_SUPPORT_TOP_BLOCK), conditionsFromItem(AITExtrasBlocks.HUDOLIN_SUPPORT_TOP_BLOCK)));
+
+
+            provider.addShapelessRecipe(ShapelessRecipeJsonBuilder
+                    .create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.HUMAN_SUPPORT_PILLARS_BLOCK, 1)
+                    .group("hudolin")
+                    .input(Blocks.OCHRE_FROGLIGHT)
+                    .input(AITExtrasBlocks.HUDOLIN_SUPPORT_PILLARS_BLOCK)
+                    .criterion(hasItem(Blocks.OCHRE_FROGLIGHT), conditionsFromItem(Blocks.OCHRE_FROGLIGHT))
+                    .criterion(hasItem(AITExtrasBlocks.HUDOLIN_SUPPORT_PILLARS_BLOCK), conditionsFromItem(AITExtrasBlocks.HUDOLIN_SUPPORT_PILLARS_BLOCK)));
+
             provider.addStonecutting(AITBlocks.COMPACT_ZEITON, AITExtrasBlocks.POLISHED_COMPACT_ZEITON,1);
 
             provider.addStonecutting(AITExtrasBlocks.POLISHED_COMPACT_ZEITON, AITExtrasBlocks.COMPACT_ZEITON_BRICKS, 1);
@@ -695,6 +716,8 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasBlocks.CRYSTAL_MASTER_BLOCK, "Roof Crystal (Master)");
                     provider.addTranslation(AITExtrasBlocks.HUDOLIN_SUPPORT_BASE_BLOCK, "Hudolin Support (Base)");
                     provider.addTranslation(AITExtrasBlocks.HUDOLIN_SUPPORT_TOP_BLOCK, "Hudolin Support (Top)");
+                    provider.addTranslation(AITExtrasBlocks.HUDOLIN_SUPPORT_PILLARS_BLOCK, "Hudolin Support (Pillars)");
+                    provider.addTranslation(AITExtrasBlocks.HUMAN_SUPPORT_PILLARS_BLOCK, "Hudolin Support (Human Nature Pillars)");
                     provider.addTranslation(AITExtrasBlocks.POLISHED_COMPACT_ZEITON, "Polished Compact Zeiton");
                     provider.addTranslation(AITExtrasBlocks.POLISHED_COMPACT_ZEITON_SLAB, "Polished Compact Zeiton Slab");
                     provider.addTranslation(AITExtrasBlocks.POLISHED_COMPACT_ZEITON_STAIRS, "Polished Compact Zeiton Stairs");

@@ -3,7 +3,9 @@ package com.aitextras.client;
 
 import com.aitextras.client.renderers.decor.*;
 import com.aitextras.client.renderers.decor.hudolinsupport.HudolinSupportBaseRenderer;
+import com.aitextras.client.renderers.decor.hudolinsupport.HudolinSupportPillarsRenderer;
 import com.aitextras.client.renderers.decor.hudolinsupport.HudolinSupportTopRenderer;
+import com.aitextras.client.renderers.decor.hudolinsupport.HumanSupportPillarsRenderer;
 import com.aitextras.client.renderers.monitors.ExtrasMonitorRenderer;
 import com.aitextras.client.renderers.monitors.ExtrasScreenMonitorRenderer;
 import com.aitextras.core.AITExtrasBlockEntityTypes;
@@ -47,6 +49,8 @@ public class AITExtrasClient implements ClientModInitializer {
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.CRYSTAL_MASTER_BLOCK_ENTITY_TYPE, CrystalMasterRenderer::new);
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.HUDOLIN_SUPPORT_BASE_BLOCK_ENTITY_TYPE, HudolinSupportBaseRenderer::new);
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.HUDOLIN_SUPPORT_TOP_BLOCK_ENTITY_TYPE, HudolinSupportTopRenderer::new);
+        BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.HUDOLIN_SUPPORT_PILLARS_BLOCK_ENTITY_TYPE, HudolinSupportPillarsRenderer::new);
+        BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.HUMAN_SUPPORT_PILLARS_BLOCK_ENTITY_TYPE, HumanSupportPillarsRenderer::new);
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.CANDLE_STAND_LARGE_BLOCK_ENTITY_TYPE, CandleStandLargeRenderer::new);
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.CANDLE_STAND_SMALL_BLOCK_ENTITY_TYPE, CandleStandSmallRenderer::new);
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.CANDLE_STAND_SINGLE_BLOCK_ENTITY_TYPE, CandleStandSingleRenderer::new);
