@@ -68,7 +68,7 @@ public class AITExtrasItems extends ItemContainer {
     @NoEnglish
     public static final Item METAL_GRATE_ITEM = new Item(new AItemSettings().group(AITExtrasItemGroups.MAIN));
 
-    @AutomaticModel
+
     @NoEnglish
     public static final Item FEZ_HAT = new RenderableArmorItem(ArmorMaterials.LEATHER, ArmorItem.Type.HELMET,
             new AItemSettings().group(AITExtrasItemGroups.COSMETICS).maxCount(1), true);
