@@ -12,6 +12,6 @@ public final class AITExtrasItemGroups implements ItemGroupContainer {
             .build();
 
     public static final AItemGroup COSMETICS = AItemGroup.builder(AITExtras.id("item_group_cosmetics"))
-            .icon(() -> new ItemStack(AITExtrasItems.FEZ_HAT.asItem()))
+            .icon(() -> new ItemStack(AITExtrasItems.BLACK_FEZ_HAT.asItem()))
             .build();
 }

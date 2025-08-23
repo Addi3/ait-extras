@@ -1,5 +1,6 @@
 package com.aitextras.datagen;
 
+import com.aitextras.AITExtras;
 import com.aitextras.core.AITExtrasBlocks;
 import com.aitextras.core.AITExtrasItemGroups;
 import com.aitextras.core.AITExtrasItems;
@@ -24,8 +25,7 @@ import net.minecraft.registry.RegistryBuilder;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.ItemTags;
 
-import static net.minecraft.data.server.recipe.RecipeProvider.conditionsFromItem;
-import static net.minecraft.data.server.recipe.RecipeProvider.hasItem;
+import static net.minecraft.data.server.recipe.RecipeProvider.*;
 
 public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
     @Override
@@ -580,18 +580,148 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(AITExtrasBlocks.HUDOLIN_SUPPORT_PILLARS_BLOCK), conditionsFromItem(AITExtrasBlocks.HUDOLIN_SUPPORT_PILLARS_BLOCK)));
 
 
-
-
             provider.addShapedRecipe(
-                    ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AITExtrasItems.FEZ_HAT, 1)
+                    ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AITExtrasItems.WHITE_FEZ_HAT, 1)
                             .group("fez")
                             .pattern("RRR")
                             .pattern(" S ")
                             .pattern("R R")
-                            .input('R', Blocks.RED_WOOL)
+                            .input('R', Blocks.WHITE_WOOL)
                             .input('S', Items.STRING)
-                            .criterion(hasItem(Blocks.RED_WOOL), conditionsFromItem(Blocks.RED_WOOL))
+                            .criterion(hasItem(Blocks.WHITE_WOOL), conditionsFromItem(Blocks.WHITE_WOOL))
                             .criterion(hasItem(Items.STRING), conditionsFromItem(Items.STRING)));
+
+            provider.addShapelessRecipe(ShapelessRecipeJsonBuilder
+                    .create(RecipeCategory.MISC, AITExtrasItems.BLACK_FEZ_HAT, 1)
+                    .group("fez")
+                    .input(AITExtrasItems.WHITE_FEZ_HAT)
+                    .input(Items.BLACK_DYE)
+                    .criterion(hasItem(AITExtrasItems.WHITE_FEZ_HAT), conditionsFromItem(AITExtrasItems.WHITE_FEZ_HAT))
+                    .criterion(hasItem(Items.BLACK_DYE), conditionsFromItem(Items.BLACK_DYE)));
+
+            provider.addShapelessRecipe(ShapelessRecipeJsonBuilder
+                    .create(RecipeCategory.MISC, AITExtrasItems.BLUE_FEZ_HAT, 1)
+                    .group("fez")
+                    .input(AITExtrasItems.WHITE_FEZ_HAT)
+                    .input(Items.BLUE_DYE)
+                    .criterion(hasItem(AITExtrasItems.WHITE_FEZ_HAT), conditionsFromItem(AITExtrasItems.WHITE_FEZ_HAT))
+                    .criterion(hasItem(Items.BLUE_DYE), conditionsFromItem(Items.BLUE_DYE)));
+
+            provider.addShapelessRecipe(ShapelessRecipeJsonBuilder
+                    .create(RecipeCategory.MISC, AITExtrasItems.BROWN_FEZ_HAT, 1)
+                    .group("fez")
+                    .input(AITExtrasItems.WHITE_FEZ_HAT)
+                    .input(Items.BROWN_DYE)
+                    .criterion(hasItem(AITExtrasItems.WHITE_FEZ_HAT), conditionsFromItem(AITExtrasItems.WHITE_FEZ_HAT))
+                    .criterion(hasItem(Items.BROWN_DYE), conditionsFromItem(Items.BROWN_DYE)));
+
+            provider.addShapelessRecipe(ShapelessRecipeJsonBuilder
+                    .create(RecipeCategory.MISC, AITExtrasItems.CYAN_FEZ_HAT, 1)
+                    .group("fez")
+                    .input(AITExtrasItems.WHITE_FEZ_HAT)
+                    .input(Items.CYAN_DYE)
+                    .criterion(hasItem(AITExtrasItems.WHITE_FEZ_HAT), conditionsFromItem(AITExtrasItems.WHITE_FEZ_HAT))
+                    .criterion(hasItem(Items.CYAN_DYE), conditionsFromItem(Items.CYAN_DYE)));
+
+            provider.addShapelessRecipe(ShapelessRecipeJsonBuilder
+                    .create(RecipeCategory.MISC, AITExtrasItems.GRAY_FEZ_HAT, 1)
+                    .group("fez")
+                    .input(AITExtrasItems.WHITE_FEZ_HAT)
+                    .input(Items.GRAY_DYE)
+                    .criterion(hasItem(AITExtrasItems.WHITE_FEZ_HAT), conditionsFromItem(AITExtrasItems.WHITE_FEZ_HAT))
+                    .criterion(hasItem(Items.GRAY_DYE), conditionsFromItem(Items.GRAY_DYE)));
+
+            provider.addShapelessRecipe(ShapelessRecipeJsonBuilder
+                    .create(RecipeCategory.MISC, AITExtrasItems.GREEN_FEZ_HAT, 1)
+                    .group("fez")
+                    .input(AITExtrasItems.WHITE_FEZ_HAT)
+                    .input(Items.GREEN_DYE)
+                    .criterion(hasItem(AITExtrasItems.WHITE_FEZ_HAT), conditionsFromItem(AITExtrasItems.WHITE_FEZ_HAT))
+                    .criterion(hasItem(Items.GREEN_DYE), conditionsFromItem(Items.GREEN_DYE)));
+
+            provider.addShapelessRecipe(ShapelessRecipeJsonBuilder
+                    .create(RecipeCategory.MISC, AITExtrasItems.LIGHT_BLUE_FEZ_HAT, 1)
+                    .group("fez")
+                    .input(AITExtrasItems.WHITE_FEZ_HAT)
+                    .input(Items.LIGHT_BLUE_DYE)
+                    .criterion(hasItem(AITExtrasItems.WHITE_FEZ_HAT), conditionsFromItem(AITExtrasItems.WHITE_FEZ_HAT))
+                    .criterion(hasItem(Items.LIGHT_BLUE_DYE), conditionsFromItem(Items.LIGHT_BLUE_DYE)));
+
+            provider.addShapelessRecipe(ShapelessRecipeJsonBuilder
+                    .create(RecipeCategory.MISC, AITExtrasItems.LIGHT_GRAY_FEZ_HAT, 1)
+                    .group("fez")
+                    .input(AITExtrasItems.WHITE_FEZ_HAT)
+                    .input(Items.LIGHT_GRAY_DYE)
+                    .criterion(hasItem(AITExtrasItems.WHITE_FEZ_HAT), conditionsFromItem(AITExtrasItems.WHITE_FEZ_HAT))
+                    .criterion(hasItem(Items.LIGHT_GRAY_DYE), conditionsFromItem(Items.LIGHT_GRAY_DYE)));
+
+            provider.addShapelessRecipe(ShapelessRecipeJsonBuilder
+                    .create(RecipeCategory.MISC, AITExtrasItems.LIME_FEZ_HAT, 1)
+                    .group("fez")
+                    .input(AITExtrasItems.WHITE_FEZ_HAT)
+                    .input(Items.LIME_DYE)
+                    .criterion(hasItem(AITExtrasItems.WHITE_FEZ_HAT), conditionsFromItem(AITExtrasItems.WHITE_FEZ_HAT))
+                    .criterion(hasItem(Items.LIME_DYE), conditionsFromItem(Items.LIME_DYE)));
+
+            provider.addShapelessRecipe(ShapelessRecipeJsonBuilder
+                    .create(RecipeCategory.MISC, AITExtrasItems.MAGENTA_FEZ_HAT, 1)
+                    .group("fez")
+                    .input(AITExtrasItems.WHITE_FEZ_HAT)
+                    .input(Items.MAGENTA_DYE)
+                    .criterion(hasItem(AITExtrasItems.WHITE_FEZ_HAT), conditionsFromItem(AITExtrasItems.WHITE_FEZ_HAT))
+                    .criterion(hasItem(Items.MAGENTA_DYE), conditionsFromItem(Items.MAGENTA_DYE)));
+
+            provider.addShapelessRecipe(ShapelessRecipeJsonBuilder
+                    .create(RecipeCategory.MISC, AITExtrasItems.ORANGE_FEZ_HAT, 1)
+                    .group("fez")
+                    .input(AITExtrasItems.WHITE_FEZ_HAT)
+                    .input(Items.ORANGE_DYE)
+                    .criterion(hasItem(AITExtrasItems.WHITE_FEZ_HAT), conditionsFromItem(AITExtrasItems.WHITE_FEZ_HAT))
+                    .criterion(hasItem(Items.ORANGE_DYE), conditionsFromItem(Items.ORANGE_DYE)));
+
+            provider.addShapelessRecipe(ShapelessRecipeJsonBuilder
+                    .create(RecipeCategory.MISC, AITExtrasItems.PINK_FEZ_HAT, 1)
+                    .group("fez")
+                    .input(AITExtrasItems.WHITE_FEZ_HAT)
+                    .input(Items.PINK_DYE)
+                    .criterion(hasItem(AITExtrasItems.WHITE_FEZ_HAT), conditionsFromItem(AITExtrasItems.WHITE_FEZ_HAT))
+                    .criterion(hasItem(Items.PINK_DYE), conditionsFromItem(Items.PINK_DYE)));
+
+            provider.addShapelessRecipe(ShapelessRecipeJsonBuilder
+                    .create(RecipeCategory.MISC, AITExtrasItems.PURPLE_FEZ_HAT, 1)
+                    .group("fez")
+                    .input(AITExtrasItems.WHITE_FEZ_HAT)
+                    .input(Items.PURPLE_DYE)
+                    .criterion(hasItem(AITExtrasItems.WHITE_FEZ_HAT), conditionsFromItem(AITExtrasItems.WHITE_FEZ_HAT))
+                    .criterion(hasItem(Items.PURPLE_DYE), conditionsFromItem(Items.PURPLE_DYE)));
+
+            provider.addShapelessRecipe(ShapelessRecipeJsonBuilder
+                    .create(RecipeCategory.MISC, AITExtrasItems.RED_FEZ_HAT, 1)
+                    .group("fez")
+                    .input(AITExtrasItems.WHITE_FEZ_HAT)
+                    .input(Items.RED_DYE)
+                    .criterion(hasItem(AITExtrasItems.WHITE_FEZ_HAT), conditionsFromItem(AITExtrasItems.WHITE_FEZ_HAT))
+                    .criterion(hasItem(Items.RED_DYE), conditionsFromItem(Items.RED_DYE)));
+
+            provider.addShapelessRecipe(ShapelessRecipeJsonBuilder
+                    .create(RecipeCategory.MISC, AITExtrasItems.YELLOW_FEZ_HAT, 1)
+                    .group("fez")
+                    .input(AITExtrasItems.WHITE_FEZ_HAT)
+                    .input(Items.YELLOW_DYE)
+                    .criterion(hasItem(AITExtrasItems.WHITE_FEZ_HAT), conditionsFromItem(AITExtrasItems.WHITE_FEZ_HAT))
+                    .criterion(hasItem(Items.YELLOW_DYE), conditionsFromItem(Items.YELLOW_DYE)));
+
+            provider.addShapelessRecipe(
+                    ShapelessRecipeJsonBuilder
+                            .create(RecipeCategory.MISC, AITExtrasItems.WHITE_FEZ_HAT, 1)
+                            .group("fez")
+                            .input(AITExtrasItemTagProvider.AITExtrasTags.Items.FEZ_HATS)
+                            .input(Items.WHITE_DYE)
+                            .criterion("has_fez", conditionsFromTag(AITExtrasItemTagProvider.AITExtrasTags.Items.FEZ_HATS))
+                            .criterion(hasItem(Items.WHITE_DYE), conditionsFromItem(Items.WHITE_DYE)),
+                    AITExtras.id("white_fez_from_dye")
+            );
+
 
             provider.addStonecutting(AITBlocks.COMPACT_ZEITON, AITExtrasBlocks.POLISHED_COMPACT_ZEITON,1);
 
@@ -772,9 +902,25 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasItems.ATOMIC_SHREDDER, "Atomic Shredder");
                     provider.addTranslation(AITExtrasItems.METAL_GRATE_ITEM, "Metal Grate");
                     provider.addTranslation(AITExtrasItems.METAL_MESH_ITEM, "Metal Mesh");
-                    provider.addTranslation(AITExtrasItems.FEZ_HAT, "Fez");
+                    provider.addTranslation(AITExtrasItems.WHITE_FEZ_HAT, "White Fez");
+                    provider.addTranslation(AITExtrasItems.BLACK_FEZ_HAT, "Black Fez");
+                    provider.addTranslation(AITExtrasItems.BLUE_FEZ_HAT, "Blue Fez");
+                    provider.addTranslation(AITExtrasItems.BROWN_FEZ_HAT, "Brown Fez");
+                    provider.addTranslation(AITExtrasItems.CYAN_FEZ_HAT, "Cyan Fez");
+                    provider.addTranslation(AITExtrasItems.GRAY_FEZ_HAT, "Gray Fez");
+                    provider.addTranslation(AITExtrasItems.GREEN_FEZ_HAT, "Green Fez");
+                    provider.addTranslation(AITExtrasItems.LIGHT_BLUE_FEZ_HAT, "Light Blue Fez");
+                    provider.addTranslation(AITExtrasItems.LIGHT_GRAY_FEZ_HAT, "Light Gray Fez");
+                    provider.addTranslation(AITExtrasItems.LIME_FEZ_HAT, "Lime Fez");
+                    provider.addTranslation(AITExtrasItems.MAGENTA_FEZ_HAT, "Magenta Fez");
+                    provider.addTranslation(AITExtrasItems.ORANGE_FEZ_HAT, "Orange Fez");
+                    provider.addTranslation(AITExtrasItems.PINK_FEZ_HAT, "Pink Fez");
+                    provider.addTranslation(AITExtrasItems.PURPLE_FEZ_HAT, "Purple Fez");
+                    provider.addTranslation(AITExtrasItems.RED_FEZ_HAT, "Red Fez");
+                    provider.addTranslation(AITExtrasItems.YELLOW_FEZ_HAT, "Yellow Fez");
 
-                    // Tabs / ToolTips
+
+            // Tabs / ToolTips
                      provider.addTranslation(AITExtrasItemGroups.MAIN, "AIT Extras");
                      provider.addTranslation("itemGroup.ait-extras.item_group_cosmetics", "AIT Extras: Cosmetics");
                      provider.addTranslation("block.tooltip.seal", "If you SHIFT when placing this, it will become a CENTERED version!!");
