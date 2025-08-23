@@ -8,6 +8,9 @@ import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.state.StateManager;
+import net.minecraft.state.property.BooleanProperty;
+import net.minecraft.state.property.DirectionProperty;
+import net.minecraft.state.property.Properties;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Formatting;
@@ -25,8 +28,24 @@ import java.util.List;
 import static com.aitextras.core.blocks.SealBlock.CENTERED;
 
 public class SealSmallBlock extends HorizontalFacingBlock {
+    public static final BooleanProperty CENTERED = BooleanProperty.of("centered");
+    public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
 
-    protected static final VoxelShape SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 16.0, 16.0);
+    protected static final VoxelShape SHAPE_NORTH = Block.createCuboidShape(
+            0, 0, 0, 16, 16, 2
+    );
+
+    protected static final VoxelShape SHAPE_SOUTH = Block.createCuboidShape(
+            0, 0, 14, 16, 16, 16
+    );
+
+    protected static final VoxelShape SHAPE_EAST = Block.createCuboidShape(
+            14, 0, 0, 16, 16, 16
+    );
+
+    protected static final VoxelShape SHAPE_WEST = Block.createCuboidShape(
+            0, 0, 0, 2, 16, 16
+    );
 
 
     public SealSmallBlock(Settings settings) {
@@ -36,20 +55,20 @@ public class SealSmallBlock extends HorizontalFacingBlock {
                 .with(CENTERED, false));
     }
 
-
     @Override
-    public VoxelShape getCollisionShape(BlockState state, net.minecraft.world.BlockView world, BlockPos pos, ShapeContext context) {
-        return SHAPE;
+    public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+        return switch (state.get(FACING)) {
+            case NORTH -> SHAPE_NORTH;
+            case SOUTH -> SHAPE_SOUTH;
+            case EAST -> SHAPE_EAST;
+            case WEST -> SHAPE_WEST;
+            default -> SHAPE_NORTH;
+        };
     }
 
     @Override
-    public VoxelShape getOutlineShape(BlockState state, net.minecraft.world.BlockView world, BlockPos pos, ShapeContext context) {
-        return SHAPE;
-    }
-
-    @Override
-    public boolean isShapeFullCube(BlockState state, net.minecraft.world.BlockView world, BlockPos pos) {
-        return false;
+    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+        return getCollisionShape(state, world, pos, context);
     }
 
 
