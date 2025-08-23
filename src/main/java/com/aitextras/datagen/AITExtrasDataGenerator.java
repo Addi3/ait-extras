@@ -579,6 +579,20 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(Blocks.OCHRE_FROGLIGHT), conditionsFromItem(Blocks.OCHRE_FROGLIGHT))
                     .criterion(hasItem(AITExtrasBlocks.HUDOLIN_SUPPORT_PILLARS_BLOCK), conditionsFromItem(AITExtrasBlocks.HUDOLIN_SUPPORT_PILLARS_BLOCK)));
 
+
+
+
+            provider.addShapedRecipe(
+                    ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AITExtrasItems.FEZ_HAT, 1)
+                            .group("fez")
+                            .pattern("RRR")
+                            .pattern(" S ")
+                            .pattern("R R")
+                            .input('R', Blocks.RED_WOOL)
+                            .input('S', Items.STRING)
+                            .criterion(hasItem(Blocks.RED_WOOL), conditionsFromItem(Blocks.RED_WOOL))
+                            .criterion(hasItem(Items.STRING), conditionsFromItem(Items.STRING)));
+
             provider.addStonecutting(AITBlocks.COMPACT_ZEITON, AITExtrasBlocks.POLISHED_COMPACT_ZEITON,1);
 
             provider.addStonecutting(AITExtrasBlocks.POLISHED_COMPACT_ZEITON, AITExtrasBlocks.COMPACT_ZEITON_BRICKS, 1);
@@ -737,11 +751,11 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasBlocks.METAL_GRATE_STAIRS, "Metal Grate Stairs");
                     provider.addTranslation(AITExtrasBlocks.METAL_GRATE_WALL, "Metal Grate Wall");
                     provider.addTranslation(AITExtrasBlocks.METAL_GRATE_TRAPDOOR, "Metal Grate Trapdoor");
-            provider.addTranslation(AITExtrasBlocks.METAL_MESH, "Metal Mesh");
-            provider.addTranslation(AITExtrasBlocks.METAL_MESH_SLAB, "Metal Mesh Slab");
-            provider.addTranslation(AITExtrasBlocks.METAL_MESH_STAIRS, "Metal Mesh Stairs");
-            provider.addTranslation(AITExtrasBlocks.METAL_MESH_WALL, "Metal Mesh Wall");
-            provider.addTranslation(AITExtrasBlocks.METAL_MESH_TRAPDOOR, "Metal Mesh Trapdoor");
+                    provider.addTranslation(AITExtrasBlocks.METAL_MESH, "Metal Mesh");
+                    provider.addTranslation(AITExtrasBlocks.METAL_MESH_SLAB, "Metal Mesh Slab");
+                    provider.addTranslation(AITExtrasBlocks.METAL_MESH_STAIRS, "Metal Mesh Stairs");
+                    provider.addTranslation(AITExtrasBlocks.METAL_MESH_WALL, "Metal Mesh Wall");
+                    provider.addTranslation(AITExtrasBlocks.METAL_MESH_TRAPDOOR, "Metal Mesh Trapdoor");
 
                     // Items
                     provider.addTranslation(AITExtrasItems.MERCURY_DISC.getTranslationKey() + ".desc", "Nitrogenez - Mercury");
@@ -758,21 +772,23 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasItems.ATOMIC_SHREDDER, "Atomic Shredder");
                     provider.addTranslation(AITExtrasItems.METAL_GRATE_ITEM, "Metal Grate");
                     provider.addTranslation(AITExtrasItems.METAL_MESH_ITEM, "Metal Mesh");
+                    provider.addTranslation(AITExtrasItems.FEZ_HAT, "Fez");
 
                     // Tabs / ToolTips
                      provider.addTranslation(AITExtrasItemGroups.MAIN, "AIT Extras");
-            provider.addTranslation("block.tooltip.seal", "If you SHIFT when placing this, it will become a CENTERED version!!");
-            provider.addTranslation("block.tooltip.hatstandacacia", "Variant: Acacia");
-            provider.addTranslation("block.tooltip.hatstandbamboo", "Variant: Bamboo");
-            provider.addTranslation("block.tooltip.hatstandbirch", "Variant: Birch");
-            provider.addTranslation("block.tooltip.hatstandcherry", "Variant: Cherry");
-            provider.addTranslation("block.tooltip.hatstandcrimson", "Variant: Crimson");
-            provider.addTranslation("block.tooltip.hatstanddarkoak", "Variant: Dark Oak");
-            provider.addTranslation("block.tooltip.hatstandjungle", "Variant: Jungle");
-            provider.addTranslation("block.tooltip.hatstandmangrove", "Variant: Mangrove");
-            provider.addTranslation("block.tooltip.hatstandoak", "Variant: Oak");
-            provider.addTranslation("block.tooltip.hatstandspruce", "Variant: Spruce");
-            provider.addTranslation("block.tooltip.hatstandwarped", "Variant: Warped");
+                     provider.addTranslation("itemGroup.ait-extras.item_group_cosmetics", "AIT Extras: Cosmetics");
+                     provider.addTranslation("block.tooltip.seal", "If you SHIFT when placing this, it will become a CENTERED version!!");
+                     provider.addTranslation("block.tooltip.hatstandacacia", "Variant: Acacia");
+                     provider.addTranslation("block.tooltip.hatstandbamboo", "Variant: Bamboo");
+                     provider.addTranslation("block.tooltip.hatstandbirch", "Variant: Birch");
+                     provider.addTranslation("block.tooltip.hatstandcherry", "Variant: Cherry");
+                     provider.addTranslation("block.tooltip.hatstandcrimson", "Variant: Crimson");
+                     provider.addTranslation("block.tooltip.hatstanddarkoak", "Variant: Dark Oak");
+                     provider.addTranslation("block.tooltip.hatstandjungle", "Variant: Jungle");
+                     provider.addTranslation("block.tooltip.hatstandmangrove", "Variant: Mangrove");
+                     provider.addTranslation("block.tooltip.hatstandoak", "Variant: Oak");
+                     provider.addTranslation("block.tooltip.hatstandspruce", "Variant: Spruce");
+                     provider.addTranslation("block.tooltip.hatstandwarped", "Variant: Warped");
 
                     //SFXS
                     provider.addTranslation("animation.ait-extras.classic_mat", "Classic (Alt)");
