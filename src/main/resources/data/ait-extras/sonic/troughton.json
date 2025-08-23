@@ -1,0 +1,13 @@
+{
+  "id": "ait-extras:troughton",
+  "models": {
+    "inactive": "ait-extras:item/sonic/classic/troughton/inactive",
+    "interaction": "ait-extras:item/sonic/classic/troughton/interaction",
+    "overload": "ait-extras:item/sonic/classic/troughton/overload",
+    "scanning": "ait-extras:item/sonic/classic/troughton/scanning",
+    "tardis": "ait-extras:item/sonic/classic/troughton/tardis"
+  },
+  "loyalty": {
+    "type": "OWNER"
+  }
+}

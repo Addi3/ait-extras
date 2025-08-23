@@ -1,0 +1,13 @@
+{
+  "id": "ait-extras:baker",
+  "models": {
+    "inactive": "ait-extras:item/sonic/classic/baker/inactive",
+    "interaction": "ait-extras:item/sonic/classic/baker/active",
+    "overload": "ait-extras:item/sonic/classic/baker/active",
+    "scanning": "ait-extras:item/sonic/classic/baker/active",
+    "tardis": "ait-extras:item/sonic/classic/baker/active"
+  },
+  "loyalty": {
+    "type": "OWNER"
+  }
+}

@@ -693,6 +693,11 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation("sonic.ait-extras.fob_pink", "Fob (Pink)");
                     provider.addTranslation("sonic.ait-extras.fob_red", "Fob (Red)");
                     provider.addTranslation("sonic.ait-extras.fob_yellow", "Fob (Yellow)");
+                    provider.addTranslation("sonic.ait-extras.pertwee", "Pertwee");
+                    provider.addTranslation("sonic.ait-extras.baker", "Baker");
+                    provider.addTranslation("sonic.ait-extras.retro", "Retro");
+                    provider.addTranslation("sonic.ait-extras.mcgann", "McGann");
+                    provider.addTranslation("sonic.ait-extras.troughton", "Troughton");
 
                     // Blocks
                     provider.addTranslation(AITExtrasBlocks.EXTRAS_MONITOR_BLOCK, "Victorian Monitor");
@@ -761,18 +766,18 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
 
                     // Tabs / ToolTips
                      provider.addTranslation(AITExtrasItemGroups.MAIN, "AIT Extras");
-            provider.addTranslation("block.tooltip.seal", "If you SHIFT when placing this, it will become a CENTERED version!!");
-            provider.addTranslation("block.tooltip.hatstandacacia", "Variant: Acacia");
-            provider.addTranslation("block.tooltip.hatstandbamboo", "Variant: Bamboo");
-            provider.addTranslation("block.tooltip.hatstandbirch", "Variant: Birch");
-            provider.addTranslation("block.tooltip.hatstandcherry", "Variant: Cherry");
-            provider.addTranslation("block.tooltip.hatstandcrimson", "Variant: Crimson");
-            provider.addTranslation("block.tooltip.hatstanddarkoak", "Variant: Dark Oak");
-            provider.addTranslation("block.tooltip.hatstandjungle", "Variant: Jungle");
-            provider.addTranslation("block.tooltip.hatstandmangrove", "Variant: Mangrove");
-            provider.addTranslation("block.tooltip.hatstandoak", "Variant: Oak");
-            provider.addTranslation("block.tooltip.hatstandspruce", "Variant: Spruce");
-            provider.addTranslation("block.tooltip.hatstandwarped", "Variant: Warped");
+                     provider.addTranslation("block.tooltip.seal", "If you SHIFT when placing this, it will become a CENTERED version!!");
+                     provider.addTranslation("block.tooltip.hatstandacacia", "Variant: Acacia");
+                     provider.addTranslation("block.tooltip.hatstandbamboo", "Variant: Bamboo");
+                     provider.addTranslation("block.tooltip.hatstandbirch", "Variant: Birch");
+                     provider.addTranslation("block.tooltip.hatstandcherry", "Variant: Cherry");
+                     provider.addTranslation("block.tooltip.hatstandcrimson", "Variant: Crimson");
+                     provider.addTranslation("block.tooltip.hatstanddarkoak", "Variant: Dark Oak");
+                     provider.addTranslation("block.tooltip.hatstandjungle", "Variant: Jungle");
+                     provider.addTranslation("block.tooltip.hatstandmangrove", "Variant: Mangrove");
+                     provider.addTranslation("block.tooltip.hatstandoak", "Variant: Oak");
+                     provider.addTranslation("block.tooltip.hatstandspruce", "Variant: Spruce");
+                     provider.addTranslation("block.tooltip.hatstandwarped", "Variant: Warped");
 
                     //SFXS
                     provider.addTranslation("animation.ait-extras.classic_mat", "Classic (Alt)");
