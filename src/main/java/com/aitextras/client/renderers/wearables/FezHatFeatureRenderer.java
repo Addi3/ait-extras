@@ -75,9 +75,6 @@ public class FezHatFeatureRenderer <T extends LivingEntity, M extends BipedEntit
         if (!(stack.isOf(AITExtrasItems.WHITE_FEZ_HAT) || stack.isOf(AITExtrasItems.BLACK_FEZ_HAT) || stack.isOf(AITExtrasItems.BLUE_FEZ_HAT) || stack.isOf(AITExtrasItems.BROWN_FEZ_HAT) || stack.isOf(AITExtrasItems.CYAN_FEZ_HAT) || stack.isOf(AITExtrasItems.GRAY_FEZ_HAT) || stack.isOf(AITExtrasItems.GREEN_FEZ_HAT) || stack.isOf(AITExtrasItems.LIGHT_BLUE_FEZ_HAT) || stack.isOf(AITExtrasItems.LIGHT_GRAY_FEZ_HAT) || stack.isOf(AITExtrasItems.LIME_FEZ_HAT) || stack.isOf(AITExtrasItems.MAGENTA_FEZ_HAT) || stack.isOf(AITExtrasItems.ORANGE_FEZ_HAT) || stack.isOf(AITExtrasItems.PINK_FEZ_HAT) || stack.isOf(AITExtrasItems.PURPLE_FEZ_HAT) || stack.isOf(AITExtrasItems.RED_FEZ_HAT) || stack.isOf(AITExtrasItems.YELLOW_FEZ_HAT)))
             return;
 
-        if (!(livingEntity instanceof AbstractClientPlayerEntity))
-            return;
-
         matrixStack.push();
 
         this.model.hat.copyTransform(this.getContextModel().head);

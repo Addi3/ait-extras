@@ -49,8 +49,6 @@ public class ScarfFeatureRenderer<T extends LivingEntity, M extends BipedEntityM
         if (!(stack.isOf(AITExtrasItems.SCARF)|| stack.isOf(AITExtrasItems.SCARF_RED) || stack.isOf(AITExtrasItems.SCARF_RAINBOW)))
         return;
 
-        if (!(livingEntity instanceof AbstractClientPlayerEntity))
-            return;
 
         matrixStack.push();
 
