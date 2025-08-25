@@ -28,7 +28,7 @@ public class AITExtrasItemTagProvider extends FabricTagProvider<Item> {
                 .add(AITExtrasItems.MERCURY_DISC);
         // .add(AITExtrasItems.RECALL_DISC);
 
-        // Add all fez hats to custom tag
+
         getOrCreateTagBuilder(AITExtrasTags.Items.FEZ_HATS)
                 .add(AITExtrasItems.BLACK_FEZ_HAT)
                 .add(AITExtrasItems.BLUE_FEZ_HAT)
@@ -46,6 +46,11 @@ public class AITExtrasItemTagProvider extends FabricTagProvider<Item> {
                 .add(AITExtrasItems.RED_FEZ_HAT)
                 .add(AITExtrasItems.WHITE_FEZ_HAT)
                 .add(AITExtrasItems.YELLOW_FEZ_HAT);
+
+        getOrCreateTagBuilder(AITExtrasTags.Items.SCARFS)
+                .add(AITExtrasItems.SCARF)
+                .add(AITExtrasItems.SCARF_RED)
+                .add(AITExtrasItems.SCARF_RAINBOW);
     }
 
     public static class AITExtrasTags {
@@ -53,6 +58,10 @@ public class AITExtrasItemTagProvider extends FabricTagProvider<Item> {
             public static final TagKey<Item> FEZ_HATS = TagKey.of(
                     RegistryKeys.ITEM,
                     id("fez_hats")
+            );
+            public static final TagKey<Item> SCARFS = TagKey.of(
+                    RegistryKeys.ITEM,
+                    id("scarfs")
             );
         }
     }

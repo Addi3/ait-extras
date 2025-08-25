@@ -19,11 +19,13 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
+import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryBuilder;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.ItemTags;
+import net.minecraft.registry.tag.TagKey;
 
 import static net.minecraft.data.server.recipe.RecipeProvider.*;
 
@@ -723,6 +725,49 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
             );
 
 
+            provider.addShapedRecipe(
+                    ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AITExtrasItems.SCARF, 1)
+                            .group("scarf")
+                            .pattern("WWW")
+                            .pattern("W W")
+                            .pattern("W W")
+                            .input('W', ItemTags.WOOL)
+                            .criterion("has_wool", conditionsFromTag(ItemTags.WOOL)));
+
+            provider.addShapelessRecipe(
+                    ShapelessRecipeJsonBuilder
+                            .create(RecipeCategory.MISC, AITExtrasItems.SCARF, 1)
+                            .group("scarf")
+                            .input(AITExtrasItemTagProvider.AITExtrasTags.Items.SCARFS)
+                            .input(Items.WHITE_DYE)
+                            .criterion("has_scaft", conditionsFromTag(AITExtrasItemTagProvider.AITExtrasTags.Items.SCARFS))
+                            .criterion(hasItem(Items.WHITE_DYE), conditionsFromItem(Items.WHITE_DYE)),
+                    AITExtras.id("scarf_from_dye")
+            );
+
+            provider.addShapelessRecipe(ShapelessRecipeJsonBuilder
+                    .create(RecipeCategory.MISC, AITExtrasItems.SCARF_RED, 1)
+                    .group("scarf")
+                    .input(AITExtrasItems.SCARF)
+                    .input(Items.RED_DYE)
+                    .input(Items.PURPLE_DYE)
+                    .criterion(hasItem(AITExtrasItems.SCARF), conditionsFromItem(AITExtrasItems.SCARF))
+                    .criterion(hasItem(Items.RED_DYE), conditionsFromItem(Items.RED_DYE))
+                    .criterion(hasItem(Items.PURPLE_DYE), conditionsFromItem(Items.PURPLE_DYE)));
+
+            provider.addShapelessRecipe(ShapelessRecipeJsonBuilder
+                    .create(RecipeCategory.MISC, AITExtrasItems.SCARF_RAINBOW, 1)
+                    .group("scarf")
+                    .input(AITExtrasItems.SCARF)
+                    .input(Items.ORANGE_DYE)
+                    .input(Items.CYAN_DYE)
+                    .input(Items.MAGENTA_DYE)
+                    .criterion(hasItem(AITExtrasItems.SCARF), conditionsFromItem(AITExtrasItems.SCARF))
+                    .criterion(hasItem(Items.ORANGE_DYE), conditionsFromItem(Items.ORANGE_DYE))
+                    .criterion(hasItem(Items.CYAN_DYE), conditionsFromItem(Items.CYAN_DYE))
+                    .criterion(hasItem(Items.MAGENTA_DYE), conditionsFromItem(Items.MAGENTA_DYE)));
+
+
             provider.addStonecutting(AITBlocks.COMPACT_ZEITON, AITExtrasBlocks.POLISHED_COMPACT_ZEITON,1);
 
             provider.addStonecutting(AITExtrasBlocks.POLISHED_COMPACT_ZEITON, AITExtrasBlocks.COMPACT_ZEITON_BRICKS, 1);
@@ -918,6 +963,9 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasItems.PURPLE_FEZ_HAT, "Purple Fez");
                     provider.addTranslation(AITExtrasItems.RED_FEZ_HAT, "Red Fez");
                     provider.addTranslation(AITExtrasItems.YELLOW_FEZ_HAT, "Yellow Fez");
+                    provider.addTranslation(AITExtrasItems.SCARF, "Scarf");
+                    provider.addTranslation(AITExtrasItems.SCARF_RED, "Red Scarf");
+                    provider.addTranslation(AITExtrasItems.SCARF_RAINBOW, "Rainbow Scarf");
 
 
             // Tabs / ToolTips

@@ -127,4 +127,17 @@ public class AITExtrasItems extends ItemContainer {
     @NoEnglish
     public static final Item YELLOW_FEZ_HAT = new RenderableArmorItem(ArmorMaterials.LEATHER, ArmorItem.Type.HELMET,
             new AItemSettings().group(AITExtrasItemGroups.COSMETICS).maxCount(1), true);
+
+    @AutomaticModel
+    @NoEnglish
+    public static final Item SCARF = new RenderableArmorItem(ArmorMaterials.LEATHER, ArmorItem.Type.CHESTPLATE,
+            new AItemSettings().group(AITExtrasItemGroups.COSMETICS).maxCount(1), true);
+    @AutomaticModel
+    @NoEnglish
+    public static final Item SCARF_RED = new RenderableArmorItem(ArmorMaterials.LEATHER, ArmorItem.Type.CHESTPLATE,
+            new AItemSettings().group(AITExtrasItemGroups.COSMETICS).maxCount(1), true);
+    @AutomaticModel
+    @NoEnglish
+    public static final Item SCARF_RAINBOW = new RenderableArmorItem(ArmorMaterials.LEATHER, ArmorItem.Type.CHESTPLATE,
+            new AItemSettings().group(AITExtrasItemGroups.COSMETICS).maxCount(1), true);
 }

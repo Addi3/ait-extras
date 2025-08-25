@@ -1,6 +1,7 @@
 package com.aitextras.mixin.client.rendering;
 
 import com.aitextras.client.renderers.wearables.FezHatFeatureRenderer;
+import com.aitextras.client.renderers.wearables.ScarfFeatureRenderer;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.LivingEntityRenderer;
@@ -29,6 +30,7 @@ public abstract class PlayerEntityRendererMixin
 
 
         this.addFeature(new FezHatFeatureRenderer<>(renderer, ctx.getModelLoader()));
+        this.addFeature(new ScarfFeatureRenderer<>(renderer, ctx.getModelLoader()));
     }
 
 

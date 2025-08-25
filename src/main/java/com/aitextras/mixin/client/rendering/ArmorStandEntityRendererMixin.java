@@ -1,6 +1,7 @@
 package com.aitextras.mixin.client.rendering;
 
 import com.aitextras.client.renderers.wearables.FezHatFeatureRenderer;
+import com.aitextras.client.renderers.wearables.ScarfFeatureRenderer;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -29,5 +30,6 @@ public abstract class ArmorStandEntityRendererMixin
         ArmorStandEntityRenderer renderer = (ArmorStandEntityRenderer) (Object) this;
 
         this.addFeature(new FezHatFeatureRenderer<>(renderer, ctx.getModelLoader()));
+        this.addFeature(new ScarfFeatureRenderer<>(renderer, ctx.getModelLoader()));
     }
 }
