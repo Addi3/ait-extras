@@ -1,6 +1,6 @@
 package com.aitextras.client.models.decor;
 
-import com.aitextras.client.animation.RoofCrystalAnimation;
+
 import com.aitextras.core.blockentities.CrystalBlockEntity;
 import dev.amble.ait.core.tardis.handler.travel.TravelHandlerBase;
 import net.minecraft.client.model.*;
@@ -10,7 +10,7 @@ import net.minecraft.client.render.entity.model.SinglePartEntityModel;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.Entity;
 
-public class CrystalModel extends MovingCrystalModel {
+public class CrystalModel extends SinglePartEntityModel {
     private final ModelPart root;
     public CrystalModel(ModelPart root) {
         this.root = root.getChild("rotor_jodie");
@@ -206,27 +206,10 @@ public class CrystalModel extends MovingCrystalModel {
     @Override
     public void setAngles(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
     }
-
-
-    @Override
-    public Animation getAnimationForState(TravelHandlerBase.State state) {
-        return switch(state) {
-            case DEMAT -> RoofCrystalAnimation.FLIGHT;
-            case MAT -> RoofCrystalAnimation.FLIGHT;
-            case FLIGHT -> RoofCrystalAnimation.FLIGHT;
-            default -> Animation.Builder.create(0).build();
-        };
-    }
     
     @Override
     public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, float red, float green, float blue, float alpha) {
         root.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
-
-    }
-
-    @Override
-    public void renderWithAnimations(CrystalBlockEntity console, ModelPart root, MatrixStack matrices, VertexConsumer vertices, int light, int overlay, float red, float green, float blue, float pAlpha) {
-        super.renderWithAnimations(console, root, matrices, vertices, light, overlay, red, green, blue, pAlpha);
     }
 
     @Override

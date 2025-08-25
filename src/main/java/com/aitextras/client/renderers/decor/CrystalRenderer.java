@@ -36,20 +36,18 @@ public class CrystalRenderer<T extends CrystalBlockEntity> implements BlockEntit
                        VertexConsumerProvider vertexConsumers, int light, int overlay) {
         if (!entity.isLinked() && TardisServerWorld.isTardisDimension(entity.getWorld())) return;
         CrystalModel model = new CrystalModel(CrystalModel.getTexturedModelData().createModel());
-        Tardis tardis = entity.tardis().get();
-        TravelHandler travel = tardis.travel();
-        boolean hasPower = tardis.fuel().hasPower();
-        model.animateBlockEntity(entity, travel.getState(), hasPower);
         matrices.push();
         matrices.scale(1f, 1f, 1f);
         matrices.translate(0.5f, 1.5f, 0.5f);
         matrices.multiply(RotationAxis.POSITIVE_Z.rotationDegrees(180));
 
-        model.renderWithAnimations(entity, model.getPart(), matrices, vertexConsumers.getBuffer(RenderLayer.getEntityTranslucent(CRYSTAL_TEXTURE)),
-                light, overlay, 1.0F, 1.0F, 1.0F, 1.0F);
+        this.crystalModel.render(matrices,
+                vertexConsumers.getBuffer(RenderLayer.getEntityTranslucent(CRYSTAL_TEXTURE)), light, overlay, 1.0F,
+                1.0F, 1.0F, 1.0F);
+        this.crystalModel.render(matrices,
+                vertexConsumers.getBuffer(RenderLayer.getEntityTranslucentEmissive(EMISSIVE_CRYSTAL_TEXTURE)),
+                0xF000F00, overlay, 1.0F, 1.0F, 1.0F, 1.0F);
 
-        model.renderWithAnimations(entity, model.getPart(), matrices, vertexConsumers.getBuffer(RenderLayer.getEntityCutoutNoCullZOffset(EMISSIVE_CRYSTAL_TEXTURE)),
-                0xf000f0, overlay, 1.0F, 1.0F, 1.0F, 1.0F);
 
         matrices.pop();
 

@@ -12,7 +12,6 @@ import dev.amble.lib.datagen.util.NoBlockDrop;
 import dev.amble.lib.datagen.util.NoEnglish;
 import dev.amble.lib.datagen.util.PickaxeMineable;
 import dev.amble.lib.item.AItemSettings;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.Instrument;
 import net.minecraft.block.piston.PistonBehavior;
@@ -343,4 +342,8 @@ public class AITExtrasBlocks extends BlockContainer {
                     .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)),
             BlockSetType.OAK
     );
+
+    @AutomaticModel
+    @NoEnglish
+    public static final Block RETEP = new RetepBlock(ABlockSettings.create());
    }
