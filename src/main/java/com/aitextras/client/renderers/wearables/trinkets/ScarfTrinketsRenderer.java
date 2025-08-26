@@ -1,30 +1,63 @@
 package com.aitextras.client.renderers.wearables.trinkets;
 
-
+import com.aitextras.AITExtras;
+import com.aitextras.client.models.wearables.ScarfModel;
+import com.aitextras.core.AITExtrasItems;
 import dev.emi.trinkets.api.SlotReference;
 import dev.emi.trinkets.api.client.TrinketRenderer;
-import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.OverlayTexture;
+import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.VertexConsumerProvider;
+import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.client.render.entity.model.EntityModel;
-import net.minecraft.client.render.model.json.ModelTransformationMode;
+import net.minecraft.client.render.item.ItemRenderer;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.math.RotationAxis;
+import net.minecraft.util.Identifier;
 
-public abstract class ScarfTrinketsRenderer implements TrinketRenderer {
+public class ScarfTrinketsRenderer implements TrinketRenderer {
+
+    private final ScarfModel scarfModel = new ScarfModel(ScarfModel.getTexturedModelData().createModel());
+
+    private static final Identifier SCARF = new Identifier(AITExtras.MOD_ID,
+            "textures/wearables/scarf.png");
+    private static final Identifier SCARF_RED = new Identifier(AITExtras.MOD_ID,
+            "textures/wearables/scarf_red.png");
+    private static final Identifier SCARF_RAINBOW = new Identifier(AITExtras.MOD_ID,
+            "textures/wearables/scarf_rainbow.png");
 
     @Override
-    public void render(ItemStack stack, SlotReference slotReference, EntityModel<? extends LivingEntity> contextModel, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light,
-                       LivingEntity player, float limbAngle, float limbDistance, float tickDelta, float animationProgress, float headYaw, float headPitch) {
+    public void render(ItemStack stack, SlotReference slotReference, EntityModel<? extends LivingEntity> contextModel,
+                       MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light,
+                       LivingEntity entity, float limbAngle, float limbDistance, float tickDelta,
+                       float animationProgress, float headYaw, float headPitch) {
+
         matrices.push();
 
-        matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(180));
-        matrices.translate(0, -0.2, -0.25);
+        if (contextModel instanceof BipedEntityModel<?> biped) {
+            biped.body.rotate(matrices);
+        }
+        matrices.translate(0D, 0.0D, 0.0D);
 
 
-        MinecraftClient.getInstance().getItemRenderer().renderItem(stack, ModelTransformationMode.FIXED, light, OverlayTexture.DEFAULT_UV, matrices, vertexConsumers, player.getWorld(), 0);
+        Identifier texture;
+        if (stack.getItem() == AITExtrasItems.SCARF_RED) {
+            texture = SCARF_RED;
+        } else if (stack.getItem() ==  AITExtrasItems.SCARF_RAINBOW) {
+            texture = SCARF_RAINBOW;
+        } else {
+            texture = SCARF;
+        }
+
+        VertexConsumer vertexConsumer = ItemRenderer.getItemGlintConsumer(
+                vertexConsumers,
+                scarfModel.getLayer(texture),
+                false,
+                stack.hasGlint()
+        );
+
+        scarfModel.render(matrices, vertexConsumer, light, OverlayTexture.DEFAULT_UV, 1.0F, 1.0F, 1.0F, 1.0F);
         matrices.pop();
     }
 }

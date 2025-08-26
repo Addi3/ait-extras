@@ -1,14 +1,10 @@
 package com.aitextras.client.renderers.wearables;
 
 import com.aitextras.AITExtras;
-import com.aitextras.client.models.wearables.FezHatModel;
 import com.aitextras.client.models.wearables.ScarfModel;
 import com.aitextras.core.AITExtrasItems;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.fabricmc.fabric.api.client.rendering.v1.ArmorRenderer;
-import net.minecraft.client.model.Model;
-import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumer;
@@ -21,13 +17,11 @@ import net.minecraft.client.render.entity.model.ModelWithArms;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.decoration.ArmorStandEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.RotationAxis;
 
 @Environment(value = EnvType.CLIENT)
-public class ScarfFeatureRenderer<T extends LivingEntity, M extends BipedEntityModel<T> & ModelWithArms>
+public class ScarfFeatureRenderer <T extends LivingEntity, M extends BipedEntityModel<T> & ModelWithArms>
         extends
         FeatureRenderer<T, M>{
 

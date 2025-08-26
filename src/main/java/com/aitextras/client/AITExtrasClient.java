@@ -8,12 +8,11 @@ import com.aitextras.client.renderers.decor.hudolinsupport.HudolinSupportTopRend
 import com.aitextras.client.renderers.decor.hudolinsupport.HumanSupportPillarsRenderer;
 import com.aitextras.client.renderers.monitors.ExtrasMonitorRenderer;
 import com.aitextras.client.renderers.monitors.ExtrasScreenMonitorRenderer;
-import com.aitextras.client.renderers.wearables.ScarfFeatureRenderer;
+import com.aitextras.client.renderers.wearables.trinkets.FezHatTrinketsRenderer;
 import com.aitextras.client.renderers.wearables.trinkets.ScarfTrinketsRenderer;
 import com.aitextras.core.AITExtrasBlockEntityTypes;
 import com.aitextras.core.AITExtrasBlocks;
 import com.aitextras.core.AITExtrasItems;
-import dev.emi.trinkets.api.client.TrinketRenderer;
 import dev.emi.trinkets.api.client.TrinketRendererRegistry;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
@@ -63,8 +62,25 @@ public class AITExtrasClient implements ClientModInitializer {
     }
 
     public static void trinketsRegister() {
-        TrinketRendererRegistry.registerRenderer(AITExtrasItems.SCARF, new ScarfTrinketsRenderer() {
-        });
+        TrinketRendererRegistry.registerRenderer(AITExtrasItems.SCARF, new ScarfTrinketsRenderer());
+        TrinketRendererRegistry.registerRenderer(AITExtrasItems.SCARF_RED, new ScarfTrinketsRenderer());
+        TrinketRendererRegistry.registerRenderer(AITExtrasItems.SCARF_RAINBOW, new ScarfTrinketsRenderer());
+        TrinketRendererRegistry.registerRenderer(AITExtrasItems.WHITE_FEZ_HAT, new FezHatTrinketsRenderer());
+        TrinketRendererRegistry.registerRenderer(AITExtrasItems.BLACK_FEZ_HAT, new FezHatTrinketsRenderer());
+        TrinketRendererRegistry.registerRenderer(AITExtrasItems.BROWN_FEZ_HAT, new FezHatTrinketsRenderer());
+        TrinketRendererRegistry.registerRenderer(AITExtrasItems.CYAN_FEZ_HAT, new FezHatTrinketsRenderer());
+        TrinketRendererRegistry.registerRenderer(AITExtrasItems.GRAY_FEZ_HAT, new FezHatTrinketsRenderer());
+        TrinketRendererRegistry.registerRenderer(AITExtrasItems.GREEN_FEZ_HAT, new FezHatTrinketsRenderer());
+        TrinketRendererRegistry.registerRenderer(AITExtrasItems.LIGHT_BLUE_FEZ_HAT, new FezHatTrinketsRenderer());
+        TrinketRendererRegistry.registerRenderer(AITExtrasItems.LIGHT_GRAY_FEZ_HAT, new FezHatTrinketsRenderer());
+        TrinketRendererRegistry.registerRenderer(AITExtrasItems.LIME_FEZ_HAT, new FezHatTrinketsRenderer());
+        TrinketRendererRegistry.registerRenderer(AITExtrasItems.MAGENTA_FEZ_HAT, new FezHatTrinketsRenderer());
+        TrinketRendererRegistry.registerRenderer(AITExtrasItems.ORANGE_FEZ_HAT, new FezHatTrinketsRenderer());
+        TrinketRendererRegistry.registerRenderer(AITExtrasItems.PINK_FEZ_HAT, new FezHatTrinketsRenderer());
+        TrinketRendererRegistry.registerRenderer(AITExtrasItems.PURPLE_FEZ_HAT, new FezHatTrinketsRenderer());
+        TrinketRendererRegistry.registerRenderer(AITExtrasItems.RED_FEZ_HAT, new FezHatTrinketsRenderer());
+        TrinketRendererRegistry.registerRenderer(AITExtrasItems.YELLOW_FEZ_HAT, new FezHatTrinketsRenderer());
+        TrinketRendererRegistry.registerRenderer(AITExtrasItems.BLUE_FEZ_HAT, new FezHatTrinketsRenderer());
     }
 
     public static void resourcepackRegister() {
