@@ -768,6 +768,17 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(Items.MAGENTA_DYE), conditionsFromItem(Items.MAGENTA_DYE)));
 
 
+            provider.addShapedRecipe(
+                    ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AITExtrasItems.TENNANT_COAT, 1)
+                            .group("coat")
+                            .pattern("LCL")
+                            .pattern("L L")
+                            .input('L', Items.LEATHER)
+                            .input('C', Items.LEATHER_CHESTPLATE)
+                            .criterion(hasItem(Items.LEATHER), conditionsFromItem(Items.LEATHER))
+                            .criterion(hasItem(Items.LEATHER_CHESTPLATE), conditionsFromItem(Items.LEATHER_CHESTPLATE)));
+
+
             provider.addStonecutting(AITBlocks.COMPACT_ZEITON, AITExtrasBlocks.POLISHED_COMPACT_ZEITON,1);
 
             provider.addStonecutting(AITExtrasBlocks.POLISHED_COMPACT_ZEITON, AITExtrasBlocks.COMPACT_ZEITON_BRICKS, 1);
@@ -966,6 +977,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasItems.SCARF, "Scarf");
                     provider.addTranslation(AITExtrasItems.SCARF_RED, "Red Scarf");
                     provider.addTranslation(AITExtrasItems.SCARF_RAINBOW, "Rainbow Scarf");
+                    provider.addTranslation(AITExtrasItems.TENNANT_COAT, "Tennant Coat");
 
 
             // Tabs / ToolTips

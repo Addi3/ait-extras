@@ -20,6 +20,7 @@ import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.EntityPose;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.decoration.ArmorStandEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.RotationAxis;
@@ -76,8 +77,15 @@ public class FezHatFeatureRenderer <T extends LivingEntity, M extends BipedEntit
         if (!(stack.isOf(AITExtrasItems.WHITE_FEZ_HAT) || stack.isOf(AITExtrasItems.BLACK_FEZ_HAT) || stack.isOf(AITExtrasItems.BLUE_FEZ_HAT) || stack.isOf(AITExtrasItems.BROWN_FEZ_HAT) || stack.isOf(AITExtrasItems.CYAN_FEZ_HAT) || stack.isOf(AITExtrasItems.GRAY_FEZ_HAT) || stack.isOf(AITExtrasItems.GREEN_FEZ_HAT) || stack.isOf(AITExtrasItems.LIGHT_BLUE_FEZ_HAT) || stack.isOf(AITExtrasItems.LIGHT_GRAY_FEZ_HAT) || stack.isOf(AITExtrasItems.LIME_FEZ_HAT) || stack.isOf(AITExtrasItems.MAGENTA_FEZ_HAT) || stack.isOf(AITExtrasItems.ORANGE_FEZ_HAT) || stack.isOf(AITExtrasItems.PINK_FEZ_HAT) || stack.isOf(AITExtrasItems.PURPLE_FEZ_HAT) || stack.isOf(AITExtrasItems.RED_FEZ_HAT) || stack.isOf(AITExtrasItems.YELLOW_FEZ_HAT)))
             return;
 
+
         matrixStack.push();
 
+
+        if (livingEntity instanceof ArmorStandEntity) {
+
+            matrixStack.translate(-0.05F, 0.05f, 0.0F);
+
+        }
         this.model.hat.copyTransform(this.getContextModel().head);
         this.model.setAngles(livingEntity, f, g, j, k, l);
 

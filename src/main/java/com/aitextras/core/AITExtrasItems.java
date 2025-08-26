@@ -140,4 +140,9 @@ public class AITExtrasItems extends ItemContainer {
     @NoEnglish
     public static final Item SCARF_RAINBOW = new RenderableArmorItem(ArmorMaterials.LEATHER, ArmorItem.Type.CHESTPLATE,
             new AItemSettings().group(AITExtrasItemGroups.COSMETICS).maxCount(1), true);
+
+    @AutomaticModel
+    @NoEnglish
+    public static final Item TENNANT_COAT = new RenderableArmorItem(ArmorMaterials.LEATHER, ArmorItem.Type.CHESTPLATE,
+            new AItemSettings().group(AITExtrasItemGroups.COSMETICS).maxCount(1), true);
 }

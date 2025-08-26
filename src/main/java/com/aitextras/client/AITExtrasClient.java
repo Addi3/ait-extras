@@ -8,6 +8,7 @@ import com.aitextras.client.renderers.decor.hudolinsupport.HudolinSupportTopRend
 import com.aitextras.client.renderers.decor.hudolinsupport.HumanSupportPillarsRenderer;
 import com.aitextras.client.renderers.monitors.ExtrasMonitorRenderer;
 import com.aitextras.client.renderers.monitors.ExtrasScreenMonitorRenderer;
+import com.aitextras.client.renderers.wearables.trinkets.CoatTrinketsRenderer;
 import com.aitextras.client.renderers.wearables.trinkets.FezHatTrinketsRenderer;
 import com.aitextras.client.renderers.wearables.trinkets.ScarfTrinketsRenderer;
 import com.aitextras.core.AITExtrasBlockEntityTypes;
@@ -81,6 +82,7 @@ public class AITExtrasClient implements ClientModInitializer {
         TrinketRendererRegistry.registerRenderer(AITExtrasItems.RED_FEZ_HAT, new FezHatTrinketsRenderer());
         TrinketRendererRegistry.registerRenderer(AITExtrasItems.YELLOW_FEZ_HAT, new FezHatTrinketsRenderer());
         TrinketRendererRegistry.registerRenderer(AITExtrasItems.BLUE_FEZ_HAT, new FezHatTrinketsRenderer());
+        TrinketRendererRegistry.registerRenderer(AITExtrasItems.TENNANT_COAT, new CoatTrinketsRenderer());
     }
 
     public static void resourcepackRegister() {
