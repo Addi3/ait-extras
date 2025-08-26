@@ -679,6 +679,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
 
                         //clock
                     provider.addTranslation("exterior.ait-extras.clock", "Clock");
+                    provider.addTranslation("exterior.ait-extras.clock_master", "Clock (Master)");
 
                         //origin
                     provider.addTranslation("exterior.ait-extras.origin", "Origin");
