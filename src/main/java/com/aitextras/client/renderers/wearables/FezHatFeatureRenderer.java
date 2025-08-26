@@ -15,6 +15,7 @@ import net.minecraft.client.render.entity.PlayerEntityRenderer;
 import net.minecraft.client.render.entity.feature.FeatureRenderer;
 import net.minecraft.client.render.entity.feature.FeatureRendererContext;
 import net.minecraft.client.render.entity.model.*;
+import net.minecraft.client.util.ModelIdentifier;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.EntityPose;
 import net.minecraft.entity.EquipmentSlot;
@@ -81,7 +82,6 @@ public class FezHatFeatureRenderer <T extends LivingEntity, M extends BipedEntit
         this.model.setAngles(livingEntity, f, g, j, k, l);
 
         matrixStack.multiply(RotationAxis.NEGATIVE_Z.rotationDegrees(-10));
-
         VertexConsumer vertexConsumer = vertexConsumerProvider.getBuffer(RenderLayer.getEntitySmoothCutout(
                 stack.getItem() == AITExtrasItems.WHITE_FEZ_HAT ? WHITE_FEZ_HAT :
             stack.getItem() == AITExtrasItems.BLACK_FEZ_HAT ? BLACK_FEZ_HAT :

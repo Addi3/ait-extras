@@ -8,8 +8,13 @@ import com.aitextras.client.renderers.decor.hudolinsupport.HudolinSupportTopRend
 import com.aitextras.client.renderers.decor.hudolinsupport.HumanSupportPillarsRenderer;
 import com.aitextras.client.renderers.monitors.ExtrasMonitorRenderer;
 import com.aitextras.client.renderers.monitors.ExtrasScreenMonitorRenderer;
+import com.aitextras.client.renderers.wearables.ScarfFeatureRenderer;
+import com.aitextras.client.renderers.wearables.trinkets.ScarfTrinketsRenderer;
 import com.aitextras.core.AITExtrasBlockEntityTypes;
 import com.aitextras.core.AITExtrasBlocks;
+import com.aitextras.core.AITExtrasItems;
+import dev.emi.trinkets.api.client.TrinketRenderer;
+import dev.emi.trinkets.api.client.TrinketRendererRegistry;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
@@ -25,6 +30,7 @@ public class AITExtrasClient implements ClientModInitializer {
     public void onInitializeClient() {
         blockEntityRendererRegister();
         resourcepackRegister();
+        trinketsRegister();
         BlockRenderLayerMapRegister();
     }
 
@@ -54,8 +60,11 @@ public class AITExtrasClient implements ClientModInitializer {
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.CANDLE_STAND_LARGE_BLOCK_ENTITY_TYPE, CandleStandLargeRenderer::new);
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.CANDLE_STAND_SMALL_BLOCK_ENTITY_TYPE, CandleStandSmallRenderer::new);
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.CANDLE_STAND_SINGLE_BLOCK_ENTITY_TYPE, CandleStandSingleRenderer::new);
+    }
 
-
+    public static void trinketsRegister() {
+        TrinketRendererRegistry.registerRenderer(AITExtrasItems.SCARF, new ScarfTrinketsRenderer() {
+        });
     }
 
     public static void resourcepackRegister() {

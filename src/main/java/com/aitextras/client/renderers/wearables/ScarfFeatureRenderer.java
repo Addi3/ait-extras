@@ -6,6 +6,8 @@ import com.aitextras.client.models.wearables.ScarfModel;
 import com.aitextras.core.AITExtrasItems;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
+import net.fabricmc.fabric.api.client.rendering.v1.ArmorRenderer;
+import net.minecraft.client.model.Model;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.RenderLayer;
@@ -19,6 +21,7 @@ import net.minecraft.client.render.entity.model.ModelWithArms;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.decoration.ArmorStandEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.RotationAxis;
@@ -26,7 +29,7 @@ import net.minecraft.util.math.RotationAxis;
 @Environment(value = EnvType.CLIENT)
 public class ScarfFeatureRenderer<T extends LivingEntity, M extends BipedEntityModel<T> & ModelWithArms>
         extends
-        FeatureRenderer<T, M> {
+        FeatureRenderer<T, M>{
 
     private static final Identifier SCARF = new Identifier(AITExtras.MOD_ID,
             "textures/wearables/scarf.png");
@@ -41,6 +44,8 @@ public class ScarfFeatureRenderer<T extends LivingEntity, M extends BipedEntityM
         this.model = new ScarfModel(ScarfModel.getTexturedModelData().createModel());
     }
 
+
+
     @Override
     public void render(MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i, T livingEntity,
                        float f, float g, float h, float j, float k, float l) {
@@ -48,7 +53,6 @@ public class ScarfFeatureRenderer<T extends LivingEntity, M extends BipedEntityM
 
         if (!(stack.isOf(AITExtrasItems.SCARF)|| stack.isOf(AITExtrasItems.SCARF_RED) || stack.isOf(AITExtrasItems.SCARF_RAINBOW)))
         return;
-
 
         matrixStack.push();
 
