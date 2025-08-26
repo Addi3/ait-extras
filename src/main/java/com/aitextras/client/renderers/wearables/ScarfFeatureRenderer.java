@@ -52,7 +52,7 @@ public class ScarfFeatureRenderer <T extends LivingEntity, M extends BipedEntity
 
         this.model.scarf.copyTransform(this.getContextModel().body);
         this.model.setAngles(livingEntity, f, g, j, k, l);
-        matrixStack.scale(0.2F, 0.2F, 0.2F);
+        matrixStack.scale(1.05F, 1.05F, 1.05F);
 
         VertexConsumer vertexConsumer = vertexConsumerProvider.getBuffer(RenderLayer.getEntitySmoothCutout(
                 stack.getItem() == AITExtrasItems.SCARF ? SCARF :

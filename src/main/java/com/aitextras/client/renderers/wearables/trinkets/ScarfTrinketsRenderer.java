@@ -39,7 +39,7 @@ public class ScarfTrinketsRenderer implements TrinketRenderer {
             biped.body.rotate(matrices);
         }
         matrices.translate(0D, 0.0D, 0.0D);
-
+        matrices.scale(1.05F, 1.05F, 1.05F);
 
         Identifier texture;
         if (stack.getItem() == AITExtrasItems.SCARF_RED) {
