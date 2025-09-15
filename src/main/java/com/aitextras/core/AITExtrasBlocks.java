@@ -346,4 +346,11 @@ public class AITExtrasBlocks extends BlockContainer {
     @AutomaticModel
     @NoEnglish
     public static final Block RETEP = new RetepBlock(ABlockSettings.create());
-   }
+
+    @NoEnglish
+    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
+    public static final Block ARS_EGG_BLOCK = new ArsEggBlock(ABlockSettings.create()
+            .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).nonOpaque().requiresTool()
+            .strength(1.0F, 1.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.SHROOMLIGHT));
+
+}

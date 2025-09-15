@@ -579,6 +579,18 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(Blocks.OCHRE_FROGLIGHT), conditionsFromItem(Blocks.OCHRE_FROGLIGHT))
                     .criterion(hasItem(AITExtrasBlocks.HUDOLIN_SUPPORT_PILLARS_BLOCK), conditionsFromItem(AITExtrasBlocks.HUDOLIN_SUPPORT_PILLARS_BLOCK)));
 
+            provider.addShapedRecipe(
+                    ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.ARS_EGG_BLOCK, 2)
+                            .pattern(" I ")
+                            .pattern("SES")
+                            .pattern("ISI")
+                            .input('I', Items.IRON_INGOT)
+                            .input('E', Items.EGG)
+                            .input('S', Blocks.SEA_LANTERN)
+                            .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+                            .criterion(hasItem(Items.EGG), conditionsFromItem(Items.EGG))
+                            .criterion(hasItem(Blocks.SEA_LANTERN), conditionsFromItem(Blocks.SEA_LANTERN)));
+
             provider.addStonecutting(AITBlocks.COMPACT_ZEITON, AITExtrasBlocks.POLISHED_COMPACT_ZEITON,1);
 
             provider.addStonecutting(AITExtrasBlocks.POLISHED_COMPACT_ZEITON, AITExtrasBlocks.COMPACT_ZEITON_BRICKS, 1);
@@ -743,11 +755,12 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasBlocks.METAL_GRATE_STAIRS, "Metal Grate Stairs");
                     provider.addTranslation(AITExtrasBlocks.METAL_GRATE_WALL, "Metal Grate Wall");
                     provider.addTranslation(AITExtrasBlocks.METAL_GRATE_TRAPDOOR, "Metal Grate Trapdoor");
-            provider.addTranslation(AITExtrasBlocks.METAL_MESH, "Metal Mesh");
-            provider.addTranslation(AITExtrasBlocks.METAL_MESH_SLAB, "Metal Mesh Slab");
-            provider.addTranslation(AITExtrasBlocks.METAL_MESH_STAIRS, "Metal Mesh Stairs");
-            provider.addTranslation(AITExtrasBlocks.METAL_MESH_WALL, "Metal Mesh Wall");
-            provider.addTranslation(AITExtrasBlocks.METAL_MESH_TRAPDOOR, "Metal Mesh Trapdoor");
+                    provider.addTranslation(AITExtrasBlocks.METAL_MESH, "Metal Mesh");
+                    provider.addTranslation(AITExtrasBlocks.METAL_MESH_SLAB, "Metal Mesh Slab");
+                    provider.addTranslation(AITExtrasBlocks.METAL_MESH_STAIRS, "Metal Mesh Stairs");
+                    provider.addTranslation(AITExtrasBlocks.METAL_MESH_WALL, "Metal Mesh Wall");
+                    provider.addTranslation(AITExtrasBlocks.METAL_MESH_TRAPDOOR, "Metal Mesh Trapdoor");
+                    provider.addTranslation(AITExtrasBlocks.ARS_EGG_BLOCK, "ARS Egg");
 
                     // Items
                     provider.addTranslation(AITExtrasItems.MERCURY_DISC.getTranslationKey() + ".desc", "Nitrogenez - Mercury");
@@ -768,6 +781,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     // Tabs / ToolTips
                      provider.addTranslation(AITExtrasItemGroups.MAIN, "AIT Extras");
                      provider.addTranslation("block.tooltip.seal", "If you SHIFT when placing this, it will become a CENTERED version!!");
+                     provider.addTranslation("block.tooltip.ars_egg", "If you RIGHT CLICK the block, it will turn ON and OFF!!");
                      provider.addTranslation("block.tooltip.hatstandacacia", "Variant: Acacia");
                      provider.addTranslation("block.tooltip.hatstandbamboo", "Variant: Bamboo");
                      provider.addTranslation("block.tooltip.hatstandbirch", "Variant: Birch");
@@ -806,6 +820,8 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation("achievement.ait-extras.description.obtain_rice_pudding", "Powerful. Crush the lesser races. Conquer the galaxy. Unimaginable power. Unlimited rice pudding, et cetera, et cetera.");
                     provider.addTranslation("achievement.ait-extras.title.obtain_seal_block", "The Seal of Rassilon!");
                     provider.addTranslation("achievement.ait-extras.description.obtain_seal_block", "Craft the Seal of Rassilon");
+                    provider.addTranslation("achievement.ait-extras.title.obtain_ars_egg_block", "Architectural Reconfiguration System");
+                    provider.addTranslation("achievement.ait-extras.description.obtain_ars_egg_block", "Craft an ARS Egg");
 
 
             return provider;
