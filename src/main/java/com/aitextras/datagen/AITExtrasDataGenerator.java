@@ -125,17 +125,6 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(Items.SPECTRAL_ARROW), conditionsFromItem(Items.SPECTRAL_ARROW))
                     .criterion(hasItem(Items.GOLD_NUGGET), conditionsFromItem(Items.GOLD_NUGGET)));
 
-//            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AITExtrasItems.RECALL_DISC, 1)
-//                    .pattern("SSS")
-//                    .pattern("PWP")
-//                    .pattern("SSS")
-//                    .input('S', AITItems.SUPERHEATED_ZEITON)
-//                    .input('W', AITItems.WAYPOINT_CARTRIDGE)
-//                    .input('P', AITItems.PLASMIC_MATERIAL)
-//                    .criterion(hasItem(AITItems.SUPERHEATED_ZEITON), conditionsFromItem(AITItems.SUPERHEATED_ZEITON))
-//                    .criterion(hasItem(AITItems.WAYPOINT_CARTRIDGE), conditionsFromItem(AITItems.WAYPOINT_CARTRIDGE))
-//                    .criterion(hasItem(AITItems.PLASMIC_MATERIAL), conditionsFromItem(AITItems.PLASMIC_MATERIAL)));
-
             ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, AITExtrasItems.JELLY_BABIES, 1);
             provider.addShapelessRecipe(ShapelessRecipeJsonBuilder
                     .create(RecipeCategory.FOOD, AITExtrasItems.JELLY_BABIES, 4)
@@ -446,6 +435,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                             .criterion(hasItem(AITExtrasItems.ZIRCONIUM_INGOT), conditionsFromItem(AITExtrasItems.ZIRCONIUM_INGOT))
                             .criterion(hasItem(AITExtrasBlocks.CANDLE_STAND_SMALL_BLOCK), conditionsFromItem(AITExtrasBlocks.CANDLE_STAND_SMALL_BLOCK)));
 
+
             provider.addShapedRecipe(
                     ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasItems.ATOMIC_SHREDDER , 1)
                             .pattern("  I")
@@ -591,6 +581,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                             .criterion(hasItem(Items.EGG), conditionsFromItem(Items.EGG))
                             .criterion(hasItem(Blocks.SEA_LANTERN), conditionsFromItem(Blocks.SEA_LANTERN)));
 
+
             provider.addStonecutting(AITBlocks.COMPACT_ZEITON, AITExtrasBlocks.POLISHED_COMPACT_ZEITON,1);
 
             provider.addStonecutting(AITExtrasBlocks.POLISHED_COMPACT_ZEITON, AITExtrasBlocks.COMPACT_ZEITON_BRICKS, 1);
@@ -734,8 +725,6 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasBlocks.CRYSTAL_MASTER_BLOCK, "Roof Crystal (Master)");
                     provider.addTranslation(AITExtrasBlocks.HUDOLIN_SUPPORT_BASE_BLOCK, "Hudolin Support (Base)");
                     provider.addTranslation(AITExtrasBlocks.HUDOLIN_SUPPORT_TOP_BLOCK, "Hudolin Support (Top)");
-                    provider.addTranslation(AITExtrasBlocks.HUDOLIN_SUPPORT_PILLARS_BLOCK, "Hudolin Support (Pillars)");
-                    provider.addTranslation(AITExtrasBlocks.HUMAN_SUPPORT_PILLARS_BLOCK, "Hudolin Support (Human Nature Pillars)");
                     provider.addTranslation(AITExtrasBlocks.POLISHED_COMPACT_ZEITON, "Polished Compact Zeiton");
                     provider.addTranslation(AITExtrasBlocks.POLISHED_COMPACT_ZEITON_SLAB, "Polished Compact Zeiton Slab");
                     provider.addTranslation(AITExtrasBlocks.POLISHED_COMPACT_ZEITON_STAIRS, "Polished Compact Zeiton Stairs");
@@ -750,6 +739,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasBlocks.CANDLE_STAND_LARGE_BLOCK, "Candle Stand (Large)");
                     provider.addTranslation(AITExtrasBlocks.CANDLE_STAND_SINGLE_BLOCK, "Candle Stand (Single)");
                     provider.addTranslation(AITExtrasBlocks.CANDLE_STAND_SMALL_BLOCK, "Candle Stand (Small)");
+
                     provider.addTranslation(AITExtrasBlocks.METAL_GRATE, "Metal Grate");
                     provider.addTranslation(AITExtrasBlocks.METAL_GRATE_SLAB, "Metal Grate Slab");
                     provider.addTranslation(AITExtrasBlocks.METAL_GRATE_STAIRS, "Metal Grate Stairs");
@@ -762,11 +752,10 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasBlocks.METAL_MESH_TRAPDOOR, "Metal Mesh Trapdoor");
                     provider.addTranslation(AITExtrasBlocks.ARS_EGG_BLOCK, "ARS Egg");
 
+
                     // Items
                     provider.addTranslation(AITExtrasItems.MERCURY_DISC.getTranslationKey() + ".desc", "Nitrogenez - Mercury");
                     provider.addTranslation(AITExtrasItems.MERCURY_DISC, "Music Disc");
-//                    provider.addTranslation(AITExtrasItems.RECALL_DISC.getTranslationKey() + ".desc", "Valid Trips: 1");
-//                    provider.addTranslation(AITExtrasItems.RECALL_DISC, "Emergency Recall Disc");
                     provider.addTranslation(AITExtrasItems.JELLY_BABIES, "Jelly Babies");
                     provider.addTranslation(AITExtrasItems.CUSTARD_CREAM, "Custard Cream");
                     provider.addTranslation(AITExtrasItems.RICE_PUDDING, "Rice Pudding");
@@ -774,9 +763,6 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasItems.RAW_ZIRCONIUM, "Raw Zirconium");
                     provider.addTranslation(AITExtrasItems.ZIRCONIUM_INGOT, "Zirconium Ingot");
                     provider.addTranslation(AITExtrasItems.WHISTLE, "Summon Whistle");
-                    provider.addTranslation(AITExtrasItems.ATOMIC_SHREDDER, "Atomic Shredder");
-                    provider.addTranslation(AITExtrasItems.METAL_GRATE_ITEM, "Metal Grate");
-                    provider.addTranslation(AITExtrasItems.METAL_MESH_ITEM, "Metal Mesh");
 
                     // Tabs / ToolTips
                      provider.addTranslation(AITExtrasItemGroups.MAIN, "AIT Extras");

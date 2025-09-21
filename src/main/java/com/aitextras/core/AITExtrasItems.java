@@ -1,13 +1,7 @@
 package com.aitextras.core;
 
 
-import com.aitextras.core.item.AtomicShredderItem;
-import com.aitextras.core.item.RecallDiscItem;
 import com.aitextras.core.item.WhistleItem;
-import com.sun.jna.platform.unix.X11;
-import dev.amble.ait.core.AITItemGroups;
-import dev.amble.ait.core.AITSounds;
-import dev.amble.ait.core.item.RemoteItem;
 import dev.amble.lib.container.impl.ItemContainer;
 import dev.amble.lib.datagen.util.AutomaticModel;
 import dev.amble.lib.datagen.util.NoEnglish;
@@ -53,15 +47,4 @@ public class AITExtrasItems extends ItemContainer {
 
     @NoEnglish
     public static final Item WHISTLE = new WhistleItem(new AItemSettings().group(AITExtrasItemGroups.MAIN));
-
-    @NoEnglish
-    public static final Item ATOMIC_SHREDDER = new AtomicShredderItem(new AItemSettings().group(AITExtrasItemGroups.MAIN));
-
-    @AutomaticModel
-    @NoEnglish
-    public static final Item METAL_MESH_ITEM = new Item(new AItemSettings().group(AITExtrasItemGroups.MAIN));
-
-    @AutomaticModel
-    @NoEnglish
-    public static final Item METAL_GRATE_ITEM = new Item(new AItemSettings().group(AITExtrasItemGroups.MAIN));
 }
