@@ -435,6 +435,153 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                             .criterion(hasItem(AITExtrasItems.ZIRCONIUM_INGOT), conditionsFromItem(AITExtrasItems.ZIRCONIUM_INGOT))
                             .criterion(hasItem(AITExtrasBlocks.CANDLE_STAND_SMALL_BLOCK), conditionsFromItem(AITExtrasBlocks.CANDLE_STAND_SMALL_BLOCK)));
 
+
+            provider.addShapedRecipe(
+                    ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasItems.ATOMIC_SHREDDER , 1)
+                            .pattern("  I")
+                            .pattern("ZAZ")
+                            .pattern("Z  ")
+                            .input('I', Items.IRON_INGOT)
+                            .input('Z', AITExtrasItems.ZIRCONIUM_INGOT)
+                            .input('A', AITItems.ARTRON_COLLECTOR)
+                            .criterion(hasItem(Items.CANDLE), conditionsFromItem(Items.CANDLE))
+                            .criterion(hasItem(AITExtrasItems.ZIRCONIUM_INGOT), conditionsFromItem(AITExtrasItems.ZIRCONIUM_INGOT))
+                            .criterion(hasItem(AITExtrasBlocks.CANDLE_STAND_SMALL_BLOCK), conditionsFromItem(AITExtrasBlocks.CANDLE_STAND_SMALL_BLOCK)));
+
+            provider.addShapedRecipe(
+                    ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasItems.METAL_MESH_ITEM, 6)
+                            .group("metal_mesh")
+                            .pattern("Z Z")
+                            .pattern(" Z ")
+                            .pattern("Z Z")
+                            .input('Z', AITExtrasItems.ZIRCONIUM_INGOT)
+                            .criterion(hasItem(AITExtrasItems.ZIRCONIUM_INGOT), conditionsFromItem(AITExtrasItems.ZIRCONIUM_INGOT)));
+
+            provider.addShapedRecipe(
+                    ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.METAL_MESH, 4)
+                            .group("metal_mesh")
+                            .pattern("MMM")
+                            .pattern("MMM")
+                            .pattern("MMM")
+                            .input('M', AITExtrasItems.METAL_MESH_ITEM)
+                            .criterion(hasItem(AITExtrasItems.METAL_MESH_ITEM), conditionsFromItem(AITExtrasItems.METAL_MESH_ITEM)));
+
+            provider.addShapedRecipe(
+                    ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.METAL_MESH_STAIRS, 4)
+                            .group("metal_mesh")
+                            .pattern("  M")
+                            .pattern(" MM")
+                            .pattern("MMM")
+                            .input('M', AITExtrasItems.METAL_MESH_ITEM)
+                            .criterion(hasItem(AITExtrasItems.METAL_MESH_ITEM), conditionsFromItem(AITExtrasItems.METAL_MESH_ITEM)));
+
+            provider.addShapedRecipe(
+                    ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.METAL_MESH_SLAB, 6)
+                            .group("metal_mesh")
+                            .pattern("MMM")
+                            .input('M', AITExtrasItems.METAL_MESH_ITEM)
+                            .criterion(hasItem(AITExtrasItems.METAL_MESH_ITEM), conditionsFromItem(AITExtrasItems.METAL_MESH_ITEM)));
+
+            provider.addShapedRecipe(
+                    ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.METAL_MESH_WALL, 4)
+                            .group("metal_mesh")
+                            .pattern("MMM")
+                            .pattern("MMM")
+                            .input('M', AITExtrasItems.METAL_MESH_ITEM)
+                            .criterion(hasItem(AITExtrasItems.METAL_MESH_ITEM), conditionsFromItem(AITExtrasItems.METAL_MESH_ITEM)));
+
+            provider.addShapedRecipe(
+                    ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.METAL_MESH_TRAPDOOR, 2)
+                            .group("metal_mesh")
+                            .pattern("MM")
+                            .pattern("MM")
+                            .input('M', AITExtrasItems.METAL_MESH_ITEM)
+                            .criterion(hasItem(AITExtrasItems.METAL_MESH_ITEM), conditionsFromItem(AITExtrasItems.METAL_MESH_ITEM)));
+
+            provider.addShapedRecipe(
+                    ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasItems.METAL_GRATE_ITEM, 6)
+                            .group("metal_grate")
+                            .pattern("M M")
+                            .pattern(" M ")
+                            .pattern("M M")
+                            .input('M', AITExtrasItems.METAL_MESH_ITEM)
+                            .criterion(hasItem(AITExtrasItems.METAL_MESH_ITEM), conditionsFromItem(AITExtrasItems.METAL_MESH_ITEM)));
+
+            provider.addShapedRecipe(
+                    ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.METAL_GRATE, 4)
+                            .group("metal_grate")
+                            .pattern("MMM")
+                            .pattern("MMM")
+                            .pattern("MMM")
+                            .input('M', AITExtrasItems.METAL_GRATE_ITEM)
+                            .criterion(hasItem(AITExtrasItems.METAL_GRATE_ITEM), conditionsFromItem(AITExtrasItems.METAL_GRATE_ITEM)));
+
+            provider.addShapedRecipe(
+                    ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.METAL_GRATE_STAIRS, 4)
+                            .group("metal_grate")
+                            .pattern("  M")
+                            .pattern(" MM")
+                            .pattern("MMM")
+                            .input('M', AITExtrasItems.METAL_GRATE_ITEM)
+                            .criterion(hasItem(AITExtrasItems.METAL_GRATE_ITEM), conditionsFromItem(AITExtrasItems.METAL_GRATE_ITEM)));
+
+            provider.addShapedRecipe(
+                    ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.METAL_GRATE_SLAB, 6)
+                            .group("metal_grate")
+                            .pattern("MMM")
+                            .input('M', AITExtrasItems.METAL_GRATE_ITEM)
+                            .criterion(hasItem(AITExtrasItems.METAL_GRATE_ITEM), conditionsFromItem(AITExtrasItems.METAL_GRATE_ITEM)));
+
+            provider.addShapedRecipe(
+                    ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.METAL_GRATE_WALL, 4)
+                            .group("metal_grate")
+                            .pattern("MMM")
+                            .pattern("MMM")
+                            .input('M', AITExtrasItems.METAL_GRATE_ITEM)
+                            .criterion(hasItem(AITExtrasItems.METAL_GRATE_ITEM), conditionsFromItem(AITExtrasItems.METAL_GRATE_ITEM)));
+
+
+            provider.addShapedRecipe(
+                    ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.METAL_GRATE_TRAPDOOR, 2)
+                            .group("metal_grate")
+                            .pattern("MM")
+                            .pattern("MM")
+                            .input('M', AITExtrasItems.METAL_GRATE_ITEM)
+                            .criterion(hasItem(AITExtrasItems.METAL_GRATE_ITEM), conditionsFromItem(AITExtrasItems.METAL_GRATE_ITEM)));
+
+
+            provider.addShapedRecipe(
+                    ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.HUDOLIN_SUPPORT_PILLARS_BLOCK, 1)
+                            .group("hudolin")
+                            .pattern("YZY")
+                            .pattern("Y Y")
+                            .input('Z', AITExtrasItems.ZIRCONIUM_INGOT)
+                            .input('Y', AITExtrasBlocks.HUDOLIN_SUPPORT_TOP_BLOCK)
+                            .criterion(hasItem(AITExtrasItems.ZIRCONIUM_INGOT), conditionsFromItem(AITExtrasItems.ZIRCONIUM_INGOT))
+                            .criterion(hasItem(AITExtrasBlocks.HUDOLIN_SUPPORT_TOP_BLOCK), conditionsFromItem(AITExtrasBlocks.HUDOLIN_SUPPORT_TOP_BLOCK)));
+
+
+            provider.addShapelessRecipe(ShapelessRecipeJsonBuilder
+                    .create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.HUMAN_SUPPORT_PILLARS_BLOCK, 1)
+                    .group("hudolin")
+                    .input(Blocks.OCHRE_FROGLIGHT)
+                    .input(AITExtrasBlocks.HUDOLIN_SUPPORT_PILLARS_BLOCK)
+                    .criterion(hasItem(Blocks.OCHRE_FROGLIGHT), conditionsFromItem(Blocks.OCHRE_FROGLIGHT))
+                    .criterion(hasItem(AITExtrasBlocks.HUDOLIN_SUPPORT_PILLARS_BLOCK), conditionsFromItem(AITExtrasBlocks.HUDOLIN_SUPPORT_PILLARS_BLOCK)));
+
+            provider.addShapedRecipe(
+                    ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.ARS_EGG_BLOCK, 2)
+                            .pattern(" I ")
+                            .pattern("SES")
+                            .pattern("ISI")
+                            .input('I', Items.IRON_INGOT)
+                            .input('E', Items.EGG)
+                            .input('S', Blocks.SEA_LANTERN)
+                            .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+                            .criterion(hasItem(Items.EGG), conditionsFromItem(Items.EGG))
+                            .criterion(hasItem(Blocks.SEA_LANTERN), conditionsFromItem(Blocks.SEA_LANTERN)));
+
+
             provider.addStonecutting(AITBlocks.COMPACT_ZEITON, AITExtrasBlocks.POLISHED_COMPACT_ZEITON,1);
 
             provider.addStonecutting(AITExtrasBlocks.POLISHED_COMPACT_ZEITON, AITExtrasBlocks.COMPACT_ZEITON_BRICKS, 1);
@@ -593,6 +740,19 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasBlocks.CANDLE_STAND_SINGLE_BLOCK, "Candle Stand (Single)");
                     provider.addTranslation(AITExtrasBlocks.CANDLE_STAND_SMALL_BLOCK, "Candle Stand (Small)");
 
+                    provider.addTranslation(AITExtrasBlocks.METAL_GRATE, "Metal Grate");
+                    provider.addTranslation(AITExtrasBlocks.METAL_GRATE_SLAB, "Metal Grate Slab");
+                    provider.addTranslation(AITExtrasBlocks.METAL_GRATE_STAIRS, "Metal Grate Stairs");
+                    provider.addTranslation(AITExtrasBlocks.METAL_GRATE_WALL, "Metal Grate Wall");
+                    provider.addTranslation(AITExtrasBlocks.METAL_GRATE_TRAPDOOR, "Metal Grate Trapdoor");
+                    provider.addTranslation(AITExtrasBlocks.METAL_MESH, "Metal Mesh");
+                    provider.addTranslation(AITExtrasBlocks.METAL_MESH_SLAB, "Metal Mesh Slab");
+                    provider.addTranslation(AITExtrasBlocks.METAL_MESH_STAIRS, "Metal Mesh Stairs");
+                    provider.addTranslation(AITExtrasBlocks.METAL_MESH_WALL, "Metal Mesh Wall");
+                    provider.addTranslation(AITExtrasBlocks.METAL_MESH_TRAPDOOR, "Metal Mesh Trapdoor");
+                    provider.addTranslation(AITExtrasBlocks.ARS_EGG_BLOCK, "ARS Egg");
+
+
                     // Items
                     provider.addTranslation(AITExtrasItems.MERCURY_DISC.getTranslationKey() + ".desc", "Nitrogenez - Mercury");
                     provider.addTranslation(AITExtrasItems.MERCURY_DISC, "Music Disc");
@@ -607,6 +767,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     // Tabs / ToolTips
                      provider.addTranslation(AITExtrasItemGroups.MAIN, "AIT Extras");
                      provider.addTranslation("block.tooltip.seal", "If you SHIFT when placing this, it will become a CENTERED version!!");
+                     provider.addTranslation("block.tooltip.ars_egg", "If you RIGHT CLICK the block, it will turn ON and OFF!!");
                      provider.addTranslation("block.tooltip.hatstandacacia", "Variant: Acacia");
                      provider.addTranslation("block.tooltip.hatstandbamboo", "Variant: Bamboo");
                      provider.addTranslation("block.tooltip.hatstandbirch", "Variant: Birch");
@@ -645,6 +806,8 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation("achievement.ait-extras.description.obtain_rice_pudding", "Powerful. Crush the lesser races. Conquer the galaxy. Unimaginable power. Unlimited rice pudding, et cetera, et cetera.");
                     provider.addTranslation("achievement.ait-extras.title.obtain_seal_block", "The Seal of Rassilon!");
                     provider.addTranslation("achievement.ait-extras.description.obtain_seal_block", "Craft the Seal of Rassilon");
+                    provider.addTranslation("achievement.ait-extras.title.obtain_ars_egg_block", "Architectural Reconfiguration System");
+                    provider.addTranslation("achievement.ait-extras.description.obtain_ars_egg_block", "Craft an ARS Egg");
 
 
             return provider;

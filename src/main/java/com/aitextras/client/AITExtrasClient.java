@@ -74,5 +74,6 @@ public class AITExtrasClient implements ClientModInitializer {
     public static void BlockRenderLayerMapRegister() {
         BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.SEAL_BLOCK, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.SEAL_SMALL_BLOCK, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.ARS_EGG_BLOCK, RenderLayer.getCutout());
     }
 }

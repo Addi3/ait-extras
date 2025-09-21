@@ -68,5 +68,13 @@ public class AITExtrasAchievementProvider extends FabricAdvancementProvider {
                         null, AdvancementFrame.TASK, true, true, true)
                 .criterion("obtain_seal_block", InventoryChangedCriterion.Conditions.items(AITExtrasBlocks.SEAL_BLOCK ))
                 .build(consumer, AITExtras.MOD_ID + "/obtain_seal_block");
+
+        Advancement arseggBlock = Advancement.Builder.create().parent(root)
+                .display(AITExtrasBlocks.ARS_EGG_BLOCK ,
+                        Text.translatable("achievement.ait-extras.title.obtain_ars_egg_block"),
+                        Text.translatable("achievement.ait-extras.description.obtain_ars_egg_blockk"),
+                        null, AdvancementFrame.TASK, true, true, true)
+                .criterion("obtain_ars_egg_block", InventoryChangedCriterion.Conditions.items(AITExtrasBlocks.ARS_EGG_BLOCK ))
+                .build(consumer, AITExtras.MOD_ID + "/obtain_ars_egg_block");
     }
 }
