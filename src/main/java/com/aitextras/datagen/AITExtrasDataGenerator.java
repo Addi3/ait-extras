@@ -551,25 +551,6 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
 
 
             provider.addShapedRecipe(
-                    ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.HUDOLIN_SUPPORT_PILLARS_BLOCK, 1)
-                            .group("hudolin")
-                            .pattern("YZY")
-                            .pattern("Y Y")
-                            .input('Z', AITExtrasItems.ZIRCONIUM_INGOT)
-                            .input('Y', AITExtrasBlocks.HUDOLIN_SUPPORT_TOP_BLOCK)
-                            .criterion(hasItem(AITExtrasItems.ZIRCONIUM_INGOT), conditionsFromItem(AITExtrasItems.ZIRCONIUM_INGOT))
-                            .criterion(hasItem(AITExtrasBlocks.HUDOLIN_SUPPORT_TOP_BLOCK), conditionsFromItem(AITExtrasBlocks.HUDOLIN_SUPPORT_TOP_BLOCK)));
-
-
-            provider.addShapelessRecipe(ShapelessRecipeJsonBuilder
-                    .create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.HUMAN_SUPPORT_PILLARS_BLOCK, 1)
-                    .group("hudolin")
-                    .input(Blocks.OCHRE_FROGLIGHT)
-                    .input(AITExtrasBlocks.HUDOLIN_SUPPORT_PILLARS_BLOCK)
-                    .criterion(hasItem(Blocks.OCHRE_FROGLIGHT), conditionsFromItem(Blocks.OCHRE_FROGLIGHT))
-                    .criterion(hasItem(AITExtrasBlocks.HUDOLIN_SUPPORT_PILLARS_BLOCK), conditionsFromItem(AITExtrasBlocks.HUDOLIN_SUPPORT_PILLARS_BLOCK)));
-
-            provider.addShapedRecipe(
                     ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.ARS_EGG_BLOCK, 2)
                             .pattern(" I ")
                             .pattern("SES")
@@ -627,6 +608,8 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation("desktop.ait-extras.tardim", "Tardim");
                     provider.addTranslation("desktop.ait-extras.type_85", "Type 85");
                     provider.addTranslation("desktop.ait-extras.type_89", "Type 89");
+                    provider.addTranslation("desktop.ait-extras.wooden", "Wooden");
+                    provider.addTranslation("desktop.ait-extras.human_nature", "Human Nature Remixed");
 
                     //exteriors
 
@@ -763,6 +746,9 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasItems.RAW_ZIRCONIUM, "Raw Zirconium");
                     provider.addTranslation(AITExtrasItems.ZIRCONIUM_INGOT, "Zirconium Ingot");
                     provider.addTranslation(AITExtrasItems.WHISTLE, "Summon Whistle");
+                    provider.addTranslation(AITExtrasItems.ATOMIC_SHREDDER, "Atomic Shredder");
+                    provider.addTranslation(AITExtrasItems.METAL_MESH_ITEM, "Metal Mesh");
+                    provider.addTranslation(AITExtrasItems.METAL_GRATE_ITEM, "Metal Grate");
 
                     // Tabs / ToolTips
                      provider.addTranslation(AITExtrasItemGroups.MAIN, "AIT Extras");

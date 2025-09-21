@@ -48,20 +48,6 @@ public class AITExtrasBlocks extends BlockContainer {
             .strength(1.5F, 6.0F).pistonBehavior(PistonBehavior.IGNORE).sounds(BlockSoundGroup.METAL));
 
 
-
-    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
-    @NoEnglish
-    public static final Block HUDOLIN_SUPPORT_PILLARS_BLOCK = new HudolinSupportPillarsBlock(ABlockSettings.create()
-            .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
-            .strength(1.5F, 6.0F).pistonBehavior(PistonBehavior.IGNORE).sounds(BlockSoundGroup.METAL));
-
-    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
-    @NoEnglish
-    public static final Block HUMAN_SUPPORT_PILLARS_BLOCK = new HumanSupportPillarsBlock(ABlockSettings.create()
-            .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
-            .strength(1.5F, 6.0F).pistonBehavior(PistonBehavior.IGNORE).sounds(BlockSoundGroup.METAL));
-
-
     @NoEnglish
     public static final Block HAT_STAND_OAK_BLOCK = new HatStandOakBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
