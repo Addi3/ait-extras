@@ -14,7 +14,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 
-public class CrystalBlockEntity extends InteriorLinkableBlockEntity {
+public class CrystalBlockEntity extends BlockEntity {
 
     public CrystalBlockEntity(BlockPos pos, BlockState state) {
         super(AITExtrasBlockEntityTypes.CRYSTAL_BLOCK_ENTITY_TYPE, pos, state);
