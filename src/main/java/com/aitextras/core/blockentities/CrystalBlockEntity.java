@@ -23,50 +23,6 @@ public class CrystalBlockEntity extends InteriorLinkableBlockEntity {
     public float getScale() {
         return 1;
     }
-
-
-    public final AnimationState ANIM_STATE = new AnimationState();
-
-    public int age;
-
-    public int getAge() {
-        return age;
-    }
-
-    @Override
-    public void onLinked() {
-        if (this.tardis().isEmpty())
-            return;
-
-        Tardis tardis = this.tardis().get();
-
-        if (tardis instanceof ClientTardis)
-            return;
-
-        tardis.getDesktop().getConsolePos().add(this.pos);
-        tardis.asServer().markDirty(tardis.getDesktop());
-    }
-
-
-//    public void tick(World world, BlockPos pos, BlockState blockState, CrystalBlockEntity blockEntity) {
-//        if (!(world instanceof ServerWorld)) {
-//            if (!blockEntity.isLinked()) return;
-//            Tardis tardis = blockEntity.tardis().get();
-//
-//            TravelHandlerBase.State state = tardis.travel().getState();
-//
-//            this.age++;
-//
-//            ANIM_STATE.startIfNotRunning(this.getAge());
-//
-//            switch (state) {
-//                case FLIGHT -> {
-//
-//                    }
-//                }
-//
-//            }
-//        }
-    }
+}
 
 

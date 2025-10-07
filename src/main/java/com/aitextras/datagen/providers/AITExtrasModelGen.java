@@ -96,8 +96,6 @@ public class AITExtrasModelGen extends AmbleModelProvider {
             module.getDataGenerator().ifPresent(data -> data.generateItemModels(this, generator));
         });
 
-        this.withItems(AITItems.class);
-        this.withBlocks(AITBlocks.class);
 
         super.generateItemModels(generator);
     }
