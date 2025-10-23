@@ -8,6 +8,7 @@
   "left_animation": "clock:open",
   "has_transparent_doors": false,
   "animations": {
+    "landed": "clock:idle",
     "demat": "clock:flight",
     "mat": "clock:flight"
   },

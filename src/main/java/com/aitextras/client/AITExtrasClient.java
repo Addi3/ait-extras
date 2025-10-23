@@ -3,9 +3,7 @@ package com.aitextras.client;
 
 import com.aitextras.client.renderers.decor.*;
 import com.aitextras.client.renderers.decor.hudolinsupport.HudolinSupportBaseRenderer;
-import com.aitextras.client.renderers.decor.hudolinsupport.HudolinSupportPillarsRenderer;
 import com.aitextras.client.renderers.decor.hudolinsupport.HudolinSupportTopRenderer;
-import com.aitextras.client.renderers.decor.hudolinsupport.HumanSupportPillarsRenderer;
 import com.aitextras.client.renderers.monitors.ExtrasMonitorRenderer;
 import com.aitextras.client.renderers.monitors.ExtrasScreenMonitorRenderer;
 import com.aitextras.client.renderers.wearables.trinkets.CoatTrinketsRenderer;
@@ -50,13 +48,8 @@ public class AITExtrasClient implements ClientModInitializer {
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.HAT_STAND_MANGROVE_BLOCK_ENTITY_TYPE, HatStandMangroveRenderer::new);
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.HAT_STAND_SPRUCE_BLOCK_ENTITY_TYPE, HatStandSpruceRenderer::new);
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.HAT_STAND_WARPED_BLOCK_ENTITY_TYPE, HatStandWarpedRenderer::new);
-        BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.CRYSTAL_BLOCK_ENTITY_TYPE, CrystalRenderer::new);
-        BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.CRYSTAL_ZEITON_BLOCK_ENTITY_TYPE, CrystalZeitonRenderer::new);
-        BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.CRYSTAL_MASTER_BLOCK_ENTITY_TYPE, CrystalMasterRenderer::new);
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.HUDOLIN_SUPPORT_BASE_BLOCK_ENTITY_TYPE, HudolinSupportBaseRenderer::new);
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.HUDOLIN_SUPPORT_TOP_BLOCK_ENTITY_TYPE, HudolinSupportTopRenderer::new);
-        BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.HUDOLIN_SUPPORT_PILLARS_BLOCK_ENTITY_TYPE, HudolinSupportPillarsRenderer::new);
-        BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.HUMAN_SUPPORT_PILLARS_BLOCK_ENTITY_TYPE, HumanSupportPillarsRenderer::new);
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.CANDLE_STAND_LARGE_BLOCK_ENTITY_TYPE, CandleStandLargeRenderer::new);
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.CANDLE_STAND_SMALL_BLOCK_ENTITY_TYPE, CandleStandSmallRenderer::new);
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.CANDLE_STAND_SINGLE_BLOCK_ENTITY_TYPE, CandleStandSingleRenderer::new);
@@ -103,6 +96,9 @@ public class AITExtrasClient implements ClientModInitializer {
     }
 
     public static void BlockRenderLayerMapRegister() {
+        BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.SEAL_BLOCK, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.SEAL_SMALL_BLOCK, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.ARS_EGG_BLOCK, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.METAL_GRATE, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.METAL_GRATE_SLAB, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.METAL_GRATE_STAIRS, RenderLayer.getCutout());
@@ -113,7 +109,5 @@ public class AITExtrasClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.METAL_MESH_STAIRS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.METAL_MESH_WALL, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.METAL_MESH_TRAPDOOR, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.SEAL_BLOCK, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.SEAL_SMALL_BLOCK, RenderLayer.getCutout());
     }
 }

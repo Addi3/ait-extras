@@ -86,8 +86,9 @@ public class CandleStandLargeBlock extends BlockWithEntity implements BlockEntit
 
     @Override
     public boolean isShapeFullCube(BlockState state, BlockView world, BlockPos pos) {
-        return false;
+        return true;
     }
+
 
     @Nullable
     @Override

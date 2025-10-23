@@ -79,11 +79,11 @@ public class AITExtrasModelGen extends AmbleModelProvider {
         metal_grate_pool.slab(AITExtrasBlocks.METAL_GRATE_SLAB);
         metal_grate_pool.wall(AITExtrasBlocks.METAL_GRATE_WALL);
 
+
         BlockStateModelGenerator.BlockTexturePool metal_mesh_pool = generator.registerCubeAllModelTexturePool(AITExtrasBlocks.METAL_MESH);
         metal_mesh_pool.stairs(AITExtrasBlocks.METAL_MESH_STAIRS);
         metal_mesh_pool.slab(AITExtrasBlocks.METAL_MESH_SLAB);
         metal_mesh_pool.wall(AITExtrasBlocks.METAL_MESH_WALL);
-
 
         super.generateBlockStateModels(generator);
     }
@@ -96,8 +96,6 @@ public class AITExtrasModelGen extends AmbleModelProvider {
             module.getDataGenerator().ifPresent(data -> data.generateItemModels(this, generator));
         });
 
-        this.withItems(AITItems.class);
-        this.withBlocks(AITBlocks.class);
 
         super.generateItemModels(generator);
     }

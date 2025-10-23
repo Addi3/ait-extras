@@ -48,7 +48,7 @@ public class SunDialBlock extends BlockWithEntity implements BlockEntityProvider
 
     @Override
     public boolean isShapeFullCube(BlockState state, BlockView world, BlockPos pos) {
-        return false;
+        return true;
     }
 
     @Nullable

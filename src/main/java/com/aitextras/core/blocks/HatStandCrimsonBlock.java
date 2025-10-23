@@ -50,7 +50,7 @@ public class HatStandCrimsonBlock extends BlockWithEntity implements BlockEntity
 
     @Override
     public boolean isShapeFullCube(BlockState state, BlockView world, BlockPos pos) {
-        return false;
+        return true;
     }
 
     @Nullable

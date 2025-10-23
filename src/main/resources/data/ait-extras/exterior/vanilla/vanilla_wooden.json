@@ -5,7 +5,7 @@
   "texture": "ait-extras:textures/blockentities/exteriors/vanilla/vanilla_wooden.png",
   "emission": "ait-extras:textures/blockentities/exteriors/vanilla/vanilla_emission.png",
   "model": "ait-extras:vanilla",
-  "door": "ait-extras:vanilla_wooden",
+  "door": "ait-extras:vanilla",
   "left_animation": "vanilla:open",
   "has_transparent_doors": true,
   "animations": {

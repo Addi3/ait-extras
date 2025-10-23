@@ -49,7 +49,7 @@ public class HatStandOakBlock extends BlockWithEntity implements BlockEntityProv
 
     @Override
     public boolean isShapeFullCube(BlockState state, BlockView world, BlockPos pos) {
-        return false;
+        return true;
     }
 
     @Nullable

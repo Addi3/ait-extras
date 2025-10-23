@@ -21,14 +21,6 @@ repositories {
     // See https://docs.gradle.org/current/userguide/declaring_repositories.html
     // for more information about repositories.
 
-    maven {
-        name = "TerraformersMC"
-        url = "https://maven.terraformersmc.com/"
-    }
-    maven {
-        name = "Ladysnake Libs"
-        url = 'https://maven.ladysnake.org/releases'
-    }
     mavenLocal()
 
     maven {
@@ -43,13 +35,13 @@ repositories {
 
 
     maven { url "https://maven.shedaniel.me/" }
+    maven { url "https://maven.terraformersmc.com/releases/" }
 
     // YACL
     maven { url 'https://maven.isxander.dev/releases' }
 
     // AmbleKit
     maven { url "https://api.modrinth.com/maven" }
-
 
 }
 
@@ -86,9 +78,13 @@ dependencies {
     modImplementation "com.github.amblelabs:ait:${project.ait_version}"
     modImplementation "dev.isxander:yet-another-config-lib:${project.yacl_version}"
 
-    modImplementation("com.github.amblelabs:modkit:v${project.amblekit_version}")
+    modImplementation "com.github.amblelabs:modkit:${project.use_amblekit_dev ? project.amblekit_dev_version : project.amblekit_version}"
 
-    modImplementation "dev.emi:trinkets:${trinkets_version}"
+    // getter setter
+    compileOnly 'org.projectlombok:lombok:1.18.34'
+    annotationProcessor 'org.projectlombok:lombok:1.18.34'
+    testCompileOnly 'org.projectlombok:lombok:1.18.34'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.34'
 }
 
 
@@ -98,7 +94,6 @@ processResources {
     inputs.property "loader_version", project.loader_version
     inputs.property "amblekit_version", project.amblekit_version
     inputs.property "yacl_version", project.yacl_version
-    inputs.property "trinkets_version", project.trinkets_version
     filteringCharset "UTF-8"
 
     filesMatching("fabric.mod.json") {
@@ -106,8 +101,7 @@ processResources {
                 "minecraft_version": project.minecraft_version,
                 "amblekit_version": project.amblekit_version,
                 "loader_version": project.loader_version,
-                "yacl_version": project.yacl_version,
-                "trinkets_version": project.trinkets_version
+                "yacl_version": project.yacl_version
     }
 }
 
@@ -161,5 +155,6 @@ publishing {
 fabricApi {
     configureDataGeneration {
         modId = "ait-extras"
+		client = true
     }
 }

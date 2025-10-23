@@ -49,8 +49,9 @@ public class ExtrasMonitorBlock extends BlockWithEntity implements BlockEntityPr
 
     @Override
     public boolean isShapeFullCube(BlockState state, BlockView world, BlockPos pos) {
-        return false;
+        return true;
     }
+
 
     @Nullable
     @Override

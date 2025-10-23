@@ -1,0 +1,6 @@
+{
+	"parent": "ait-extras:item/sonic/classic/troughton/troughton",
+	"textures": {
+		"0": "ait-extras:item/sonic_tools/classic/troughton_interaction"
+	}
+}

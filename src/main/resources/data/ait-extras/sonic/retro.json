@@ -1,0 +1,13 @@
+{
+  "id": "ait-extras:retro",
+  "models": {
+    "inactive": "ait-extras:item/sonic/classic/retro/inactive",
+    "interaction": "ait-extras:item/sonic/classic/retro/active",
+    "overload": "ait-extras:item/sonic/classic/retro/active",
+    "scanning": "ait-extras:item/sonic/classic/retro/active",
+    "tardis": "ait-extras:item/sonic/classic/retro/active"
+  },
+  "loyalty": {
+    "type": "OWNER"
+  }
+}
