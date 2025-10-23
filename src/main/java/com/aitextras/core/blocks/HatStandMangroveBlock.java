@@ -50,7 +50,7 @@ public class HatStandMangroveBlock extends BlockWithEntity implements BlockEntit
 
     @Override
     public boolean isShapeFullCube(BlockState state, BlockView world, BlockPos pos) {
-        return false;
+        return true;
     }
 
     @Nullable

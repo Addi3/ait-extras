@@ -71,6 +71,11 @@ public class SealSmallBlock extends HorizontalFacingBlock {
         return getCollisionShape(state, world, pos, context);
     }
 
+    @Override
+    public boolean isShapeFullCube(BlockState state, BlockView world, BlockPos pos) {
+        return true;
+    }
+
 
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {

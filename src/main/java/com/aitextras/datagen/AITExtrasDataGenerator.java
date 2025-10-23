@@ -245,24 +245,24 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .input('F',Items.WARPED_FENCE)
                     .criterion(hasItem(Items.WARPED_FENCE), conditionsFromItem(Items.WARPED_FENCE)));
 
-            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.CRYSTAL_ZEITON_BLOCK, 1)
-                    .group("crystal")
-                    .pattern(" Z ")
-                    .pattern(" B ")
-                    .pattern(" Z ")
-                    .input('B',AITBlocks.ZEITON_BLOCK)
-                    .input('Z',AITItems.ZEITON_SHARD)
-                    .criterion(hasItem(AITBlocks.ZEITON_BLOCK), conditionsFromItem(AITBlocks.ZEITON_BLOCK)));
-
-            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.CRYSTAL_MASTER_BLOCK, 1)
-                    .group("crystal")
-                    .pattern(" A ")
-                    .pattern(" B ")
-                    .pattern(" Z ")
-                    .input('B',AITBlocks.ZEITON_BLOCK)
-                    .input('Z',AITItems.ZEITON_SHARD)
-                    .input('A',Items.AMETHYST_SHARD)
-                    .criterion(hasItem(Blocks.AMETHYST_BLOCK), conditionsFromItem(Blocks.AMETHYST_BLOCK)));
+//            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.CRYSTAL_ZEITON_BLOCK, 1)
+//                    .group("crystal")
+//                    .pattern(" Z ")
+//                    .pattern(" B ")
+//                    .pattern(" Z ")
+//                    .input('B',AITBlocks.ZEITON_BLOCK)
+//                    .input('Z',AITItems.ZEITON_SHARD)
+//                    .criterion(hasItem(AITBlocks.ZEITON_BLOCK), conditionsFromItem(AITBlocks.ZEITON_BLOCK)));
+//
+//            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.CRYSTAL_MASTER_BLOCK, 1)
+//                    .group("crystal")
+//                    .pattern(" A ")
+//                    .pattern(" B ")
+//                    .pattern(" Z ")
+//                    .input('B',AITBlocks.ZEITON_BLOCK)
+//                    .input('Z',AITItems.ZEITON_SHARD)
+//                    .input('A',Items.AMETHYST_SHARD)
+//                    .criterion(hasItem(Blocks.AMETHYST_BLOCK), conditionsFromItem(Blocks.AMETHYST_BLOCK)));
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.CRYSTAL_BLOCK, 1)
                     .group("crystal")
@@ -704,8 +704,8 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasBlocks.HAT_STAND_SPRUCE_BLOCK, "Hat Stand");
                     provider.addTranslation(AITExtrasBlocks.HAT_STAND_WARPED_BLOCK, "Hat Stand");
                     provider.addTranslation(AITExtrasBlocks.CRYSTAL_BLOCK, "Roof Crystal");
-                    provider.addTranslation(AITExtrasBlocks.CRYSTAL_ZEITON_BLOCK, "Roof Crystal (Zeiton)");
-                    provider.addTranslation(AITExtrasBlocks.CRYSTAL_MASTER_BLOCK, "Roof Crystal (Master)");
+//                    provider.addTranslation(AITExtrasBlocks.CRYSTAL_ZEITON_BLOCK, "Roof Crystal (Zeiton)");
+//                    provider.addTranslation(AITExtrasBlocks.CRYSTAL_MASTER_BLOCK, "Roof Crystal (Master)");
                     provider.addTranslation(AITExtrasBlocks.HUDOLIN_SUPPORT_BASE_BLOCK, "Hudolin Support (Base)");
                     provider.addTranslation(AITExtrasBlocks.HUDOLIN_SUPPORT_TOP_BLOCK, "Hudolin Support (Top)");
                     provider.addTranslation(AITExtrasBlocks.POLISHED_COMPACT_ZEITON, "Polished Compact Zeiton");

@@ -47,6 +47,12 @@ public class ArsEggBlock extends HorizontalFacingBlock {
         return SHAPE;
     }
 
+    @Override
+    public boolean isShapeFullCube(BlockState state, BlockView world, BlockPos pos) {
+        return true;
+    }
+
+
 
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
