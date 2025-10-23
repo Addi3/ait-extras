@@ -155,5 +155,6 @@ publishing {
 fabricApi {
     configureDataGeneration {
         modId = "ait-extras"
+		client = true
     }
 }
