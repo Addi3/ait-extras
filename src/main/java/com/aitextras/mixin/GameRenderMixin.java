@@ -33,10 +33,8 @@ public abstract class GameRenderMixin {
 
     @Inject(method = "render", at = @At("HEAD"))
     private void applyShader(float tickDelta, long startTime, boolean tick, CallbackInfo ci) {
-        // Current perspective
         int currentPerspective = client.options.getPerspective().ordinal();
 
-        // Current camera entity
         ClientPlayerEntity cameraPlayer = null;
         if (client.cameraEntity instanceof ClientPlayerEntity player) {
             cameraPlayer = player;
@@ -48,21 +46,18 @@ public abstract class GameRenderMixin {
             wearing = head.isOf(AITExtrasItems.THREED_GLASSES);
         }
 
-        // Only update shader if camera player or perspective changed
         boolean needsUpdate = cameraPlayer != lastCameraPlayer || currentPerspective != lastPerspective;
 
         lastCameraPlayer = cameraPlayer;
         lastPerspective = currentPerspective;
 
         if (needsUpdate) {
-            // Disable shader if it was active
             if (shaderActive) {
                 disablePostProcessor();
                 shaderActive = false;
             }
         }
 
-        // Enable shader if the camera player is wearing glasses
         if (wearing && !shaderActive) {
             loadPostProcessor(GLASSES_SHADER);
             shaderActive = true;
