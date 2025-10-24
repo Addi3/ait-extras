@@ -4,6 +4,7 @@
   "package": "com.aitextras.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "GameRenderMixin"
   ],
   "client": [
     "client.rendering.ArmorFeatureRendererMixin",
