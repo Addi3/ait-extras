@@ -9,12 +9,14 @@ import com.aitextras.client.renderers.monitors.ExtrasScreenMonitorRenderer;
 import com.aitextras.client.renderers.wearables.trinkets.CoatTrinketsRenderer;
 import com.aitextras.client.renderers.wearables.trinkets.FezHatTrinketsRenderer;
 import com.aitextras.client.renderers.wearables.trinkets.ScarfTrinketsRenderer;
+import com.aitextras.client.renderers.wearables.trinkets.ThreeDGlassesTrinketsRenderer;
 import com.aitextras.core.AITExtrasBlockEntityTypes;
 import com.aitextras.core.AITExtrasBlocks;
 import com.aitextras.core.AITExtrasItems;
 import dev.emi.trinkets.api.client.TrinketRendererRegistry;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
@@ -30,6 +32,7 @@ public class AITExtrasClient implements ClientModInitializer {
         resourcepackRegister();
         trinketsRegister();
         BlockRenderLayerMapRegister();
+       // HudRenderCallback.EVENT.register(new GlassesOverlay());
     }
 
 
@@ -76,6 +79,7 @@ public class AITExtrasClient implements ClientModInitializer {
         TrinketRendererRegistry.registerRenderer(AITExtrasItems.YELLOW_FEZ_HAT, new FezHatTrinketsRenderer());
         TrinketRendererRegistry.registerRenderer(AITExtrasItems.BLUE_FEZ_HAT, new FezHatTrinketsRenderer());
         TrinketRendererRegistry.registerRenderer(AITExtrasItems.TENNANT_COAT, new CoatTrinketsRenderer());
+        TrinketRendererRegistry.registerRenderer(AITExtrasItems.THREED_GLASSES, new ThreeDGlassesTrinketsRenderer());
     }
 
     public static void resourcepackRegister() {

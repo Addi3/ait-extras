@@ -247,14 +247,14 @@ public class AITExtrasBlocks extends BlockContainer {
     @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
     public static final Block METAL_GRATE = new Block(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
-            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.COPPER));
+            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.COPPER).nonOpaque());
 
 
     @NoEnglish
     @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
     public static final Block METAL_GRATE_SLAB = new SlabBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
-            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.COPPER));
+            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.COPPER).nonOpaque());
 
 
     @NoEnglish
@@ -262,14 +262,14 @@ public class AITExtrasBlocks extends BlockContainer {
     public static final Block METAL_GRATE_STAIRS = new StairsBlock(
             METAL_GRATE.getDefaultState(),ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
-            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.COPPER));
+            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.COPPER).nonOpaque());
 
 
     @NoEnglish
     @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
     public static final Block METAL_GRATE_WALL = new WallBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
-            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.COPPER));
+            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.COPPER).nonOpaque());
 
 
     @NoEnglish
@@ -278,7 +278,7 @@ public class AITExtrasBlocks extends BlockContainer {
             ABlockSettings.create()
                     .strength(2.0F, 3.0F)
                     
-                    .requiresTool()
+                    .requiresTool().nonOpaque()
                     .sounds(BlockSoundGroup.COPPER)
                     .pistonBehavior(PistonBehavior.NORMAL)
                     .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)),
@@ -290,14 +290,14 @@ public class AITExtrasBlocks extends BlockContainer {
     @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
     public static final Block METAL_MESH = new Block(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
-            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.COPPER));
+            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.COPPER).nonOpaque());
 
 
     @NoEnglish
     @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
     public static final Block METAL_MESH_SLAB = new SlabBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
-            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.COPPER));
+            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.COPPER).nonOpaque());
 
 
     @NoEnglish
@@ -305,23 +305,22 @@ public class AITExtrasBlocks extends BlockContainer {
     public static final Block METAL_MESH_STAIRS = new StairsBlock(
             METAL_GRATE.getDefaultState(),ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
-            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.COPPER));
+            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.COPPER).nonOpaque());
 
 
     @NoEnglish
     @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
     public static final Block METAL_MESH_WALL = new WallBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
-            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.COPPER));
+            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.COPPER).nonOpaque());
 
     @NoEnglish
     @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
     public static final Block METAL_MESH_TRAPDOOR = new TrapdoorBlock(
             ABlockSettings.create()
                     .strength(2.0F, 3.0F)
-                    
                     .requiresTool()
-                    .sounds(BlockSoundGroup.COPPER)
+                    .sounds(BlockSoundGroup.COPPER).nonOpaque()
                     .pistonBehavior(PistonBehavior.NORMAL)
                     .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)),
             BlockSetType.OAK
