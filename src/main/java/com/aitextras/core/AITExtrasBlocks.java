@@ -5,10 +5,7 @@ import com.aitextras.core.blocks.hudolinsupport.HudolinSupportBaseBlock;
 import com.aitextras.core.blocks.hudolinsupport.HudolinSupportTopBlock;
 import dev.amble.lib.block.ABlockSettings;
 import dev.amble.lib.container.impl.BlockContainer;
-import dev.amble.lib.datagen.util.AutomaticModel;
-import dev.amble.lib.datagen.util.NoBlockDrop;
-import dev.amble.lib.datagen.util.NoEnglish;
-import dev.amble.lib.datagen.util.PickaxeMineable;
+import dev.amble.lib.datagen.util.*;
 import dev.amble.lib.item.AItemSettings;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.Instrument;
@@ -49,56 +46,67 @@ public class AITExtrasBlocks extends BlockContainer {
 
 
     @NoEnglish
+    @AxeMineable(tool = AxeMineable.Tool.IRON)
     public static final Block HAT_STAND_OAK_BLOCK = new HatStandOakBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
             .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.WOOD));
 
     @NoEnglish
+    @AxeMineable(tool = AxeMineable.Tool.IRON)
     public static final Block HAT_STAND_ACACIA_BLOCK = new HatStandAcaciaBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
             .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.WOOD));
 
     @NoEnglish
+    @AxeMineable(tool = AxeMineable.Tool.IRON)
     public static final Block HAT_STAND_BAMBOO_BLOCK = new HatStandBambooBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
             .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.WOOD));
 
     @NoEnglish
+    @AxeMineable(tool = AxeMineable.Tool.IRON)
     public static final Block HAT_STAND_BIRCH_BLOCK = new HatStandBirchBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
             .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.WOOD));
 
     @NoEnglish
+    @AxeMineable(tool = AxeMineable.Tool.IRON)
     public static final Block HAT_STAND_CHERRY_BLOCK = new HatStandCherryBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
             .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.WOOD));
 
     @NoEnglish
+    @AxeMineable(tool = AxeMineable.Tool.IRON)
     public static final Block HAT_STAND_CRIMSON_BLOCK = new HatStandCrimsonBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
             .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.WOOD));
 
     @NoEnglish
+    @AxeMineable(tool = AxeMineable.Tool.IRON)
     public static final Block HAT_STAND_DARK_OAK_BLOCK = new HatStandDarkOakBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
             .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.WOOD));
 
     @NoEnglish
+    @AxeMineable(tool = AxeMineable.Tool.IRON)
     public static final Block HAT_STAND_JUNGLE_BLOCK = new HatStandJungleBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
             .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.WOOD));
 
     @NoEnglish
+    @AxeMineable(tool = AxeMineable.Tool.IRON)
     public static final Block HAT_STAND_MANGROVE_BLOCK = new HatStandMangroveBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
             .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.WOOD));
 
     @NoEnglish
+    @AxeMineable(tool = AxeMineable.Tool.IRON)
     public static final Block HAT_STAND_SPRUCE_BLOCK = new HatStandSpruceBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
             .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.WOOD));
 
     @NoEnglish
+    @AxeMineable(tool = AxeMineable.Tool.IRON)
     public static final Block HAT_STAND_WARPED_BLOCK = new HatStandWarpedBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
             .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.WOOD));
