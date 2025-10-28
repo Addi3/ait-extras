@@ -1,16 +1,63 @@
-ext.getCurrentVersion = {
-    var patch = System.getenv("GITHUB_RUN_NUMBER")
-    var branch = System.getenv("GITHUB_REF")
+import java.util.Optional
 
-    if (branch != null && branch.startsWith("refs/heads/")) {
-        branch = branch.substring("refs/heads/".length())
-        // replace / with -
-        branch = branch.replaceAll("/", "-")
-        if (branch == "main" || branch == "release") {
-            branch = null
-        }
+class CI {
+
+    static final String REFS_PREFIX = "refs/heads/"
+
+    static Optional<String> branch() {
+        // groovy is very bad at globals, apparently.
+        return Optional.ofNullable(System.getenv("GITHUB_REF"))
+                .filter { it.startsWith(REFS_PREFIX) }
+                .map { it.substring(REFS_PREFIX.length()).replaceAll("/", "-") }
     }
 
-    return project.mod_version + (patch != null ? ("." + patch) : "")\
-        + "-" + project.minecraft_version + "-" + project.mod_version_qualifier + (branch != null ? ("-" + branch) : "")
+    static Optional<String> buildNum() {
+        return Optional.ofNullable(System.getenv("GITHUB_RUN_NUMBER"))
+    }
 }
+
+class Versioning {
+
+    static final String BRANCH_MAIN = "main"
+    static final String BRANCH_RELEASE = "release"
+
+    static final String BUILD_RELEASE = "release"
+    static final String BUILD_LOCAL = "local"
+    static final String BUILD = "dev"
+
+    static Optional<String> getBranch() {
+        return CI.branch()
+                .filter { it != BRANCH_MAIN && it != BRANCH_RELEASE }
+    }
+
+    static Optional<String> getBuild() {
+        return CI.branch()
+                .filter { it != BRANCH_RELEASE }
+                .flatMap { CI.buildNum() }
+    }
+
+    static String getQualifier() {
+        return CI.branch()
+                .map { it == BRANCH_RELEASE ? BUILD_RELEASE : BUILD }
+                .orElse(BUILD_LOCAL)
+    }
+}
+
+String createVer(boolean includeBuild) {
+    String qualifier = ""
+
+    Versioning.branch.ifPresent { branch ->
+        qualifier += "$branch-"
+    }
+
+    qualifier += Versioning.qualifier
+
+    Versioning.build.filter { includeBuild }.ifPresent {build ->
+        qualifier += ".$build"
+    }
+
+    return "$project.mod_version-$qualifier+mc.$project.minecraft_version"
+}
+
+version = createVer(true)
+ext.artifactVersion = createVer(false)
