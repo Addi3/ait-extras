@@ -337,7 +337,7 @@ public class AITExtrasBlocks extends BlockContainer {
 
     @AutomaticModel
     @NoEnglish
-    public static final Block RETEP_BLOCK = new RetepBlock(ABlockSettings.create());
+    public static final Block RETEP = new RetepBlock(ABlockSettings.create());
 
     @NoEnglish
     @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
