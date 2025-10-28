@@ -52,7 +52,7 @@ jobs:
       id: setup-maven
       uses: drtheodor/static-file-server-actions/upload/setup@main
       with:
-        repo: Addi3/maven
+        repo: addi3/maven
 
     - name: Build for Maven
       env:
