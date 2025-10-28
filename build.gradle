@@ -6,8 +6,6 @@ plugins {
 }
 
 apply from: 'versioning.gradle'
-
-version = getCurrentVersion()
 group = project.maven_group
 
 base {
@@ -139,6 +137,7 @@ publishing {
     publications {
         create("mavenJava", MavenPublication) {
             artifactId = project.archives_base_name
+			version = artifactVersion
             from components.java
         }
     }
