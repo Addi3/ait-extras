@@ -62,6 +62,6 @@ jobs:
     - name: Publish to Amble Maven
       uses: drtheodor/static-file-server-actions/upload@main
       with:
-        published: com/aitextras
+        published: com/ait-extras
         token: ${{ secrets.PAT_TOKEN }}
         message: "chore: publish AIT Extras artifacts"
