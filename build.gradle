@@ -57,7 +57,10 @@ repositories {
     // YACL
     maven { url 'https://maven.isxander.dev/releases' }
 
-
+	// IP
+    maven {
+		url "https://jitpack.io"
+	}
 }
 
 dependencies {
