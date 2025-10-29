@@ -7,8 +7,10 @@ import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import net.minecraft.entity.EquipmentSlot;
+import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -19,16 +21,21 @@ public abstract class GameRenderMixin {
     abstract void loadPostProcessor(Identifier id);
 
     @Shadow
-    abstract void disablePostProcessor();
+    public abstract void disablePostProcessor();
 
+    @Final
     @Shadow
     MinecraftClient client;
 
+    @Unique
     private static final Identifier GLASSES_SHADER =
             new Identifier("minecraft", "shaders/post/deconverge.json");
 
+    @Unique
     private boolean shaderActive = false;
+    @Unique
     private ClientPlayerEntity lastCameraPlayer = null;
+    @Unique
     private int lastPerspective = -1;
 
     @Inject(method = "render", at = @At("HEAD"))
@@ -47,15 +54,12 @@ public abstract class GameRenderMixin {
         }
 
         boolean needsUpdate = cameraPlayer != lastCameraPlayer || currentPerspective != lastPerspective;
-
         lastCameraPlayer = cameraPlayer;
         lastPerspective = currentPerspective;
 
-        if (needsUpdate) {
-            if (shaderActive) {
-                disablePostProcessor();
-                shaderActive = false;
-            }
+        if (shaderActive && !wearing) {
+            disablePostProcessor();
+            shaderActive = false;
         }
 
         if (wearing && !shaderActive) {

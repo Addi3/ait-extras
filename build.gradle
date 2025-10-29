@@ -71,7 +71,7 @@ dependencies {
 
     include(implementation "net.objecthunter:exp4j:0.4.8")
     modImplementation "dev.drtheo:multidim:${project.multidim_version}"
-    modImplementation "dev.emi:trinkets:${trinkets_version}"
+    modApi "dev.emi:trinkets:${trinkets_version}"
 
     // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"

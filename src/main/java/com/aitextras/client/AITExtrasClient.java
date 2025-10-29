@@ -16,7 +16,6 @@ import com.aitextras.core.AITExtrasItems;
 import dev.emi.trinkets.api.client.TrinketRendererRegistry;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
-import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
@@ -32,7 +31,6 @@ public class AITExtrasClient implements ClientModInitializer {
         resourcepackRegister();
         trinketsRegister();
         BlockRenderLayerMapRegister();
-       // HudRenderCallback.EVENT.register(new GlassesOverlay());
     }
 
 
