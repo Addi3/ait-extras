@@ -2,6 +2,7 @@ package com.aitextras.core;
 
 
 import com.aitextras.core.item.AtomicShredderItem;
+import com.aitextras.core.item.RoundelItem;
 import com.aitextras.core.item.WhistleItem;
 import dev.amble.lib.container.impl.ItemContainer;
 import dev.amble.lib.datagen.util.AutomaticModel;
@@ -59,4 +60,11 @@ public class AITExtrasItems extends ItemContainer {
 
     @NoEnglish
     public static final Item ATOMIC_SHREDDER = new AtomicShredderItem(new AItemSettings().group(AITExtrasItemGroups.MAIN));
+
+    // Roundels
+
+    @AutomaticModel
+    @NoEnglish
+    public static final Item HEXAGON = new RoundelItem(new AItemSettings().group(AITExtrasItemGroups.ROUNDELS));
+
 }

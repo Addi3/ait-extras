@@ -6,10 +6,12 @@ import com.aitextras.client.renderers.decor.hudolinsupport.HudolinSupportBaseRen
 import com.aitextras.client.renderers.decor.hudolinsupport.HudolinSupportTopRenderer;
 import com.aitextras.client.renderers.monitors.ExtrasMonitorRenderer;
 import com.aitextras.client.renderers.monitors.ExtrasScreenMonitorRenderer;
+import com.aitextras.client.renderers.roundel.RoundelRenderer;
 import com.aitextras.core.AITExtrasBlockEntityTypes;
 import com.aitextras.core.AITExtrasBlocks;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
@@ -22,8 +24,15 @@ public class AITExtrasClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         blockEntityRendererRegister();
+        EntityRendererRegister();
         resourcepackRegister();
         BlockRenderLayerMapRegister();
+
+    }
+
+    public static void EntityRendererRegister() {
+        EntityRendererRegistry.register(AITExtrasEntities.ROUNDEL, RoundelRenderer::new);
+
     }
 
 
