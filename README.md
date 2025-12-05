@@ -57,7 +57,7 @@
   Required Mods!
 </h2>
 
-- Requires AiT 1.3.0 and above -> [Download Here](https://modrinth.com/mod/ait/versions)
+- Requires AiT 1.2.7 and above -> [Download Here](https://modrinth.com/mod/ait/versions)
 - Requires AmbleKit (latest 1.20.1 version) -> [Download Here](https://modrinth.com/mod/amblekit/versions)
 - Requires YACL (latest fabric 1.20.1 version) -> [Download Here](https://modrinth.com/mod/yacl/versions?g=1.20.1&l=fabric)
 
