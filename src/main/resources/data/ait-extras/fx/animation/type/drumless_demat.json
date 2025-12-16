@@ -1,6 +1,0 @@
-{
-  "id": "ait-extras:drumless_demat",
-  "expected_state": "demat",
-  "sound": "ait-extras:tardis/travel/drumless_demat",
-  "blockbench_file": "ait:pulsating_demat"
-}

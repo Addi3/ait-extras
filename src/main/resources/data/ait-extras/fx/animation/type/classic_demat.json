@@ -1,6 +1,0 @@
-{
-  "id": "ait-extras:classic_demat",
-  "expected_state": "demat",
-  "sound": "ait-extras:tardis/travel/classic_demat",
-  "blockbench_file": "ait:classic_demat"
-}

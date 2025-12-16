@@ -53,9 +53,6 @@ repositories {
     mavenLocal()
     maven { url "https://maven.shedaniel.me/" }
     maven { url "https://maven.terraformersmc.com/releases/" }
-
-    // YACL
-    maven { url 'https://maven.isxander.dev/releases' }
 }
 
 dependencies {
@@ -71,13 +68,10 @@ dependencies {
     // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-    modImplementation "dev.amble:ait:${project.ait_version}"
-
     modApi("dev.amble:lib:${project.amblekit_version}") {
         exclude(group: "net.fabricmc.fabric-api")
     }
 
-    modImplementation "dev.isxander:yet-another-config-lib:${project.yacl_version}"
 
     // getter setter
     compileOnly 'org.projectlombok:lombok:1.18.34'
@@ -95,7 +89,6 @@ processResources {
     inputs.property "version", project.version
     inputs.property "minecraft_version", project.minecraft_version
     inputs.property "loader_version", project.loader_version
-    inputs.property "yacl_version", project.yacl_version
     inputs.property "trinkets_version", project.trinkets_version
     inputs.property "amblekit_version", project.amblekit_version
     filteringCharset "UTF-8"
@@ -104,7 +97,6 @@ processResources {
         expand "version": project.version,
                 "minecraft_version": project.minecraft_version,
                 "loader_version": project.loader_version,
-                "yacl_version": project.yacl_version,
                 "amblekit_version": project.amblekit_version,
                 "trinkets_version": project.trinkets_version
     }

@@ -1,6 +1,0 @@
-{
-  "id": "ait-extras:minecart_mat",
-  "expected_state": "mat",
-  "sound": "ait-extras:tardis/travel/minecart_mat",
-  "blockbench_file": "ait:pulsating_mat"
-}

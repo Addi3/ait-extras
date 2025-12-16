@@ -23,10 +23,7 @@ public class AITExtrasItemTagProvider extends FabricTagProvider<Item> {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
-        // Example: add your discs
-        getOrCreateTagBuilder(ItemTags.MUSIC_DISCS)
-                .add(AITExtrasItems.MERCURY_DISC);
-        // .add(AITExtrasItems.RECALL_DISC);
+
 
 
         getOrCreateTagBuilder(AITExtrasTags.Items.FEZ_HATS)

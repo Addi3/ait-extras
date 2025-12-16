@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "scarf",
+  "ingredients": [
+    {
+      "tag": "ait-extras:scarfs"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "item": "ait-extras:scarf"
+  }
+}
