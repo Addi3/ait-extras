@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "fez",
+  "ingredients": [
+    {
+      "tag": "ait-extras:fez"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "item": "ait-extras:white_fez"
+  }
+}
