@@ -31,7 +31,6 @@
     "yet_another_config_lib_v3": ">=3.6.1+1.20.1-fabric",
     "minecraft": "${minecraft_version}",
     "ait": ">=1.2.7",
-    "amblekit": ">=1.1.13-1.20.1-beta",
-    "trinkets_version": ">=3.7.0"
+    "amblekit": ">=1.1.13-1.20.1-beta"
   }
 }

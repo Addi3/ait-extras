@@ -56,11 +56,6 @@ repositories {
 
     // YACL
     maven { url 'https://maven.isxander.dev/releases' }
-
-	// IP
-    maven {
-		url "https://jitpack.io"
-	}
 }
 
 dependencies {
@@ -75,13 +70,13 @@ dependencies {
 
     // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-    modImplementation "dev.amble:ait:${ait_version}"{
-        exclude(group: "dev.amble:lib")
-    }
-	
+
+    modImplementation "dev.amble:ait:${project.ait_version}"
+
     modApi("dev.amble:lib:${project.amblekit_version}") {
         exclude(group: "net.fabricmc.fabric-api")
     }
+
     modImplementation "dev.isxander:yet-another-config-lib:${project.yacl_version}"
 
     // getter setter
@@ -110,8 +105,8 @@ processResources {
                 "minecraft_version": project.minecraft_version,
                 "loader_version": project.loader_version,
                 "yacl_version": project.yacl_version,
-                "trinkets_version": project.trinkets_version,
-            "amblekit_version": project.amblekit_version
+                "amblekit_version": project.amblekit_version,
+                "trinkets_version": project.trinkets_version
     }
 }
 
