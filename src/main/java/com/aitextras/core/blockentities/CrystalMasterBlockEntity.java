@@ -19,21 +19,20 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 
-
-public class CrystalBlockEntity extends BlockEntity implements AnimatedBlockEntity, BlockEntityTicker<CrystalBlockEntity> {
-    private static final BedrockModelReference MODEL = new BedrockModelReference(AITExtras.MOD_ID, "crystal_block");
+public class CrystalMasterBlockEntity extends BlockEntity implements AnimatedBlockEntity, BlockEntityTicker<CrystalMasterBlockEntity> {
+    private static final BedrockModelReference MODEL = new BedrockModelReference(AITExtras.MOD_ID, "master_crystal_block");
 
     @Getter
     private final AnimationState animationState = new AnimationState();
     @Getter
     private int age = 0;
 
-    public CrystalBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
+    public CrystalMasterBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
         super(type, pos, state);
     }
 
-    public CrystalBlockEntity(BlockPos pos, BlockState state) {
-        this(AITExtrasBlockEntityTypes.CRYSTAL_BLOCK, pos, state);
+    public CrystalMasterBlockEntity(BlockPos pos, BlockState state) {
+        this(AITExtrasBlockEntityTypes.CRYSTAL_MASTER_BLOCK, pos, state);
     }
 
     @Override
@@ -57,7 +56,7 @@ public class CrystalBlockEntity extends BlockEntity implements AnimatedBlockEnti
     }
 
     @Override
-    public void tick(World world, BlockPos pos, BlockState state, CrystalBlockEntity blockEntity) {
+    public void tick(World world, BlockPos pos, BlockState state, CrystalMasterBlockEntity blockEntity) {
         age++;
     }
 

@@ -117,17 +117,17 @@ public class AITExtrasBlocks extends BlockContainer {
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
             .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.AMETHYST_BLOCK).nonOpaque().notSolid());
 
-//    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
-//    @NoEnglish
-//    public static final Block CRYSTAL_ZEITON_BLOCK = new CrystalZeitonBlock(ABlockSettings.create()
-//            .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
-//            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.AMETHYST_BLOCK));
-//
-//    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
-//    @NoEnglish
-//    public static final Block CRYSTAL_MASTER_BLOCK = new CrystalMasterBlock(ABlockSettings.create()
-//            .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
-//            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.AMETHYST_BLOCK));
+    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
+    @NoEnglish
+    public static final Block CRYSTAL_ZEITON_BLOCK = new CrystalZeitonBlock(ABlockSettings.create()
+            .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
+            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.AMETHYST_BLOCK).nonOpaque().notSolid());
+
+    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
+    @NoEnglish
+    public static final Block CRYSTAL_MASTER_BLOCK = new CrystalMasterBlock(ABlockSettings.create()
+            .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
+            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.AMETHYST_BLOCK).nonOpaque().notSolid());
 
     @AutomaticModel
     @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)

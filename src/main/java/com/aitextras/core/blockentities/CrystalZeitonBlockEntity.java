@@ -19,21 +19,20 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 
-
-public class CrystalBlockEntity extends BlockEntity implements AnimatedBlockEntity, BlockEntityTicker<CrystalBlockEntity> {
-    private static final BedrockModelReference MODEL = new BedrockModelReference(AITExtras.MOD_ID, "crystal_block");
+public class CrystalZeitonBlockEntity extends BlockEntity implements AnimatedBlockEntity, BlockEntityTicker<CrystalZeitonBlockEntity> {
+    private static final BedrockModelReference MODEL = new BedrockModelReference(AITExtras.MOD_ID, "zeiton_crystal_block");
 
     @Getter
     private final AnimationState animationState = new AnimationState();
     @Getter
     private int age = 0;
 
-    public CrystalBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
+    public CrystalZeitonBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
         super(type, pos, state);
     }
 
-    public CrystalBlockEntity(BlockPos pos, BlockState state) {
-        this(AITExtrasBlockEntityTypes.CRYSTAL_BLOCK, pos, state);
+    public CrystalZeitonBlockEntity(BlockPos pos, BlockState state) {
+        this(AITExtrasBlockEntityTypes.CRYSTAL_ZEITON_BLOCK, pos, state);
     }
 
     @Override
@@ -57,15 +56,15 @@ public class CrystalBlockEntity extends BlockEntity implements AnimatedBlockEnti
     }
 
     @Override
-    public void tick(World world, BlockPos pos, BlockState state, CrystalBlockEntity blockEntity) {
+    public void tick(World world, BlockPos pos, BlockState state, CrystalZeitonBlockEntity blockEntity) {
         age++;
     }
 
 
-//    public void useOn(World world, boolean sneaking, PlayerEntity player,Tardis tardis) {
-//        if (tardis.travel().inFlight()) return;
-//            this.playAnimation(new BedrockAnimationReference("crystal_block", "flight"));
-//        }
+   // public void useOn(World world, boolean sneaking, PlayerEntity player,Tardis tardis) {
+   //     if (tardis.travel().inFlight()) return;
+   //         this.playAnimation(new BedrockAnimationReference("crystal_block", "flight"));
+   //     }
 
 
 
