@@ -23,7 +23,8 @@ repositories {
 
     repositories {
         maven {
-            url "https://amblelabs.github.io/maven"
+            url "https://amblelabs.dev/maven"
+
             content {
                 includeGroup "dev.amble"
             }
@@ -98,6 +99,7 @@ processResources {
     inputs.property "yacl_version", project.yacl_version
     inputs.property "trinkets_version", project.trinkets_version
     inputs.property "amblekit_version", project.amblekit_version
+    inputs.property "ait_version", project.ait_version
     filteringCharset "UTF-8"
 
     filesMatching("fabric.mod.json") {
@@ -106,7 +108,8 @@ processResources {
                 "loader_version": project.loader_version,
                 "yacl_version": project.yacl_version,
                 "amblekit_version": project.amblekit_version,
-                "trinkets_version": project.trinkets_version
+                "trinkets_version": project.trinkets_version,
+                "ait_version": project.ait_version
     }
 }
 
