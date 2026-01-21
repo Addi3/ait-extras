@@ -19,6 +19,9 @@
 						"0.0": [0, 0, 0],
 						"5.0": [0, 0, 360]
 					}
+				},
+				"portal": {
+					"scale": 0
 				}
 			}
 		},
@@ -168,7 +171,6 @@
 		"idle": {
 			"loop": true,
 			"animation_length": 0.5,
-			"override_previous_animation": true,
 			"bones": {
 				"stargate": {
 					"rotation": [0, 0, -180]

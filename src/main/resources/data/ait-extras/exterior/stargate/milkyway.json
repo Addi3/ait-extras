@@ -9,7 +9,6 @@
   "left_animation": "stargate:open",
   "has_transparent_doors": false,
   "animations": {
-    "landed": "stargate:idle",
     "demat": "stargate:flight",
     "mat": "stargate:flight"
   },
