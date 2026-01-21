@@ -1,0 +1,15 @@
+{
+  "id": "ait-extras:stargate_door",
+  "model": "ait-extras:stargate",
+  "is_double": false,
+  "open_sound": "ait-extras:tardis/stargate/gate_open",
+  "close_sound": "ait-extras:tardis/stargate/gate_close",
+  "left_animation": "stargate:open",
+  "has_transparent_doors": false,
+  "portal_info": {
+    "enabled": false,
+    "width": 0,
+    "height": 0
+  }
+}
+

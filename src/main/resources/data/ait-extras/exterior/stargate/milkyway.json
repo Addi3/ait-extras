@@ -1,0 +1,24 @@
+{
+  "id": "ait-extras:milkyway",
+  "category": "ait-extras:stargate",
+  "parent": "ait:exterior/capsule/default",
+  "texture": "ait-extras:textures/blockentities/exteriors/stargate/milky_way.png",
+  "emission": "ait-extras:textures/blockentities/exteriors/stargate/milky_way_emission.png",
+  "model": "ait-extras:stargate",
+  "door": "ait-extras:stargate_door",
+  "left_animation": "stargate:open",
+  "has_transparent_doors": false,
+  "animations": {
+    "landed": "stargate:idle",
+    "demat": "stargate:flight",
+    "mat": "stargate:flight"
+  },
+
+  "seat_translation": [0, 0, 0],
+  "portal_info": {
+  "enabled": false,
+    "width": 0,
+    "height": 0
+  }
+}
+

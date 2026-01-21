@@ -31,6 +31,11 @@ public class AITExtrasSounds {
     public static final SoundEvent WHISTLE = register("tools/whistle");
     public static final SoundEvent RETEP = register("music/retep");
 
+    // Stargate exterior
+
+    public static final SoundEvent GATE_OPEN = register("tardis/stargate/gate_open");
+    public static final SoundEvent GATE_CLOSE = register("tardis/stargate/gate_close");
+
     // Register a SoundEvent
     private static SoundEvent register(String name) {
         Identifier id = AITExtras.id(name);
