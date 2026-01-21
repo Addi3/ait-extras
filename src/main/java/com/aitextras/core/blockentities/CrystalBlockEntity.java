@@ -62,10 +62,10 @@ public class CrystalBlockEntity extends BlockEntity implements AnimatedBlockEnti
     }
 
 
-    public void useOn(World world, boolean sneaking, PlayerEntity player,Tardis tardis) {
-        if (tardis.travel().inFlight()) return;
-            this.playAnimation(new BedrockAnimationReference("crystal_block", "flight"));
-        }
+//    public void useOn(World world, boolean sneaking, PlayerEntity player,Tardis tardis) {
+//        if (tardis.travel().inFlight()) return;
+//            this.playAnimation(new BedrockAnimationReference("crystal_block", "flight"));
+//        }
 
 
 

@@ -1,10 +1,8 @@
 package com.aitextras.datagen.providers;
 
+
 import com.aitextras.core.AITExtrasBlocks;
-import com.aitextras.core.AITExtrasItems;
 import dev.amble.ait.AITMod;
-import dev.amble.ait.core.AITBlocks;
-import dev.amble.ait.core.AITItems;
 import dev.amble.ait.module.ModuleRegistry;
 import dev.amble.lib.datagen.model.AmbleModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -14,7 +12,6 @@ import net.minecraft.item.Item;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
-import net.minecraft.world.BlockCollisionSpliterator;
 
 import java.util.ArrayList;
 import java.util.List;

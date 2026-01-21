@@ -3,10 +3,13 @@ package com.aitextras.core;
 
 import com.aitextras.core.item.AtomicShredderItem;
 import com.aitextras.core.item.WhistleItem;
+import dev.amble.ait.core.item.RenderableArmorItem;
 import dev.amble.lib.container.impl.ItemContainer;
 import dev.amble.lib.datagen.util.AutomaticModel;
 import dev.amble.lib.datagen.util.NoEnglish;
 import dev.amble.lib.item.AItemSettings;
+import net.minecraft.item.ArmorItem;
+import net.minecraft.item.ArmorMaterials;
 import net.minecraft.item.Item;
 import net.minecraft.item.MusicDiscItem;
 import net.minecraft.util.Rarity;
@@ -17,10 +20,6 @@ public class AITExtrasItems extends ItemContainer {
     @NoEnglish
     public static final Item MERCURY_DISC = new MusicDiscItem(11, AITExtrasSounds.MERCURY_DISC,
             new AItemSettings().maxCount(1).rarity(Rarity.RARE).group(AITExtrasItemGroups.MAIN), 216);
-
-//    @AutomaticModel
-//    @NoEnglish
-//    public static final Item RECALL_DISC = new RecallDiscItem(new AItemSettings().maxCount(1));
 
     @AutomaticModel
    @NoEnglish
@@ -59,4 +58,93 @@ public class AITExtrasItems extends ItemContainer {
 
     @NoEnglish
     public static final Item ATOMIC_SHREDDER = new AtomicShredderItem(new AItemSettings().group(AITExtrasItemGroups.MAIN));
+
+
+    @AutomaticModel
+    @NoEnglish
+    public static final Item WHITE_FEZ_HAT = new RenderableArmorItem(ArmorMaterials.LEATHER, ArmorItem.Type.HELMET,
+            new AItemSettings().group(AITExtrasItemGroups.COSMETICS).maxCount(1), true);
+    @AutomaticModel
+    @NoEnglish
+    public static final Item BLACK_FEZ_HAT = new RenderableArmorItem(ArmorMaterials.LEATHER, ArmorItem.Type.HELMET,
+            new AItemSettings().group(AITExtrasItemGroups.COSMETICS).maxCount(1), true);
+    @AutomaticModel
+    @NoEnglish
+    public static final Item BLUE_FEZ_HAT = new RenderableArmorItem(ArmorMaterials.LEATHER, ArmorItem.Type.HELMET,
+            new AItemSettings().group(AITExtrasItemGroups.COSMETICS).maxCount(1), true);
+    @AutomaticModel
+    @NoEnglish
+    public static final Item BROWN_FEZ_HAT = new RenderableArmorItem(ArmorMaterials.LEATHER, ArmorItem.Type.HELMET,
+            new AItemSettings().group(AITExtrasItemGroups.COSMETICS).maxCount(1), true);
+    @AutomaticModel
+    @NoEnglish
+    public static final Item CYAN_FEZ_HAT = new RenderableArmorItem(ArmorMaterials.LEATHER, ArmorItem.Type.HELMET,
+            new AItemSettings().group(AITExtrasItemGroups.COSMETICS).maxCount(1), true);
+    @AutomaticModel
+    @NoEnglish
+    public static final Item GRAY_FEZ_HAT = new RenderableArmorItem(ArmorMaterials.LEATHER, ArmorItem.Type.HELMET,
+            new AItemSettings().group(AITExtrasItemGroups.COSMETICS).maxCount(1), true);
+    @AutomaticModel
+    @NoEnglish
+    public static final Item GREEN_FEZ_HAT = new RenderableArmorItem(ArmorMaterials.LEATHER, ArmorItem.Type.HELMET,
+            new AItemSettings().group(AITExtrasItemGroups.COSMETICS).maxCount(1), true);
+    @AutomaticModel
+    @NoEnglish
+    public static final Item LIGHT_BLUE_FEZ_HAT = new RenderableArmorItem(ArmorMaterials.LEATHER, ArmorItem.Type.HELMET,
+            new AItemSettings().group(AITExtrasItemGroups.COSMETICS).maxCount(1), true);
+    @AutomaticModel
+    @NoEnglish
+    public static final Item LIGHT_GRAY_FEZ_HAT = new RenderableArmorItem(ArmorMaterials.LEATHER, ArmorItem.Type.HELMET,
+            new AItemSettings().group(AITExtrasItemGroups.COSMETICS).maxCount(1), true);
+    @AutomaticModel
+    @NoEnglish
+    public static final Item LIME_FEZ_HAT = new RenderableArmorItem(ArmorMaterials.LEATHER, ArmorItem.Type.HELMET,
+            new AItemSettings().group(AITExtrasItemGroups.COSMETICS).maxCount(1), true);
+    @AutomaticModel
+    @NoEnglish
+    public static final Item MAGENTA_FEZ_HAT = new RenderableArmorItem(ArmorMaterials.LEATHER, ArmorItem.Type.HELMET,
+            new AItemSettings().group(AITExtrasItemGroups.COSMETICS).maxCount(1), true);
+    @AutomaticModel
+    @NoEnglish
+    public static final Item ORANGE_FEZ_HAT = new RenderableArmorItem(ArmorMaterials.LEATHER, ArmorItem.Type.HELMET,
+            new AItemSettings().group(AITExtrasItemGroups.COSMETICS).maxCount(1), true);
+    @AutomaticModel
+    @NoEnglish
+    public static final Item PINK_FEZ_HAT = new RenderableArmorItem(ArmorMaterials.LEATHER, ArmorItem.Type.HELMET,
+            new AItemSettings().group(AITExtrasItemGroups.COSMETICS).maxCount(1), true);
+    @AutomaticModel
+    @NoEnglish
+    public static final Item PURPLE_FEZ_HAT = new RenderableArmorItem(ArmorMaterials.LEATHER, ArmorItem.Type.HELMET,
+            new AItemSettings().group(AITExtrasItemGroups.COSMETICS).maxCount(1), true);
+    @AutomaticModel
+    @NoEnglish
+    public static final Item RED_FEZ_HAT = new RenderableArmorItem(ArmorMaterials.LEATHER, ArmorItem.Type.HELMET,
+            new AItemSettings().group(AITExtrasItemGroups.COSMETICS).maxCount(1), true);
+    @AutomaticModel
+    @NoEnglish
+    public static final Item YELLOW_FEZ_HAT = new RenderableArmorItem(ArmorMaterials.LEATHER, ArmorItem.Type.HELMET,
+            new AItemSettings().group(AITExtrasItemGroups.COSMETICS).maxCount(1), true);
+
+    @AutomaticModel
+    @NoEnglish
+    public static final Item SCARF = new RenderableArmorItem(ArmorMaterials.LEATHER, ArmorItem.Type.CHESTPLATE,
+            new AItemSettings().group(AITExtrasItemGroups.COSMETICS).maxCount(1), true);
+    @AutomaticModel
+    @NoEnglish
+    public static final Item SCARF_RED = new RenderableArmorItem(ArmorMaterials.LEATHER, ArmorItem.Type.CHESTPLATE,
+            new AItemSettings().group(AITExtrasItemGroups.COSMETICS).maxCount(1), true);
+    @AutomaticModel
+    @NoEnglish
+    public static final Item SCARF_RAINBOW = new RenderableArmorItem(ArmorMaterials.LEATHER, ArmorItem.Type.CHESTPLATE,
+            new AItemSettings().group(AITExtrasItemGroups.COSMETICS).maxCount(1), true);
+
+    @AutomaticModel
+    @NoEnglish
+    public static final Item TENNANT_COAT = new RenderableArmorItem(ArmorMaterials.LEATHER, ArmorItem.Type.CHESTPLATE,
+            new AItemSettings().group(AITExtrasItemGroups.COSMETICS).maxCount(1), true);
+
+    @AutomaticModel
+    @NoEnglish
+    public static final Item THREED_GLASSES = new RenderableArmorItem(ArmorMaterials.LEATHER, ArmorItem.Type.HELMET,
+            new AItemSettings().group(AITExtrasItemGroups.COSMETICS).maxCount(1), true);
 }

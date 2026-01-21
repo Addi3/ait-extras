@@ -5,10 +5,7 @@ import com.aitextras.core.blocks.hudolinsupport.HudolinSupportBaseBlock;
 import com.aitextras.core.blocks.hudolinsupport.HudolinSupportTopBlock;
 import dev.amble.lib.block.ABlockSettings;
 import dev.amble.lib.container.impl.BlockContainer;
-import dev.amble.lib.datagen.util.AutomaticModel;
-import dev.amble.lib.datagen.util.NoBlockDrop;
-import dev.amble.lib.datagen.util.NoEnglish;
-import dev.amble.lib.datagen.util.PickaxeMineable;
+import dev.amble.lib.datagen.util.*;
 import dev.amble.lib.item.AItemSettings;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.Instrument;
@@ -49,56 +46,67 @@ public class AITExtrasBlocks extends BlockContainer {
 
 
     @NoEnglish
+    @AxeMineable(tool = AxeMineable.Tool.IRON)
     public static final Block HAT_STAND_OAK_BLOCK = new HatStandOakBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
             .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.WOOD));
 
     @NoEnglish
+    @AxeMineable(tool = AxeMineable.Tool.IRON)
     public static final Block HAT_STAND_ACACIA_BLOCK = new HatStandAcaciaBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
             .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.WOOD));
 
     @NoEnglish
+    @AxeMineable(tool = AxeMineable.Tool.IRON)
     public static final Block HAT_STAND_BAMBOO_BLOCK = new HatStandBambooBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
             .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.WOOD));
 
     @NoEnglish
+    @AxeMineable(tool = AxeMineable.Tool.IRON)
     public static final Block HAT_STAND_BIRCH_BLOCK = new HatStandBirchBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
             .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.WOOD));
 
     @NoEnglish
+    @AxeMineable(tool = AxeMineable.Tool.IRON)
     public static final Block HAT_STAND_CHERRY_BLOCK = new HatStandCherryBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
             .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.WOOD));
 
     @NoEnglish
+    @AxeMineable(tool = AxeMineable.Tool.IRON)
     public static final Block HAT_STAND_CRIMSON_BLOCK = new HatStandCrimsonBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
             .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.WOOD));
 
     @NoEnglish
+    @AxeMineable(tool = AxeMineable.Tool.IRON)
     public static final Block HAT_STAND_DARK_OAK_BLOCK = new HatStandDarkOakBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
             .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.WOOD));
 
     @NoEnglish
+    @AxeMineable(tool = AxeMineable.Tool.IRON)
     public static final Block HAT_STAND_JUNGLE_BLOCK = new HatStandJungleBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
             .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.WOOD));
 
     @NoEnglish
+    @AxeMineable(tool = AxeMineable.Tool.IRON)
     public static final Block HAT_STAND_MANGROVE_BLOCK = new HatStandMangroveBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
             .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.WOOD));
 
     @NoEnglish
+    @AxeMineable(tool = AxeMineable.Tool.IRON)
     public static final Block HAT_STAND_SPRUCE_BLOCK = new HatStandSpruceBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
             .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.WOOD));
 
     @NoEnglish
+    @AxeMineable(tool = AxeMineable.Tool.IRON)
     public static final Block HAT_STAND_WARPED_BLOCK = new HatStandWarpedBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
             .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.WOOD));
@@ -109,17 +117,17 @@ public class AITExtrasBlocks extends BlockContainer {
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
             .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.AMETHYST_BLOCK).nonOpaque().notSolid());
 
-//    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
-//    @NoEnglish
-//    public static final Block CRYSTAL_ZEITON_BLOCK = new CrystalZeitonBlock(ABlockSettings.create()
-//            .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
-//            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.AMETHYST_BLOCK));
-//
-//    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
-//    @NoEnglish
-//    public static final Block CRYSTAL_MASTER_BLOCK = new CrystalMasterBlock(ABlockSettings.create()
-//            .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
-//            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.AMETHYST_BLOCK));
+    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
+    @NoEnglish
+    public static final Block CRYSTAL_ZEITON_BLOCK = new CrystalZeitonBlock(ABlockSettings.create()
+            .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
+            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.AMETHYST_BLOCK).nonOpaque().notSolid());
+
+    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
+    @NoEnglish
+    public static final Block CRYSTAL_MASTER_BLOCK = new CrystalMasterBlock(ABlockSettings.create()
+            .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
+            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.AMETHYST_BLOCK).nonOpaque().notSolid());
 
     @AutomaticModel
     @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
@@ -247,14 +255,14 @@ public class AITExtrasBlocks extends BlockContainer {
     @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
     public static final Block METAL_GRATE = new Block(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
-            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.COPPER));
+            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.COPPER).nonOpaque());
 
 
     @NoEnglish
     @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
     public static final Block METAL_GRATE_SLAB = new SlabBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
-            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.COPPER));
+            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.COPPER).nonOpaque());
 
 
     @NoEnglish
@@ -262,14 +270,14 @@ public class AITExtrasBlocks extends BlockContainer {
     public static final Block METAL_GRATE_STAIRS = new StairsBlock(
             METAL_GRATE.getDefaultState(),ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
-            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.COPPER));
+            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.COPPER).nonOpaque());
 
 
     @NoEnglish
     @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
     public static final Block METAL_GRATE_WALL = new WallBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
-            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.COPPER));
+            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.COPPER).nonOpaque());
 
 
     @NoEnglish
@@ -278,7 +286,7 @@ public class AITExtrasBlocks extends BlockContainer {
             ABlockSettings.create()
                     .strength(2.0F, 3.0F)
                     
-                    .requiresTool()
+                    .requiresTool().nonOpaque()
                     .sounds(BlockSoundGroup.COPPER)
                     .pistonBehavior(PistonBehavior.NORMAL)
                     .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)),
@@ -290,14 +298,14 @@ public class AITExtrasBlocks extends BlockContainer {
     @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
     public static final Block METAL_MESH = new Block(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
-            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.COPPER));
+            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.COPPER).nonOpaque());
 
 
     @NoEnglish
     @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
     public static final Block METAL_MESH_SLAB = new SlabBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
-            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.COPPER));
+            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.COPPER).nonOpaque());
 
 
     @NoEnglish
@@ -305,23 +313,22 @@ public class AITExtrasBlocks extends BlockContainer {
     public static final Block METAL_MESH_STAIRS = new StairsBlock(
             METAL_GRATE.getDefaultState(),ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
-            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.COPPER));
+            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.COPPER).nonOpaque());
 
 
     @NoEnglish
     @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
     public static final Block METAL_MESH_WALL = new WallBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
-            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.COPPER));
+            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.COPPER).nonOpaque());
 
     @NoEnglish
     @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
     public static final Block METAL_MESH_TRAPDOOR = new TrapdoorBlock(
             ABlockSettings.create()
                     .strength(2.0F, 3.0F)
-                    
                     .requiresTool()
-                    .sounds(BlockSoundGroup.COPPER)
+                    .sounds(BlockSoundGroup.COPPER).nonOpaque()
                     .pistonBehavior(PistonBehavior.NORMAL)
                     .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)),
             BlockSetType.OAK
@@ -330,12 +337,12 @@ public class AITExtrasBlocks extends BlockContainer {
 
     @AutomaticModel
     @NoEnglish
-    public static final Block RETEP_BLOCK = new RetepBlock(ABlockSettings.create());
+    public static final Block RETEP = new RetepBlock(ABlockSettings.create());
 
     @NoEnglish
     @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
     public static final Block ARS_EGG_BLOCK = new ArsEggBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
-            .strength(1.0F, 1.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.SHROOMLIGHT));
+            .strength(1.0F, 1.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.SHROOMLIGHT).luminance(state -> 5));
 
 }
