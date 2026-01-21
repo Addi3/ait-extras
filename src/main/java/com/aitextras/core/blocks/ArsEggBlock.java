@@ -23,7 +23,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class ArsEggBlock extends HorizontalFacingBlock {
-    public static final BooleanProperty ON = BooleanProperty.of("on");
+    public static final BooleanProperty LIT = BooleanProperty.of("lit");
 
     protected static final VoxelShape SHAPE= Block.createCuboidShape(
             3.8, -0.2, 3.8, 12.2, 12.2, 12.2
@@ -32,7 +32,7 @@ public class ArsEggBlock extends HorizontalFacingBlock {
     public ArsEggBlock(Settings settings) {
         super(settings);
         this.setDefaultState(this.stateManager.getDefaultState()
-                .with(ON, false));
+                .with(LIT, false));
     }
 
 
@@ -59,12 +59,12 @@ public class ArsEggBlock extends HorizontalFacingBlock {
         boolean isSneaking = ctx.getPlayer() != null && ctx.getPlayer().isSneaking();
 
         return this.getDefaultState()
-                .with(ON, isSneaking);
+                .with(LIT, isSneaking);
     }
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(ON);
+        builder.add(LIT);
     }
 
 
@@ -73,11 +73,11 @@ public class ArsEggBlock extends HorizontalFacingBlock {
                               net.minecraft.entity.player.PlayerEntity player, Hand hand,
                               BlockHitResult hit) {
         if (!world.isClient) {
-            if (!state.get(ON)) {
-                world.setBlockState(pos, state.with(ON, true), 3);
+            if (!state.get(LIT)) {
+                world.setBlockState(pos, state.with(LIT, true), 3);
             }
-            if (state.get(ON)) {
-                world.setBlockState(pos, state.with(ON, false), 3);
+            if (state.get(LIT)) {
+                world.setBlockState(pos, state.with(LIT, false), 3);
             }
         }
         return ActionResult.SUCCESS;

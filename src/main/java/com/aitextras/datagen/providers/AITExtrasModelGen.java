@@ -1,6 +1,7 @@
 package com.aitextras.datagen.providers;
 
 
+import com.aitextras.AITExtras;
 import com.aitextras.core.AITExtrasBlocks;
 import dev.amble.ait.AITMod;
 import dev.amble.ait.module.ModuleRegistry;
@@ -30,7 +31,7 @@ public class AITExtrasModelGen extends AmbleModelProvider {
     }
 
     private static Model item(String parent, TextureKey... requiredTextureKeys) {
-        return item(AITMod.MOD_ID, parent, requiredTextureKeys);
+        return item(AITExtras.MOD_ID, parent, requiredTextureKeys);
     }
 
     private static Model item(TextureKey... requiredTextureKeys) {

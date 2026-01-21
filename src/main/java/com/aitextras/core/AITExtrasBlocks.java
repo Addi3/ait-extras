@@ -12,6 +12,8 @@ import net.minecraft.block.enums.Instrument;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.sound.BlockSoundGroup;
 
+import static net.minecraft.block.Blocks.createLightLevelFromLitBlockState;
+
 public class AITExtrasBlocks extends BlockContainer {
 
     @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
@@ -343,6 +345,6 @@ public class AITExtrasBlocks extends BlockContainer {
     @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
     public static final Block ARS_EGG_BLOCK = new ArsEggBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
-            .strength(1.0F, 1.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.SHROOMLIGHT).luminance(state -> 5));
+            .strength(1.0F, 1.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.SHROOMLIGHT).luminance(createLightLevelFromLitBlockState(8)));
 
 }
