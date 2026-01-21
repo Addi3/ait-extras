@@ -2,6 +2,7 @@ package com.aitextras.mixin;
 
 import com.aitextras.core.AITExtrasItems;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.option.Perspective;
 import net.minecraft.client.render.GameRenderer;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -18,14 +19,14 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(GameRenderer.class)
 public abstract class GameRenderMixin {
     @Shadow
-    abstract void loadPostProcessor(Identifier id);
+    protected abstract void loadPostProcessor(Identifier id);
 
     @Shadow
     public abstract void disablePostProcessor();
 
     @Final
     @Shadow
-    MinecraftClient client;
+    private MinecraftClient client;
 
     @Unique
     private static final Identifier GLASSES_SHADER =
@@ -33,38 +34,35 @@ public abstract class GameRenderMixin {
 
     @Unique
     private boolean shaderActive = false;
-    @Unique
-    private ClientPlayerEntity lastCameraPlayer = null;
-    @Unique
-    private int lastPerspective = -1;
 
     @Inject(method = "render", at = @At("HEAD"))
-    private void applyShader(float tickDelta, long startTime, boolean tick, CallbackInfo ci) {
-        int currentPerspective = client.options.getPerspective().ordinal();
+    private void aitextras$applyGlassesShader(
+            float tickDelta, long startTime, boolean tick, CallbackInfo ci) {
 
-        ClientPlayerEntity cameraPlayer = null;
-        if (client.cameraEntity instanceof ClientPlayerEntity player) {
-            cameraPlayer = player;
-        }
+        ClientPlayerEntity player = client.player;
+        if (player == null) return;
 
-        boolean wearing = false;
-        if (cameraPlayer != null) {
-            ItemStack head = cameraPlayer.getEquippedStack(EquipmentSlot.HEAD);
-            wearing = head.isOf(AITExtrasItems.THREED_GLASSES);
-        }
+        boolean firstPerson =
+                client.options.getPerspective() == Perspective.FIRST_PERSON;
 
-        boolean needsUpdate = cameraPlayer != lastCameraPlayer || currentPerspective != lastPerspective;
-        lastCameraPlayer = cameraPlayer;
-        lastPerspective = currentPerspective;
+        ItemStack helmet = player.getEquippedStack(EquipmentSlot.HEAD);
+        boolean wearingGlasses = helmet.isOf(AITExtrasItems.THREED_GLASSES);
 
-        if (shaderActive && !wearing) {
-            disablePostProcessor();
+
+        if (!firstPerson) {
             shaderActive = false;
+            return;
         }
 
-        if (wearing && !shaderActive) {
+        if (wearingGlasses && !shaderActive) {
             loadPostProcessor(GLASSES_SHADER);
             shaderActive = true;
+            return;
+        }
+
+        if (!wearingGlasses && shaderActive) {
+            disablePostProcessor();
+            shaderActive = false;
         }
     }
 }

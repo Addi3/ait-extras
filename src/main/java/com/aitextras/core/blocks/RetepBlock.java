@@ -4,8 +4,11 @@ import com.aitextras.core.AITExtrasSounds;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.PlayerInventory;
+import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
+import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
@@ -23,13 +26,10 @@ public class RetepBlock extends Block {
 
 
     @Override
-    public ActionResult onUse(BlockState state, @NotNull World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if (!world.isClient) {
-            var mid = Vec3d.ofCenter(pos);
-
-
+            Vec3d mid = Vec3d.ofCenter(pos);
             float pitch = 0.5f + world.random.nextFloat() * 1.5f;
-
 
             world.playSound(
                     null,
@@ -38,16 +38,32 @@ public class RetepBlock extends Block {
                     mid.getZ(),
                     getSound(state),
                     SoundCategory.BLOCKS,
-                    1.0f, // volume
+                    1.0f,
                     pitch
             );
-        } else {
 
-            float pitch = 0.5f + world.random.nextFloat() * 1.5f;
-            player.playSound(getSound(state), 1.0f, pitch);
+            if (!player.getAbilities().creativeMode) {
+                PlayerInventory inv = player.getInventory();
+
+                for (int i = 0; i < inv.size(); i++) {
+                    ItemStack stack = inv.getStack(i);
+
+                    if (!stack.isEmpty() && stack.isOf(this.asItem())) {
+                        stack.decrement(64);
+                        break;
+                    }
+                }
+
+                player.sendMessage(
+                        Text.translatable("message.ait-extras.noretep"),
+                        true
+                );
+            }
         }
+
         return ActionResult.SUCCESS;
     }
+
 
 
     public static SoundEvent getSound(BlockState state) {
@@ -57,5 +73,7 @@ public class RetepBlock extends Block {
 
         return ret;
     }
+    }
 
-}
+
+

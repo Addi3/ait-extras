@@ -343,6 +343,6 @@ public class AITExtrasBlocks extends BlockContainer {
     @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
     public static final Block ARS_EGG_BLOCK = new ArsEggBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
-            .strength(1.0F, 1.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.SHROOMLIGHT));
+            .strength(1.0F, 1.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.SHROOMLIGHT).luminance(state -> 5));
 
 }

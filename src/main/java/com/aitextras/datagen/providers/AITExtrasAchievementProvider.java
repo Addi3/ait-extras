@@ -24,7 +24,7 @@ public class AITExtrasAchievementProvider extends FabricAdvancementProvider {
                 .display(AITExtrasItems.MERCURY_DISC,
                         Text.translatable("achievement.ait-extras.title.root"),
                         Text.translatable("achievement.ait-extras.description.root"),
-                        new Identifier("textures/block/anvil.png"),
+                        new Identifier("textures/background.png"),
                         AdvancementFrame.TASK, false, false, false)
                 .criterion("root", InventoryChangedCriterion.Conditions.items(AITExtrasItems.JELLY_BABIES))
                 .build(consumer, AITExtras.MOD_ID + "/root");

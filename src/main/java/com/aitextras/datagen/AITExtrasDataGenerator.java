@@ -766,8 +766,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
     private void genEnglish(FabricDataGenerator.Pack pack) {
         pack.addProvider((((output, registriesFuture) -> {
                     AmbleLanguageProvider provider = new AmbleLanguageProvider(output, LanguageType.EN_US);
-
-            provider.translateBlocks(AITBlocks.class);
+                    
 
                     //desktops
                     provider.addTranslation("desktop.ait-extras.axos", "Axos");
@@ -879,7 +878,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasBlocks.HAT_STAND_SPRUCE_BLOCK, "Hat Stand");
                     provider.addTranslation(AITExtrasBlocks.HAT_STAND_WARPED_BLOCK, "Hat Stand");
                     provider.addTranslation(AITExtrasBlocks.CRYSTAL_BLOCK, "Roof Crystal");
-                   provider.addTranslation(AITExtrasBlocks.CRYSTAL_ZEITON_BLOCK, "Roof Crystal (Zeiton)");
+                    provider.addTranslation(AITExtrasBlocks.CRYSTAL_ZEITON_BLOCK, "Roof Crystal (Zeiton)");
                     provider.addTranslation(AITExtrasBlocks.CRYSTAL_MASTER_BLOCK, "Roof Crystal (Master)");
                     provider.addTranslation(AITExtrasBlocks.HUDOLIN_SUPPORT_BASE_BLOCK, "Hudolin Support (Base)");
                     provider.addTranslation(AITExtrasBlocks.HUDOLIN_SUPPORT_TOP_BLOCK, "Hudolin Support (Top)");
@@ -959,6 +958,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     // Tabs / ToolTips
                      provider.addTranslation(AITExtrasItemGroups.MAIN, "AIT Extras");
                      provider.addTranslation("itemGroup.ait-extras.item_group_cosmetics", "AIT Extras: Cosmetics");
+                     provider.addTranslation("message.ait-extras.noretep", "No Retep For you!");
                      provider.addTranslation("block.tooltip.seal", "If you SHIFT when placing this, it will become a CENTERED version!!");
                      provider.addTranslation("block.tooltip.ars_egg", "If you RIGHT CLICK the block, it will turn ON and OFF!!");
                      provider.addTranslation("block.tooltip.hatstandacacia", "Variant: Acacia");
