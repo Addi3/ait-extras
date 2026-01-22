@@ -754,6 +754,16 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(Blocks.BLUE_STAINED_GLASS), conditionsFromItem(Blocks.BLUE_STAINED_GLASS))
                     .criterion(hasItem(Blocks.RED_STAINED_GLASS), conditionsFromItem(Blocks.RED_STAINED_GLASS)));
 
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AITExtrasItems.KEYCHAIN, 1)
+                    .pattern(" N ")
+                    .pattern("N N")
+                    .pattern("NBN")
+                    .input('N',Items.IRON_NUGGET)
+                    .input('B',Items.IRON_BARS)
+                    .criterion(hasItem(Items.IRON_NUGGET), conditionsFromItem(Items.IRON_NUGGET))
+                    .criterion(hasItem(Blocks.IRON_BARS), conditionsFromItem(Blocks.IRON_BARS)));
+
             return provider;
 
         })));
@@ -960,6 +970,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasItems.SCARF_RAINBOW, "Rainbow Scarf");
                     provider.addTranslation(AITExtrasItems.TENNANT_COAT, "Tennant Coat");
                     provider.addTranslation(AITExtrasItems.THREED_GLASSES, "3D Glasses");
+                    provider.addTranslation(AITExtrasItems.KEYCHAIN, "Key Chain");
 
                     // Tabs / ToolTips
                      provider.addTranslation(AITExtrasItemGroups.MAIN, "AIT Extras");

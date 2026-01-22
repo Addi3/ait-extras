@@ -2,6 +2,7 @@ package com.aitextras.core;
 
 
 import com.aitextras.core.item.AtomicShredderItem;
+import com.aitextras.core.item.KeyChainItem;
 import com.aitextras.core.item.WhistleItem;
 import dev.amble.ait.core.item.RenderableArmorItem;
 import dev.amble.lib.container.impl.ItemContainer;
@@ -147,4 +148,7 @@ public class AITExtrasItems extends ItemContainer {
     @NoEnglish
     public static final Item THREED_GLASSES = new RenderableArmorItem(ArmorMaterials.LEATHER, ArmorItem.Type.HELMET,
             new AItemSettings().group(AITExtrasItemGroups.COSMETICS).maxCount(1), true);
+
+    @NoEnglish
+    public static final Item KEYCHAIN = new KeyChainItem(new AItemSettings().group(AITExtrasItemGroups.MAIN));
 }

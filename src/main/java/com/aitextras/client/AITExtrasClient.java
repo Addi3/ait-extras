@@ -19,8 +19,10 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
+import net.minecraft.client.item.ModelPredicateProviderRegistry;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
+import net.minecraft.util.Identifier;
 
 import static com.aitextras.AITExtras.*;
 
@@ -31,6 +33,18 @@ public class AITExtrasClient implements ClientModInitializer {
         resourcepackRegister();
         trinketsRegister();
         BlockRenderLayerMapRegister();
+
+        ModelPredicateProviderRegistry.register(
+                AITExtrasItems.KEYCHAIN,
+                new Identifier("filled"),
+                (stack, world, entity, seed) -> {
+                    int count = 0;
+                    if (stack.hasNbt() && stack.getNbt().contains("Items")) {
+                        count = stack.getNbt().getList("Items", 10).size();
+                    }
+                    return count / 3f;
+                }
+        );
     }
 
 

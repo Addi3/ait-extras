@@ -1,0 +1,10 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "ait-extras:item/keychain_empty" },
+	"overrides": [
+		{ "predicate": { "filled": 0.33 }, "model": "ait-extras:item/keychain_1" },
+		{ "predicate": { "filled": 0.66 }, "model": "ait-extras:item/keychain_2" },
+		{ "predicate": { "filled": 1.0 }, "model": "ait-extras:item/keychain_3" }
+	]
+}

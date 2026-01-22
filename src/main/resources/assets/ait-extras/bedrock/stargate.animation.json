@@ -340,6 +340,42 @@
 					"effect": "chevron_lock"
 				}
 			}
+		},
+		"flight_alt": {
+			"loop": true,
+			"animation_length": 5,
+			"bones": {
+				"stargate": {
+					"rotation": [0, 0, -180]
+				},
+				"SymbolRing": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"5.0": [0, 0, 360]
+					}
+				},
+				"SymbolRingDestiny": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"5.0": [0, 0, 360]
+					}
+				},
+				"portal": {
+					"scale": 0
+				},
+				"OuterRing": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"5.0": [0, 0, 360]
+					}
+				},
+				"InnerRing": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"5.0": [0, 0, 360]
+					}
+				}
+			}
 		}
 	}
 }

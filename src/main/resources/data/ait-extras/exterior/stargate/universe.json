@@ -9,8 +9,8 @@
   "left_animation": "stargate:open_alt",
   "has_transparent_doors": false,
   "animations": {
-    "demat": "stargate:flight",
-    "mat": "stargate:flight"
+    "demat": "stargate:flight_alt",
+    "mat": "stargate:flight_alt"
   },
 
   "seat_translation": [0, 0, 0],

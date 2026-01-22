@@ -1,0 +1,30 @@
+{
+	"parent": "minecraft:item/generated",
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [0, 90, -55],
+			"translation": [0, 2.25, 0],
+			"scale": [0.6, 0.6, 0.6]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [0, 90, 55],
+			"translation": [0, 2.25, 0],
+			"scale": [0.6, 0.6, 0.6]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, -85, 0],
+			"scale": [0.6, 0.6, 0.6]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 85, 0],
+			"scale": [0.6, 0.6, 0.6]
+		},
+		"ground": {
+			"scale": [0.6, 0.6, 0.6]
+		},
+		"head": {
+			"rotation": [0, -90, 0],
+			"translation": [0, 6.5, -8.25]
+		}
+	}
+}

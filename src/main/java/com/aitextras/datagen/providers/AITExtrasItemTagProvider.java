@@ -4,6 +4,7 @@ import java.util.concurrent.CompletableFuture;
 
 import com.aitextras.AITExtras;
 import com.aitextras.core.AITExtrasItems;
+import dev.amble.ait.core.AITItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.item.Item;
@@ -51,6 +52,13 @@ public class AITExtrasItemTagProvider extends FabricTagProvider<Item> {
                 .add(AITExtrasItems.SCARF)
                 .add(AITExtrasItems.SCARF_RED)
                 .add(AITExtrasItems.SCARF_RAINBOW);
+
+        getOrCreateTagBuilder(AITExtrasTags.Items.KEYCHAIN_ITEMS)
+                .add(AITItems.CLASSIC_KEY)
+                .add(AITItems.GOLD_KEY)
+                .add(AITItems.IRON_KEY)
+                .add(AITItems.NETHERITE_KEY)
+                .add(AITItems.SKELETON_KEY);
     }
 
     public static class AITExtrasTags {
@@ -62,6 +70,10 @@ public class AITExtrasItemTagProvider extends FabricTagProvider<Item> {
             public static final TagKey<Item> SCARFS = TagKey.of(
                     RegistryKeys.ITEM,
                     id("scarfs")
+            );
+            public static final TagKey<Item> KEYCHAIN_ITEMS = TagKey.of(
+                    RegistryKeys.ITEM,
+                    id("keychain_items")
             );
         }
     }
