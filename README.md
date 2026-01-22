@@ -97,6 +97,7 @@
 ### Thank You's:
 
 - [Pan](https://github.com/Mansarde) - Provided the Control Lables and Old Protocol Names Resource Packs
+- [Ouro](https://ouro-the-boro.carrd.co/) - Stargate Model / Textures
 - [Project TinyLink](https://www.youtube.com/@projecttinylink7986) - permission to use their exterior design
 - [Maggie](https://discord.com/channels/1213989169878274068/1289647140485861438) - "Classic" exteriors
 - [Maketendo](https://modrinth.com/user/Maketendo) - Setting the mod up

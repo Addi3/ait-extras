@@ -847,6 +847,12 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation("exterior.ait-extras.origin_soul", "Origin (Soul)");
                     provider.addTranslation("exterior.ait-extras.origin_fire", "Origin (Fire)");
 
+                        //stargate
+                    provider.addTranslation("exterior.ait-extras.stargate", "Stargate");
+                    provider.addTranslation("exterior.ait-extras.milkyway", "MilkyWay");
+                    provider.addTranslation("exterior.ait-extras.pegasus", "Pegasus");
+                    provider.addTranslation("exterior.ait-extras.universe", "Universe");
+
 
 
                     //sonics
