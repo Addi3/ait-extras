@@ -70,6 +70,10 @@ public class AITExtrasBlockEntityTypes implements BlockEntityContainer{
     public static BlockEntityType<CandleStandLargeBlockEntity> CANDLE_STAND_LARGE_BLOCK_ENTITY_TYPE = FabricBlockEntityTypeBuilder
             .create(CandleStandLargeBlockEntity::new, AITExtrasBlocks.CANDLE_STAND_LARGE_BLOCK).build();
 
+    public static BlockEntityType<TubeLightBlockEntity> TUBE_LIGHT_BLOCK_ENTITY_TYPE = FabricBlockEntityTypeBuilder
+            .create(TubeLightBlockEntity::new, AITExtrasBlocks.TUBE_LIGHT_BLOCK).build();
+
+
     @HasBedrockModel
     public static BlockEntityType<CrystalBlockEntity> CRYSTAL_BLOCK = FabricBlockEntityTypeBuilder.create(CrystalBlockEntity::new, AITExtrasBlocks.CRYSTAL_BLOCK).build();
 
@@ -78,4 +82,6 @@ public class AITExtrasBlockEntityTypes implements BlockEntityContainer{
 
     @HasBedrockModel
     public static BlockEntityType<CrystalZeitonBlockEntity> CRYSTAL_ZEITON_BLOCK = FabricBlockEntityTypeBuilder.create(CrystalZeitonBlockEntity::new, AITExtrasBlocks.CRYSTAL_ZEITON_BLOCK).build();
+
+
 }
