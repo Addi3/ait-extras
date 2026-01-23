@@ -764,6 +764,15 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(Items.IRON_NUGGET), conditionsFromItem(Items.IRON_NUGGET))
                     .criterion(hasItem(Blocks.IRON_BARS), conditionsFromItem(Blocks.IRON_BARS)));
 
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.TUBE_LIGHT_BLOCK, 2)
+                    .pattern("FS")
+                    .pattern(" S")
+                    .input('S',Blocks.SANDSTONE_WALL)
+                    .input('F',Blocks.OCHRE_FROGLIGHT)
+                    .criterion(hasItem(Blocks.SANDSTONE_WALL), conditionsFromItem(Blocks.SANDSTONE_WALL))
+                    .criterion(hasItem(Blocks.OCHRE_FROGLIGHT), conditionsFromItem(Blocks.OCHRE_FROGLIGHT)));
+
             return provider;
 
         })));
@@ -912,6 +921,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasBlocks.CANDLE_STAND_LARGE_BLOCK, "Candle Stand (Large)");
                     provider.addTranslation(AITExtrasBlocks.CANDLE_STAND_SINGLE_BLOCK, "Candle Stand (Single)");
                     provider.addTranslation(AITExtrasBlocks.CANDLE_STAND_SMALL_BLOCK, "Candle Stand (Small)");
+                    provider.addTranslation(AITExtrasBlocks.TUBE_LIGHT_BLOCK, "Tube Light");
 
                     provider.addTranslation(AITExtrasBlocks.METAL_GRATE, "Metal Grate");
                     provider.addTranslation(AITExtrasBlocks.METAL_GRATE_SLAB, "Metal Grate Slab");

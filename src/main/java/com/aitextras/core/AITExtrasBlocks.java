@@ -351,5 +351,5 @@ public class AITExtrasBlocks extends BlockContainer {
     @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
     public static final Block TUBE_LIGHT_BLOCK = new TubeLightBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
-            .strength(1.0F, 1.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.SHROOMLIGHT).luminance(8));
+            .strength(1.0F, 1.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.SHROOMLIGHT).luminance(8).nonOpaque().notSolid());
 }

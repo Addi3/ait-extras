@@ -59,8 +59,6 @@ public class TubeLightBlockEntity extends BlockEntity implements AnimatedBlockEn
         age++;
     }
 
-
-
 }
 
 

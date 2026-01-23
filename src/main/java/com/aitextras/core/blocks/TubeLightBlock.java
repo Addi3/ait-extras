@@ -54,7 +54,7 @@ public class TubeLightBlock extends Block implements BlockEntityProvider {
 
     @Override
     public boolean isShapeFullCube(BlockState state, BlockView world, BlockPos pos) {
-        return true;
+        return false;
     }
 
 
@@ -77,7 +77,7 @@ public class TubeLightBlock extends Block implements BlockEntityProvider {
             }
         };
     }
-    
+
     @Override
     public BlockState rotate(BlockState state, BlockRotation rotation) {
         return state.with(ROTATION, rotation.rotate(state.get(ROTATION), MAX_ROTATIONS));
