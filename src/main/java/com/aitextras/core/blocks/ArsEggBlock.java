@@ -2,7 +2,6 @@ package com.aitextras.core.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.HorizontalFacingBlock;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.ItemPlacementContext;
@@ -22,7 +21,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class ArsEggBlock extends HorizontalFacingBlock {
+public class ArsEggBlock extends Block {
     public static final BooleanProperty LIT = BooleanProperty.of("lit");
 
     protected static final VoxelShape SHAPE= Block.createCuboidShape(
