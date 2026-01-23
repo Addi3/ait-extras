@@ -59,7 +59,7 @@
 
 <h3>The game will not launch unless you have all of these mods!</h3>
 
-- Requires AiT 1.3.0 and above -> [Download Here](https://modrinth.com/mod/ait/versions)
+- Requires AiT (latest 1.20.1 version) -> [Download Here](https://modrinth.com/mod/ait/versions)
 - Requires AmbleKit (latest 1.20.1 version) -> [Download Here](https://modrinth.com/mod/amblekit/versions)
 - Requires YACL (latest fabric 1.20.1 version) -> [Download Here](https://modrinth.com/mod/yacl/versions?g=1.20.1&l=fabric)
 - Requires Trinkets API (latest fabric 1.20.1 version) -> [Download Here](https://modrinth.com/mod/trinkets/version/3.7.2)
