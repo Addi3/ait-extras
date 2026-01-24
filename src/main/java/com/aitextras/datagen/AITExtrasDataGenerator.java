@@ -823,6 +823,20 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(Items.REDSTONE), conditionsFromItem(Items.REDSTONE))
                     .criterion(hasItem(Blocks.GLASS), conditionsFromItem(Blocks.GLASS)));
 
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.EMITTER, 4)
+                    .pattern("BBB")
+                    .pattern("RWR")
+                    .pattern("BCB")
+                    .input('C',Items.COAL)
+                    .input('W',Items.WATER_BUCKET)
+                    .input('R',Items.REDSTONE)
+                    .input('B',Blocks.BLACK_CONCRETE)
+                    .criterion(hasItem(Items.COAL), conditionsFromItem(Items.COAL))
+                    .criterion(hasItem(Items.WATER_BUCKET), conditionsFromItem(Items.WATER_BUCKET))
+                    .criterion(hasItem(Items.REDSTONE), conditionsFromItem(Items.REDSTONE))
+                    .criterion(hasItem(Blocks.BLACK_CONCRETE), conditionsFromItem(Blocks.BLACK_CONCRETE)));
+
             return provider;
 
         })));
@@ -988,6 +1002,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasBlocks.CLASSIC_MONITOR_COVER_BLOCK, "Monitor Cover (Classic)");
                     provider.addTranslation(AITExtrasBlocks.ELEVATOR, "Elevator");
                     provider.addTranslation(AITExtrasBlocks.ELEVATOR_BASE, "Elevator Base");
+                    provider.addTranslation(AITExtrasBlocks.EMITTER, "Emitter");
 
 
                     // Items
@@ -1040,8 +1055,8 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                      provider.addTranslation(AITExtrasItemGroups.MAIN, "AIT Extras");
                      provider.addTranslation("itemGroup.ait-extras.item_group_cosmetics", "AIT Extras: Cosmetics");
                      provider.addTranslation("message.ait-extras.noretep", "No Retep For you!");
-                     provider.addTranslation("block.tooltip.seal", "If you SHIFT when placing this, it will become a CENTERED version!!");
-                     provider.addTranslation("block.tooltip.ars_egg", "If you RIGHT CLICK the block, it will turn ON and OFF!!");
+                     provider.addTranslation("block.tooltip.seal", "Hold SHIFT to place CENTERED version!");
+                     provider.addTranslation("block.tooltip.ars_egg", "RIGHT CLICK to turn ON / OFF!");
                      provider.addTranslation("block.tooltip.hatstandacacia", "Variant: Acacia");
                      provider.addTranslation("block.tooltip.hatstandbamboo", "Variant: Bamboo");
                      provider.addTranslation("block.tooltip.hatstandbirch", "Variant: Birch");
@@ -1055,6 +1070,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                      provider.addTranslation("block.tooltip.hatstandwarped", "Variant: Warped");
                      provider.addTranslation("block.tooltip.elevatorplaceable", "Can be placed on: Elevator Base");
                      provider.addTranslation("block.tooltip.elevatorinteract", "Hold SPACE to go up and SHIFT to stop!");
+                     provider.addTranslation("block.tooltip.emitter", "Activate with redstone!");
 
                     //SFXS
                     provider.addTranslation("animation.ait-extras.classic_mat", "Classic (Alt)");

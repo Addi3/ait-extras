@@ -5,16 +5,19 @@ import dev.amble.ait.AITMod;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.block.*;
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.text.Style;
 import net.minecraft.text.Text;
 import net.minecraft.text.TextColor;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
@@ -52,22 +55,6 @@ public class ElevatorBlock extends Block {
         double centerX = pos.getX() + 0.5;
         double centerZ = pos.getZ() + 0.5;
 
-        int outerAmount = 3;
-        double outerSpread = 0.5;
-
-        for (int i = 0; i < outerAmount; i++) {
-            double yOffset = (double) i / outerAmount;
-            double y = pos.getY() + yOffset;
-
-            double x = centerX + (random.nextDouble() - 0.5) * outerSpread;
-            double z = centerZ + (random.nextDouble() - 0.5) * outerSpread;
-
-            world.addParticle(
-                    ParticleTypes.END_ROD,
-                    x, y, z,
-                    0.0, 0.0, 0.0
-            );
-        }
 
         int innerAmount = 1;
         double innerSpread = 1;
@@ -91,17 +78,15 @@ public class ElevatorBlock extends Block {
         return this.canPlantOnTop(world.getBlockState(blockPos), world, blockPos);
     }
 
-
-    protected void appendTooltip(ItemStack stack, List<Text> tooltip) {
+    public void appendTooltip(ItemStack stack, @Nullable BlockView world, List<Text> tooltip, TooltipContext options) {
+        super.appendTooltip(stack, world, tooltip, options);
         tooltip.add(
                 Text.translatable("block.tooltip.elevatorplaceable")
-                        .setStyle(Style.EMPTY.withColor(TextColor.fromRgb(0xffffff)))
-                        .append(Text.literal(" "))
-                        .append(
-                                Text.translatable("block.tooltip.elevatorinteract")
-                                        .setStyle(Style.EMPTY.withColor(TextColor.fromRgb(0xffffff)))
-                        )
-        );
+                        .formatted(Formatting.WHITE));
+
+        tooltip.add(
+                Text.translatable("block.tooltip.elevatorinteract")
+                        .formatted(Formatting.GOLD));
     }
 
 }
