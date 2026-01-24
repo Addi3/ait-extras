@@ -221,14 +221,14 @@ public class AITExtrasBlocks extends BlockContainer {
  @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
  public static final Block SEAL_BLOCK = new SealBlock(ABlockSettings.create()
          .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
-         .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.METAL));
+         .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.METAL).nonOpaque().notSolid());
 
 
  @NoEnglish
  @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
  public static final Block SEAL_SMALL_BLOCK = new SealSmallBlock(ABlockSettings.create()
          .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
-         .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.METAL));
+         .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.METAL).nonOpaque().notSolid());
 
 
  @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
@@ -352,4 +352,16 @@ public class AITExtrasBlocks extends BlockContainer {
     public static final Block TUBE_LIGHT_BLOCK = new TubeLightBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
             .strength(1.0F, 1.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.SHROOMLIGHT).luminance(8).nonOpaque().notSolid());
+
+    @NoEnglish
+    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
+    public static final Block MONITOR_COVER_BLOCK = new MonitorCoverBlock(ABlockSettings.create()
+            .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
+            .strength(1.0F, 1.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.WOOD).luminance(8).nonOpaque().notSolid());
+
+    @NoEnglish
+    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
+    public static final Block CLASSIC_MONITOR_COVER_BLOCK = new ClassicMonitorCoverBlock(ABlockSettings.create()
+            .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
+            .strength(1.0F, 1.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.WOOD).luminance(8).nonOpaque().notSolid());
 }

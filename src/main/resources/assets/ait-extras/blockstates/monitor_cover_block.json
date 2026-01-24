@@ -1,0 +1,6 @@
+
+{
+  "variants": {
+    "": { "model": "ait-extras:block/monitor_cover_block" }
+  }
+}

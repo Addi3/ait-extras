@@ -30,6 +30,7 @@ public class AITExtrasSounds {
     public static final SoundEvent SHIELD_HUM = register("tardis/shield_hum");
     public static final SoundEvent WHISTLE = register("tools/whistle");
     public static final SoundEvent RETEP = register("music/retep");
+    public static final SoundEvent ROUNDEL_DOOR = register("tardis/roundel_door");
 
     // Stargate exterior
 

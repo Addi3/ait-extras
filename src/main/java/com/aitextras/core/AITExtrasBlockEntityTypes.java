@@ -1,6 +1,7 @@
 package com.aitextras.core;
 
 
+import com.aitextras.AITExtras;
 import com.aitextras.core.blockentities.*;
 import com.aitextras.core.blockentities.hudolinsupport.HudolinSupportBaseBlockEntity;
 import com.aitextras.core.blockentities.hudolinsupport.HudolinSupportTopBlockEntity;
@@ -72,6 +73,12 @@ public class AITExtrasBlockEntityTypes implements BlockEntityContainer{
 
     public static BlockEntityType<TubeLightBlockEntity> TUBE_LIGHT_BLOCK_ENTITY_TYPE = FabricBlockEntityTypeBuilder
             .create(TubeLightBlockEntity::new, AITExtrasBlocks.TUBE_LIGHT_BLOCK).build();
+
+    public static BlockEntityType<MonitorCoverBlockEntity> MONITOR_COVER_BLOCK_ENTITY_TYPE = FabricBlockEntityTypeBuilder
+            .create(MonitorCoverBlockEntity::new, AITExtrasBlocks.MONITOR_COVER_BLOCK).build();
+
+    public static BlockEntityType<ClassicMonitorCoverBlockEntity> CLASSIC_MONITOR_COVER_BLOCK_ENTITY_TYPE = FabricBlockEntityTypeBuilder
+            .create(ClassicMonitorCoverBlockEntity::new, AITExtrasBlocks.CLASSIC_MONITOR_COVER_BLOCK).build();
 
 
     @HasBedrockModel

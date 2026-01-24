@@ -773,6 +773,30 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(Blocks.SANDSTONE_WALL), conditionsFromItem(Blocks.SANDSTONE_WALL))
                     .criterion(hasItem(Blocks.OCHRE_FROGLIGHT), conditionsFromItem(Blocks.OCHRE_FROGLIGHT)));
 
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.MONITOR_COVER_BLOCK, 1)
+                    .group("cover")
+                    .pattern("LLL")
+                    .pattern("PBP")
+                    .input('L',Blocks.STRIPPED_SPRUCE_LOG)
+                    .input('B',Blocks.STONE_BUTTON)
+                    .input('P',Blocks.PISTON)
+                    .criterion(hasItem(Blocks.STRIPPED_SPRUCE_LOG), conditionsFromItem(Blocks.STRIPPED_SPRUCE_LOG))
+                    .criterion(hasItem(Blocks.STONE_BUTTON), conditionsFromItem(Blocks.STONE_BUTTON))
+                    .criterion(hasItem(Blocks.PISTON), conditionsFromItem(Blocks.PISTON)));
+
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.CLASSIC_MONITOR_COVER_BLOCK, 1)
+                    .group("cover")
+                    .pattern("QQQ")
+                    .pattern("PBP")
+                    .input('Q',Blocks.QUARTZ_BLOCK)
+                    .input('B',Blocks.STONE_BUTTON)
+                    .input('P',Blocks.PISTON)
+                    .criterion(hasItem(Blocks.QUARTZ_BLOCK), conditionsFromItem(Blocks.QUARTZ_BLOCK))
+                    .criterion(hasItem(Blocks.STONE_BUTTON), conditionsFromItem(Blocks.STONE_BUTTON))
+                    .criterion(hasItem(Blocks.PISTON), conditionsFromItem(Blocks.PISTON)));
+
             return provider;
 
         })));
@@ -934,6 +958,8 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasBlocks.METAL_MESH_WALL, "Metal Mesh Wall");
                     provider.addTranslation(AITExtrasBlocks.METAL_MESH_TRAPDOOR, "Metal Mesh Trapdoor");
                     provider.addTranslation(AITExtrasBlocks.ARS_EGG_BLOCK, "ARS Egg");
+                    provider.addTranslation(AITExtrasBlocks.MONITOR_COVER_BLOCK, "Monitor Cover");
+                    provider.addTranslation(AITExtrasBlocks.CLASSIC_MONITOR_COVER_BLOCK, "Monitor Cover (Classic)");
 
 
                     // Items
