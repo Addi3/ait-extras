@@ -10,7 +10,8 @@
     "client.rendering.ArmorFeatureRendererMixin",
     "client.rendering.ArmorStandEntityRendererMixin",
     "client.rendering.HeadFeatureRendererMixin",
-    "client.rendering.PlayerEntityRendererMixin"
+    "client.rendering.PlayerEntityRendererMixin",
+    "client.rendering.ElevatorBlockRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1

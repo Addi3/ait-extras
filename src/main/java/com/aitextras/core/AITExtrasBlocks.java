@@ -364,4 +364,16 @@ public class AITExtrasBlocks extends BlockContainer {
     public static final Block CLASSIC_MONITOR_COVER_BLOCK = new ClassicMonitorCoverBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
             .strength(1.0F, 1.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.WOOD).luminance(8).nonOpaque().notSolid());
+
+    @NoEnglish
+    @NoBlockDrop
+    public static final Block ELEVATOR = new ElevatorBlock(ABlockSettings.create()
+            .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN))
+            .strength(1.0F, 1.0F).pistonBehavior(PistonBehavior.IGNORE).sounds(BlockSoundGroup.SHROOMLIGHT).luminance(8).nonOpaque().notSolid().noCollision());
+
+    @NoEnglish
+    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
+    public static final Block ELEVATOR_BASE = new Block(ABlockSettings.create()
+            .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
+            .strength(2.5F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.METAL).luminance(8).nonOpaque().notSolid());
 }

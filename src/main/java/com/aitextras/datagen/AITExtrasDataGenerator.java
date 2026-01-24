@@ -797,6 +797,32 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(Blocks.STONE_BUTTON), conditionsFromItem(Blocks.STONE_BUTTON))
                     .criterion(hasItem(Blocks.PISTON), conditionsFromItem(Blocks.PISTON)));
 
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.ELEVATOR_BASE, 2)
+                    .group("elevator")
+                    .pattern("ZBZ")
+                    .pattern("RGR")
+                    .pattern("ZRZ")
+                    .input('R',Items.REDSTONE)
+                    .input('Z',AITExtrasItems.ZIRCONIUM_INGOT)
+                    .input('B',Blocks.LIGHT_BLUE_STAINED_GLASS)
+                    .input('G',Blocks.GLOWSTONE)
+                    .criterion(hasItem(Items.REDSTONE), conditionsFromItem(Items.REDSTONE))
+                    .criterion(hasItem(AITExtrasItems.ZIRCONIUM_INGOT), conditionsFromItem(AITExtrasItems.ZIRCONIUM_INGOT))
+                    .criterion(hasItem(Blocks.LIGHT_BLUE_STAINED_GLASS), conditionsFromItem(Blocks.LIGHT_BLUE_STAINED_GLASS))
+                    .criterion(hasItem(Blocks.GLOWSTONE), conditionsFromItem(Blocks.GLOWSTONE)));
+
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.ELEVATOR, 16)
+                    .group("elevator")
+                    .pattern("R")
+                    .pattern("G")
+                    .pattern("R")
+                    .input('R',Items.REDSTONE)
+                    .input('G',Blocks.GLASS)
+                    .criterion(hasItem(Items.REDSTONE), conditionsFromItem(Items.REDSTONE))
+                    .criterion(hasItem(Blocks.GLASS), conditionsFromItem(Blocks.GLASS)));
+
             return provider;
 
         })));
@@ -960,6 +986,8 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasBlocks.ARS_EGG_BLOCK, "ARS Egg");
                     provider.addTranslation(AITExtrasBlocks.MONITOR_COVER_BLOCK, "Monitor Cover");
                     provider.addTranslation(AITExtrasBlocks.CLASSIC_MONITOR_COVER_BLOCK, "Monitor Cover (Classic)");
+                    provider.addTranslation(AITExtrasBlocks.ELEVATOR, "Elevator");
+                    provider.addTranslation(AITExtrasBlocks.ELEVATOR_BASE, "Elevator Base");
 
 
                     // Items
@@ -1025,6 +1053,8 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                      provider.addTranslation("block.tooltip.hatstandoak", "Variant: Oak");
                      provider.addTranslation("block.tooltip.hatstandspruce", "Variant: Spruce");
                      provider.addTranslation("block.tooltip.hatstandwarped", "Variant: Warped");
+                     provider.addTranslation("block.tooltip.elevatorplaceable", "Can be placed on: Elevator Base");
+                     provider.addTranslation("block.tooltip.elevatorinteract", "Hold SPACE to go up and SHIFT to stop!");
 
                     //SFXS
                     provider.addTranslation("animation.ait-extras.classic_mat", "Classic (Alt)");

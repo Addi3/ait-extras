@@ -1,0 +1,6 @@
+
+{
+  "variants": {
+    "": { "model": "ait-extras:block/elevator_base" }
+  }
+}
