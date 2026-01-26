@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "lit=false": { "model": "ait-extras:block/ars_egg" },
+    "lit=true": { "model": "ait-extras:block/ars_egg_on"}
+  }
+}

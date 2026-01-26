@@ -551,7 +551,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
 
 
             provider.addShapedRecipe(
-                    ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.ARS_EGG_BLOCK, 2)
+                    ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.ARS_EGG, 2)
                             .pattern(" I ")
                             .pattern("SES")
                             .pattern("ISI")
@@ -837,6 +837,35 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(Items.REDSTONE), conditionsFromItem(Items.REDSTONE))
                     .criterion(hasItem(Blocks.BLACK_CONCRETE), conditionsFromItem(Blocks.BLACK_CONCRETE)));
 
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.PILLAR, 4)
+                    .group("pillar")
+                    .pattern("P")
+                    .pattern("P")
+                    .pattern("P")
+                    .input('P',Blocks.QUARTZ_PILLAR)
+                    .criterion(hasItem(Blocks.QUARTZ_PILLAR), conditionsFromItem(Blocks.QUARTZ_PILLAR)));
+
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.PILLAR_TOP, 4)
+                    .group("pillar")
+                    .pattern("S")
+                    .pattern("P")
+                    .input('S',Blocks.QUARTZ_SLAB)
+                    .input('P',Blocks.QUARTZ_PILLAR)
+                    .criterion(hasItem(Blocks.QUARTZ_SLAB), conditionsFromItem(Blocks.QUARTZ_SLAB))
+                    .criterion(hasItem(Blocks.QUARTZ_PILLAR), conditionsFromItem(Blocks.QUARTZ_PILLAR)));
+
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.PILLAR_BOTTOM, 4)
+                    .group("pillar")
+                    .pattern("P")
+                    .pattern("S")
+                    .input('S',Blocks.QUARTZ_SLAB)
+                    .input('P',Blocks.QUARTZ_PILLAR)
+                    .criterion(hasItem(Blocks.QUARTZ_SLAB), conditionsFromItem(Blocks.QUARTZ_SLAB))
+                    .criterion(hasItem(Blocks.QUARTZ_PILLAR), conditionsFromItem(Blocks.QUARTZ_PILLAR)));
+
             return provider;
 
         })));
@@ -997,12 +1026,15 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasBlocks.METAL_MESH_STAIRS, "Metal Mesh Stairs");
                     provider.addTranslation(AITExtrasBlocks.METAL_MESH_WALL, "Metal Mesh Wall");
                     provider.addTranslation(AITExtrasBlocks.METAL_MESH_TRAPDOOR, "Metal Mesh Trapdoor");
-                    provider.addTranslation(AITExtrasBlocks.ARS_EGG_BLOCK, "ARS Egg");
+                    provider.addTranslation(AITExtrasBlocks.ARS_EGG, "ARS Egg");
                     provider.addTranslation(AITExtrasBlocks.MONITOR_COVER_BLOCK, "Monitor Cover");
                     provider.addTranslation(AITExtrasBlocks.CLASSIC_MONITOR_COVER_BLOCK, "Monitor Cover (Classic)");
                     provider.addTranslation(AITExtrasBlocks.ELEVATOR, "Elevator");
                     provider.addTranslation(AITExtrasBlocks.ELEVATOR_BASE, "Elevator Base");
                     provider.addTranslation(AITExtrasBlocks.EMITTER, "Emitter");
+                    provider.addTranslation(AITExtrasBlocks.PILLAR_TOP, "Classic Pillar Top");
+                    provider.addTranslation(AITExtrasBlocks.PILLAR, "Classic Pillar");
+                    provider.addTranslation(AITExtrasBlocks.PILLAR_BOTTOM, "Classic Pillar Bottom");
 
 
                     // Items

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "ait-extras:block/pillar_bottom",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "ait-extras:block/pillar_bottom"
+    },
+    "axis=z": {
+      "model": "ait-extras:block/pillar_bottom",
+      "x": 90
+    }
+  }
+}

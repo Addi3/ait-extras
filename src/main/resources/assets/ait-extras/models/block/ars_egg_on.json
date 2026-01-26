@@ -1,5 +1,5 @@
 {
-	"parent": "ait-extras:block/ars_egg_block",
+	"parent": "ait-extras:block/ars_egg",
 	"textures": {
 		"0": "ait-extras:block/ars_egg_on",
 		"particle": "ait-extras:block/ars_egg"
