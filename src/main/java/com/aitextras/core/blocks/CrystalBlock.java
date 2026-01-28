@@ -31,7 +31,7 @@ public class CrystalBlock extends Block implements BlockEntityProvider {
         builder.add(POWERED);
     }
 
-    protected static final VoxelShape SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 48.0, 16.0);
+    protected static final VoxelShape SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 16.0, 16.0);
 
     @Override
     public BlockState getPlacementState(ItemPlacementContext context) {
@@ -80,21 +80,19 @@ public class CrystalBlock extends Block implements BlockEntityProvider {
                                Block sourceBlock, BlockPos sourcePos, boolean notify) {
         if (world.getBlockEntity(pos) instanceof CrystalBlockEntity be) {
 
-            if (!world.isClient) {
-                boolean isPowered = state.get(CrystalBlock.POWERED);
-                world.setBlockState(pos, state.with(CrystalBlock.POWERED, !isPowered), Block.NOTIFY_ALL);
+            if (world.isClient) return;
+
+            boolean powered = world.isReceivingRedstonePower(pos);
+            boolean open = state.get(POWERED);
+
+            if (powered != open) {
+                world.setBlockState(pos, state.with(POWERED, powered), Block.NOTIFY_ALL);
+
 
             }
-
         }
 
     }
-
-    @Override
-    public boolean emitsRedstonePower(BlockState state) {
-        return false;
-    }
-
 }
 
 
