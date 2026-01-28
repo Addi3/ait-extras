@@ -71,6 +71,20 @@ public class ClassicMonitorCoverBlockEntity extends BlockEntity implements Anima
         }
     }
 
+    public void onOpenStateChanged(boolean open) {
+        if (world == null || world.isClient) return;
+
+        if (open) {
+            playAnimation(new BedrockAnimationReference(
+                    "classic_monitor_cover_block", "open"
+            ));
+        } else {
+            playAnimation(new BedrockAnimationReference(
+                    "classic_monitor_cover_block", "close"
+            ));
+        }
+    }
+
 }
 
 

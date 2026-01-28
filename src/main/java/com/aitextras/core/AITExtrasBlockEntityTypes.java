@@ -1,10 +1,9 @@
 package com.aitextras.core;
 
 
-import com.aitextras.AITExtras;
 import com.aitextras.core.blockentities.*;
-import com.aitextras.core.blockentities.hudolinsupport.HudolinSupportBaseBlockEntity;
-import com.aitextras.core.blockentities.hudolinsupport.HudolinSupportTopBlockEntity;
+import com.aitextras.core.blockentities.HudolinSupportBaseBlockEntity;
+import com.aitextras.core.blockentities.HudolinSupportTopBlockEntity;
 import dev.amble.lib.animation.HasBedrockModel;
 import dev.amble.lib.container.impl.BlockEntityContainer;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
@@ -79,6 +78,12 @@ public class AITExtrasBlockEntityTypes implements BlockEntityContainer{
 
     public static BlockEntityType<ClassicMonitorCoverBlockEntity> CLASSIC_MONITOR_COVER_BLOCK_ENTITY_TYPE = FabricBlockEntityTypeBuilder
             .create(ClassicMonitorCoverBlockEntity::new, AITExtrasBlocks.CLASSIC_MONITOR_COVER_BLOCK).build();
+
+    public static BlockEntityType<RoundelDoorBlockEntity> ROUNDEL_DOOR_BLOCK_ENTITY_TYPE = FabricBlockEntityTypeBuilder
+            .create(RoundelDoorBlockEntity::new, AITExtrasBlocks.ROUNDEL_DOOR_BLOCK).build();
+
+    public static BlockEntityType<ClassicRoundelDoorBlockEntity> CLASSIC_ROUNDEL_DOOR_BLOCK_ENTITY_TYPE = FabricBlockEntityTypeBuilder
+            .create(ClassicRoundelDoorBlockEntity::new, AITExtrasBlocks.CLASSIC_ROUNDEL_DOOR_BLOCK).build();
 
 
     @HasBedrockModel

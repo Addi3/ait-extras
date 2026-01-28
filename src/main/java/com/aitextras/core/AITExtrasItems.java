@@ -151,4 +151,8 @@ public class AITExtrasItems extends ItemContainer {
 
     @NoEnglish
     public static final Item KEYCHAIN = new KeyChainItem(new AItemSettings().group(AITExtrasItemGroups.MAIN));
+
+    @NoEnglish
+    @AutomaticModel
+    public static final Item ROUNDEL_MOULD = new Item(new AItemSettings().group(AITExtrasItemGroups.MAIN));
 }

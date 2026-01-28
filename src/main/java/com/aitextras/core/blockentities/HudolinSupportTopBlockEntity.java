@@ -1,4 +1,4 @@
-package com.aitextras.core.blockentities.hudolinsupport;
+package com.aitextras.core.blockentities;
 
 import com.aitextras.core.AITExtrasBlockEntityTypes;
 import net.minecraft.block.BlockState;

@@ -2,7 +2,7 @@ package com.aitextras.client.renderers.decor.hudolinsupport;
 
 import com.aitextras.AITExtras;
 import com.aitextras.client.models.decor.hudolinsupport.HudolinSupportTopModel;
-import com.aitextras.core.blockentities.hudolinsupport.HudolinSupportTopBlockEntity;
+import com.aitextras.core.blockentities.HudolinSupportTopBlockEntity;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.SkullBlock;
 import net.minecraft.client.render.RenderLayer;

@@ -2,6 +2,7 @@ package com.aitextras.core.blocks;
 
 import com.aitextras.core.AITExtrasBlockEntityTypes;
 import com.aitextras.core.AITExtrasSounds;
+import com.aitextras.core.blockentities.ClassicMonitorCoverBlockEntity;
 import com.aitextras.core.blockentities.MonitorCoverBlockEntity;
 import com.aitextras.core.blockentities.TubeLightBlockEntity;
 import net.minecraft.block.*;
@@ -128,6 +129,32 @@ public class MonitorCoverBlock extends Block implements BlockEntityProvider {
         }
 
         return super.onUse(state, world, pos, player, hand, hit);
+    }
+
+    @Override
+    public void neighborUpdate(BlockState state, World world, BlockPos pos,
+                               Block sourceBlock, BlockPos sourcePos, boolean notify) {
+        if (world.getBlockEntity(pos) instanceof MonitorCoverBlockEntity be) {
+
+            if (world.isClient) return;
+
+            boolean powered = world.isReceivingRedstonePower(pos);
+            boolean open = state.get(OPEN);
+
+            if (powered != open) {
+                world.setBlockState(pos, state.with(OPEN, powered), Block.NOTIFY_ALL);
+
+                world.playSound(
+                        null,
+                        pos,
+                        AITExtrasSounds.ROUNDEL_DOOR,
+                        SoundCategory.BLOCKS,
+                        3.0f,
+                        1.0f
+                );
+                be.onOpenStateChanged(powered);
+            }
+        }
     }
 }
 

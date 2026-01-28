@@ -1,8 +1,8 @@
 package com.aitextras.core;
 
 import com.aitextras.core.blocks.*;
-import com.aitextras.core.blocks.hudolinsupport.HudolinSupportBaseBlock;
-import com.aitextras.core.blocks.hudolinsupport.HudolinSupportTopBlock;
+import com.aitextras.core.blocks.HudolinSupportBaseBlock;
+import com.aitextras.core.blocks.HudolinSupportTopBlock;
 import dev.amble.lib.block.ABlockSettings;
 import dev.amble.lib.container.impl.BlockContainer;
 import dev.amble.lib.datagen.util.*;
@@ -400,4 +400,16 @@ public class AITExtrasBlocks extends BlockContainer {
     public static final Block PILLAR_BOTTOM = new PillarBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
             .strength(2.5F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.STONE));
+
+    @NoEnglish
+    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
+    public static final Block ROUNDEL_DOOR_BLOCK = new RoundelDoorBlock(ABlockSettings.create()
+            .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
+            .strength(1.0F, 1.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.STONE).nonOpaque().notSolid());
+
+    @NoEnglish
+    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
+    public static final Block CLASSIC_ROUNDEL_DOOR_BLOCK = new ClassicRoundelDoorBlock(ABlockSettings.create()
+            .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
+            .strength(1.0F, 1.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.STONE).nonOpaque().notSolid());
 }

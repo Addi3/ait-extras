@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "ait-extras:item/classic_roundel_door_item"
+  }
+}

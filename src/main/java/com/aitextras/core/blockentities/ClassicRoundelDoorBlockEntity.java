@@ -3,7 +3,7 @@ package com.aitextras.core.blockentities;
 
 import com.aitextras.AITExtras;
 import com.aitextras.core.AITExtrasBlockEntityTypes;
-import com.aitextras.core.blocks.MonitorCoverBlock;
+import com.aitextras.core.blocks.ClassicRoundelDoorBlock;
 import dev.amble.lib.animation.AnimatedBlockEntity;
 import dev.amble.lib.client.bedrock.BedrockAnimationReference;
 import dev.amble.lib.client.bedrock.BedrockModelReference;
@@ -19,20 +19,21 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 
-public class MonitorCoverBlockEntity extends BlockEntity implements AnimatedBlockEntity, BlockEntityTicker<MonitorCoverBlockEntity> {
-    private static final BedrockModelReference MODEL = new BedrockModelReference(AITExtras.MOD_ID, "monitor_cover_block");
+public class ClassicRoundelDoorBlockEntity extends BlockEntity implements AnimatedBlockEntity, BlockEntityTicker<ClassicRoundelDoorBlockEntity> {
+    private static final BedrockModelReference MODEL = new BedrockModelReference(AITExtras.MOD_ID, "classic_roundel_door_block");
 
     @Getter
     private final AnimationState animationState = new AnimationState();
     @Getter
     private int age = 0;
 
-    public MonitorCoverBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
+
+    public ClassicRoundelDoorBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
         super(type, pos, state);
     }
 
-    public MonitorCoverBlockEntity(BlockPos pos, BlockState state) {
-        this(AITExtrasBlockEntityTypes.MONITOR_COVER_BLOCK_ENTITY_TYPE, pos, state);
+    public ClassicRoundelDoorBlockEntity(BlockPos pos, BlockState state) {
+        this(AITExtrasBlockEntityTypes.CLASSIC_ROUNDEL_DOOR_BLOCK_ENTITY_TYPE, pos, state);
     }
 
     @Override
@@ -52,11 +53,11 @@ public class MonitorCoverBlockEntity extends BlockEntity implements AnimatedBloc
 
     @Override
     public boolean hasEmission() {
-        return false;
+        return true;
     }
 
     @Override
-    public void tick(World world, BlockPos pos, BlockState state, MonitorCoverBlockEntity blockEntity) {
+    public void tick(World world, BlockPos pos, BlockState state, ClassicRoundelDoorBlockEntity blockEntity) {
         age++;
     }
 
@@ -64,10 +65,10 @@ public class MonitorCoverBlockEntity extends BlockEntity implements AnimatedBloc
         if (world.isClient) return;
         BlockState state = world.getBlockState(pos);
 
-        if (state.get(MonitorCoverBlock.OPEN)) {
-            this.playAnimation(new BedrockAnimationReference("monitor_cover_block", "open"));
+        if (state.get(ClassicRoundelDoorBlock.OPEN)) {
+            this.playAnimation(new BedrockAnimationReference("classic_roundel_door_block", "open"));
         } else {
-            this.playAnimation(new BedrockAnimationReference("monitor_cover_block", "close"));
+            this.playAnimation(new BedrockAnimationReference("classic_roundel_door_block", "close"));
         }
     }
 
@@ -76,15 +77,14 @@ public class MonitorCoverBlockEntity extends BlockEntity implements AnimatedBloc
 
         if (open) {
             playAnimation(new BedrockAnimationReference(
-                    "monitor_cover_block", "open"
+                    "classic_roundel_door_block", "open"
             ));
         } else {
             playAnimation(new BedrockAnimationReference(
-                    "monitor_cover_block", "close"
+                    "classic_roundel_door_block", "close"
             ));
         }
     }
-
 }
 
 
