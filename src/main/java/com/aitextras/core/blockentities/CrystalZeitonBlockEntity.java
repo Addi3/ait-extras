@@ -3,7 +3,7 @@ package com.aitextras.core.blockentities;
 
 import com.aitextras.AITExtras;
 import com.aitextras.core.AITExtrasBlockEntityTypes;
-import dev.amble.ait.core.tardis.Tardis;
+import com.aitextras.core.blocks.CrystalZeitonBlock;
 import dev.amble.lib.animation.AnimatedBlockEntity;
 import dev.amble.lib.client.bedrock.BedrockAnimationReference;
 import dev.amble.lib.client.bedrock.BedrockModelReference;
@@ -13,7 +13,6 @@ import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.AnimationState;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
@@ -55,17 +54,32 @@ public class CrystalZeitonBlockEntity extends BlockEntity implements AnimatedBlo
         return true;
     }
 
+
     @Override
     public void tick(World world, BlockPos pos, BlockState state, CrystalZeitonBlockEntity blockEntity) {
-        age++;
+
+        if (!world.isClient) return;
+        boolean powered = state.get(CrystalZeitonBlock.POWERED);
+
+        if (powered) {
+            if (age == 0 || age >= 90) {
+                this.playAnimation(
+                        new BedrockAnimationReference("zeiton_crystal_block", "flight")
+                );
+                age = 0;
+            }
+            age++;
+        } else {
+            if (age != 0) {
+                this.playAnimation(
+                        new BedrockAnimationReference("zeiton_crystal_block", "idle")
+                );
+            }
+            age = 0;
+        }
     }
-
-
-
-
-
-
 }
+
 
 
 

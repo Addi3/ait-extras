@@ -3,6 +3,8 @@ package com.aitextras.core.blockentities;
 
 import com.aitextras.AITExtras;
 import com.aitextras.core.AITExtrasBlockEntityTypes;
+import com.aitextras.core.blocks.CrystalBlock;
+import com.aitextras.core.blocks.CrystalMasterBlock;
 import dev.amble.ait.core.tardis.Tardis;
 import dev.amble.lib.animation.AnimatedBlockEntity;
 import dev.amble.lib.client.bedrock.BedrockAnimationReference;
@@ -55,17 +57,28 @@ public class CrystalMasterBlockEntity extends BlockEntity implements AnimatedBlo
         return true;
     }
 
+
     @Override
     public void tick(World world, BlockPos pos, BlockState state, CrystalMasterBlockEntity blockEntity) {
-        age++;
+
+        if (!world.isClient) return;
+        boolean powered = state.get(CrystalMasterBlock.POWERED);
+
+        if (powered) {
+            if (age == 0 || age >= 90) {
+                this.playAnimation(
+                        new BedrockAnimationReference("master_crystal_block", "flight")
+                );
+                age = 0;
+            }
+            age++;
+        } else {
+            if (age != 0) {
+                this.playAnimation(
+                        new BedrockAnimationReference("master_crystal_block", "idle")
+                );
+            }
+            age = 0;
+        }
     }
-
-
-
-
-
-
 }
-
-
-
