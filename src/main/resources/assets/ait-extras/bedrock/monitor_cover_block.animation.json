@@ -3,37 +3,37 @@
 	"animations": {
 		"open": {
 			"loop": "hold_on_last_frame",
-			"animation_length": 1,
+			"animation_length": 3,
 			"override_previous_animation": true,
 			"bones": {
 				"bottom": {
 					"position": {
 						"0.0": [0, 0, 0],
-						"1.0": [0, -16, 0]
+						"3.0": [0, -16, 0]
 					}
 				},
 				"top": {
 					"position": {
 						"0.0": [0, 0, 0],
-						"1.0": [0, 16, 0]
+						"3.0": [0, 16, 0]
 					}
 				}
 			}
 		},
 		"close": {
 			"loop": "hold_on_last_frame",
-			"animation_length": 1,
+			"animation_length": 3,
 			"bones": {
 				"bottom": {
 					"position": {
 						"0.0": [0, -16, 0],
-						"1.0": [0, 0, 0]
+						"3.0": [0, 0, 0]
 					}
 				},
 				"top": {
 					"position": {
 						"0.0": [0, 16, 0],
-						"1.0": [0, 0, 0]
+						"3.0": [0, 0, 0]
 					}
 				}
 			}

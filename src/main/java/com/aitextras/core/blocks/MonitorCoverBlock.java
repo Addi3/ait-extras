@@ -119,7 +119,7 @@ public class MonitorCoverBlock extends Block implements BlockEntityProvider {
                 world.playSound(
                         null,
                         pos,
-                        AITExtrasSounds.ROUNDEL_DOOR,
+                        AITExtrasSounds.SCANNER,
                         SoundCategory.BLOCKS,
                         3.0f,
                         1.0f
@@ -149,7 +149,7 @@ public class MonitorCoverBlock extends Block implements BlockEntityProvider {
                 world.playSound(
                         null,
                         pos,
-                        AITExtrasSounds.ROUNDEL_DOOR,
+                        AITExtrasSounds.SCANNER,
                         SoundCategory.BLOCKS,
                         3.0f,
                         1.0f

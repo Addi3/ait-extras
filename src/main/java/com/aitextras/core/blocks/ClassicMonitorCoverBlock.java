@@ -116,7 +116,7 @@ public class ClassicMonitorCoverBlock extends Block implements BlockEntityProvid
                 world.playSound(
                         null,
                         pos,
-                        AITExtrasSounds.ROUNDEL_DOOR,
+                        AITExtrasSounds.SCANNER,
                         SoundCategory.BLOCKS,
                         3.0f,
                         1.0f
@@ -146,7 +146,7 @@ public class ClassicMonitorCoverBlock extends Block implements BlockEntityProvid
                 world.playSound(
                         null,
                         pos,
-                        AITExtrasSounds.ROUNDEL_DOOR,
+                        AITExtrasSounds.SCANNER,
                         SoundCategory.BLOCKS,
                         3.0f,
                         1.0f
