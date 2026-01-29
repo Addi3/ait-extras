@@ -85,7 +85,7 @@ public class ExtrasMonitorRenderer<T extends ExtrasMonitorBlockEntity> implement
         matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(180f));
         matrices.multiply(RotationAxis.NEGATIVE_Y.rotationDegrees(180 - h)); // Apply block rotation here
         matrices.scale(0.004f * scale, 0.004f * scale, 0.004f * scale);
-        matrices.translate(-50f, 0, -47);
+        matrices.translate(-55f, 0, -55);
 
 // Render text
         TravelHandler travel = tardis.travel();
