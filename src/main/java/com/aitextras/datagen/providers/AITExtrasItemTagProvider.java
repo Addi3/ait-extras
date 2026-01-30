@@ -31,22 +31,7 @@ public class AITExtrasItemTagProvider extends FabricTagProvider<Item> {
 
 
         getOrCreateTagBuilder(AITExtrasTags.Items.FEZ_HATS)
-                .add(AITExtrasItems.BLACK_FEZ_HAT)
-                .add(AITExtrasItems.BLUE_FEZ_HAT)
-                .add(AITExtrasItems.BROWN_FEZ_HAT)
-                .add(AITExtrasItems.CYAN_FEZ_HAT)
-                .add(AITExtrasItems.GRAY_FEZ_HAT)
-                .add(AITExtrasItems.GREEN_FEZ_HAT)
-                .add(AITExtrasItems.LIGHT_BLUE_FEZ_HAT)
-                .add(AITExtrasItems.LIGHT_GRAY_FEZ_HAT)
-                .add(AITExtrasItems.LIME_FEZ_HAT)
-                .add(AITExtrasItems.MAGENTA_FEZ_HAT)
-                .add(AITExtrasItems.ORANGE_FEZ_HAT)
-                .add(AITExtrasItems.PINK_FEZ_HAT)
-                .add(AITExtrasItems.PURPLE_FEZ_HAT)
-                .add(AITExtrasItems.RED_FEZ_HAT)
-                .add(AITExtrasItems.WHITE_FEZ_HAT)
-                .add(AITExtrasItems.YELLOW_FEZ_HAT);
+                .add(AITExtrasItems.FEZ_ITEM);
 
         getOrCreateTagBuilder(AITExtrasTags.Items.SCARFS)
                 .add(AITExtrasItems.SCARF)

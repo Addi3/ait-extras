@@ -20,11 +20,11 @@ public class ScarfTrinketsRenderer implements TrinketRenderer {
 
     private final ScarfModel scarfModel = new ScarfModel(ScarfModel.getTexturedModelData().createModel());
 
-    private static final Identifier SCARF = new Identifier(AITExtras.MOD_ID,
+    private static final Identifier SCARF = AITExtras.id(
             "textures/wearables/scarf.png");
-    private static final Identifier SCARF_RED = new Identifier(AITExtras.MOD_ID,
+    private static final Identifier SCARF_RED = AITExtras.id(
             "textures/wearables/scarf_red.png");
-    private static final Identifier SCARF_RAINBOW = new Identifier(AITExtras.MOD_ID,
+    private static final Identifier SCARF_RAINBOW = AITExtras.id(
             "textures/wearables/scarf_rainbow.png");
 
     @Override

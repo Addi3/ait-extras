@@ -16,7 +16,7 @@ import net.minecraft.util.math.RotationPropertyHelper;
 
 public class HatStandCherryRenderer<T extends HatStandCherryBlockEntity> implements BlockEntityRenderer<T> {
 
-    public static final Identifier HAT_STAND_CHERRY_TEXTURE = new Identifier(AITExtras.MOD_ID,
+    public static final Identifier HAT_STAND_CHERRY_TEXTURE = AITExtras.id(
             "textures/blockentities/decor/hatstand/cherry.png");
     private final HatStandModel hatStandModel;
 

@@ -16,7 +16,7 @@ import net.minecraft.util.math.RotationPropertyHelper;
 
 public class HatStandCrimsonRenderer<T extends HatStandCrimsonBlockEntity> implements BlockEntityRenderer<T> {
 
-    public static final Identifier HAT_STAND_CRIMSON_TEXTURE = new Identifier(AITExtras.MOD_ID,
+    public static final Identifier HAT_STAND_CRIMSON_TEXTURE = AITExtras.id(
             "textures/blockentities/decor/hatstand/crimson.png");
     private final HatStandModel hatStandModel;
 

@@ -13,19 +13,22 @@ import com.aitextras.client.renderers.wearables.trinkets.ThreeDGlassesTrinketsRe
 import com.aitextras.core.AITExtrasBlockEntityTypes;
 import com.aitextras.core.AITExtrasBlocks;
 import com.aitextras.core.AITExtrasItems;
-import dev.amble.lib.animation.AnimatedBlockEntity;
-import dev.amble.lib.animation.client.BedrockBlockEntityRenderer;
 import dev.emi.trinkets.api.client.TrinketRendererRegistry;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
-import net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
+import net.fabricmc.fabric.impl.client.rendering.ColorProviderRegistryImpl;
 import net.fabricmc.loader.api.FabricLoader;
-import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.color.item.ItemColorProvider;
 import net.minecraft.client.item.ModelPredicateProviderRegistry;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
+import net.minecraft.item.DyeableItem;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 
 import static com.aitextras.AITExtras.*;
@@ -37,6 +40,8 @@ public class AITExtrasClient implements ClientModInitializer {
         resourcepackRegister();
         trinketsRegister();
         BlockRenderLayerMapRegister();
+
+        ColorProviderRegistry.ITEM.register(new FezColorProvider(), AITExtrasItems.FEZ_ITEM);
 
         ModelPredicateProviderRegistry.register(
                 AITExtrasItems.KEYCHAIN,
@@ -85,22 +90,7 @@ public class AITExtrasClient implements ClientModInitializer {
         TrinketRendererRegistry.registerRenderer(AITExtrasItems.SCARF, new ScarfTrinketsRenderer());
         TrinketRendererRegistry.registerRenderer(AITExtrasItems.SCARF_RED, new ScarfTrinketsRenderer());
         TrinketRendererRegistry.registerRenderer(AITExtrasItems.SCARF_RAINBOW, new ScarfTrinketsRenderer());
-        TrinketRendererRegistry.registerRenderer(AITExtrasItems.WHITE_FEZ_HAT, new FezHatTrinketsRenderer());
-        TrinketRendererRegistry.registerRenderer(AITExtrasItems.BLACK_FEZ_HAT, new FezHatTrinketsRenderer());
-        TrinketRendererRegistry.registerRenderer(AITExtrasItems.BROWN_FEZ_HAT, new FezHatTrinketsRenderer());
-        TrinketRendererRegistry.registerRenderer(AITExtrasItems.CYAN_FEZ_HAT, new FezHatTrinketsRenderer());
-        TrinketRendererRegistry.registerRenderer(AITExtrasItems.GRAY_FEZ_HAT, new FezHatTrinketsRenderer());
-        TrinketRendererRegistry.registerRenderer(AITExtrasItems.GREEN_FEZ_HAT, new FezHatTrinketsRenderer());
-        TrinketRendererRegistry.registerRenderer(AITExtrasItems.LIGHT_BLUE_FEZ_HAT, new FezHatTrinketsRenderer());
-        TrinketRendererRegistry.registerRenderer(AITExtrasItems.LIGHT_GRAY_FEZ_HAT, new FezHatTrinketsRenderer());
-        TrinketRendererRegistry.registerRenderer(AITExtrasItems.LIME_FEZ_HAT, new FezHatTrinketsRenderer());
-        TrinketRendererRegistry.registerRenderer(AITExtrasItems.MAGENTA_FEZ_HAT, new FezHatTrinketsRenderer());
-        TrinketRendererRegistry.registerRenderer(AITExtrasItems.ORANGE_FEZ_HAT, new FezHatTrinketsRenderer());
-        TrinketRendererRegistry.registerRenderer(AITExtrasItems.PINK_FEZ_HAT, new FezHatTrinketsRenderer());
-        TrinketRendererRegistry.registerRenderer(AITExtrasItems.PURPLE_FEZ_HAT, new FezHatTrinketsRenderer());
-        TrinketRendererRegistry.registerRenderer(AITExtrasItems.RED_FEZ_HAT, new FezHatTrinketsRenderer());
-        TrinketRendererRegistry.registerRenderer(AITExtrasItems.YELLOW_FEZ_HAT, new FezHatTrinketsRenderer());
-        TrinketRendererRegistry.registerRenderer(AITExtrasItems.BLUE_FEZ_HAT, new FezHatTrinketsRenderer());
+        TrinketRendererRegistry.registerRenderer(AITExtrasItems.FEZ_ITEM, new FezHatTrinketsRenderer());
         TrinketRendererRegistry.registerRenderer(AITExtrasItems.TENNANT_COAT, new CoatTrinketsRenderer());
         TrinketRendererRegistry.registerRenderer(AITExtrasItems.THREED_GLASSES, new ThreeDGlassesTrinketsRenderer());
     }
@@ -140,5 +130,12 @@ public class AITExtrasClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.PILLAR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.PILLAR_BOTTOM, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.PILLAR_TOP, RenderLayer.getCutout());
+    }
+
+    public static class FezColorProvider implements ItemColorProvider {
+        @Override
+        public int getColor(ItemStack stack, int tintIndex) {
+            return tintIndex > 0 ? -1 : ((DyeableItem) stack.getItem()).getColor(stack);
+        }
     }
 }

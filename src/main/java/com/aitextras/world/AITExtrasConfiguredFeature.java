@@ -40,7 +40,7 @@ public class AITExtrasConfiguredFeature {
     }
 
     private static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {
-        return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, new Identifier(AITExtras.MOD_ID, name));
+        return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, AITExtras.id(name));
     }
 
     private static <FC extends FeatureConfig, F extends Feature<FC>> void register(

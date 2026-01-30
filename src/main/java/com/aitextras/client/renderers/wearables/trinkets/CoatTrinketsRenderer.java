@@ -21,7 +21,7 @@ public class CoatTrinketsRenderer implements TrinketRenderer {
 
     private final CoatModel coatModel = new CoatModel(CoatModel.getTexturedModelData().createModel());
 
-    private static final Identifier TENNANT = new Identifier(AITExtras.MOD_ID,
+    private static final Identifier TENNANT = AITExtras.id(
             "textures/wearables/tennant_coat.png");
 
     @Override

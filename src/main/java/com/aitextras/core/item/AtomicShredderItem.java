@@ -1,10 +1,5 @@
 package com.aitextras.core.item;
 
-
-
-
-
-
 import net.minecraft.client.MinecraftClient;
 
 
@@ -60,10 +55,6 @@ import dev.amble.ait.core.tardis.util.TardisUtil;
 
 
 import dev.amble.ait.data.Loyalty;
-
-
-
-
 
 public class AtomicShredderItem extends LinkableItem {
 

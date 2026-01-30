@@ -28,7 +28,6 @@ import dev.amble.ait.core.tardis.Tardis;
 import dev.amble.ait.core.tardis.control.impl.DirectionControl;
 import dev.amble.ait.core.tardis.handler.travel.TravelUtil;
 
-
 public class WhistleItem extends LinkableItem {
 
     public WhistleItem(Settings settings) {

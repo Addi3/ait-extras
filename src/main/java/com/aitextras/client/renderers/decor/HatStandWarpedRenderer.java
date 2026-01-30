@@ -16,7 +16,7 @@ import net.minecraft.util.math.RotationPropertyHelper;
 
 public class HatStandWarpedRenderer<T extends HatStandWarpedBlockEntity> implements BlockEntityRenderer<T> {
 
-    public static final Identifier HAT_STAND_WARPED_TEXTURE = new Identifier(AITExtras.MOD_ID,
+    public static final Identifier HAT_STAND_WARPED_TEXTURE = AITExtras.id(
             "textures/blockentities/decor/hatstand/warped.png");
     private final HatStandModel hatStandModel;
 

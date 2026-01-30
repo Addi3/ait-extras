@@ -17,7 +17,7 @@ import net.minecraft.util.math.RotationPropertyHelper;
 
 public class SunDialRenderer<T extends SunDialBlockEntity> implements BlockEntityRenderer<T> {
 
-    public static final Identifier DIAL_TEXTURE = new Identifier(AITExtras.MOD_ID,
+    public static final Identifier DIAL_TEXTURE = AITExtras.id(
             "textures/blockentities/decor/armillary_sphere.png");
     private final SunDialModel sunDialModel;
 

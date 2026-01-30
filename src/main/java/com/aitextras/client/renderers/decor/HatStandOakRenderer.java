@@ -16,7 +16,7 @@ import net.minecraft.util.math.RotationPropertyHelper;
 
 public class HatStandOakRenderer<T extends HatStandOakBlockEntity> implements BlockEntityRenderer<T> {
 
-    public static final Identifier HAT_STAND_OAK_TEXTURE = new Identifier(AITExtras.MOD_ID,
+    public static final Identifier HAT_STAND_OAK_TEXTURE = AITExtras.id(
             "textures/blockentities/decor/hatstand/oak.png");
     private final HatStandModel hatStandModel;
 

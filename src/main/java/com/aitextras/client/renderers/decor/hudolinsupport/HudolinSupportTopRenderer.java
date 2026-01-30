@@ -16,7 +16,7 @@ import net.minecraft.util.math.RotationPropertyHelper;
 
 public class HudolinSupportTopRenderer<T extends HudolinSupportTopBlockEntity> implements BlockEntityRenderer<T> {
 
-    public static final Identifier SUPPORT_TEXTURE = new Identifier(AITExtras.MOD_ID,
+    public static final Identifier SUPPORT_TEXTURE = AITExtras.id(
             "textures/blockentities/decor/hudolin_support.png");
     private final HudolinSupportTopModel hudolinSupportTopModel;
 

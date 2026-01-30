@@ -20,7 +20,7 @@ public class ThreeDGlassesTrinketsRenderer implements TrinketRenderer {
 
     private final ThreeDGlassesModel threeDGlassesModel = new ThreeDGlassesModel(ThreeDGlassesModel.getTexturedModelData().createModel());
 
-    private static final Identifier GLASSES = new Identifier(AITExtras.MOD_ID,
+    private static final Identifier GLASSES = AITExtras.id(
             "textures/wearables/3d_glasses.png");
 
     @Override

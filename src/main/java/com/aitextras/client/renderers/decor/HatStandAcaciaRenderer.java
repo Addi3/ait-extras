@@ -16,7 +16,7 @@ import net.minecraft.util.math.RotationPropertyHelper;
 
 public class HatStandAcaciaRenderer<T extends HatStandAcaciaBlockEntity> implements BlockEntityRenderer<T> {
 
-    public static final Identifier HAT_STAND_ACACIA_TEXTURE = new Identifier(AITExtras.MOD_ID,
+    public static final Identifier HAT_STAND_ACACIA_TEXTURE = AITExtras.id(
             "textures/blockentities/decor/hatstand/acacia.png");
     private final HatStandModel hatStandModel;
 

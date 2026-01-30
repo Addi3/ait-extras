@@ -16,7 +16,7 @@ import net.minecraft.util.math.RotationPropertyHelper;
 
 public class HatStandJungleRenderer<T extends HatStandJungleBlockEntity> implements BlockEntityRenderer<T> {
 
-    public static final Identifier HAT_STAND_JUNGLE_TEXTURE = new Identifier(AITExtras.MOD_ID,
+    public static final Identifier HAT_STAND_JUNGLE_TEXTURE = AITExtras.id(
             "textures/blockentities/decor/hatstand/jungle.png");
     private final HatStandModel hatStandModel;
 

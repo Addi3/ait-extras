@@ -16,7 +16,7 @@ import net.minecraft.util.math.RotationPropertyHelper;
 
 public class HatStandMangroveRenderer<T extends HatStandMangroveBlockEntity> implements BlockEntityRenderer<T> {
 
-    public static final Identifier HAT_STAND_MANGROVE_TEXTURE = new Identifier(AITExtras.MOD_ID,
+    public static final Identifier HAT_STAND_MANGROVE_TEXTURE = AITExtras.id(
             "textures/blockentities/decor/hatstand/mangrove.png");
     private final HatStandModel hatStandModel;
 

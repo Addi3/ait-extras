@@ -16,7 +16,7 @@ import net.minecraft.util.math.RotationPropertyHelper;
 
 public class CandleStandLargeRenderer<T extends CandleStandLargeBlockEntity> implements BlockEntityRenderer<T> {
 
-    public static final Identifier CANDLE_TEXTURE = new Identifier(AITExtras.MOD_ID,
+    public static final Identifier CANDLE_TEXTURE = AITExtras.id(
             "textures/blockentities/decor/candle_stand.png");
     private final CandleStandLargeModel candlestandlargeModel;
 

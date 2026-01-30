@@ -26,7 +26,7 @@ public class ThreeDGlassesFeatureRenderer<T extends LivingEntity, M extends Bipe
         extends
         FeatureRenderer<T, M>{
 
-    private static final Identifier GLASSES = new Identifier(AITExtras.MOD_ID,
+    private static final Identifier GLASSES = AITExtras.id(
             "textures/wearables/3d_glasses.png");
     private final ThreeDGlassesModel model;
 

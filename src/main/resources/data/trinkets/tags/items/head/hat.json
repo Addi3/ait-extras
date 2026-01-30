@@ -1,21 +1,6 @@
 {
   "replace": false,
   "values": [
-    "ait-extras:black_fez_hat",
-    "ait-extras:blue_fez_hat",
-    "ait-extras:brown_fez_hat",
-    "ait-extras:cyan_fez_hat",
-    "ait-extras:gray_fez_hat",
-    "ait-extras:green_fez_hat",
-    "ait-extras:light_blue_fez_hat",
-    "ait-extras:light_gray_fez_hat",
-    "ait-extras:lime_fez_hat",
-    "ait-extras:magenta_fez_hat",
-    "ait-extras:orange_fez_hat",
-    "ait-extras:pink_fez_hat",
-    "ait-extras:purple_fez_hat",
-    "ait-extras:red_fez_hat",
-    "ait-extras:white_fez_hat",
-    "ait-extras:yellow_fez_hat"
+    "ait-extras:fez_item"
   ]
 }

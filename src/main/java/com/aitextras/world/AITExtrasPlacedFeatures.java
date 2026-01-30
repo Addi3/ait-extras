@@ -39,7 +39,7 @@ public class AITExtrasPlacedFeatures {
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {
-        return RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(AITExtras.MOD_ID, name));
+        return RegistryKey.of(RegistryKeys.PLACED_FEATURE, AITExtras.id(name));
     }
 
     private static void register(
