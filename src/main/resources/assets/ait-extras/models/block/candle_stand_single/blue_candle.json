@@ -1,0 +1,6 @@
+{
+  "parent": "ait-extras:block/candle_stand_single/candle_stand_single",
+  "textures": {
+    "candle": "minecraft:block/blue_candle"
+  }
+}

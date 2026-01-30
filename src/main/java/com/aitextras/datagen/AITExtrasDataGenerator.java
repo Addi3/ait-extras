@@ -401,39 +401,12 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(AITExtrasBlocks.SEAL_BLOCK), conditionsFromItem(AITExtrasBlocks.SEAL_BLOCK)));
 
             provider.addShapedRecipe(
-                    ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.CANDLE_STAND_SINGLE_BLOCK , 2)
+                    ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.CANDLE_STAND_SINGLE , 2)
                             .group("candle_stand")
-                            .pattern(" C ")
                             .pattern(" Z ")
                             .pattern(" Z ")
-                            .input('C', Items.CANDLE)
                             .input('Z', AITExtrasItems.ZIRCONIUM_INGOT)
-                            .criterion(hasItem(Items.CANDLE), conditionsFromItem(Items.CANDLE))
                             .criterion(hasItem(AITExtrasItems.ZIRCONIUM_INGOT), conditionsFromItem(AITExtrasItems.ZIRCONIUM_INGOT)));
-
-            provider.addShapedRecipe(
-                    ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.CANDLE_STAND_SMALL_BLOCK , 2)
-                            .group("candle_stand")
-                            .pattern("CSC")
-                            .pattern("Z Z")
-                            .input('C', Items.CANDLE)
-                            .input('Z', AITExtrasItems.ZIRCONIUM_INGOT)
-                            .input('S', AITExtrasBlocks.CANDLE_STAND_SINGLE_BLOCK)
-                            .criterion(hasItem(Items.CANDLE), conditionsFromItem(Items.CANDLE))
-                            .criterion(hasItem(AITExtrasItems.ZIRCONIUM_INGOT), conditionsFromItem(AITExtrasItems.ZIRCONIUM_INGOT))
-                            .criterion(hasItem(AITExtrasBlocks.CANDLE_STAND_SINGLE_BLOCK), conditionsFromItem(AITExtrasBlocks.CANDLE_STAND_SINGLE_BLOCK)));
-
-            provider.addShapedRecipe(
-                    ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.CANDLE_STAND_LARGE_BLOCK , 2)
-                            .group("candle_stand")
-                            .pattern("CSC")
-                            .pattern("Z Z")
-                            .input('C', Items.CANDLE)
-                            .input('Z', AITExtrasItems.ZIRCONIUM_INGOT)
-                            .input('S', AITExtrasBlocks.CANDLE_STAND_SMALL_BLOCK)
-                            .criterion(hasItem(Items.CANDLE), conditionsFromItem(Items.CANDLE))
-                            .criterion(hasItem(AITExtrasItems.ZIRCONIUM_INGOT), conditionsFromItem(AITExtrasItems.ZIRCONIUM_INGOT))
-                            .criterion(hasItem(AITExtrasBlocks.CANDLE_STAND_SMALL_BLOCK), conditionsFromItem(AITExtrasBlocks.CANDLE_STAND_SMALL_BLOCK)));
 
 
             provider.addShapedRecipe(
@@ -445,8 +418,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                             .input('Z', AITExtrasItems.ZIRCONIUM_INGOT)
                             .input('A', AITItems.ARTRON_COLLECTOR)
                             .criterion(hasItem(Items.CANDLE), conditionsFromItem(Items.CANDLE))
-                            .criterion(hasItem(AITExtrasItems.ZIRCONIUM_INGOT), conditionsFromItem(AITExtrasItems.ZIRCONIUM_INGOT))
-                            .criterion(hasItem(AITExtrasBlocks.CANDLE_STAND_SMALL_BLOCK), conditionsFromItem(AITExtrasBlocks.CANDLE_STAND_SMALL_BLOCK)));
+                            .criterion(hasItem(AITExtrasItems.ZIRCONIUM_INGOT), conditionsFromItem(AITExtrasItems.ZIRCONIUM_INGOT)));
 
             provider.addShapedRecipe(
                     ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasItems.METAL_MESH_ITEM, 6)
@@ -942,9 +914,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasBlocks.ZIRCONIUM_ORE, "Zirconium Ore");
                     provider.addTranslation(AITExtrasBlocks.SEAL_BLOCK, "Seal Of Rassilon");
                     provider.addTranslation(AITExtrasBlocks.SEAL_SMALL_BLOCK, "Seal Of Rassilon (Small)");
-                    provider.addTranslation(AITExtrasBlocks.CANDLE_STAND_LARGE_BLOCK, "Candle Stand (Large)");
-                    provider.addTranslation(AITExtrasBlocks.CANDLE_STAND_SINGLE_BLOCK, "Candle Stand (Single)");
-                    provider.addTranslation(AITExtrasBlocks.CANDLE_STAND_SMALL_BLOCK, "Candle Stand (Small)");
+                    provider.addTranslation(AITExtrasBlocks.CANDLE_STAND_SINGLE, "Candle Stand (Single)");
                     provider.addTranslation(AITExtrasBlocks.TUBE_LIGHT_BLOCK, "Tube Light");
                     provider.addTranslation(AITExtrasBlocks.METAL_GRATE, "Metal Grate");
                     provider.addTranslation(AITExtrasBlocks.METAL_GRATE_SLAB, "Metal Grate Slab");

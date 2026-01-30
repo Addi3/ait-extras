@@ -97,9 +97,6 @@ public class AITExtrasClient implements ClientModInitializer {
 
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.HUDOLIN_SUPPORT_BASE_BLOCK_ENTITY_TYPE, HudolinSupportBaseRenderer::new);
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.HUDOLIN_SUPPORT_TOP_BLOCK_ENTITY_TYPE, HudolinSupportTopRenderer::new);
-        BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.CANDLE_STAND_LARGE_BLOCK_ENTITY_TYPE, CandleStandLargeRenderer::new);
-        BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.CANDLE_STAND_SMALL_BLOCK_ENTITY_TYPE, CandleStandSmallRenderer::new);
-        BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.CANDLE_STAND_SINGLE_BLOCK_ENTITY_TYPE, CandleStandSingleRenderer::new);
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.TUBE_LIGHT_BLOCK_ENTITY_TYPE, TubeLightRenderer::new);
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.MONITOR_COVER_BLOCK_ENTITY_TYPE, MonitorCoverRenderer::new);
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.CLASSIC_MONITOR_COVER_BLOCK_ENTITY_TYPE, MonitorCoverRenderer::new);

@@ -1,0 +1,99 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "conditions": [
+        { "condition": "minecraft:survives_explosion" }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ait-extras:candle_stand_single"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "conditions": [
+        { "condition": "minecraft:survives_explosion" }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            { "type": "minecraft:item", "name": "minecraft:candle", "conditions": [
+              { "condition": "minecraft:block_state_property", "block": "ait-extras:candle_stand_single", "properties": { "candle": "1" } }
+            ]
+            },
+            { "type": "minecraft:item", "name": "minecraft:white_candle", "conditions": [
+              { "condition": "minecraft:block_state_property", "block": "ait-extras:candle_stand_single", "properties": { "candle": "2" } }
+            ]
+            },
+            { "type": "minecraft:item", "name": "minecraft:orange_candle", "conditions": [
+              { "condition": "minecraft:block_state_property", "block": "ait-extras:candle_stand_single", "properties": { "candle": "3" } }
+            ]
+            },
+            { "type": "minecraft:item", "name": "minecraft:magenta_candle", "conditions": [
+              { "condition": "minecraft:block_state_property", "block": "ait-extras:candle_stand_single", "properties": { "candle": "4" } }
+            ]
+            },
+            { "type": "minecraft:item", "name": "minecraft:light_blue_candle", "conditions": [
+              { "condition": "minecraft:block_state_property", "block": "ait-extras:candle_stand_single", "properties": { "candle": "5" } }
+            ]
+            },
+            { "type": "minecraft:item", "name": "minecraft:yellow_candle", "conditions": [
+              { "condition": "minecraft:block_state_property", "block": "ait-extras:candle_stand_single", "properties": { "candle": "6" } }
+            ]
+            },
+            { "type": "minecraft:item", "name": "minecraft:lime_candle", "conditions": [
+              { "condition": "minecraft:block_state_property", "block": "ait-extras:candle_stand_single", "properties": { "candle": "7" } }
+            ]
+            },
+            { "type": "minecraft:item", "name": "minecraft:pink_candle", "conditions": [
+              { "condition": "minecraft:block_state_property", "block": "ait-extras:candle_stand_single", "properties": { "candle": "8" } }
+            ]
+            },
+            { "type": "minecraft:item", "name": "minecraft:gray_candle", "conditions": [
+              { "condition": "minecraft:block_state_property", "block": "ait-extras:candle_stand_single", "properties": { "candle": "9" } }
+            ]
+            },
+            { "type": "minecraft:item", "name": "minecraft:light_gray_candle", "conditions": [
+              { "condition": "minecraft:block_state_property", "block": "ait-extras:candle_stand_single", "properties": { "candle": "10" } }
+            ]
+            },
+            { "type": "minecraft:item", "name": "minecraft:cyan_candle", "conditions": [
+              { "condition": "minecraft:block_state_property", "block": "ait-extras:candle_stand_single", "properties": { "candle": "11" } }
+            ]
+            },
+            { "type": "minecraft:item", "name": "minecraft:purple_candle", "conditions": [
+              { "condition": "minecraft:block_state_property", "block": "ait-extras:candle_stand_single", "properties": { "candle": "12" } }
+            ]
+            },
+            { "type": "minecraft:item", "name": "minecraft:blue_candle", "conditions": [
+              { "condition": "minecraft:block_state_property", "block": "ait-extras:candle_stand_single", "properties": { "candle": "13" } }
+            ]
+            },
+            { "type": "minecraft:item", "name": "minecraft:brown_candle", "conditions": [
+              { "condition": "minecraft:block_state_property", "block": "ait-extras:candle_stand_single", "properties": { "candle": "14" } }
+            ]
+            },
+            { "type": "minecraft:item", "name": "minecraft:green_candle", "conditions": [
+              { "condition": "minecraft:block_state_property", "block": "ait-extras:candle_stand_single", "properties": { "candle": "15" } }
+            ]
+            },
+            { "type": "minecraft:item", "name": "minecraft:red_candle", "conditions": [
+              { "condition": "minecraft:block_state_property", "block": "ait-extras:candle_stand_single", "properties": { "candle": "16" } }
+            ]
+            },
+            { "type": "minecraft:item", "name": "minecraft:black_candle", "conditions": [
+              { "condition": "minecraft:block_state_property", "block": "ait-extras:candle_stand_single", "properties": { "candle": "17" } }
+            ]
+            }
+          ]
+        }
+      ],
+      "rolls": 1.0
+    }
+  ]
+}

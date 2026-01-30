@@ -1,62 +1,75 @@
 package com.aitextras.core.blocks;
 
-import com.aitextras.core.blockentities.CandleStandSingleBlockEntity;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.block.*;
-import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.IntProperty;
-import net.minecraft.state.property.Properties;
 import net.minecraft.util.ActionResult;
-import net.minecraft.util.BlockMirror;
-import net.minecraft.util.BlockRotation;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.RotationPropertyHelper;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
-import org.jetbrains.annotations.Nullable;
-import net.minecraft.util.math.random.Random;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
 
-public class CandleStandSingleBlock extends BlockWithEntity implements BlockEntityProvider {
+public class CandleStandSingleBlock extends Block {
 
-    public static final int MAX_ROTATION_INDEX = RotationPropertyHelper.getMax();
-    private static final int MAX_ROTATIONS = MAX_ROTATION_INDEX + 1;
-
-    public static final IntProperty ROTATION = Properties.ROTATION;
     public static final BooleanProperty LIT = BooleanProperty.of("lit");
+    public static final IntProperty CANDLE = IntProperty.of("candle", 0, 17);
 
-    protected static final VoxelShape SHAPE = Block.createCuboidShape(4.0, 0.0, 4.0, 12.0, 26.0, 12.0);
+    protected static final VoxelShape SHAPE =
+            Block.createCuboidShape(4.0, 0.0, 4.0, 12.0, 26.0, 12.0);
+
+    private static final Item[] CANDLES = new Item[]{
+            Items.CANDLE,           // 1
+            Items.WHITE_CANDLE,     // 2
+            Items.ORANGE_CANDLE,    // 3
+            Items.MAGENTA_CANDLE,   // 4
+            Items.LIGHT_BLUE_CANDLE,// 5
+            Items.YELLOW_CANDLE,    // 6
+            Items.LIME_CANDLE,      // 7
+            Items.PINK_CANDLE,      // 8
+            Items.GRAY_CANDLE,      // 9
+            Items.LIGHT_GRAY_CANDLE,// 10
+            Items.CYAN_CANDLE,      // 11
+            Items.PURPLE_CANDLE,    // 12
+            Items.BLUE_CANDLE,      // 13
+            Items.BROWN_CANDLE,     // 14
+            Items.GREEN_CANDLE,     // 15
+            Items.RED_CANDLE,       // 16
+            Items.BLACK_CANDLE      // 17
+    };
 
     public CandleStandSingleBlock(Settings settings) {
         super(settings.luminance(state -> state.get(LIT) ? 10 : 0));
         this.setDefaultState(this.stateManager.getDefaultState()
-                .with(ROTATION, 0)
-                .with(LIT, false));
+                .with(LIT, false)
+                .with(CANDLE, 0));
     }
 
     @Environment(EnvType.CLIENT)
     @Override
     public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
-        if (!state.get(LIT)) return;
-
-        double x = pos.getX() + 0.5;
-        double y = pos.getY() + 1.7;
-        double z = pos.getZ() + 0.5;
-
-        world.addParticle(ParticleTypes.FLAME, x, y, z, 0, 0, 0);
+        if (!state.get(LIT) || state.get(CANDLE) == 0) return;
+        world.addParticle(
+                ParticleTypes.FLAME,
+                pos.getX() + 0.5,
+                pos.getY() + 1.7,
+                pos.getZ() + 0.5,
+                0, 0, 0
+        );
     }
 
     @Override
@@ -74,12 +87,6 @@ public class CandleStandSingleBlock extends BlockWithEntity implements BlockEnti
         return true;
     }
 
-    @Nullable
-    @Override
-    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-        return new CandleStandSingleBlockEntity(pos, state);
-    }
-
     @Override
     public VoxelShape getCullingShape(BlockState state, BlockView world, BlockPos pos) {
         return VoxelShapes.empty();
@@ -87,62 +94,53 @@ public class CandleStandSingleBlock extends BlockWithEntity implements BlockEnti
 
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
-        return this.getDefaultState()
-                .with(ROTATION, RotationPropertyHelper.fromYaw(ctx.getPlayerYaw()))
-                .with(LIT, false);
-    }
-
-    public BlockState rotate(BlockState state, int rotationSteps) {
-        int newRotation = (state.get(ROTATION) + rotationSteps) % MAX_ROTATIONS;
-        return state.with(ROTATION, newRotation);
-    }
-
-    @Override
-    public BlockState rotate(BlockState state, BlockRotation rotation) {
-        return state.with(ROTATION, rotation.rotate(state.get(ROTATION), MAX_ROTATIONS));
-    }
-
-    @Override
-    public BlockState mirror(BlockState state, BlockMirror mirror) {
-        return state.with(ROTATION, mirror.mirror(state.get(ROTATION), MAX_ROTATIONS));
+        return this.getDefaultState();
     }
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(ROTATION, LIT);
+        builder.add(LIT, CANDLE);
     }
 
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos,
                               PlayerEntity player, Hand hand, BlockHitResult hit) {
-        ItemStack heldItem = player.getStackInHand(hand);
 
-        if (heldItem.getItem() == Items.FLINT_AND_STEEL) {
-            if (!state.get(LIT)) {
+        ItemStack stack = player.getStackInHand(hand);
+        Item item = stack.getItem();
+
+        if (item == Items.FLINT_AND_STEEL) {
+            if (!state.get(LIT) && state.get(CANDLE) != 0) {
                 world.setBlockState(pos, state.with(LIT, true), 3);
                 world.playSound(null, pos, SoundEvents.ITEM_FLINTANDSTEEL_USE,
                         SoundCategory.BLOCKS, 1.0f, 1.0f);
-
-                if (!player.isCreative()) {
-                    heldItem.damage(1, player, p -> p.sendToolBreakStatus(hand));
-                }
-            }
-            return ActionResult.SUCCESS;
-        } else {
-            if (state.get(LIT)) {
-                world.setBlockState(pos, state.with(LIT, false), 3);
-                world.playSound(null, pos, SoundEvents.BLOCK_CANDLE_EXTINGUISH,
-                        SoundCategory.BLOCKS, 1.0f, 1.0f);
-
-                if (world.isClient) {
-                    double x = pos.getX() + 0.5;
-                    double y = pos.getY() + 1.7;
-                    double z = pos.getZ() + 0.5;
-
-                    world.addParticle(ParticleTypes.FLAME, x, y, z, 0, 0, 0);
-                }
+                if (!player.isCreative()) stack.damage(1, player, p -> p.sendToolBreakStatus(hand));
             }
             return ActionResult.SUCCESS;
         }
+
+        int candleIndex = getCandleIndex(item);
+        if (candleIndex != -1 && state.get(CANDLE) == 0) {
+            world.setBlockState(pos, state.with(CANDLE, candleIndex), 3);
+            world.playSound(null, pos, SoundEvents.BLOCK_CANDLE_PLACE,
+                    SoundCategory.BLOCKS, 1.0f, 1.0f);
+            if (!player.isCreative()) stack.decrement(1);
+            return ActionResult.SUCCESS;
+        }
+
+        if (state.get(LIT)) {
+            world.setBlockState(pos, state.with(LIT, false), 3);
+            world.playSound(null, pos, SoundEvents.BLOCK_CANDLE_EXTINGUISH,
+                    SoundCategory.BLOCKS, 1.0f, 1.0f);
+        }
+
+        return ActionResult.SUCCESS;
+    }
+
+    private static int getCandleIndex(Item item) {
+        for (int i = 0; i < CANDLES.length; i++) {
+            if (CANDLES[i] == item) return i + 1;
+        }
+        return -1;
     }
 }

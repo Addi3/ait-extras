@@ -231,28 +231,6 @@ public class AITExtrasBlocks extends BlockContainer {
          .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.METAL).nonOpaque().notSolid());
 
 
- @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
- @NoEnglish
- public static final Block CANDLE_STAND_SINGLE_BLOCK = new CandleStandSingleBlock(ABlockSettings.create()
-         .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
-         .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.CHAIN).luminance(state -> 9));
-
-
- @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
- @NoEnglish
- public static final Block CANDLE_STAND_SMALL_BLOCK = new CandleStandSmallBlock(ABlockSettings.create()
-         .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
-         .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.CHAIN).luminance(state -> 9));
-
-
- @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
- @NoEnglish
- public static final Block CANDLE_STAND_LARGE_BLOCK = new CandleStandLargeBlock(ABlockSettings.create()
-         .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
-         .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.CHAIN).luminance(state -> 9));
-
-
-
     @NoEnglish
     @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
     public static final Block METAL_GRATE = new Block(ABlockSettings.create()
@@ -418,4 +396,12 @@ public class AITExtrasBlocks extends BlockContainer {
     public static final Block STONE_ROUNDEL_DOOR_BLOCK = new StoneRoundelDoorBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
             .strength(1.0F, 1.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.STONE).nonOpaque().notSolid());
+
+
+    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
+    @NoEnglish
+    @NoBlockDrop
+    public static final Block CANDLE_STAND_SINGLE = new CandleStandSingleBlock(ABlockSettings.create()
+            .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
+            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.CHAIN).luminance(state -> 9));
 }

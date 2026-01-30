@@ -35,6 +35,7 @@ import java.util.List;
 public class RoundelDoorBlock extends HorizontalFacingBlock implements BlockEntityProvider {
 
     public static final BooleanProperty OPEN = BooleanProperty.of("open");
+    public static final BooleanProperty CENTERED = BooleanProperty.of("centered");
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
 
     public RoundelDoorBlock(Settings settings) {
@@ -53,9 +54,12 @@ public class RoundelDoorBlock extends HorizontalFacingBlock implements BlockEnti
 
     @Override
     public BlockState getPlacementState(ItemPlacementContext context) {
+        boolean isSneaking = context.getPlayer() != null && context.getPlayer().isSneaking();
+
         return this.getDefaultState()
                 .with(FACING, context.getHorizontalPlayerFacing().getOpposite())
-                .with(OPEN, false);
+                .with(OPEN, false)
+                .with(CENTERED, isSneaking);
     }
 
     private static VoxelShape getShapeForDirection(Direction direction) {
@@ -106,7 +110,7 @@ public class RoundelDoorBlock extends HorizontalFacingBlock implements BlockEnti
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(FACING, OPEN);
+        builder.add(FACING, OPEN, CENTERED);
     }
 
 

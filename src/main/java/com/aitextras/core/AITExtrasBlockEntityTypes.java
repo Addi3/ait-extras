@@ -61,15 +61,6 @@ public class AITExtrasBlockEntityTypes implements BlockEntityContainer{
     public static BlockEntityType<HudolinSupportTopBlockEntity> HUDOLIN_SUPPORT_TOP_BLOCK_ENTITY_TYPE = FabricBlockEntityTypeBuilder
             .create(HudolinSupportTopBlockEntity::new, AITExtrasBlocks.HUDOLIN_SUPPORT_TOP_BLOCK).build();
 
-    public static BlockEntityType<CandleStandSingleBlockEntity> CANDLE_STAND_SINGLE_BLOCK_ENTITY_TYPE = FabricBlockEntityTypeBuilder
-            .create(CandleStandSingleBlockEntity::new, AITExtrasBlocks.CANDLE_STAND_SINGLE_BLOCK).build();
-
-    public static BlockEntityType<CandleStandSmallBlockEntity> CANDLE_STAND_SMALL_BLOCK_ENTITY_TYPE = FabricBlockEntityTypeBuilder
-            .create(CandleStandSmallBlockEntity::new, AITExtrasBlocks.CANDLE_STAND_SMALL_BLOCK).build();
-
-    public static BlockEntityType<CandleStandLargeBlockEntity> CANDLE_STAND_LARGE_BLOCK_ENTITY_TYPE = FabricBlockEntityTypeBuilder
-            .create(CandleStandLargeBlockEntity::new, AITExtrasBlocks.CANDLE_STAND_LARGE_BLOCK).build();
-
     public static BlockEntityType<TubeLightBlockEntity> TUBE_LIGHT_BLOCK_ENTITY_TYPE = FabricBlockEntityTypeBuilder
             .create(TubeLightBlockEntity::new, AITExtrasBlocks.TUBE_LIGHT_BLOCK).build();
 
