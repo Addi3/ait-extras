@@ -408,6 +408,16 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                             .input('Z', AITExtrasItems.ZIRCONIUM_INGOT)
                             .criterion(hasItem(AITExtrasItems.ZIRCONIUM_INGOT), conditionsFromItem(AITExtrasItems.ZIRCONIUM_INGOT)));
 
+            provider.addShapedRecipe(
+                    ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.CANDLE_STAND_DOUBLE , 2)
+                            .group("candle_stand")
+                            .pattern("ZCZ")
+                            .pattern(" Z ")
+                            .input('Z', AITExtrasItems.ZIRCONIUM_INGOT)
+                            .input('C', AITExtrasBlocks.CANDLE_STAND_SINGLE)
+                            .criterion(hasItem(AITExtrasBlocks.CANDLE_STAND_SINGLE), conditionsFromItem(AITExtrasBlocks.CANDLE_STAND_SINGLE))
+                            .criterion(hasItem(AITExtrasItems.ZIRCONIUM_INGOT), conditionsFromItem(AITExtrasItems.ZIRCONIUM_INGOT)));
+
 
             provider.addShapedRecipe(
                     ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasItems.ATOMIC_SHREDDER , 1)
@@ -417,7 +427,8 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                             .input('I', Items.IRON_INGOT)
                             .input('Z', AITExtrasItems.ZIRCONIUM_INGOT)
                             .input('A', AITItems.ARTRON_COLLECTOR)
-                            .criterion(hasItem(Items.CANDLE), conditionsFromItem(Items.CANDLE))
+                            .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+                            .criterion(hasItem(AITItems.ARTRON_COLLECTOR), conditionsFromItem(AITItems.ARTRON_COLLECTOR))
                             .criterion(hasItem(AITExtrasItems.ZIRCONIUM_INGOT), conditionsFromItem(AITExtrasItems.ZIRCONIUM_INGOT)));
 
             provider.addShapedRecipe(
@@ -915,6 +926,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasBlocks.SEAL_BLOCK, "Seal Of Rassilon");
                     provider.addTranslation(AITExtrasBlocks.SEAL_SMALL_BLOCK, "Seal Of Rassilon (Small)");
                     provider.addTranslation(AITExtrasBlocks.CANDLE_STAND_SINGLE, "Candle Stand (Single)");
+                    provider.addTranslation(AITExtrasBlocks.CANDLE_STAND_DOUBLE, "Candle Stand (Double)");
                     provider.addTranslation(AITExtrasBlocks.TUBE_LIGHT_BLOCK, "Tube Light");
                     provider.addTranslation(AITExtrasBlocks.METAL_GRATE, "Metal Grate");
                     provider.addTranslation(AITExtrasBlocks.METAL_GRATE_SLAB, "Metal Grate Slab");

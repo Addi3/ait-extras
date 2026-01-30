@@ -1,0 +1,57 @@
+{
+  "variants": {
+    "candle=0,lit=false": { "model": "ait-extras:block/candle_stand_double/candless_stand" },
+    "candle=0,lit=true":  { "model": "ait-extras:block/candle_stand_double/candless_stand" },
+
+    "candle=1,lit=false": { "model": "ait-extras:block/candle_stand_double/candle" },
+    "candle=1,lit=true":  { "model": "ait-extras:block/candle_stand_double/candle_lit" },
+
+    "candle=2,lit=false": { "model": "ait-extras:block/candle_stand_double/white_candle" },
+    "candle=2,lit=true":  { "model": "ait-extras:block/candle_stand_double/white_candle_lit" },
+
+    "candle=3,lit=false": { "model": "ait-extras:block/candle_stand_double/orange_candle" },
+    "candle=3,lit=true":  { "model": "ait-extras:block/candle_stand_double/orange_candle_lit" },
+
+    "candle=4,lit=false": { "model": "ait-extras:block/candle_stand_double/magenta_candle" },
+    "candle=4,lit=true":  { "model": "ait-extras:block/candle_stand_double/magenta_candle_lit" },
+
+    "candle=5,lit=false": { "model": "ait-extras:block/candle_stand_double/light_blue_candle" },
+    "candle=5,lit=true":  { "model": "ait-extras:block/candle_stand_double/light_blue_candle_lit" },
+
+    "candle=6,lit=false": { "model": "ait-extras:block/candle_stand_double/yellow_candle" },
+    "candle=6,lit=true":  { "model": "ait-extras:block/candle_stand_double/yellow_candle_lit" },
+
+    "candle=7,lit=false": { "model": "ait-extras:block/candle_stand_double/lime_candle" },
+    "candle=7,lit=true":  { "model": "ait-extras:block/candle_stand_double/lime_candle_lit" },
+
+    "candle=8,lit=false": { "model": "ait-extras:block/candle_stand_double/pink_candle" },
+    "candle=8,lit=true":  { "model": "ait-extras:block/candle_stand_double/pink_candle_lit" },
+
+    "candle=9,lit=false": { "model": "ait-extras:block/candle_stand_double/gray_candle" },
+    "candle=9,lit=true":  { "model": "ait-extras:block/candle_stand_double/gray_candle_lit" },
+
+    "candle=10,lit=false": { "model": "ait-extras:block/candle_stand_double/light_gray_candle" },
+    "candle=10,lit=true":  { "model": "ait-extras:block/candle_stand_double/light_gray_candle_lit" },
+
+    "candle=11,lit=false": { "model": "ait-extras:block/candle_stand_double/cyan_candle" },
+    "candle=11,lit=true":  { "model": "ait-extras:block/candle_stand_double/cyan_candle_lit" },
+
+    "candle=12,lit=false": { "model": "ait-extras:block/candle_stand_double/purple_candle" },
+    "candle=12,lit=true":  { "model": "ait-extras:block/candle_stand_double/purple_candle_lit" },
+
+    "candle=13,lit=false": { "model": "ait-extras:block/candle_stand_double/blue_candle" },
+    "candle=13,lit=true":  { "model": "ait-extras:block/candle_stand_double/blue_candle_lit" },
+
+    "candle=14,lit=false": { "model": "ait-extras:block/candle_stand_double/brown_candle" },
+    "candle=14,lit=true":  { "model": "ait-extras:block/candle_stand_double/brown_candle_lit" },
+
+    "candle=15,lit=false": { "model": "ait-extras:block/candle_stand_double/green_candle" },
+    "candle=15,lit=true":  { "model": "ait-extras:block/candle_stand_double/green_candle_lit" },
+
+    "candle=16,lit=false": { "model": "ait-extras:block/candle_stand_double/red_candle" },
+    "candle=16,lit=true":  { "model": "ait-extras:block/candle_stand_double/red_candle_lit" },
+
+    "candle=17,lit=false": { "model": "ait-extras:block/candle_stand_double/black_candle" },
+    "candle=17,lit=true":  { "model": "ait-extras:block/candle_stand_double/black_candle_lit" }
+  }
+}

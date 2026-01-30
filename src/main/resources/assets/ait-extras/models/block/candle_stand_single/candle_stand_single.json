@@ -3,8 +3,7 @@
 	"credit": "Made with Blockbench",
 	"textures": {
 		"0": "ait-extras:block/single_candle_stand",
-		"#candle": "minecraft:block/destroy_stage_0",
-		"particle": "minecraft:block/anvil"
+		"particle": "block/anvil"
 	},
 	"elements": [
 		{

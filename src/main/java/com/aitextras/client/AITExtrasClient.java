@@ -151,6 +151,7 @@ public class AITExtrasClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.PILLAR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.PILLAR_BOTTOM, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.PILLAR_TOP, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.CANDLE_STAND_DOUBLE, RenderLayer.getCutout());
     }
 
     public static class FezColorProvider implements ItemColorProvider {

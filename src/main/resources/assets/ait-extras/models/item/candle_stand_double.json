@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "ait-extras:item/candle_stand_double_item"
+  }
+}
