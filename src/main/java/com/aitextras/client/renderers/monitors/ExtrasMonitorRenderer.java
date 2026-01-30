@@ -58,6 +58,7 @@ public class ExtrasMonitorRenderer<T extends ExtrasMonitorBlockEntity> implement
         matrices.translate(0.5f, 1.5f, 0.5f);
         matrices.multiply(RotationAxis.NEGATIVE_Y.rotationDegrees(h));
         matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(180));
+        matrices.translate(0, 0, 0.09375); // this moves it forward by 1.5 pixels - Loqor
 
         // Retrieve scale dynamically and apply it
         float scale = entity.getScale();

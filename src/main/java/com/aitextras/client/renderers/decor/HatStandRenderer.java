@@ -1,8 +1,7 @@
 package com.aitextras.client.renderers.decor;
 
-import com.aitextras.AITExtras;
 import com.aitextras.client.models.decor.HatStandModel;
-import com.aitextras.core.blockentities.HatStandOakBlockEntity;
+import com.aitextras.core.blockentities.AbstractHatStandBlockEntity;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.SkullBlock;
 import net.minecraft.client.render.RenderLayer;
@@ -14,14 +13,13 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.RotationAxis;
 import net.minecraft.util.math.RotationPropertyHelper;
 
-public class HatStandOakRenderer<T extends HatStandOakBlockEntity> implements BlockEntityRenderer<T> {
-
-    public static final Identifier HAT_STAND_OAK_TEXTURE = AITExtras.id(
-            "textures/blockentities/decor/hatstand/oak.png");
+public class HatStandRenderer<T extends AbstractHatStandBlockEntity> implements BlockEntityRenderer<T> {
     private final HatStandModel hatStandModel;
+    private final Identifier texture;
 
-    public HatStandOakRenderer(BlockEntityRendererFactory.Context ctx) {
+    public HatStandRenderer(BlockEntityRendererFactory.Context ctx, Identifier texture) {
         this.hatStandModel = new HatStandModel(HatStandModel.getTexturedModelData().createModel());
+        this.texture = texture;
     }
 
     @Override
@@ -41,7 +39,7 @@ public class HatStandOakRenderer<T extends HatStandOakBlockEntity> implements Bl
         matrices.scale(scale, scale, scale);
 
         this.hatStandModel.render(matrices,
-                vertexConsumers.getBuffer(RenderLayer.getEntityTranslucent(HAT_STAND_OAK_TEXTURE)), light, overlay, 1.0F,
+                vertexConsumers.getBuffer(RenderLayer.getEntityTranslucent(this.texture)), light, overlay, 1.0F,
                 1.0F, 1.0F, 1.0F);
 
         matrices.pop();
