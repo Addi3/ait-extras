@@ -412,4 +412,10 @@ public class AITExtrasBlocks extends BlockContainer {
     public static final Block CLASSIC_ROUNDEL_DOOR_BLOCK = new ClassicRoundelDoorBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
             .strength(1.0F, 1.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.STONE).nonOpaque().notSolid());
+
+    @NoEnglish
+    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
+    public static final Block STONE_ROUNDEL_DOOR_BLOCK = new StoneRoundelDoorBlock(ABlockSettings.create()
+            .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
+            .strength(1.0F, 1.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.STONE).nonOpaque().notSolid());
 }

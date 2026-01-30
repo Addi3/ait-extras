@@ -782,6 +782,21 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(Blocks.GLOWSTONE), conditionsFromItem(Blocks.GLOWSTONE))
                     .criterion(hasItem(Items.REDSTONE), conditionsFromItem(Items.REDSTONE)));
 
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.STONE_ROUNDEL_DOOR_BLOCK, 1)
+                    .group("roundel")
+                    .pattern("MG")
+                    .pattern("MD")
+                    .pattern("MR")
+                    .input('M',AITExtrasItems.ROUNDEL_MOULD)
+                    .input('D',Blocks.IRON_DOOR)
+                    .input('R',Items.REDSTONE)
+                    .input('G',Blocks.DEEPSLATE)
+                    .criterion(hasItem(AITExtrasItems.ROUNDEL_MOULD), conditionsFromItem(AITExtrasItems.ROUNDEL_MOULD))
+                    .criterion(hasItem(Blocks.IRON_DOOR), conditionsFromItem(Blocks.IRON_DOOR))
+                    .criterion(hasItem(Blocks.DEEPSLATE), conditionsFromItem(Blocks.DEEPSLATE))
+                    .criterion(hasItem(Items.REDSTONE), conditionsFromItem(Items.REDSTONE)));
+
             return provider;
 
         })));
@@ -952,6 +967,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasBlocks.PILLAR_BOTTOM, "Classic Pillar Bottom");
                     provider.addTranslation(AITExtrasBlocks.ROUNDEL_DOOR_BLOCK, "Roundel Door");
                     provider.addTranslation(AITExtrasBlocks.CLASSIC_ROUNDEL_DOOR_BLOCK, "Classic Roundel Door");
+                    provider.addTranslation(AITExtrasBlocks.STONE_ROUNDEL_DOOR_BLOCK, "Stone Roundel Door");
 
 
                     // Items

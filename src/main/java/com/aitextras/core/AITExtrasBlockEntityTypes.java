@@ -85,6 +85,9 @@ public class AITExtrasBlockEntityTypes implements BlockEntityContainer{
     public static BlockEntityType<ClassicRoundelDoorBlockEntity> CLASSIC_ROUNDEL_DOOR_BLOCK_ENTITY_TYPE = FabricBlockEntityTypeBuilder
             .create(ClassicRoundelDoorBlockEntity::new, AITExtrasBlocks.CLASSIC_ROUNDEL_DOOR_BLOCK).build();
 
+    public static BlockEntityType<StoneRoundelDoorBlockEntity> STONE_ROUNDEL_DOOR_BLOCK_ENTITY_TYPE = FabricBlockEntityTypeBuilder
+            .create(StoneRoundelDoorBlockEntity::new, AITExtrasBlocks.STONE_ROUNDEL_DOOR_BLOCK).build();
+
 
     @HasBedrockModel
     public static BlockEntityType<CrystalBlockEntity> CRYSTAL_BLOCK = FabricBlockEntityTypeBuilder.create(CrystalBlockEntity::new, AITExtrasBlocks.CRYSTAL_BLOCK).build();

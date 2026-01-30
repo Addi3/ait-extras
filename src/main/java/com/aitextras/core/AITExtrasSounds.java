@@ -31,6 +31,7 @@ public class AITExtrasSounds {
     public static final SoundEvent WHISTLE = register("tools/whistle");
     public static final SoundEvent RETEP = register("music/retep");
     public static final SoundEvent ROUNDEL_DOOR = register("tardis/roundel_door");
+    public static final SoundEvent STONE_ROUNDEL_DOOR = register("tardis/stone_roundel_door");
     public static final SoundEvent SCANNER = register("tardis/scanner");
 
     // Stargate exterior
