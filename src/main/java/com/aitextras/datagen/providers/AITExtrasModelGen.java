@@ -98,20 +98,6 @@ public class AITExtrasModelGen extends AmbleModelProvider {
         super.generateItemModels(generator);
     }
 
-    public void registerDirectionalBlock(Block block) {
-        directionalBlocksToRegister.add(block);
-    }
-
-
-    public void registerSimpleBlock(Block block) {
-        simpleBlocksToRegister.add(block);
-    }
-
-    private void registerItem(ItemModelGenerator generator, Item item, String modid) {
-        Model model = item(TextureKey.LAYER0);
-        model.upload(ModelIds.getItemModelId(item), createTextureMap(item, modid), generator.writer);
-    }
-
     private TextureMap createTextureMap(Item item, String modid) {
         Identifier texture = new Identifier(modid, "item/" + getItemName(item));
         if (!(doesTextureExist(texture))) {
