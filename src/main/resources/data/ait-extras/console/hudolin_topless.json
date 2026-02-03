@@ -1,0 +1,6 @@
+{
+  "id": "ait-extras:hudolin_topless",
+  "parent": "ait:console/hudolin",
+  "texture": "ait-extras:textures/blockentities/consoles/hudolin_topless_console.png",
+  "emission": "ait-extras:textures/blockentities/consoles/hudolin_topless_console_emission.png"
+}

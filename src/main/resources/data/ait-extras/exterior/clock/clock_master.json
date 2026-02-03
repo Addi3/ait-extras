@@ -3,6 +3,7 @@
   "category": "ait-extras:clock",
   "parent": "ait:exterior/capsule/default",
   "texture": "ait-extras:textures/blockentities/exteriors/clock/clock_master.png",
+  "emission": "ait-extras:textures/blockentities/exteriors/clock/clock_emission.png",
   "model": "ait-extras:clock",
   "door": "ait-extras:clock",
   "left_animation": "clock:open",
