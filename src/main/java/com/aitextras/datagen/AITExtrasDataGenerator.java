@@ -880,6 +880,10 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation("exterior.ait-extras.universe", "Universe");
 
 
+                    //Consoles
+                    provider.addTranslation("console.ait-extras.hudolin_topless", "Hudolin (Topless)");
+                    provider.addTranslation("console.ait-extras.human_nature_topless", "Human Nature (Topless)");
+                    provider.addTranslation("console.ait-extras.shalka_topless", "Shalka (Topless)");
 
                     //sonics
                     provider.addTranslation("sonic.ait-extras.cane", "Cane");
@@ -926,7 +930,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasBlocks.SEAL_BLOCK, "Seal Of Rassilon");
                     provider.addTranslation(AITExtrasBlocks.SEAL_SMALL_BLOCK, "Seal Of Rassilon (Small)");
                     provider.addTranslation(AITExtrasBlocks.CANDLE_STAND_SINGLE, "Candle Stand (Single)");
-                    provider.addTranslation(AITExtrasBlocks.CANDLE_STAND_DOUBLE, "Candle Stand (Double)");
+                    provider.addTranslation(AITExtrasBlocks.CANDLE_STAND_DOUBLE, "Candle Stand (Quad)");
                     provider.addTranslation(AITExtrasBlocks.TUBE_LIGHT_BLOCK, "Tube Light");
                     provider.addTranslation(AITExtrasBlocks.METAL_GRATE, "Metal Grate");
                     provider.addTranslation(AITExtrasBlocks.METAL_GRATE_SLAB, "Metal Grate Slab");
