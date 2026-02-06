@@ -2,8 +2,6 @@ package com.aitextras.client.renderers.wearables.trinkets;
 
 import com.aitextras.AITExtras;
 import com.aitextras.client.models.wearables.CoatModel;
-import com.aitextras.client.models.wearables.ScarfModel;
-import com.aitextras.core.AITExtrasItems;
 import dev.emi.trinkets.api.SlotReference;
 import dev.emi.trinkets.api.client.TrinketRenderer;
 import net.minecraft.client.render.OverlayTexture;
@@ -34,12 +32,13 @@ public class CoatTrinketsRenderer implements TrinketRenderer {
 
         if (contextModel instanceof BipedEntityModel<?> biped) {
             this.coatModel.body.copyTransform(biped.body);
-            this.coatModel.Left.copyTransform(biped.leftArm);
-            this.coatModel.Right.copyTransform(biped.rightArm);
+            this.coatModel.LeftArm.copyTransform(biped.leftArm);
+            this.coatModel.RightArm.copyTransform(biped.rightArm);
+            this.coatModel.LeftLeg.copyTransform(biped.leftLeg);
+            this.coatModel.RightLeg.copyTransform(biped.rightLeg);
         }
-
-
         matrices.translate(0D, 0.0D, 0.0D);
+        matrices.scale(1.15f, 1.1f, 1.1f);
 
         Identifier texture;
         texture = TENNANT;

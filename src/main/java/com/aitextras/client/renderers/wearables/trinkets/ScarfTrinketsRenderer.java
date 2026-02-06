@@ -37,8 +37,10 @@ public class ScarfTrinketsRenderer implements TrinketRenderer {
 
         if (contextModel instanceof BipedEntityModel<?> biped) {
             biped.body.rotate(matrices);
+            this.scarfModel.LeftLeg.copyTransform(biped.leftLeg);
+            this.scarfModel.RightLeg.copyTransform(biped.rightLeg);
         }
-        matrices.translate(0D, 0.0D, 0.0D);
+        matrices.translate(0D, 0.0D, -0.05D);
         matrices.scale(1.05F, 1.05F, 1.05F);
 
         Identifier texture;

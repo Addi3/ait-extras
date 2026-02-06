@@ -700,33 +700,33 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(Blocks.BLACK_CONCRETE), conditionsFromItem(Blocks.BLACK_CONCRETE)));
 
 
-            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.PILLAR, 4)
-                    .group("pillar")
-                    .pattern("P")
-                    .pattern("P")
-                    .pattern("P")
-                    .input('P',Blocks.QUARTZ_PILLAR)
-                    .criterion(hasItem(Blocks.QUARTZ_PILLAR), conditionsFromItem(Blocks.QUARTZ_PILLAR)));
-
-
-            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.PILLAR_TOP, 4)
-                    .group("pillar")
-                    .pattern("S")
-                    .pattern("P")
-                    .input('S',Blocks.QUARTZ_SLAB)
-                    .input('P',Blocks.QUARTZ_PILLAR)
-                    .criterion(hasItem(Blocks.QUARTZ_SLAB), conditionsFromItem(Blocks.QUARTZ_SLAB))
-                    .criterion(hasItem(Blocks.QUARTZ_PILLAR), conditionsFromItem(Blocks.QUARTZ_PILLAR)));
-
-
-            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.PILLAR_BOTTOM, 4)
-                    .group("pillar")
-                    .pattern("P")
-                    .pattern("S")
-                    .input('S',Blocks.QUARTZ_SLAB)
-                    .input('P',Blocks.QUARTZ_PILLAR)
-                    .criterion(hasItem(Blocks.QUARTZ_SLAB), conditionsFromItem(Blocks.QUARTZ_SLAB))
-                    .criterion(hasItem(Blocks.QUARTZ_PILLAR), conditionsFromItem(Blocks.QUARTZ_PILLAR)));
+//            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.PILLAR, 4)
+//                    .group("pillar")
+//                    .pattern("P")
+//                    .pattern("P")
+//                    .pattern("P")
+//                    .input('P',Blocks.QUARTZ_PILLAR)
+//                    .criterion(hasItem(Blocks.QUARTZ_PILLAR), conditionsFromItem(Blocks.QUARTZ_PILLAR)));
+//
+//
+//            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.PILLAR_TOP, 4)
+//                    .group("pillar")
+//                    .pattern("S")
+//                    .pattern("P")
+//                    .input('S',Blocks.QUARTZ_SLAB)
+//                    .input('P',Blocks.QUARTZ_PILLAR)
+//                    .criterion(hasItem(Blocks.QUARTZ_SLAB), conditionsFromItem(Blocks.QUARTZ_SLAB))
+//                    .criterion(hasItem(Blocks.QUARTZ_PILLAR), conditionsFromItem(Blocks.QUARTZ_PILLAR)));
+//
+//
+//            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.PILLAR_BOTTOM, 4)
+//                    .group("pillar")
+//                    .pattern("P")
+//                    .pattern("S")
+//                    .input('S',Blocks.QUARTZ_SLAB)
+//                    .input('P',Blocks.QUARTZ_PILLAR)
+//                    .criterion(hasItem(Blocks.QUARTZ_SLAB), conditionsFromItem(Blocks.QUARTZ_SLAB))
+//                    .criterion(hasItem(Blocks.QUARTZ_PILLAR), conditionsFromItem(Blocks.QUARTZ_PILLAR)));
 
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AITExtrasItems.ROUNDEL_MOULD, 4)
@@ -948,9 +948,9 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasBlocks.ELEVATOR, "Elevator");
                     provider.addTranslation(AITExtrasBlocks.ELEVATOR_BASE, "Elevator Base");
                     provider.addTranslation(AITExtrasBlocks.EMITTER, "Emitter");
-                    provider.addTranslation(AITExtrasBlocks.PILLAR_TOP, "Classic Pillar Top");
-                    provider.addTranslation(AITExtrasBlocks.PILLAR, "Classic Pillar");
-                    provider.addTranslation(AITExtrasBlocks.PILLAR_BOTTOM, "Classic Pillar Bottom");
+//                    provider.addTranslation(AITExtrasBlocks.PILLAR_TOP, "Classic Pillar Top");
+//                    provider.addTranslation(AITExtrasBlocks.PILLAR, "Classic Pillar");
+//                    provider.addTranslation(AITExtrasBlocks.PILLAR_BOTTOM, "Classic Pillar Bottom");
                     provider.addTranslation(AITExtrasBlocks.ROUNDEL_DOOR_BLOCK, "Roundel Door");
                     provider.addTranslation(AITExtrasBlocks.CLASSIC_ROUNDEL_DOOR_BLOCK, "Classic Roundel Door");
                     provider.addTranslation(AITExtrasBlocks.STONE_ROUNDEL_DOOR_BLOCK, "Stone Roundel Door");

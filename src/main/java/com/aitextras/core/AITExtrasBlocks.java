@@ -361,23 +361,23 @@ public class AITExtrasBlocks extends BlockContainer {
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
             .strength(2.5F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.METAL).luminance(8).nonOpaque().notSolid());
 
-    @NoEnglish
-    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
-    public static final Block PILLAR_TOP = new PillarBlock(ABlockSettings.create()
-            .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
-            .strength(2.5F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.STONE));
-
-    @NoEnglish
-    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
-    public static final Block PILLAR = new PillarBlock(ABlockSettings.create()
-            .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
-            .strength(2.5F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.STONE));
-
-    @NoEnglish
-    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
-    public static final Block PILLAR_BOTTOM = new PillarBlock(ABlockSettings.create()
-            .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
-            .strength(2.5F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.STONE));
+//    @NoEnglish
+//    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
+//    public static final Block PILLAR_TOP = new PillarBlock(ABlockSettings.create()
+//            .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
+//            .strength(2.5F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.STONE));
+//
+//    @NoEnglish
+//    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
+//    public static final Block PILLAR = new PillarBlock(ABlockSettings.create()
+//            .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
+//            .strength(2.5F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.STONE));
+//
+//    @NoEnglish
+//    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
+//    public static final Block PILLAR_BOTTOM = new PillarBlock(ABlockSettings.create()
+//            .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
+//            .strength(2.5F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.STONE));
 
     @NoEnglish
     @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)

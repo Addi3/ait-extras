@@ -10,7 +10,6 @@ import com.aitextras.client.renderers.monitors.ExtrasScreenMonitorRenderer;
 import com.aitextras.client.renderers.wearables.trinkets.CoatTrinketsRenderer;
 import com.aitextras.client.renderers.wearables.trinkets.FezHatTrinketsRenderer;
 import com.aitextras.client.renderers.wearables.trinkets.ScarfTrinketsRenderer;
-import com.aitextras.client.renderers.wearables.trinkets.ThreeDGlassesTrinketsRenderer;
 import com.aitextras.core.AITExtrasBlockEntityTypes;
 import com.aitextras.core.AITExtrasBlocks;
 import com.aitextras.core.AITExtrasItems;
@@ -113,7 +112,6 @@ public class AITExtrasClient implements ClientModInitializer {
         TrinketRendererRegistry.registerRenderer(AITExtrasItems.SCARF_RAINBOW, new ScarfTrinketsRenderer());
         TrinketRendererRegistry.registerRenderer(AITExtrasItems.FEZ_ITEM, new FezHatTrinketsRenderer());
         TrinketRendererRegistry.registerRenderer(AITExtrasItems.TENNANT_COAT, new CoatTrinketsRenderer());
-        TrinketRendererRegistry.registerRenderer(AITExtrasItems.THREED_GLASSES, new ThreeDGlassesTrinketsRenderer());
     }
 
     public static void resourcepackRegister() {
@@ -148,9 +146,9 @@ public class AITExtrasClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.METAL_MESH_STAIRS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.METAL_MESH_WALL, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.METAL_MESH_TRAPDOOR, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.PILLAR, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.PILLAR_BOTTOM, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.PILLAR_TOP, RenderLayer.getCutout());
+//        BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.PILLAR, RenderLayer.getCutout());
+//        BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.PILLAR_BOTTOM, RenderLayer.getCutout());
+//        BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.PILLAR_TOP, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(AITExtrasBlocks.CANDLE_STAND_DOUBLE, RenderLayer.getCutout());
     }
 

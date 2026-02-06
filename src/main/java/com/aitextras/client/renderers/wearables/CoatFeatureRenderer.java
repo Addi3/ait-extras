@@ -2,7 +2,6 @@ package com.aitextras.client.renderers.wearables;
 
 import com.aitextras.AITExtras;
 import com.aitextras.client.models.wearables.CoatModel;
-import com.aitextras.client.models.wearables.ScarfModel;
 import com.aitextras.core.AITExtrasItems;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -48,9 +47,11 @@ public class CoatFeatureRenderer<T extends LivingEntity, M extends BipedEntityMo
         matrixStack.push();
 
         this.model.body.copyTransform(this.getContextModel().body);
-        this.model.Left.copyTransform(this.getContextModel().leftArm);
-        this.model.Right.copyTransform(this.getContextModel().rightArm);
-        matrixStack.scale(1.1f, 1.1f, 1.1f);
+        this.model.LeftArm.copyTransform(this.getContextModel().leftArm);
+        this.model.RightArm.copyTransform(this.getContextModel().rightArm);
+        this.model.LeftLeg.copyTransform(this.getContextModel().leftLeg);
+        this.model.RightLeg.copyTransform(this.getContextModel().rightLeg);
+        matrixStack.scale(1.15f, 1.1f, 1.1f);
 
         this.model.setAngles(livingEntity, f, g, j, k, l);
         VertexConsumer vertexConsumer = vertexConsumerProvider.getBuffer(RenderLayer.getEntitySmoothCutout(
