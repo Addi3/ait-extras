@@ -94,5 +94,20 @@ public class AITExtrasItems extends ItemContainer {
     public static final Item ROUNDEL_MOULD = new Item(new AItemSettings().group(AITExtrasItemGroups.MAIN));
 
     @NoEnglish
-    public static final Item UMBRELLA = new UmbrellaItem(new AItemSettings().group(AITExtrasItemGroups.COSMETICS));
+    public static Item UMBRELLA_CLOSED;
+    @NoEnglish
+    public static Item UMBRELLA_OPEN;
+
+    static {
+     UMBRELLA_CLOSED = new UmbrellaItem(
+             new AItemSettings().group(AITExtrasItemGroups.COSMETICS),
+             () -> UMBRELLA_OPEN
+     );
+
+     UMBRELLA_OPEN = new UmbrellaItem(
+             new AItemSettings(),
+             () -> UMBRELLA_CLOSED
+     );
+    }
+
 }

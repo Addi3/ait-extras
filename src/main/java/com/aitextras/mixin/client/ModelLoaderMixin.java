@@ -16,15 +16,14 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import java.util.List;
 import java.util.Map;
 
-
 @Mixin(ModelLoader.class)
 public abstract class ModelLoaderMixin {
     @Shadow
     protected abstract void addModel(ModelIdentifier modelId);
 
     @Inject(method = "<init>", at = @ At(value = "INVOKE", target = "Lnet/minecraft/client/render/model/ModelLoader;addModel(Lnet/minecraft/client/util/ModelIdentifier;)V", ordinal = 3, shift = At.Shift.AFTER))
-    public void aitextras$addItemModel(BlockColors blockColors, Profiler profiler, Map<Identifier, JsonUnbakedModel> jsonUnbakedModels, Map<Identifier, List<ModelLoader.SourceTrackedData>> blockStates, CallbackInfo ci) {
-        this.addModel(new ModelIdentifier(AITExtras.MOD_ID, "handheld_umbrella", "inventory"));
+    public void smored$addItemModel(BlockColors blockColors, Profiler profiler, Map<Identifier, JsonUnbakedModel> jsonUnbakedModels, Map<Identifier, List<ModelLoader.SourceTrackedData>> blockStates, CallbackInfo ci) {
+        this.addModel(new ModelIdentifier(AITExtras.MOD_ID, "handheld_umbrella_closed", "inventory"));
         this.addModel(new ModelIdentifier(AITExtras.MOD_ID, "handheld_umbrella_open", "inventory"));
     }
 }

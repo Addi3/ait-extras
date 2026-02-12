@@ -52,16 +52,6 @@ public class AITExtrasClient implements ClientModInitializer {
                 }
         );
 
-        ModelPredicateProviderRegistry.register(
-                AITExtrasItems.UMBRELLA,
-                new Identifier("open"),
-                (stack, world, entity, seed) -> {
-                    if (stack.hasNbt() && stack.getNbt().getBoolean("Open")) {
-                        return 1.0F;
-                    }
-                    return 0.0F;
-                }
-        );
     }
 
 

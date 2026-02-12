@@ -780,6 +780,18 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(Blocks.DEEPSLATE), conditionsFromItem(Blocks.DEEPSLATE))
                     .criterion(hasItem(Items.REDSTONE), conditionsFromItem(Items.REDSTONE)));
 
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AITExtrasItems.UMBRELLA_CLOSED, 1)
+                    .pattern(" RB")
+                    .pattern(" BR")
+                    .pattern("S  ")
+                    .input('S',Items.STICK)
+                    .input('B',Blocks.BLACK_WOOL)
+                    .input('R',Blocks.RED_CARPET)
+                    .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                    .criterion(hasItem(Blocks.BLACK_WOOL), conditionsFromItem(Blocks.BLACK_WOOL))
+                    .criterion(hasItem(Blocks.RED_CARPET), conditionsFromItem(Blocks.RED_CARPET)));
+
             return provider;
 
         })));
@@ -987,6 +999,8 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasItems.THREED_GLASSES, "3D Glasses");
                     provider.addTranslation(AITExtrasItems.KEYCHAIN, "Key Chain");
                     provider.addTranslation(AITExtrasItems.ROUNDEL_MOULD, "Roundel Mould");
+                    provider.addTranslation(AITExtrasItems.UMBRELLA_CLOSED, "Umbrella");
+                    provider.addTranslation(AITExtrasItems.UMBRELLA_OPEN, "Umbrella");
 
                     // Tabs / ToolTips
                      provider.addTranslation(AITExtrasItemGroups.MAIN, "AIT Extras");

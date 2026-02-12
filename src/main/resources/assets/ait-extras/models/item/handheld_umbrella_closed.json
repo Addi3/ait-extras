@@ -107,14 +107,6 @@
 			"rotation": [0, -90, 0],
 			"translation": [0, 0, -0.25]
 		}
-	},
-	"overrides": [
-		{
-			"predicate": {
-				"open": 1
-			},
-			"model": "ait-extras:item/handheld_umbrella_open"
-		}
-	]
+	}
 }
 
