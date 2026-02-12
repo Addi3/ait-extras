@@ -1,10 +1,7 @@
 package com.aitextras.core;
 
 
-import com.aitextras.core.item.AtomicShredderItem;
-import com.aitextras.core.item.FezItem;
-import com.aitextras.core.item.KeyChainItem;
-import com.aitextras.core.item.WhistleItem;
+import com.aitextras.core.item.*;
 import dev.amble.ait.core.item.RenderableArmorItem;
 import dev.amble.lib.container.impl.ItemContainer;
 import dev.amble.lib.datagen.util.AutomaticModel;
@@ -95,4 +92,7 @@ public class AITExtrasItems extends ItemContainer {
     @NoEnglish
     @AutomaticModel
     public static final Item ROUNDEL_MOULD = new Item(new AItemSettings().group(AITExtrasItemGroups.MAIN));
+
+    @NoEnglish
+    public static final Item UMBRELLA = new UmbrellaItem(new AItemSettings().group(AITExtrasItemGroups.COSMETICS));
 }

@@ -11,7 +11,9 @@
     "client.rendering.ArmorStandEntityRendererMixin",
     "client.rendering.HeadFeatureRendererMixin",
     "client.rendering.PlayerEntityRendererMixin",
-    "client.rendering.ElevatorBlockRendererMixin"
+    "client.rendering.ElevatorBlockRendererMixin",
+    "client.ModelLoaderMixin",
+    "client.ItemRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1

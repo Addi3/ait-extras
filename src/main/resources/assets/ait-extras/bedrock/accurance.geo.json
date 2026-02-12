@@ -1,0 +1,120 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unknown",
+				"texture_width": 512,
+				"texture_height": 512,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 5.5,
+				"visible_bounds_offset": [0, 2.25, 0]
+			},
+			"bones": [
+				{
+					"name": "classic3",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-18, 0, -18], "size": [36, 2, 36], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "Posts3",
+					"parent": "classic3",
+					"pivot": [0, -1, 0],
+					"cubes": [
+						{"origin": [-17, 2, -17], "size": [4, 57, 4], "uv": [29, 189]},
+						{"origin": [-18, 2, -18], "size": [4, 57, 4], "pivot": [-1, -5, 0], "rotation": [0, -90, 0], "uv": [186, 153]},
+						{"origin": [-19, 2, -19], "size": [4, 57, 4], "pivot": [-1, -5, -1], "rotation": [0, 180, 0], "uv": [201, 21]},
+						{"origin": [-17, 2, -19], "size": [4, 57, 4], "pivot": [1, -5, -1], "rotation": [0, 90, 0], "uv": [169, 153]}
+					]
+				},
+				{
+					"name": "Doors3",
+					"parent": "classic3",
+					"pivot": [0, -2, 0]
+				},
+				{
+					"name": "right_door3",
+					"parent": "Doors3",
+					"pivot": [-12.5, 27.5, -14.5],
+					"cubes": [
+						{"origin": [-3, 32.5, -16], "size": [1, 2, 1], "uv": [208, 2]},
+						{"origin": [-13, 2, -15], "size": [13, 51, 1], "uv": [0, 189]},
+						{"origin": [-9, 28, -14], "size": [6, 7, 2], "uv": [1, 268]},
+						{"origin": [-7.5, 30.7, -12.3], "size": [3, 3, 1], "inflate": 0.1, "pivot": [-6, 32.2, -11.8], "rotation": [0, 0, 10], "uv": [13, 288]},
+						{"origin": [-7.5, 30.7, -12.3], "size": [3, 3, 1], "pivot": [-6, 32.2, -11.8], "rotation": [0, 0, 10], "uv": [0, 288]},
+						{"origin": [-12, 31.2, -13], "size": [10, 7, 0], "uv": [6, 298]},
+						{"origin": [-13, 2, -15.5], "size": [13, 51, 0], "uv": [227, 76]}
+					]
+				},
+				{
+					"name": "left_door3",
+					"parent": "Doors3",
+					"pivot": [12.5, 27.5, -14.5],
+					"cubes": [
+						{"origin": [0, 2, -15], "size": [13, 51, 1], "uv": [218, 21]},
+						{"origin": [1, 31.5, -16], "size": [1, 4, 1], "uv": [208, 2]},
+						{"origin": [0, 2, -15.5], "size": [13, 51, 0], "uv": [279, 75]}
+					]
+				},
+				{
+					"name": "Walls3",
+					"parent": "classic3",
+					"pivot": [0, -1, 0],
+					"cubes": [
+						{"origin": [-15, 0, -13], "size": [1, 56, 26], "uv": [144, 13]},
+						{"origin": [-13, 52, -15.5], "size": [26, 3, 0], "uv": [109, 0]},
+						{"origin": [-13, 2, 15.5], "size": [26, 51, 0], "uv": [116, 163]},
+						{"origin": [-15, 2, -13], "size": [1, 54, 26], "pivot": [0, -2, 0], "rotation": [0, 90, 0], "uv": [0, 106]},
+						{"origin": [-15, 2, -13], "size": [1, 54, 26], "pivot": [0, -2, 0], "rotation": [0, 180, 0], "uv": [87, 80]},
+						{"origin": [-15.5, 2, -13], "size": [0, 51, 26], "pivot": [0, -2, 0], "rotation": [0, 180, 0], "uv": [116, 137]},
+						{"origin": [-15.5, 2, -13], "size": [0, 51, 26], "uv": [148, 70]},
+						{"origin": [-13, 53, -15], "size": [26, 3, 1], "uv": [29, 106]}
+					]
+				},
+				{
+					"name": "PCB3",
+					"parent": "classic3",
+					"pivot": [0, -1, 0],
+					"cubes": [
+						{"origin": [-15, 53, -19], "size": [30, 4, 3], "uv": [207, 154]},
+						{"origin": [-14, 53, -18], "size": [30, 4, 3], "pivot": [1, -1, 0], "rotation": [0, -90, 0], "uv": [207, 146]},
+						{"origin": [-13, 53, -17], "size": [30, 4, 3], "pivot": [1, -1, 1], "rotation": [0, 180, 0], "uv": [207, 138]},
+						{"origin": [-16, 53, -18], "size": [30, 4, 3], "pivot": [-1, -1, 0], "rotation": [0, 90, 0], "uv": [207, 130]}
+					]
+				},
+				{
+					"name": "Roof3",
+					"parent": "classic3",
+					"pivot": [0, -2, 0],
+					"cubes": [
+						{"origin": [-16, 57, -16], "size": [32, 3, 32], "uv": [0, 40]},
+						{"origin": [-14, 55, -14], "size": [28, 0, 28], "uv": [230, 18]},
+						{"origin": [-14, 59, -14], "size": [28, 2, 28], "uv": [65, 225]},
+						{"origin": [-3, 61, -3], "size": [6, 2, 6], "uv": [0, 0]},
+						{"origin": [-3, 67, -3], "size": [6, 2, 6], "uv": [0, 0]},
+						{"origin": [0, 63, -3.45711], "size": [0, 4, 7], "pivot": [0, 65, 0.04289], "rotation": [0, 45, 0], "uv": [10, 9]},
+						{"origin": [0, 63, -3.45711], "size": [0, 4, 7], "pivot": [0, 65, 0.04289], "rotation": [0, -45, 0], "uv": [10, 9]}
+					]
+				},
+				{
+					"name": "on",
+					"parent": "Roof3",
+					"pivot": [0, 56.25, 0.04289],
+					"cubes": [
+						{"origin": [-1.5, 63, -1.45711], "size": [3, 4, 3], "uv": [0, 24]}
+					]
+				},
+				{
+					"name": "off",
+					"parent": "Roof3",
+					"pivot": [0, 63.25, 0.04289],
+					"cubes": [
+						{"origin": [-1.5, 63, -1.45711], "size": [3, 4, 3], "uv": [0, 47]}
+					]
+				}
+			]
+		}
+	]
+}

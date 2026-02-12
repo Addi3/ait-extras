@@ -1,0 +1,97 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unknown",
+				"texture_width": 512,
+				"texture_height": 512,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 5.5,
+				"visible_bounds_offset": [0, 2.25, 0]
+			},
+			"bones": [
+				{
+					"name": "bone",
+					"pivot": [0, 0, 0],
+					"rotation": [0, 180, 0]
+				},
+				{
+					"name": "classic3",
+					"parent": "bone",
+					"pivot": [0, -3.4, -6],
+					"rotation": [0, 180, 0]
+				},
+				{
+					"name": "Posts3",
+					"parent": "classic3",
+					"pivot": [0, -3, -6],
+					"cubes": [
+						{"origin": [-17, 0, -23], "size": [4, 54, 4], "uv": [29, 189]},
+						{"origin": [-18, 0, -24], "size": [4, 54, 4], "pivot": [-1, -7, -6], "rotation": [0, -90, 0], "uv": [186, 153]}
+					]
+				},
+				{
+					"name": "Doors3",
+					"parent": "classic3",
+					"pivot": [0, -4, -6]
+				},
+				{
+					"name": "right_door3",
+					"parent": "Doors3",
+					"pivot": [-12.5, 25.5, -20.5],
+					"cubes": [
+						{"origin": [-3, 30.5, -22], "size": [1, 2, 1], "uv": [208, 2]},
+						{"origin": [-13, 0, -21], "size": [13, 51, 1], "uv": [0, 189]},
+						{"origin": [-9, 26, -20], "size": [6, 7, 2], "uv": [1, 268]},
+						{"origin": [-7.5, 28.7, -18.3], "size": [3, 3, 1], "inflate": 0.1, "pivot": [-6, 30.2, -17.8], "rotation": [0, 0, 10], "uv": [13, 288]},
+						{"origin": [-7.5, 28.7, -18.3], "size": [3, 3, 1], "pivot": [-6, 30.2, -17.8], "rotation": [0, 0, 10], "uv": [0, 288]},
+						{"origin": [-12, 29.2, -19], "size": [10, 7, 0], "uv": [6, 298]},
+						{"origin": [-13, 0, -21.5], "size": [13, 51, 0], "uv": [227, 76]}
+					]
+				},
+				{
+					"name": "left_door3",
+					"parent": "Doors3",
+					"pivot": [12.5, 25.5, -20.5],
+					"cubes": [
+						{"origin": [0, 0, -21.5], "size": [13, 51, 0], "uv": [279, 75]},
+						{"origin": [0, 0, -21], "size": [13, 51, 1], "uv": [218, 21]},
+						{"origin": [1, 29.5, -22], "size": [1, 4, 1], "uv": [208, 2]}
+					]
+				},
+				{
+					"name": "Walls3",
+					"parent": "classic3",
+					"pivot": [0, -3, -6],
+					"cubes": [
+						{"origin": [-13, 50, -21.5], "size": [26, 3, 0], "uv": [109, 0]}
+					]
+				},
+				{
+					"name": "PCB3",
+					"parent": "classic3",
+					"pivot": [0, -3, -6],
+					"cubes": [
+						{"origin": [-15, 51, -21], "size": [30, 4, 3], "uv": [207, 154]}
+					]
+				},
+				{
+					"name": "Roof3",
+					"parent": "classic3",
+					"pivot": [0, -4, -6]
+				},
+				{
+					"name": "on",
+					"parent": "Roof3",
+					"pivot": [0, 54.25, -5.95711]
+				},
+				{
+					"name": "off",
+					"parent": "Roof3",
+					"pivot": [0, 61.25, -5.95711]
+				}
+			]
+		}
+	]
+}

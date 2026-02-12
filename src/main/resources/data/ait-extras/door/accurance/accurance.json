@@ -1,0 +1,21 @@
+{
+  "id": "ait-extras:accurance",
+  "model": "ait-extras:accurance_door",
+  "is_double": true,
+  "open_sound": "ait:tardis/police_box_door_open",
+  "close_sound": "ait:tardis/police_box_door_close",
+  "right_animation": "accurance:right_open",
+  "left_animation": "accurance:left_open",
+  "scale": [0.67, 0.67, 0.67],
+  "has_transparent_doors": false,
+  "portal_info": {
+    "enabled": true,
+    "width": 1.05,
+    "height": 2.05,
+    "north": [0,0,-0.3],
+    "east": [0,0,-0.3],
+    "south": [0,0,-0.3],
+    "west": [0,0,-0.3]
+  }
+}
+
