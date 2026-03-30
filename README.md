@@ -121,5 +121,6 @@ The repository has also moved to https://github.com/Addi3/ait-extras2-electricbo
 
 ### - [Modrinth](https://modrinth.com/project/ait-extras)
 ### - [Github](https://github.com/Addi3/ait-extras)
+### - [Codeburg](https://codeberg.org/Addi3/ait-extras)
 ### - [Discord Server](https://discord.gg/kndce97FyU)
 ### - [CurseForge](https://legacy.curseforge.com/minecraft/mc-mods/ait-extras)
