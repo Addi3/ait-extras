@@ -1,4 +1,4 @@
-![Replace this with a description](https://cdn.modrinth.com/data/cached_images/95e918d0f5e8fea049cf34eede40dd05fdaab879.png)
+<img width="600" height="200" style="image-rendering: pixelated; image-rendering: crisp-edges;" alt="logo_new" src="src/main/resources/resourcepacks/logo/assets/ait/textures/gui/title/ait_logo.png" />
 
 
 
