@@ -61,8 +61,11 @@ The repository has also moved to https://codeberg.org/Addi3/ait-extras2-electric
 <h3>The game will not launch unless you have all of these mods!</h3>
 
  Requires AiT (latest 1.20.1 version) -> [Download Here](https://modrinth.com/mod/ait/versions)
+ 
  Requires AmbleKit (latest 1.20.1 version) -> [Download Here](https://modrinth.com/mod/amblekit/versions)
+ 
  Requires YACL (latest fabric 1.20.1 version) -> [Download Here](https://modrinth.com/mod/yacl/versions?g=1.20.1&l=fabric)
+ 
  Requires Trinkets API (latest fabric 1.20.1 version) -> [Download Here](https://modrinth.com/mod/trinkets/version/3.7.2) (just for 1.1.0 and above)
 
 <h2>
@@ -98,10 +101,15 @@ The repository has also moved to https://codeberg.org/Addi3/ait-extras2-electric
 ### Thank You's:
 
  [Pan](https://github.com/Mansarde) - Provided the Control Lables and Old Protocol Names Resource Packs
+ 
  [Ouro](https://ouro-the-boro.carrd.co/) - Stargate Model / Textures
+ 
  [Project TinyLink](https://www.youtube.com/@projecttinylink7986) - permission to use their exterior design
+ 
  [Maggie](https://discord.com/channels/1213989169878274068/1289647140485861438) - "Classic" exteriors
+ 
  [Maketendo](https://modrinth.com/user/Maketendo) - Setting the mod up
+ 
  Everyone at the [Amble team](https://amblelabs.github.io/) who has helped me!
 
 -------------
