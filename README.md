@@ -1,9 +1,7 @@
-<img width="600" height="200" style="image-rendering: pixelated; image-rendering: crisp-edges;" alt="logo_new" src="src/main/resources/resourcepacks/logo/assets/ait/textures/gui/title/ait_logo.png" />
 
 
 
-
-
+<img src="promo/aitextras_logo_1400px.png" alt="AIT Extras Logo" width="700" />
 
 
 <sub>please do not upload this to any other site without Addie's permission</sub>
