@@ -1,5 +1,4 @@
-
-
+<div align="center">
 
 <img src="promo/aitextras_logo_1400px.png" alt="AIT Extras Logo" width="700" />
 
@@ -23,27 +22,27 @@
 </h2>
 
 ### Whats next for aitextras?
-- If you dont know ait is moving / has moved to 1.21.1, aitextras will do the same. This does how ever make `1.1.0` the last version on 1.20.1 and will only be updated for `2.0.0`.
+ If you dont know ait is moving / has moved to 1.21.1, aitextras will do the same. This does how ever make `1.1.0` the last version on 1.20.1 and will only be updated for `2.0.0`.
 The repository has also moved to https://codeberg.org/Addi3/ait-extras2-electricboogaloo
 
 ### What does this add / do?
 
-- This builds on top of AiT features by adding; exteriors, interiors, consoles, sonics, and more..
+ This builds on top of AiT features by adding; exteriors, interiors, consoles, sonics, and more..
 
 ### Why does it only work on AiT 1.2.7 and above?
 
-- AiT 1.2.7 is the latest accessible version (at the time) and has features that are required for the certain things to work, these features weren't present in previous versions of the mod.
+ AiT 1.2.7 is the latest accessible version (at the time) and has features that are required for the certain things to work, these features weren't present in previous versions of the mod.
 
 ### Will this mod be ported to forge or neoforge?
 
-- No, even though AiT has a forge version, this mod will be exclusively for fabric. I don't feel like porting the mod every time and have 0 idea how.
+ No, even though AiT has a forge version, this mod will be exclusively for fabric. I don't feel like porting the mod every time and have 0 idea how.
 
 
 ### How do i get access to betas?
-- Either via the AmbleLabs discord server's donator role OR via [Addie's kofi](https://ko-fi.com/addi3dabaddie)!
+ Either via the AmbleLabs discord server's donator role OR via [Addie's kofi](https://ko-fi.com/addi3dabaddie)!
 
 ### Can you add... / How do you use...?
-- You can suggest stuff on the github issues page or on the official [Ait-Extras discord server](https://discord.gg/5JDKuzarcS)! I will also answer any questions on either site!
+ You can suggest stuff on the github issues page or on the official [Ait-Extras discord server](https://discord.gg/5JDKuzarcS)! I will also answer any questions on either site!
 
 ### Want more Q&A? See [HERE](https://github.com/amblelabs/ait-extras/wiki/Q&A)
 
@@ -61,10 +60,10 @@ The repository has also moved to https://codeberg.org/Addi3/ait-extras2-electric
 
 <h3>The game will not launch unless you have all of these mods!</h3>
 
-- Requires AiT (latest 1.20.1 version) -> [Download Here](https://modrinth.com/mod/ait/versions)
-- Requires AmbleKit (latest 1.20.1 version) -> [Download Here](https://modrinth.com/mod/amblekit/versions)
-- Requires YACL (latest fabric 1.20.1 version) -> [Download Here](https://modrinth.com/mod/yacl/versions?g=1.20.1&l=fabric)
-- Requires Trinkets API (latest fabric 1.20.1 version) -> [Download Here](https://modrinth.com/mod/trinkets/version/3.7.2) (just for 1.1.0 and above)
+ Requires AiT (latest 1.20.1 version) -> [Download Here](https://modrinth.com/mod/ait/versions)
+ Requires AmbleKit (latest 1.20.1 version) -> [Download Here](https://modrinth.com/mod/amblekit/versions)
+ Requires YACL (latest fabric 1.20.1 version) -> [Download Here](https://modrinth.com/mod/yacl/versions?g=1.20.1&l=fabric)
+ Requires Trinkets API (latest fabric 1.20.1 version) -> [Download Here](https://modrinth.com/mod/trinkets/version/3.7.2) (just for 1.1.0 and above)
 
 <h2>
   <img src="https://cdn.modrinth.com/data/cached_images/29848556cea889595907388e4cb59a97a4e86aea.png"
@@ -75,11 +74,11 @@ The repository has also moved to https://codeberg.org/Addi3/ait-extras2-electric
   Recommended Mods!
 </h2>
 
-- JEI (latest fabric 1.20.1 version) -> [Download Here](https://modrinth.com/mod/jei/versions?g=1.20.1&l=fabric)
+ JEI (latest fabric 1.20.1 version) -> [Download Here](https://modrinth.com/mod/jei/versions?g=1.20.1&l=fabric)
 
 **Alternativly**
 
-- REI (latest fabric 1.20.1 version) -> [Download Here](https://modrinth.com/mod/rei/versions?g=1.20.1&l=fabric)
+ REI (latest fabric 1.20.1 version) -> [Download Here](https://modrinth.com/mod/rei/versions?g=1.20.1&l=fabric)
 
 -------------
 -------------
@@ -98,12 +97,12 @@ The repository has also moved to https://codeberg.org/Addi3/ait-extras2-electric
 
 ### Thank You's:
 
-- [Pan](https://github.com/Mansarde) - Provided the Control Lables and Old Protocol Names Resource Packs
-- [Ouro](https://ouro-the-boro.carrd.co/) - Stargate Model / Textures
-- [Project TinyLink](https://www.youtube.com/@projecttinylink7986) - permission to use their exterior design
-- [Maggie](https://discord.com/channels/1213989169878274068/1289647140485861438) - "Classic" exteriors
-- [Maketendo](https://modrinth.com/user/Maketendo) - Setting the mod up
-- Everyone at the [Amble team](https://amblelabs.github.io/) who has helped me!
+ [Pan](https://github.com/Mansarde) - Provided the Control Lables and Old Protocol Names Resource Packs
+ [Ouro](https://ouro-the-boro.carrd.co/) - Stargate Model / Textures
+ [Project TinyLink](https://www.youtube.com/@projecttinylink7986) - permission to use their exterior design
+ [Maggie](https://discord.com/channels/1213989169878274068/1289647140485861438) - "Classic" exteriors
+ [Maketendo](https://modrinth.com/user/Maketendo) - Setting the mod up
+ Everyone at the [Amble team](https://amblelabs.github.io/) who has helped me!
 
 -------------
 -------------
@@ -117,8 +116,11 @@ The repository has also moved to https://codeberg.org/Addi3/ait-extras2-electric
   Links
 </h2>
 
-### - [Modrinth](https://modrinth.com/project/ait-extras)
-### - [Github](https://github.com/Addi3/ait-extras)
-### - [Codeburg](https://codeberg.org/Addi3/ait-extras)
-### - [Discord Server](https://discord.gg/kndce97FyU)
-### - [CurseForge](https://legacy.curseforge.com/minecraft/mc-mods/ait-extras)
+###  [Modrinth](https://modrinth.com/project/ait-extras)
+###  [Github](https://github.com/Addi3/ait-extras)
+###  [Codeburg](https://codeberg.org/Addi3/ait-extras)
+###  [Discord Server](https://discord.gg/kndce97FyU)
+###  [CurseForge](https://legacy.curseforge.com/minecraft/mc-mods/ait-extras)
+
+
+</div>
