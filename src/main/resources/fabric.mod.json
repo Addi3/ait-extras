@@ -30,6 +30,8 @@
     "fabric": "*",
     "yet_another_config_lib_v3": ">=3.6.1+1.20.1-fabric",
     "minecraft": "${minecraft_version}",
-    "amblekit": ">=1.1.13-1.20.1-beta"
+    "amblekit": ">=1.1.16-dev+mc.1.20.1",
+    "ait": ">=1.2.13-dev+mc.1.20.1",
+    "trinkets": ">=3.7.2"
   }
 }
