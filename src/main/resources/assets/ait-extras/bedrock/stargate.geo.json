@@ -13,7 +13,7 @@
 			"bones": [
 				{
 					"name": "stargate",
-					"pivot": [0, 56, -0.5]
+					"pivot": [0, 90, -0.5]
 				},
 				{
 					"name": "OuterRing",
