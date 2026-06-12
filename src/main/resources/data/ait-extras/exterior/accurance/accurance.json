@@ -21,7 +21,7 @@
   "enabled": true,
   "width": 1.05,
   "height": 2.05,
-  "north": [0,-0.06,21.0],
+  "north": [0,-0.06,1.0],
   "north_east": [0,-0.06,1.0],
   "east": [0,-0.06,1.0],
   "south_east": [0,-0.06,1.0],
