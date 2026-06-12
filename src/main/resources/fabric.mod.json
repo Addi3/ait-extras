@@ -5,7 +5,7 @@
   "name": "AIT Extras",
   "description": "Where all the stuff ait doesn't want will go, along with some other stuff",
   "authors": ["Addi3"],
-  "license": "MIT",
+  "license": "ARR",
   "icon": "assets/ait-extras/icon.png",
   "environment": "*",
   "entrypoints": {
@@ -30,7 +30,7 @@
     "fabric": "*",
     "yet_another_config_lib_v3": ">=3.6.1+1.20.1-fabric",
     "minecraft": "${minecraft_version}",
-    "amblekit": ">=1.1.16-dev+mc.1.20.1",
+    "amblekit": ">=1.1.15-dev+mc.1.20.1",
     "ait": ">=1.2.13-dev+mc.1.20.1",
     "trinkets": ">=3.7.2"
   }
