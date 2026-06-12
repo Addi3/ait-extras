@@ -891,6 +891,9 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation("exterior.ait-extras.pegasus", "Pegasus");
                     provider.addTranslation("exterior.ait-extras.universe", "Universe");
 
+                        //accurance
+                    provider.addTranslation("exterior.ait-extras.accurance","accurance");
+
 
                     //Consoles
                     provider.addTranslation("console.ait-extras.hudolin_topless", "Hudolin (Topless)");
