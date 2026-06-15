@@ -6,14 +6,9 @@
   "close_sound": "minecraft:block.iron_door.close",
   "left_animation": "vanilla:open",
   "has_transparent_doors": true,
+
   "portal_info": {
-    "enabled": true,
-    "width": 1,
-    "height": 2,
-    "north": [0,0.08,0.5],
-    "east": [0,0.08,0.5],
-    "south": [0,0.08,0.5],
-    "west": [0,0.08,0.5]
+    "offset": [0,-0.0,-0.5]
   }
 }
 

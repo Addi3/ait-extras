@@ -7,26 +7,15 @@
   "model": "ait-extras:clock",
   "door": "ait-extras:clock",
   "left_animation": "clock:open",
-  "has_transparent_doors": false,
   "animations": {
     "landed": "clock:idle",
     "demat": "clock:flight",
     "mat": "clock:flight"
   },
 
-  "seat_translation": [0, 0, 0],
   "portal_info": {
-    "enabled": true,
-    "width": 1,
-    "height": 2,
-    "north": [0,-0.3,-0.3],
-    "north_east": [0,-0.3,-0.3],
-    "east": [0,-0.3,-0.3],
-    "south_east": [0,-0.3,-0.3],
-    "south": [0,-0.3,-0.3],
-    "south_west": [0,-0.3,-0.3],
-    "west": [0,-0.3,-0.3],
-    "north_west": [0,-0.3,-0.3]
+    "height":  1.8,
+    "offset": [0, 0.575, -0.35]
   }
 }
 

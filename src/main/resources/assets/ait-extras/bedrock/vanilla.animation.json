@@ -3,7 +3,7 @@
 	"animations": {
 		"open": {
 			"loop": "hold_on_last_frame",
-			"animation_length": 0.125,
+			"animation_length": 0.0417,
 			"bones": {
 				"door": {
 					"rotation": {

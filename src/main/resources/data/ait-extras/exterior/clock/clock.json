@@ -15,17 +15,7 @@
   },
 
   "portal_info": {
-  "enabled": true,
-  "width": 1,
-  "height": 2,
-  "north": [0,-0.3,-0.3],
-  "north_east": [0,-0.3,-0.3],
-  "east": [0,-0.3,-0.3],
-  "south_east": [0,-0.3,-0.3],
-  "south": [0,-0.3,-0.3],
-  "south_west": [0,-0.3,-0.3],
-  "west": [0,-0.3,-0.3],
-    "north_west": [0,-0.3,-0.3]
+  "offset": [0,-0.3,-0.3]
   }
 }
 

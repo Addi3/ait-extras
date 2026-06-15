@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '1.9-SNAPSHOT'
+    id 'fabric-loom' version '1.11-SNAPSHOT'
     id 'maven-publish'
 
     id "com.diffplug.spotless" version "6.20.0"
@@ -70,6 +70,13 @@ dependencies {
     modImplementation "dev.amble:ait:${project.ait_version}"
 
     modApi("dev.amble:lib:${project.amblekit_version}") {
+        exclude(group: "net.fabricmc.fabric-api")
+    }
+
+    modImplementation("com.github.iPortalTeam.ImmersivePortalsMod:imm_ptl_core:${project.immersive_portals_version}") {
+        exclude(group: "net.fabricmc.fabric-api")
+    }
+    modImplementation("com.github.iPortalTeam.ImmersivePortalsMod:q_misc_util:${project.immersive_portals_version}") {
         exclude(group: "net.fabricmc.fabric-api")
     }
 
