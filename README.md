@@ -39,7 +39,7 @@ The repository has also moved to https://codeberg.org/Addi3/ait-extras2-electric
 
 
 ### How do i get access to betas?
- Either via the AmbleLabs discord server's donator role OR via [Addie's kofi](https://ko-fi.com/addi3dabaddie)!
+ Either via the AmbleLabs discord server's donator role OR via Addie's [Patreon page](https://www.patreon.com/cw/Addie_Astarr)!
 
 ### Can you add... / How do you use...?
  You can suggest stuff on the github issues page or on the official [Ait-Extras discord server](https://discord.gg/kndce97FyU)! I will also answer any questions on either site!
