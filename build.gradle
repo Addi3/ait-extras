@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '1.11-SNAPSHOT'
+   id 'fabric-loom' version '1.18-SNAPSHOT'
     id 'maven-publish'
 
     id "com.diffplug.spotless" version "6.20.0"
@@ -14,24 +14,23 @@ base {
 
 repositories {
 
-    mavenLocal()
+    maven { url 'https://jitpack.io' }
 
-    repositories {
-        maven {
-            url "https://amblelabs.dev/maven"
+    maven {
+        url "https://maven.amblelabs.dev"
 
-            content {
-                includeGroup "dev.amble"
-            }
-        }
-
-        maven {
-            url "https://theo.is-a.dev/maven/"
-            content {
-                includeGroup "dev.drtheo"
-            }
+        content {
+            includeGroup "dev.amblelabs"
         }
     }
+
+    maven {
+        url "https://theo.is-a.dev/maven/"
+        content {
+            includeGroup "dev.drtheo"
+        }
+    }
+
 
     maven { url "https://api.modrinth.com/maven" }
 
@@ -61,17 +60,20 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
     include(implementation "net.objecthunter:exp4j:0.4.8")
+
     modImplementation "dev.drtheo:multidim:${project.multidim_version}"
+
     modApi "dev.emi:trinkets:${trinkets_version}"
 
     // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-    modImplementation "dev.amble:ait:${project.ait_version}"
+     modImplementation "dev.amblelabs:ait:85e6b8d96d"
 
-    modApi("dev.amble:lib:${project.amblekit_version}") {
+    modApi("dev.amblelabs:modkit:${project.amblekit_version}") {
         exclude(group: "net.fabricmc.fabric-api")
     }
+
 
     modImplementation("com.github.iPortalTeam.ImmersivePortalsMod:imm_ptl_core:${project.immersive_portals_version}") {
         exclude(group: "net.fabricmc.fabric-api")
