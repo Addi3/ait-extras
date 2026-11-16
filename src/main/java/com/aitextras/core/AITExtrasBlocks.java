@@ -131,7 +131,6 @@ public class AITExtrasBlocks extends BlockContainer {
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
             .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.AMETHYST_BLOCK).nonOpaque().notSolid());
 
-    @AutomaticModel
     @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
     @NoEnglish
     public static final Block CRYSTALLINE_SHARD_BLOCK = new Block(ABlockSettings.create()
@@ -412,4 +411,30 @@ public class AITExtrasBlocks extends BlockContainer {
     public static final Block CANDLE_STAND_DOUBLE = new CandleStandDoubleBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
             .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.CHAIN).luminance(state -> 9));
+
+
+
+
+    @NoEnglish
+    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
+    public static final Block CRYSTALLINE_SHARD_STAIRS = new StairsBlock(
+            CRYSTALLINE_SHARD_BLOCK.getDefaultState(),
+            ABlockSettings.create()
+                    .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
+                    .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.AMETHYST_BLOCK)
+    );
+
+
+    @NoEnglish
+    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
+    public static final Block CRYSTALLINE_SHARD_SLAB = new SlabBlock(ABlockSettings.create()
+            .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
+            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.AMETHYST_BLOCK));
+
+
+    @NoEnglish
+    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
+    public static final Block CRYSTALLINE_SHARD_WALL = new WallBlock(ABlockSettings.create()
+            .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
+            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.AMETHYST_BLOCK));
 }

@@ -274,6 +274,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(AITExtrasBlocks.CRYSTALLINE_SHARD_BLOCK), conditionsFromItem(AITExtrasBlocks.CRYSTALLINE_SHARD_BLOCK)));
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AITExtrasBlocks.CRYSTALLINE_SHARD_BLOCK, 1)
+                    .group("crystalline")
                     .pattern("CCC")
                     .pattern("CCC")
                     .pattern("CCC")
@@ -562,6 +563,12 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
 
             provider.addStonecutting(AITExtrasBlocks.COMPACT_ZEITON_BRICKS, AITExtrasBlocks.COMPACT_ZEITON_BRICK_WALL,1);
 
+            provider.addStonecutting(AITExtrasBlocks.CRYSTALLINE_SHARD_BLOCK, AITExtrasBlocks.CRYSTALLINE_SHARD_SLAB,2);
+
+            provider.addStonecutting(AITExtrasBlocks.CRYSTALLINE_SHARD_BLOCK, AITExtrasBlocks.CRYSTALLINE_SHARD_STAIRS,1);
+
+            provider.addStonecutting(AITExtrasBlocks.CRYSTALLINE_SHARD_BLOCK, AITExtrasBlocks.CRYSTALLINE_SHARD_WALL,1);
+
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasItems.FEZ_ITEM, 1)
                     .group("fez")
                     .pattern("WWW")
@@ -792,6 +799,32 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(Blocks.BLACK_WOOL), conditionsFromItem(Blocks.BLACK_WOOL))
                     .criterion(hasItem(Blocks.RED_CARPET), conditionsFromItem(Blocks.RED_CARPET)));
 
+
+
+            provider.addShapedRecipe(
+                    ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.CRYSTALLINE_SHARD_STAIRS, 4)
+                            .group("crystalline")
+                            .pattern("  X")
+                            .pattern(" XX")
+                            .pattern("XXX")
+                            .input('X', AITExtrasBlocks.CRYSTALLINE_SHARD_BLOCK)
+                            .criterion(hasItem(AITExtrasBlocks.CRYSTALLINE_SHARD_BLOCK), conditionsFromItem(AITExtrasBlocks.CRYSTALLINE_SHARD_BLOCK)));
+
+            provider.addShapedRecipe(
+                    ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.CRYSTALLINE_SHARD_SLAB, 6)
+                            .group("crystalline")
+                            .pattern("XXX")
+                            .input('X', AITExtrasBlocks.CRYSTALLINE_SHARD_BLOCK)
+                            .criterion(hasItem(AITExtrasBlocks.CRYSTALLINE_SHARD_BLOCK), conditionsFromItem(AITExtrasBlocks.CRYSTALLINE_SHARD_BLOCK)));
+
+            provider.addShapedRecipe(
+                    ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.CRYSTALLINE_SHARD_WALL, 6)
+                            .group("crystalline")
+                            .pattern("XXX")
+                            .pattern("XXX")
+                            .input('X', AITExtrasBlocks.CRYSTALLINE_SHARD_BLOCK)
+                            .criterion(hasItem(AITExtrasBlocks.CRYSTALLINE_SHARD_BLOCK), conditionsFromItem(AITExtrasBlocks.CRYSTALLINE_SHARD_BLOCK)));
+
             return provider;
 
         })));
@@ -969,6 +1002,9 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasBlocks.ROUNDEL_DOOR_BLOCK, "Roundel Door");
                     provider.addTranslation(AITExtrasBlocks.CLASSIC_ROUNDEL_DOOR_BLOCK, "Classic Roundel Door");
                     provider.addTranslation(AITExtrasBlocks.STONE_ROUNDEL_DOOR_BLOCK, "Stone Roundel Door");
+                    provider.addTranslation(AITExtrasBlocks.CRYSTALLINE_SHARD_SLAB, "Crystalline Shard Slab");
+                    provider.addTranslation(AITExtrasBlocks.CRYSTALLINE_SHARD_STAIRS, "Crystalline Shard Stairs");
+                    provider.addTranslation(AITExtrasBlocks.CRYSTALLINE_SHARD_WALL, "Crystalline Shard Wall");
 
 
                     // Items

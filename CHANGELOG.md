@@ -14,7 +14,7 @@
 - Emitter Block
 - Roundel Doors
 - Stargate Exteriors
-- Accurance Exterior
+- Crystalline stairs, slab, wall
 
 - ### Clothes:
     - Fez (dye-able like leather)
@@ -32,6 +32,7 @@
 - Remodeled Victorian Monitor
 - Abstract out code for the hatstands and simplify rendering steps: Loqor
 - Clock / Vanilla exterior poral positions
+- updated fabric loader ver
 
   ### Breaking Changes
     - Re-wrote Candle Stands (any candle stands before 1.1.0 will no longer exist, please remove them from your world before updating!)

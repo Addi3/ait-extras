@@ -83,6 +83,11 @@ public class AITExtrasModelGen extends AmbleModelProvider {
         metal_mesh_pool.slab(AITExtrasBlocks.METAL_MESH_SLAB);
         metal_mesh_pool.wall(AITExtrasBlocks.METAL_MESH_WALL);
 
+        BlockStateModelGenerator.BlockTexturePool crystalline_shard_pool = generator.registerCubeAllModelTexturePool(AITExtrasBlocks.CRYSTALLINE_SHARD_BLOCK);
+        crystalline_shard_pool.stairs(AITExtrasBlocks.CRYSTALLINE_SHARD_STAIRS);
+        crystalline_shard_pool.slab(AITExtrasBlocks.CRYSTALLINE_SHARD_SLAB);
+        crystalline_shard_pool.wall(AITExtrasBlocks.CRYSTALLINE_SHARD_WALL);
+
         super.generateBlockStateModels(generator);
     }
 
