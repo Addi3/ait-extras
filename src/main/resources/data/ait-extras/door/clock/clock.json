@@ -5,10 +5,8 @@
   "open_sound": "minecraft:block.wooden_door.open",
   "close_sound": "minecraft:block.wooden_door.close",
   "left_animation": "clock:open",
-
   "portal_info": {
-    "height": 1.8125,
-    "offset": [0,0.025,-0.4]
+    "offset": [0,0.02,-0.4]
   }
 }
 

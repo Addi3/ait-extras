@@ -12,10 +12,9 @@
     "demat": "clock:flight",
     "mat": "clock:flight"
   },
-
   "portal_info": {
     "height":  1.8,
-    "offset": [0, 0.575, -0.35]
+    "offset": [0, 0.69, -0.35]
   }
 }
 

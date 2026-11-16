@@ -14,6 +14,6 @@
     "mat": "vanilla:flight"
   },
   "portal_info": {
-    "offset": [0,-0.0,-0.5]
+    "offset": [0,-0.0,-1.501]
   }
 }

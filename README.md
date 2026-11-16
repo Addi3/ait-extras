@@ -21,10 +21,6 @@
   Small Q&A!
 </h2>
 
-### Whats next for aitextras?
- If you dont know ait is moving / has moved to 1.21.1, aitextras will do the same. This does how ever make `1.1.0` the last version on 1.20.1 and will only be updated for `2.0.0`.
-The repository has also moved to https://codeberg.org/Addi3/ait-extras2-electricboogaloo
-
 ### What does this add / do?
 
  This builds on top of AiT features by adding; exteriors, interiors, consoles, sonics, and more..
@@ -96,7 +92,7 @@ The repository has also moved to https://codeberg.org/Addi3/ait-extras2-electric
 </h2>
 
 ### Developers:
-- [Addi3_Astarr](https://addi3.github.io/) (Lead Developer)
+[Addi3_Astarr](https://addi3.github.io/) (Lead Developer)
 
 ### Thank You's:
 

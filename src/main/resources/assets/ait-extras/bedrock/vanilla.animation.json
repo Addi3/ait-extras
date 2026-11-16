@@ -52,7 +52,6 @@
 		"noglass": {
 			"loop": true,
 			"animation_length": 2,
-			"override_previous_animation": true,
 			"bones": {
 				"glass": {
 					"scale": {

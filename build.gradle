@@ -93,6 +93,7 @@ dependencies {
     modImplementation("mezz.jei:jei-${project.minecraft_version}-fabric-api:${project.jei_version}")
     // Using Modrinth maven because JEI's official maven crashed with Yarn mappings
     modRuntimeOnly("maven.modrinth:jei:${project.jei_version}")
+
 }
 
 

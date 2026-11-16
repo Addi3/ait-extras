@@ -1,14 +1,14 @@
 {
   "id": "ait-extras:vanilla",
   "model": "ait-extras:vanilla_door",
-  "is_double": false,
+  "is_double": true,
   "open_sound": "minecraft:block.iron_door.open",
   "close_sound": "minecraft:block.iron_door.close",
   "left_animation": "vanilla:open",
   "has_transparent_doors": true,
 
   "portal_info": {
-    "offset": [0,-0.0,-0.5]
+    "offset": [0,-0.0,-0.501]
   }
 }
 
