@@ -32,18 +32,10 @@ public class ExtrasMonitorRenderer<T extends ExtrasMonitorBlockEntity> implement
             "textures/blockentities/monitors/victorian_monitor.png");
     public static final Identifier EMISSIVE_MONITOR_TEXTURE = new Identifier(AITExtras.MOD_ID,
             "textures/blockentities/monitors/victorian_monitor_emission.png");
-    private final TextRenderer textRenderer = MinecraftClient.getInstance().textRenderer;
     private final VictorianMonitorModel victorianMonitorModel;
 
     public ExtrasMonitorRenderer(BlockEntityRendererFactory.Context ctx) {
         this.victorianMonitorModel = new VictorianMonitorModel(VictorianMonitorModel.getTexturedModelData().createModel());
-    }
-
-    private String truncateDimensionName(String name, int maxLength) {
-        if (name.length() > maxLength) {
-            return name.substring(0, maxLength) + "...";
-        }
-        return name;
     }
 
     @Override
@@ -87,37 +79,6 @@ public class ExtrasMonitorRenderer<T extends ExtrasMonitorBlockEntity> implement
         matrices.multiply(RotationAxis.NEGATIVE_Y.rotationDegrees(180 - h)); // Apply block rotation here
         matrices.scale(0.004f * scale, 0.004f * scale, 0.004f * scale);
         matrices.translate(-55f, 0, -55);
-
-// Render text
-        TravelHandler travel = tardis.travel();
-        CachedDirectedGlobalPos abpp = travel.isLanded() || travel.getState() == TravelHandlerBase.State.MAT
-                ? travel.position()
-                : travel.getProgress();
-
-        BlockPos abppPos = abpp.getPos();
-
-        CachedDirectedGlobalPos abpd = tardis.travel().destination();
-        BlockPos abpdPos = abpd.getPos();
-
-        String destinationPosText = " " + abpdPos.getX() + ", " + abpdPos.getY() + ", " + abpdPos.getZ();
-        Text destinationDimensionText = Text.of(truncateDimensionName(WorldUtil.worldText(abpd.getDimension()).getString(), 20));
-
-        this.textRenderer.drawWithOutline(Text.of("✛").asOrderedText(), 22, -2, 0x00F0FF, 0x000000,
-                matrices.peek().getPositionMatrix(), vertexConsumers, 0xF000F0);
-        this.textRenderer.drawWithOutline(Text.of(destinationPosText).asOrderedText(), 21, 5, 0xFFFFFF, 0x000000,
-                matrices.peek().getPositionMatrix(), vertexConsumers, 0xF000F0);
-        this.textRenderer.drawWithOutline(destinationDimensionText.asOrderedText(), 22, 15, 0xFFFFFF, 0x000000,
-                matrices.peek().getPositionMatrix(), vertexConsumers, 0xF000F0);
-        this.textRenderer.drawWithOutline(WorldUtil.rot2Text(abpd.getRotation()).asOrderedText(), 22, 24, 0xFFFFFF, 0x000000,
-                matrices.peek().getPositionMatrix(), vertexConsumers, 0xF000F0);
-
-        String flightTimeText = tardis.travel().getState() == TravelHandlerBase.State.LANDED
-                ? "0%"
-                : tardis.travel().getDurationAsPercentage() + "%";
-        this.textRenderer.drawWithOutline(Text.of("⏳").asOrderedText(), 60, 35, 0x00FF0F, 0x000000,
-                matrices.peek().getPositionMatrix(), vertexConsumers, 0xF000F0);
-        this.textRenderer.drawWithOutline(Text.of(flightTimeText).asOrderedText(), 70, 35, 0xFFFFFF, 0x000000,
-                matrices.peek().getPositionMatrix(), vertexConsumers, 0xF000F0);
 
         matrices.pop();
     }
