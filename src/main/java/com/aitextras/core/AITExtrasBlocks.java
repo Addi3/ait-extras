@@ -3,6 +3,7 @@ package com.aitextras.core;
 import com.aitextras.core.blocks.*;
 import com.aitextras.core.blocks.HudolinSupportBaseBlock;
 import com.aitextras.core.blocks.HudolinSupportTopBlock;
+import com.aitextras.core.blocks.JukeboxBlock;
 import dev.amble.lib.block.ABlockSettings;
 import dev.amble.lib.container.impl.BlockContainer;
 import dev.amble.lib.datagen.util.*;
@@ -154,16 +155,16 @@ public class AITExtrasBlocks extends BlockContainer {
             .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.DEEPSLATE));
 
 
- @NoEnglish
- @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
- public static final Block COMPACT_ZEITON_BRICKS = new ZeitonBlock(ABlockSettings.create()
-         .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
-         .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.AMETHYST_BLOCK));
+    @NoEnglish
+    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
+    public static final Block COMPACT_ZEITON_BRICKS = new ZeitonBlock(ABlockSettings.create()
+            .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
+            .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.AMETHYST_BLOCK));
 
 
- @NoEnglish
- @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
- public static final Block COMPACT_ZEITON_BRICK_STAIRS = new StairsBlock(
+    @NoEnglish
+    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
+    public static final Block COMPACT_ZEITON_BRICK_STAIRS = new StairsBlock(
          COMPACT_ZEITON_BRICKS.getDefaultState(),
          ABlockSettings.create()
                  .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
@@ -445,4 +446,14 @@ public class AITExtrasBlocks extends BlockContainer {
     public static final Block WHIRLYGIG_BLOCK = new WhirlygiglBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
             .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.METAL).nonOpaque().notSolid());
+
+
+
+    @NoEnglish
+    @AxeMineable(tool = AxeMineable.Tool.IRON)
+    public static final Block JUKEBOX = new JukeboxBlock(ABlockSettings.create()
+            .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
+            .instrument(Instrument.BASS).strength(2.0F, 6.0F).burnable().sounds(BlockSoundGroup.WOOD).nonOpaque());
+
+
 }

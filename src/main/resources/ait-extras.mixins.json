@@ -4,16 +4,17 @@
   "package": "com.aitextras.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "GameRenderMixin"
+    "GameRenderMixin",
+    "MusicDiscItemMixin"
   ],
   "client": [
+    "client.ItemRendererMixin",
+    "client.ModelLoaderMixin",
     "client.rendering.ArmorFeatureRendererMixin",
     "client.rendering.ArmorStandEntityRendererMixin",
-    "client.rendering.HeadFeatureRendererMixin",
-    "client.rendering.PlayerEntityRendererMixin",
     "client.rendering.ElevatorBlockRendererMixin",
-    "client.ModelLoaderMixin",
-    "client.ItemRendererMixin"
+    "client.rendering.HeadFeatureRendererMixin",
+    "client.rendering.PlayerEntityRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1

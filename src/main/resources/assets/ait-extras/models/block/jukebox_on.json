@@ -1,0 +1,7 @@
+{
+	"parent": "ait-extras:block/jukebox",
+	"textures": {
+		"0": "ait-extras:block/jukebox_on",
+		"particle": "minecraft:block/mangrove_log"
+	}
+}

@@ -8,6 +8,7 @@ import com.aitextras.world.AITExtrasConfiguredFeature;
 import com.aitextras.world.AITExtrasPlacedFeatures;
 import dev.amble.ait.core.AITBlocks;
 import dev.amble.ait.core.AITItems;
+import dev.amble.ait.module.planet.core.PlanetItems;
 import dev.amble.lib.datagen.lang.LanguageType;
 import dev.amble.lib.datagen.lang.AmbleLanguageProvider;
 import dev.amble.lib.datagen.loot.AmbleBlockLootTable;
@@ -581,15 +582,15 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .group("fez")
                     .pattern("WWW")
                     .pattern("W W")
-                    .input('W',Blocks.WHITE_WOOL)
-                    .criterion(hasItem(Blocks.WHITE_WOOL), conditionsFromItem(Blocks.WHITE_WOOL)));
+                    .input('W', PlanetItems.FABRIC)
+                    .criterion(hasItem(PlanetItems.FABRIC), conditionsFromItem(PlanetItems.FABRIC)));
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasItems.SCARF, 1)
                     .group("scarf")
                     .pattern("SSS")
                     .pattern("S S")
-                    .input('S',Items.STRING)
-                    .criterion(hasItem(Items.STRING), conditionsFromItem(Items.STRING)));
+                    .input('S',PlanetItems.FABRIC)
+                    .criterion(hasItem(PlanetItems.FABRIC), conditionsFromItem(PlanetItems.FABRIC)));
 
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasItems.SCARF_RED, 1)
@@ -833,6 +834,15 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                             .input('X', AITExtrasBlocks.CRYSTALLINE_SHARD_BLOCK)
                             .criterion(hasItem(AITExtrasBlocks.CRYSTALLINE_SHARD_BLOCK), conditionsFromItem(AITExtrasBlocks.CRYSTALLINE_SHARD_BLOCK)));
 
+            provider.addShapedRecipe(
+                    ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, AITExtrasBlocks.JUKEBOX, 1)
+                            .pattern("G")
+                            .pattern("J")
+                            .input('J', Blocks.JUKEBOX)
+                            .input('G', Blocks.GLASS_PANE)
+                            .criterion(hasItem(Blocks.JUKEBOX), conditionsFromItem(Blocks.JUKEBOX))
+                            .criterion(hasItem(Blocks.GLASS_PANE), conditionsFromItem(Blocks.GLASS_PANE)));
+
             return provider;
 
         })));
@@ -1014,6 +1024,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasBlocks.CRYSTALLINE_SHARD_STAIRS, "Crystalline Shard Stairs");
                     provider.addTranslation(AITExtrasBlocks.CRYSTALLINE_SHARD_WALL, "Crystalline Shard Wall");
                     provider.addTranslation(AITExtrasBlocks.WHIRLYGIG_BLOCK, "Whirlygig");
+                    provider.addTranslation(AITExtrasBlocks.JUKEBOX, "JukeBox");
 
 
                     // Items
