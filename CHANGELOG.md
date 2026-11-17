@@ -4,7 +4,7 @@
 
 ## Added
 
-- Atomic Shredder
+- Atomic Shredder (Hazandra but infinite)
 - Metal Grate / Mesh blocks (stairs,slab,trapdoor,wall)
 - ARS Egg
 - Monitor Covers
@@ -16,6 +16,8 @@
 - Stargate Exteriors
 - Crystalline stairs, slab, wall
 - Toyota Console Whirlygig
+- Jukebox
+- Addie's TARDIM exteriors
 
 - ### Clothes:
     - Fez (dye-able like leather)
@@ -47,4 +49,7 @@
 - Clock Exterior BOTI door render being black
   (is issue caused by bedrockexteriors https://github.com/amblelabs/ait/issues/1992)
 
+For more detail you can read the [offical commits](https://codeberg.org/Addi3/ait-extras/commits/branch/main)
+
 ----------------
+
