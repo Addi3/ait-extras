@@ -546,6 +546,14 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                             .criterion(hasItem(Items.EGG), conditionsFromItem(Items.EGG))
                             .criterion(hasItem(Blocks.SEA_LANTERN), conditionsFromItem(Blocks.SEA_LANTERN)));
 
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.WHIRLYGIG_BLOCK, 1)
+                    .pattern("CRC")
+                    .pattern(" C ")
+                    .input('R', Items.REDSTONE)
+                    .input('C', Blocks.CHISELED_STONE_BRICKS)
+                    .criterion(hasItem(Items.REDSTONE), conditionsFromItem(Items.REDSTONE))
+                    .criterion(hasItem(Blocks.CHISELED_STONE_BRICKS), conditionsFromItem(Blocks.CHISELED_STONE_BRICKS)));
+
 
             provider.addStonecutting(AITBlocks.COMPACT_ZEITON, AITExtrasBlocks.POLISHED_COMPACT_ZEITON,1);
 
@@ -1005,6 +1013,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasBlocks.CRYSTALLINE_SHARD_SLAB, "Crystalline Shard Slab");
                     provider.addTranslation(AITExtrasBlocks.CRYSTALLINE_SHARD_STAIRS, "Crystalline Shard Stairs");
                     provider.addTranslation(AITExtrasBlocks.CRYSTALLINE_SHARD_WALL, "Crystalline Shard Wall");
+                    provider.addTranslation(AITExtrasBlocks.WHIRLYGIG_BLOCK, "Whirlygig");
 
 
                     // Items

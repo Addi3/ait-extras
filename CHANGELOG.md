@@ -15,6 +15,7 @@
 - Roundel Doors
 - Stargate Exteriors
 - Crystalline stairs, slab, wall
+- Toyota Console Whirlygig
 
 - ### Clothes:
     - Fez (dye-able like leather)

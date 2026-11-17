@@ -89,5 +89,8 @@ public class AITExtrasBlockEntityTypes implements BlockEntityContainer{
     @HasBedrockModel
     public static BlockEntityType<CrystalZeitonBlockEntity> CRYSTAL_ZEITON_BLOCK = FabricBlockEntityTypeBuilder.create(CrystalZeitonBlockEntity::new, AITExtrasBlocks.CRYSTAL_ZEITON_BLOCK).build();
 
+    @HasBedrockModel
+    public static BlockEntityType<WhirlygigBlockEntity> WHIRLYGIG_BLOCK = FabricBlockEntityTypeBuilder.create(WhirlygigBlockEntity::new, AITExtrasBlocks.WHIRLYGIG_BLOCK).build();
+
 
 }
