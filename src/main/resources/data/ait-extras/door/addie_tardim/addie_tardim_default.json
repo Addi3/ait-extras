@@ -1,0 +1,16 @@
+{
+  "id": "ait-extras:addie_tardim_default",
+  "model": "ait-extras:addie_tardim_door",
+  "is_double": true,
+  "open_sound": "minecraft:block.cherry_wood_door.open",
+  "close_sound": "minecraft:block.cherry_wood_door.close",
+  "left_animation": "addie_tardim_door:door_open_left",
+  "right_animation": "addie_tardim_door:door_open_right",
+  "has_transparent_doors": false,
+  "portal_info": {
+  "enabled": false,
+  "width": 0,
+  "height": 0
+  }
+}
+

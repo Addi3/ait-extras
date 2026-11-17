@@ -1,0 +1,38 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.vanilla_door",
+				"texture_width": 256,
+				"texture_height": 256,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 5,
+				"visible_bounds_offset": [0, 1.5, 0]
+			},
+			"bones": [
+				{
+					"name": "bone",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "door_left",
+					"parent": "bone",
+					"pivot": [-8, 16, 8],
+					"rotation": [0, 180, 0],
+					"cubes": [
+						{"origin": [-16, 0, 8], "size": [8, 32, 3], "uv": [197, 174], "mirror": true}
+					]
+				},
+				{
+					"name": "door_right",
+					"parent": "bone",
+					"pivot": [8, 8.25, 8],
+					"cubes": [
+						{"origin": [0, 0, 5], "size": [8, 32, 3], "uv": [197, 174], "mirror": true}
+					]
+				}
+			]
+		}
+	]
+}

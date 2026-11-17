@@ -1,7 +1,7 @@
 {
   "id": "ait-extras:vanilla",
   "model": "ait-extras:vanilla_door",
-  "is_double": true,
+  "is_double": false,
   "open_sound": "minecraft:block.iron_door.open",
   "close_sound": "minecraft:block.iron_door.close",
   "left_animation": "vanilla:open",
