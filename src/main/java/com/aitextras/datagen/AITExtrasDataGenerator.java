@@ -937,6 +937,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation("exterior.ait-extras.universe", "Universe");
 
                         //addie tardim
+                    provider.addTranslation("exterior.ait-extras.addie_tardim","NEW TARDIM");
                     provider.addTranslation("exterior.ait-extras.addie_tardim_default","Default");
                     provider.addTranslation("exterior.ait-extras.addie_tardim_modern","Modern");
 
