@@ -110,7 +110,7 @@ public class AtomicShredderItem extends LinkableItem {
         world.playSound(null, user.getBlockPos(), AITSounds.BWEEP, SoundCategory.PLAYERS, 1f, 1f);
         TardisUtil.teleportInside(tardis.asServer(), user);
         stack.damage(1, user, p -> p.sendToolBreakStatus(hand));
-        //   user.getItemCooldownManager().set(this, 25 * 20);
+         user.getItemCooldownManager().set(this, 250 * 200);
 
         BlockPos door = tardis.getDesktop().getDoorPos().getPos();
         createTeleportEffect(tardis.asServer().world(), door.toCenterPos().subtract(0, 0.5, 0), PARTICLE_SUCCESS);
