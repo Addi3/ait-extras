@@ -9,6 +9,7 @@ import dev.amble.ait.core.tardis.Tardis;
 import dev.amble.lib.animation.AnimatedBlockEntity;
 import dev.amble.lib.client.bedrock.BedrockAnimationReference;
 import dev.amble.lib.client.bedrock.BedrockModelReference;
+import dev.amble.lib.util.ServerLifecycleHooks;
 import lombok.Getter;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
@@ -62,6 +63,8 @@ public class CrystalMasterBlockEntity extends BlockEntity implements AnimatedBlo
     public void tick(World world, BlockPos pos, BlockState state, CrystalMasterBlockEntity blockEntity) {
 
         if (!world.isClient) return;
+        if (ServerLifecycleHooks.get() == null) return;
+
         boolean powered = state.get(CrystalMasterBlock.POWERED);
 
         if (powered) {
@@ -72,7 +75,8 @@ public class CrystalMasterBlockEntity extends BlockEntity implements AnimatedBlo
                 age = 0;
             }
             age++;
-        } else {
+        }
+        else {
             if (age != 0) {
                 this.playAnimation(
                         new BedrockAnimationReference("master_crystal_block", "idle")

@@ -7,6 +7,7 @@ import com.aitextras.core.blocks.CrystalBlock;
 import dev.amble.lib.animation.AnimatedBlockEntity;
 import dev.amble.lib.client.bedrock.BedrockAnimationReference;
 import dev.amble.lib.client.bedrock.BedrockModelReference;
+import dev.amble.lib.util.ServerLifecycleHooks;
 import lombok.Getter;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
@@ -59,6 +60,7 @@ public class WhirlygigBlockEntity extends BlockEntity implements AnimatedBlockEn
     public void tick(World world, BlockPos pos, BlockState state, WhirlygigBlockEntity blockEntity) {
 
         if (!world.isClient) return;
+        if (ServerLifecycleHooks.get() == null) return;
         boolean powered = state.get(CrystalBlock.POWERED);
 
         if (powered) {
@@ -69,7 +71,8 @@ public class WhirlygigBlockEntity extends BlockEntity implements AnimatedBlockEn
                 age = 0;
             }
             age++;
-        }else {
+        }
+        else {
             if (age != 0) {
                 this.playAnimation(
                         new BedrockAnimationReference("whirlygig", "idle")
