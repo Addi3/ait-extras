@@ -60,7 +60,6 @@ public class WhirlygigBlockEntity extends BlockEntity implements AnimatedBlockEn
     public void tick(World world, BlockPos pos, BlockState state, WhirlygigBlockEntity blockEntity) {
 
         if (!world.isClient) return;
-        if (ServerLifecycleHooks.get() == null) return;
         boolean powered = state.get(CrystalBlock.POWERED);
 
         if (powered) {

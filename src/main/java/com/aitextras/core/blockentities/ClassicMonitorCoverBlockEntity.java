@@ -64,7 +64,6 @@ public class ClassicMonitorCoverBlockEntity extends BlockEntity implements Anima
     public void useOn(World world, boolean sneaking, PlayerEntity player) {
 
         if (world.isClient) return;
-        if (ServerLifecycleHooks.get() == null) return;
         BlockState state = world.getBlockState(pos);
 
         if (state.get(MonitorCoverBlock.OPEN)) {

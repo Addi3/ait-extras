@@ -61,7 +61,6 @@ public class CrystalBlockEntity extends BlockEntity implements AnimatedBlockEnti
     public void tick(World world, BlockPos pos, BlockState state, CrystalBlockEntity blockEntity) {
 
         if (!world.isClient) return;
-        if (ServerLifecycleHooks.get() == null) return;
 
         boolean powered = state.get(CrystalBlock.POWERED);
 

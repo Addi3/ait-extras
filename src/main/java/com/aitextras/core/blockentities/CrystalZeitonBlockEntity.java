@@ -60,7 +60,6 @@ public class CrystalZeitonBlockEntity extends BlockEntity implements AnimatedBlo
     public void tick(World world, BlockPos pos, BlockState state, CrystalZeitonBlockEntity blockEntity) {
 
         if (!world.isClient) return;
-        if (ServerLifecycleHooks.get() == null) return;
 
         boolean powered = state.get(CrystalZeitonBlock.POWERED);
 
