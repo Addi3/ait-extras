@@ -1,4 +1,4 @@
-package com.aitextras.mixin;
+package com.aitextras.mixin.client;
 
 import com.aitextras.core.AITExtrasItems;
 import net.minecraft.client.MinecraftClient;
