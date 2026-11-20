@@ -64,6 +64,9 @@ public class AITExtrasBlockEntityTypes implements BlockEntityContainer{
     public static BlockEntityType<TubeLightBlockEntity> TUBE_LIGHT_BLOCK_ENTITY_TYPE = FabricBlockEntityTypeBuilder
             .create(TubeLightBlockEntity::new, AITExtrasBlocks.TUBE_LIGHT_BLOCK).build();
 
+    public static BlockEntityType<WhirlygigBlockEntity> WHIRLYGIG_BLOCK_ENTITY_TYPE = FabricBlockEntityTypeBuilder
+            .create(WhirlygigBlockEntity::new, AITExtrasBlocks.WHIRLYGIG_BLOCK).build();
+
     public static BlockEntityType<MonitorCoverBlockEntity> MONITOR_COVER_BLOCK_ENTITY_TYPE = FabricBlockEntityTypeBuilder
             .create(MonitorCoverBlockEntity::new, AITExtrasBlocks.MONITOR_COVER_BLOCK).build();
 
@@ -88,9 +91,5 @@ public class AITExtrasBlockEntityTypes implements BlockEntityContainer{
 
     @HasBedrockModel
     public static BlockEntityType<CrystalZeitonBlockEntity> CRYSTAL_ZEITON_BLOCK = FabricBlockEntityTypeBuilder.create(CrystalZeitonBlockEntity::new, AITExtrasBlocks.CRYSTAL_ZEITON_BLOCK).build();
-
-    @HasBedrockModel
-    public static BlockEntityType<WhirlygigBlockEntity> WHIRLYGIG_BLOCK = FabricBlockEntityTypeBuilder.create(WhirlygigBlockEntity::new, AITExtrasBlocks.WHIRLYGIG_BLOCK).build();
-
 
 }

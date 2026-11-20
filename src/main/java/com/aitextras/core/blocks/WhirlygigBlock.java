@@ -11,9 +11,14 @@ import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
+import net.minecraft.state.property.IntProperty;
+import net.minecraft.state.property.Properties;
 import net.minecraft.text.Text;
+import net.minecraft.util.BlockMirror;
+import net.minecraft.util.BlockRotation;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.RotationPropertyHelper;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
@@ -25,16 +30,20 @@ import java.util.List;
 public class WhirlygigBlock extends Block implements BlockEntityProvider {
 
     public static final BooleanProperty POWERED = BooleanProperty.of("powered");
+    public static final int MAX_ROTATION_INDEX = RotationPropertyHelper.getMax();
+    private static final int MAX_ROTATIONS = MAX_ROTATION_INDEX + 1;
+    public static final IntProperty ROTATION = Properties.ROTATION;
 
     public WhirlygigBlock(Settings settings) {
         super(settings);
         this.setDefaultState(this.stateManager.getDefaultState()
-                .with(POWERED, false));
+                .with(POWERED, false)
+                .with(ROTATION, 0));
     }
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(POWERED);
+        builder.add(POWERED).add(ROTATION);
     }
 
     protected static final VoxelShape SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 16.0, 16.0);
@@ -42,7 +51,19 @@ public class WhirlygigBlock extends Block implements BlockEntityProvider {
     @Override
     public BlockState getPlacementState(ItemPlacementContext context) {
         return this.getDefaultState()
-                .with(POWERED, false);
+                .with(POWERED, false)
+                .with(ROTATION, RotationPropertyHelper.fromYaw(context.getPlayerYaw())
+                );
+    }
+
+    @Override
+    public BlockState rotate(BlockState state, BlockRotation rotation) {
+        return state.with(ROTATION, rotation.rotate(state.get(ROTATION), MAX_ROTATIONS));
+    }
+
+    @Override
+    public BlockState mirror(BlockState state, BlockMirror mirror) {
+        return state.with(ROTATION, mirror.mirror(state.get(ROTATION), MAX_ROTATIONS));
     }
 
     @Override
@@ -68,7 +89,7 @@ public class WhirlygigBlock extends Block implements BlockEntityProvider {
 
     @Override
     public @Nullable BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-        return AITExtrasBlockEntityTypes.WHIRLYGIG_BLOCK.instantiate(pos, state);
+        return AITExtrasBlockEntityTypes.WHIRLYGIG_BLOCK_ENTITY_TYPE.instantiate(pos, state);
     }
 
     @Override
@@ -99,7 +120,6 @@ public class WhirlygigBlock extends Block implements BlockEntityProvider {
         }
 
     }
-
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable BlockView world, List<Text> tooltip, TooltipContext options) {

@@ -33,7 +33,7 @@ public class WhirlygigBlockEntity extends BlockEntity implements AnimatedBlockEn
     }
 
     public WhirlygigBlockEntity(BlockPos pos, BlockState state) {
-        this(AITExtrasBlockEntityTypes.WHIRLYGIG_BLOCK, pos, state);
+        this(AITExtrasBlockEntityTypes.WHIRLYGIG_BLOCK_ENTITY_TYPE, pos, state);
     }
 
     @Override
