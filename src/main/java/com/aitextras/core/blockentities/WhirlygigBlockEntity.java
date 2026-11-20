@@ -60,22 +60,33 @@ public class WhirlygigBlockEntity extends BlockEntity implements AnimatedBlockEn
     public void tick(World world, BlockPos pos, BlockState state, WhirlygigBlockEntity blockEntity) {
 
         if (!world.isClient) return;
+
         boolean powered = state.get(CrystalBlock.POWERED);
 
         if (powered) {
             if (age == 0 || age >= 90) {
-                this.playAnimation(
-                        new BedrockAnimationReference("whirlygig", "flight")
-                );
+                if (ServerLifecycleHooks.get() != null) {
+                    this.playAnimation(
+                            new BedrockAnimationReference("whirlygig", "flight")
+                    );
+                } else {
+                    this.animationState.start(world.getTime() != 0
+                            ? (int) world.getTime()
+                            : 0);
+                }
                 age = 0;
             }
             age++;
         }
         else {
             if (age != 0) {
-                this.playAnimation(
-                        new BedrockAnimationReference("whirlygig", "idle")
-                );
+                if (ServerLifecycleHooks.get() != null) {
+                    this.playAnimation(
+                            new BedrockAnimationReference("whirlygig", "idle")
+                    );
+                } else {
+                    this.animationState.stop();
+                }
             }
             age = 0;
         }
