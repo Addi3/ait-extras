@@ -12,6 +12,7 @@
 			}
 		},
 		"flight": {
+			"loop": true,
 			"animation_length": 4.5,
 			"bones": {
 				"root": {
