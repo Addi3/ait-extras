@@ -4,6 +4,7 @@ package com.aitextras.core.blockentities;
 import com.aitextras.AITExtras;
 import com.aitextras.core.AITExtrasBlockEntityTypes;
 import com.aitextras.core.blocks.CrystalBlock;
+import com.aitextras.core.blocks.WhirlygigBlock;
 import dev.amble.lib.animation.AnimatedBlockEntity;
 import dev.amble.lib.client.bedrock.BedrockAnimationReference;
 import dev.amble.lib.client.bedrock.BedrockModelReference;
@@ -60,33 +61,22 @@ public class WhirlygigBlockEntity extends BlockEntity implements AnimatedBlockEn
     public void tick(World world, BlockPos pos, BlockState state, WhirlygigBlockEntity blockEntity) {
 
         if (!world.isClient) return;
-
-        boolean powered = state.get(CrystalBlock.POWERED);
+        boolean powered = state.get(WhirlygigBlock.POWERED);
 
         if (powered) {
-            if (age == 0 || age >= 90) {
-                if (ServerLifecycleHooks.get() != null) {
-                    this.playAnimation(
-                            new BedrockAnimationReference("whirlygig", "flight")
-                    );
-                } else {
-                    this.animationState.start(world.getTime() != 0
-                            ? (int) world.getTime()
-                            : 0);
-                }
-                age = 0;
+            if (age == 0) {
+                this.playAnimation(new BedrockAnimationReference("whirlygig", "flight"));
+            }
+            if (age == 90) {
+                this.playAnimation(new BedrockAnimationReference("whirlygig", "flight"));
             }
             age++;
         }
         else {
             if (age != 0) {
-                if (ServerLifecycleHooks.get() != null) {
-                    this.playAnimation(
-                            new BedrockAnimationReference("whirlygig", "idle")
-                    );
-                } else {
-                    this.animationState.stop();
-                }
+                this.playAnimation(
+                        new BedrockAnimationReference("whirlygig", "idle")
+                );
             }
             age = 0;
         }

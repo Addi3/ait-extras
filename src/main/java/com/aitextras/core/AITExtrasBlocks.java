@@ -443,7 +443,7 @@ public class AITExtrasBlocks extends BlockContainer {
 
     @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
     @NoEnglish
-    public static final Block WHIRLYGIG_BLOCK = new WhirlygiglBlock(ABlockSettings.create()
+    public static final Block WHIRLYGIG_BLOCK = new WhirlygigBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
             .strength(2.0F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.METAL).nonOpaque().notSolid());
 

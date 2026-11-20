@@ -1,7 +1,6 @@
 package com.aitextras.core.blocks;
 
 import com.aitextras.core.AITExtrasBlockEntityTypes;
-import com.aitextras.core.blockentities.CrystalBlockEntity;
 import com.aitextras.core.blockentities.WhirlygigBlockEntity;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
@@ -23,11 +22,11 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class WhirlygiglBlock extends Block implements BlockEntityProvider {
+public class WhirlygigBlock extends Block implements BlockEntityProvider {
 
     public static final BooleanProperty POWERED = BooleanProperty.of("powered");
 
-    public WhirlygiglBlock(Settings settings) {
+    public WhirlygigBlock(Settings settings) {
         super(settings);
         this.setDefaultState(this.stateManager.getDefaultState()
                 .with(POWERED, false));

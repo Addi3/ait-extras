@@ -64,12 +64,13 @@ public class CrystalBlockEntity extends BlockEntity implements AnimatedBlockEnti
 
         boolean powered = state.get(CrystalBlock.POWERED);
 
+
         if (powered) {
-            if (age == 0 || age >= 90) {
-                this.playAnimation(
-                        new BedrockAnimationReference("crystal_block", "flight")
-                );
-                age = 0;
+            if (age == 0) {
+                this.playAnimation(new BedrockAnimationReference("crystal_block", "flight"));
+            }
+            if (age == 90) {
+                this.playAnimation(new BedrockAnimationReference("crystal_block", "flight"));
             }
             age++;
         }
