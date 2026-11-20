@@ -893,6 +893,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation("exterior.ait-extras.eleven_toyota_alternate", "Copper Toyota (ALT)");
                     provider.addTranslation("exterior.ait-extras.coral_alternate", "Coral (ALT)");
                     provider.addTranslation("exterior.ait-extras.tokamak_eotd", "Tokamak (EOTD)");
+                    provider.addTranslation("exterior.ait-extras.tokamak_eotd", "Tokamak (EOTD)");
                     provider.addTranslation("exterior.ait-extras.toyota_alternate", "Toyota (ALT)");
                     provider.addTranslation("exterior.ait-extras.tokamak", "Crystalline");
                     provider.addTranslation("exterior.ait-extras.yard", "73 Yards");
@@ -947,6 +948,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation("console.ait-extras.hudolin_topless", "Hudolin (Topless)");
                     provider.addTranslation("console.ait-extras.human_nature_topless", "Human Nature (Topless)");
                     provider.addTranslation("console.ait-extras.shalka_topless", "Shalka (Topless)");
+                    provider.addTranslation("console.ait-extras.hudolin_unvarnished_topless", "Unvarnished (Topless)");
 
                     //sonics
                     provider.addTranslation("sonic.ait-extras.cane", "Cane");
