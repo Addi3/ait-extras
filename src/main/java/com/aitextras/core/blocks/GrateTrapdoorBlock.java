@@ -50,6 +50,22 @@ public class GrateTrapdoorBlock extends TrapdoorBlock {
         return super.onUse(state, world, pos, player, hand, hit);
     }
 
+    @Override
+    public void neighborUpdate(BlockState state, World world, BlockPos pos,
+                               Block sourceBlock, BlockPos sourcePos, boolean notify) {
+
+        if (world.isClient) return;
+
+        boolean powered = world.isReceivingRedstonePower(pos);
+        boolean open = state.get(ON);
+
+        if (powered != open) {
+            world.setBlockState(pos, state.with(ON, powered), Block.NOTIFY_ALL);
+
+
+        }
+    }
+
     @Environment(EnvType.CLIENT)
     @Override
     public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
