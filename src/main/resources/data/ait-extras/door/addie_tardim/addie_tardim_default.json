@@ -8,7 +8,7 @@
   "right_animation": "addie_tardim_door:door_open_right",
   "has_transparent_doors": false,
   "portal_info": {
-    "offset": [0,-0.0,-0.501],
+    "offset": [0,-0.0,-0.495],
     "width": 1,
     "height": 2
   }

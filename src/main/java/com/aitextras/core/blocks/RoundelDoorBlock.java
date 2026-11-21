@@ -170,11 +170,11 @@ public class RoundelDoorBlock extends HorizontalFacingBlock implements BlockEnti
     public void appendTooltip(ItemStack stack, @Nullable BlockView world, List<Text> tooltip, TooltipContext options) {
         super.appendTooltip(stack, world, tooltip, options);
         tooltip.add(
-                Text.translatable("block.tooltip.roundeldoorinteract")
+                Text.translatable("block.tooltip.interact")
                         .formatted(Formatting.GOLD));
 
         tooltip.add(
-                Text.translatable("block.tooltip.roundeldoorredstone")
+                Text.translatable("block.tooltip.redstone")
                         .formatted(Formatting.GOLD));
     }
 

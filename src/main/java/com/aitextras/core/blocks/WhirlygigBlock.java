@@ -124,7 +124,7 @@ public class WhirlygigBlock extends Block implements BlockEntityProvider {
     @Override
     public void appendTooltip(ItemStack stack, @Nullable BlockView world, List<Text> tooltip, TooltipContext options) {
         super.appendTooltip(stack, world, tooltip, options);
-        tooltip.add(Text.translatable("block.tooltip.roofcrystal").formatted(Formatting.GOLD));
+        tooltip.add(Text.translatable("block.tooltip.redstone").formatted(Formatting.GOLD));
 
     }
 }

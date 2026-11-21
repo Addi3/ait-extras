@@ -702,18 +702,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(Blocks.GLASS), conditionsFromItem(Blocks.GLASS)));
 
 
-            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.EMITTER, 4)
-                    .pattern("BBB")
-                    .pattern("RWR")
-                    .pattern("BCB")
-                    .input('C',Items.COAL)
-                    .input('W',Items.WATER_BUCKET)
-                    .input('R',Items.REDSTONE)
-                    .input('B',Blocks.BLACK_CONCRETE)
-                    .criterion(hasItem(Items.COAL), conditionsFromItem(Items.COAL))
-                    .criterion(hasItem(Items.WATER_BUCKET), conditionsFromItem(Items.WATER_BUCKET))
-                    .criterion(hasItem(Items.REDSTONE), conditionsFromItem(Items.REDSTONE))
-                    .criterion(hasItem(Blocks.BLACK_CONCRETE), conditionsFromItem(Blocks.BLACK_CONCRETE)));
+
 
 
 //            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.PILLAR, 4)
@@ -1012,10 +1001,6 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasBlocks.CLASSIC_MONITOR_COVER_BLOCK, "Monitor Cover (Classic)");
                     provider.addTranslation(AITExtrasBlocks.ELEVATOR, "Elevator");
                     provider.addTranslation(AITExtrasBlocks.ELEVATOR_BASE, "Elevator Base");
-                    provider.addTranslation(AITExtrasBlocks.EMITTER, "Emitter");
-//                    provider.addTranslation(AITExtrasBlocks.PILLAR_TOP, "Classic Pillar Top");
-//                    provider.addTranslation(AITExtrasBlocks.PILLAR, "Classic Pillar");
-//                    provider.addTranslation(AITExtrasBlocks.PILLAR_BOTTOM, "Classic Pillar Bottom");
                     provider.addTranslation(AITExtrasBlocks.ROUNDEL_DOOR_BLOCK, "Roundel Door");
                     provider.addTranslation(AITExtrasBlocks.CLASSIC_ROUNDEL_DOOR_BLOCK, "Classic Roundel Door");
                     provider.addTranslation(AITExtrasBlocks.STONE_ROUNDEL_DOOR_BLOCK, "Stone Roundel Door");
@@ -1079,10 +1064,9 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                      provider.addTranslation("block.tooltip.hatstandwarped", "Variant: Warped");
                      provider.addTranslation("block.tooltip.elevatorplaceable", "Can be placed on: Elevator Base");
                      provider.addTranslation("block.tooltip.elevatorinteract", "Hold SPACE to go up and SHIFT to stop!");
-                     provider.addTranslation("block.tooltip.emitter", "Activate with redstone!");
-                     provider.addTranslation("block.tooltip.roundeldoorinteract", "Activate with RIGHT CLICK!");
-                     provider.addTranslation("block.tooltip.roundeldoorredstone", "Activate with redstone!");
-                     provider.addTranslation("block.tooltip.roofcrystal", "Activate with redstone!");
+                     provider.addTranslation("block.tooltip.interact", "Activate with RIGHT click!");
+                     provider.addTranslation("block.tooltip.shift_interact", "Activate with SHIFT RIGHT click!");
+                     provider.addTranslation("block.tooltip.redstone", "Activate with redstone!");
 
                     //SFXS
                     provider.addTranslation("animation.ait-extras.classic_mat", "Classic (Alt)");

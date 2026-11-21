@@ -35,7 +35,6 @@ public class AITExtrasSounds {
     public static final SoundEvent SCANNER = register("tardis/scanner");
 
     // Stargate exterior
-
     public static final SoundEvent GATE_OPEN = register("tardis/stargate/gate_open");
     public static final SoundEvent GATE_CLOSE = register("tardis/stargate/gate_close");
 

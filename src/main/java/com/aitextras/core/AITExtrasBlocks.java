@@ -262,7 +262,7 @@ public class AITExtrasBlocks extends BlockContainer {
 
     @NoEnglish
     @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
-    public static final Block METAL_GRATE_TRAPDOOR = new TrapdoorBlock(
+    public static final Block METAL_GRATE_TRAPDOOR = new GrateTrapdoorBlock(
             ABlockSettings.create()
                     .strength(2.0F, 3.0F)
                     
@@ -304,7 +304,7 @@ public class AITExtrasBlocks extends BlockContainer {
 
     @NoEnglish
     @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
-    public static final Block METAL_MESH_TRAPDOOR = new TrapdoorBlock(
+    public static final Block METAL_MESH_TRAPDOOR = new GrateTrapdoorBlock(
             ABlockSettings.create()
                     .strength(2.0F, 3.0F)
                     .requiresTool()
@@ -313,11 +313,6 @@ public class AITExtrasBlocks extends BlockContainer {
                     .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)),
             BlockSetType.OAK
     );
-
-
-    @AutomaticModel
-    @NoEnglish
-    public static final Block RETEP = new RetepBlock(ABlockSettings.create());
 
     @NoEnglish
     @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
@@ -354,30 +349,6 @@ public class AITExtrasBlocks extends BlockContainer {
     public static final Block ELEVATOR_BASE = new Block(ABlockSettings.create()
             .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
             .strength(2.5F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.METAL).luminance(8).nonOpaque().notSolid());
-
-    @NoEnglish
-    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
-    public static final Block EMITTER = new EmitterBlock(ABlockSettings.create()
-            .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
-            .strength(2.5F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.METAL).luminance(8).nonOpaque().notSolid());
-
-//    @NoEnglish
-//    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
-//    public static final Block PILLAR_TOP = new PillarBlock(ABlockSettings.create()
-//            .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
-//            .strength(2.5F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.STONE));
-//
-//    @NoEnglish
-//    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
-//    public static final Block PILLAR = new PillarBlock(ABlockSettings.create()
-//            .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
-//            .strength(2.5F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.STONE));
-//
-//    @NoEnglish
-//    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
-//    public static final Block PILLAR_BOTTOM = new PillarBlock(ABlockSettings.create()
-//            .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
-//            .strength(2.5F, 3.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.STONE));
 
     @NoEnglish
     @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
