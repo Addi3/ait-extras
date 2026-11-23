@@ -11,7 +11,6 @@
 - Tube Light
 - Key Chain (can hold max of 3 keys)
 - Elevator Base / Elevator blocks
-- Emitter Block
 - Roundel Doors
 - Stargate Exteriors
 - Crystalline stairs, slab, wall
@@ -20,10 +19,11 @@
 - Addie's TARDIM exteriors
 
 - ### Clothes:
-    - Fez (dye-able like leather)
-    - Scarf (4ths, 13ths)
-    - 10th Doctors Coat
-    - 3d Glasses
+  - Fez (dye-able like leather)
+  - Scarf (4ths, 13ths)
+  - 10th Doctors Coat
+  - 3d Glasses
+  - 7th Doctors umbrella
 
 ### Changes
 
@@ -38,7 +38,7 @@
 - updated fabric loader ver
 
   ### Breaking Changes
-    - Re-wrote Candle Stands (any candle stands before 1.1.0 will no longer exist, please remove them from your world before updating!)
+  - Re-wrote Candle Stands (any candle stands before 1.1.0 will no longer exist, please remove them from your world before updating!)
 
 ### Fixes
 
