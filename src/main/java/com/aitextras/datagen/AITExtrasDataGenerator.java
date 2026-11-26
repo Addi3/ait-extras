@@ -580,17 +580,20 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasItems.FEZ_ITEM, 1)
                     .group("fez")
+                    .pattern("S")
                     .pattern("WWW")
                     .pattern("W W")
                     .input('W', PlanetItems.FABRIC)
+                    .input('S', Items.STRING)
+                    .criterion(hasItem(Items.STRING), conditionsFromItem(Items.STRING))
                     .criterion(hasItem(PlanetItems.FABRIC), conditionsFromItem(PlanetItems.FABRIC)));
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasItems.SCARF, 1)
                     .group("scarf")
                     .pattern("SSS")
                     .pattern("S S")
-                    .input('S',PlanetItems.FABRIC)
-                    .criterion(hasItem(PlanetItems.FABRIC), conditionsFromItem(PlanetItems.FABRIC)));
+                    .input('S',Items.STRING)
+                    .criterion(hasItem(Items.STRING), conditionsFromItem(Items.STRING)));
 
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasItems.SCARF_RED, 1)
