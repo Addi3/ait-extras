@@ -24,6 +24,30 @@
 					}
 				}
 			}
+		},
+		"door_open_left": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.25,
+			"bones": {
+				"door_left": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [0, 77.5, 0]
+					}
+				}
+			}
+		},
+		"door_open_right": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.25,
+			"bones": {
+				"door_right": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [0, -77.5, 0]
+					}
+				}
+			}
 		}
 	}
 }

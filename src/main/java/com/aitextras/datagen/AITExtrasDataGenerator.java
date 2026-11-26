@@ -300,13 +300,13 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .input('C',AITExtrasItems.CRYSTALLINE_SHARD)
                     .criterion(hasItem(AITExtrasItems.CRYSTALLINE_SHARD), conditionsFromItem(AITExtrasItems.CRYSTALLINE_SHARD)));
 
-            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AITExtrasItems.WHISTLE, 1)
-                    .pattern("AAA")
-                    .pattern(" RA")
-                    .input('A',Items.IRON_INGOT)
-                    .input('R',AITItems.REMOTE_ITEM)
-                    .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
-                    .criterion(hasItem(AITItems.REMOTE_ITEM), conditionsFromItem(AITItems.REMOTE_ITEM)));
+           ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AITExtrasItems.WHISTLE, 1)
+                   .pattern("AAA")
+                   .pattern(" RA")
+                   .input('A',Items.IRON_INGOT)
+                   .input('R',AITItems.REMOTE_ITEM)
+                   .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+                   .criterion(hasItem(AITItems.REMOTE_ITEM), conditionsFromItem(AITItems.REMOTE_ITEM)));
 
             provider.addShapelessRecipe(ShapelessRecipeJsonBuilder
                     .create(RecipeCategory.MISC, AITExtrasItems.ZIRCONIUM_INGOT, 4)
@@ -327,7 +327,6 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .group("hudolin")
                     .pattern("III")
                     .pattern(" IA")
-                    .pattern("   ")
                     .input('A',AITExtrasItems.RAW_ZIRCONIUM)
                     .input('I',AITExtrasItems.ZIRCONIUM_INGOT)
                     .criterion(hasItem(AITExtrasItems.RAW_ZIRCONIUM), conditionsFromItem(AITExtrasItems.RAW_ZIRCONIUM)));
@@ -598,7 +597,7 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasItems.FEZ_ITEM, 1)
                     .group("fez")
-                    .pattern("S")
+                    .pattern(" S ")
                     .pattern("WWW")
                     .pattern("W W")
                     .input('W', PlanetItems.FABRIC)
@@ -853,6 +852,30 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                             .criterion(hasItem(Blocks.JUKEBOX), conditionsFromItem(Blocks.JUKEBOX))
                             .criterion(hasItem(Blocks.GLASS_PANE), conditionsFromItem(Blocks.GLASS_PANE)));
 
+
+
+            provider.addShapelessRecipe(ShapelessRecipeJsonBuilder
+                    .create(RecipeCategory.DECORATIONS, AITExtrasBlocks.CLASSIC_ROUNDEL_DOOR_CENTER_BLOCK, 1)
+                    .group("roundel")
+                    .input(AITExtrasBlocks.CLASSIC_ROUNDEL_DOOR_BLOCK)
+                    .criterion(hasItem(AITExtrasBlocks.CLASSIC_ROUNDEL_DOOR_BLOCK), conditionsFromItem(AITExtrasBlocks.CLASSIC_ROUNDEL_DOOR_BLOCK)));
+
+
+
+            provider.addShapelessRecipe(ShapelessRecipeJsonBuilder
+                    .create(RecipeCategory.DECORATIONS, AITExtrasBlocks.ROUNDEL_DOOR_CENTER_BLOCK, 1)
+                    .group("roundel")
+                    .input(AITExtrasBlocks.ROUNDEL_DOOR_BLOCK)
+                    .criterion(hasItem(AITExtrasBlocks.ROUNDEL_DOOR_BLOCK), conditionsFromItem(AITExtrasBlocks.ROUNDEL_DOOR_BLOCK)));
+
+
+
+            provider.addShapelessRecipe(ShapelessRecipeJsonBuilder
+                    .create(RecipeCategory.DECORATIONS, AITExtrasBlocks.STONE_ROUNDEL_DOOR_CENTER_BLOCK, 1)
+                    .group("roundel")
+                    .input(AITExtrasBlocks.STONE_ROUNDEL_DOOR_BLOCK)
+                    .criterion(hasItem(AITExtrasBlocks.STONE_ROUNDEL_DOOR_BLOCK), conditionsFromItem(AITExtrasBlocks.STONE_ROUNDEL_DOOR_BLOCK)));
+
             return provider;
 
         })));
@@ -1025,6 +1048,9 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasBlocks.ROUNDEL_DOOR_BLOCK, "Roundel Door");
                     provider.addTranslation(AITExtrasBlocks.CLASSIC_ROUNDEL_DOOR_BLOCK, "Classic Roundel Door");
                     provider.addTranslation(AITExtrasBlocks.STONE_ROUNDEL_DOOR_BLOCK, "Stone Roundel Door");
+                    provider.addTranslation(AITExtrasBlocks.ROUNDEL_DOOR_CENTER_BLOCK, "Roundel Door (Centered)");
+                    provider.addTranslation(AITExtrasBlocks.CLASSIC_ROUNDEL_DOOR_CENTER_BLOCK, "Classic Roundel Door (Centered)");
+                    provider.addTranslation(AITExtrasBlocks.STONE_ROUNDEL_DOOR_CENTER_BLOCK, "Stone Roundel Door (Centered)");
                     provider.addTranslation(AITExtrasBlocks.CRYSTALLINE_SHARD_SLAB, "Crystalline Shard Slab");
                     provider.addTranslation(AITExtrasBlocks.CRYSTALLINE_SHARD_STAIRS, "Crystalline Shard Stairs");
                     provider.addTranslation(AITExtrasBlocks.CRYSTALLINE_SHARD_WALL, "Crystalline Shard Wall");

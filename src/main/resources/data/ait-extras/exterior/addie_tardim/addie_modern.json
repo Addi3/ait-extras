@@ -10,7 +10,7 @@
   "right_animation": "addie_tardim:open_right",
   "portal_info": {
     "enabled": true,
-    "offset": [0,0.11,-0.15],
+    "offset": [0,0.13,-0.6],
     "width": 1,
     "height": 2
   }

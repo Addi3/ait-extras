@@ -35,7 +35,6 @@ import java.util.List;
 public class StoneRoundelDoorBlock extends HorizontalFacingBlock implements BlockEntityProvider {
 
     public static final BooleanProperty OPEN = BooleanProperty.of("open");
-    public static final BooleanProperty CENTERED = BooleanProperty.of("centered");
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
 
     public StoneRoundelDoorBlock(Settings settings) {
@@ -54,12 +53,10 @@ public class StoneRoundelDoorBlock extends HorizontalFacingBlock implements Bloc
 
     @Override
     public BlockState getPlacementState(ItemPlacementContext context) {
-        boolean isSneaking = context.getPlayer() != null && context.getPlayer().isSneaking();
 
         return this.getDefaultState()
                 .with(FACING, context.getHorizontalPlayerFacing().getOpposite())
-                .with(OPEN, false)
-                .with(CENTERED, isSneaking);
+                .with(OPEN, false);
     }
 
     private static VoxelShape getShapeForDirection(Direction direction) {
@@ -110,7 +107,7 @@ public class StoneRoundelDoorBlock extends HorizontalFacingBlock implements Bloc
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(FACING, OPEN, CENTERED);
+        builder.add(FACING, OPEN);
     }
 
 

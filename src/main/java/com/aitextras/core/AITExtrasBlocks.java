@@ -427,4 +427,23 @@ public class AITExtrasBlocks extends BlockContainer {
             .instrument(Instrument.BASS).strength(2.0F, 6.0F).burnable().sounds(BlockSoundGroup.WOOD).nonOpaque());
 
 
+    @NoEnglish
+    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
+    public static final Block ROUNDEL_DOOR_CENTER_BLOCK = new RoundelDoorCenterBlock(ABlockSettings.create()
+            .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
+            .strength(1.0F, 1.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.STONE).nonOpaque().notSolid());
+
+    @NoEnglish
+    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
+    public static final Block CLASSIC_ROUNDEL_DOOR_CENTER_BLOCK = new ClassicRoundelDoorCenterBlock(ABlockSettings.create()
+            .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
+            .strength(1.0F, 1.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.STONE).nonOpaque().notSolid());
+
+    @NoEnglish
+    @PickaxeMineable(tool = PickaxeMineable.Tool.IRON)
+    public static final Block STONE_ROUNDEL_DOOR_CENTER_BLOCK = new StoneRoundelDoorCenterBlock(ABlockSettings.create()
+            .itemSettings(new AItemSettings().group(AITExtrasItemGroups.MAIN)).requiresTool()
+            .strength(1.0F, 1.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.STONE).nonOpaque().notSolid());
+
+
 }

@@ -5,12 +5,12 @@
   "texture": "ait-extras:textures/blockentities/exteriors/addie_tardim/glasgow.png",
   "emission": "ait-extras:textures/blockentities/exteriors/addie_tardim/glasgow_emission.png",
   "model": "ait-extras:addie_tardim_glasgow",
-  "door": "ait-extras:addie_tardim_default",
+  "door": "ait-extras:addie_tardim_glasgow",
   "left_animation": "addie_tardim:open_left",
   "right_animation": "addie_tardim:open_right",
   "portal_info": {
     "enabled": true,
-    "offset": [0,0.11,-0.15],
+    "offset": [0,0.13,-0.6],
     "width": 1,
     "height": 2
   }

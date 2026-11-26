@@ -104,6 +104,9 @@ public class AITExtrasClient implements ClientModInitializer {
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.ROUNDEL_DOOR_BLOCK_ENTITY_TYPE, RoundelDoorRenderer::new);
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.CLASSIC_ROUNDEL_DOOR_BLOCK_ENTITY_TYPE, ClassicRoundelDoorRenderer::new);
         BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.STONE_ROUNDEL_DOOR_BLOCK_ENTITY_TYPE, StoneRoundelDoorRenderer::new);
+        BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.ROUNDEL_DOOR_CENTER_BLOCK_ENTITY_TYPE, RoundelDoorCenterRenderer::new);
+        BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.CLASSIC_ROUNDEL_DOOR_CENTER_BLOCK_ENTITY_TYPE, ClassicRoundelDoorCenterRenderer::new);
+        BlockEntityRendererFactories.register(AITExtrasBlockEntityTypes.STONE_ROUNDEL_DOOR_CENTER_BLOCK_ENTITY_TYPE, StoneRoundelDoorCenterRenderer::new);
 
     }
 

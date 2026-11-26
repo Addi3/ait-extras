@@ -1,0 +1,16 @@
+{
+  "id": "ait-extras:addie_tardim_glasgow",
+  "model": "ait-extras:addie_tardim_door_glasgow",
+  "is_double": true,
+  "open_sound": "minecraft:block.cherry_wood_door.open",
+  "close_sound": "minecraft:block.cherry_wood_door.close",
+  "left_animation": "addie_tardim_door:door_open_left",
+  "right_animation": "addie_tardim_door:door_open_right",
+  "has_transparent_doors": false,
+  "portal_info": {
+    "offset": [0,-0.0,-0.495],
+    "width": 1,
+    "height": 2
+  }
+}
+
