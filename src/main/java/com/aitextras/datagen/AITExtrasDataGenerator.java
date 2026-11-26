@@ -131,10 +131,6 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     .create(RecipeCategory.FOOD, AITExtrasItems.JELLY_BABIES, 4)
                     .input(Items.PAPER)
                     .input(Items.SUGAR)
-                    .input(Items.RED_DYE)
-                    .input(Items.GREEN_DYE)
-                    .input(Items.MAGENTA_DYE)
-                    .input(Items.YELLOW_DYE)
                     .criterion(hasItem(Items.PAPER), conditionsFromItem(Items.PAPER))
                     .criterion(hasItem(Items.SUGAR), conditionsFromItem(Items.SUGAR)));
 
@@ -160,90 +156,112 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.HAT_STAND_OAK_BLOCK, 1)
                     .group("hat_stand")
-                    .pattern("FFF")
-                    .pattern(" F ")
-                    .pattern(" F ")
+                    .pattern("FSF")
+                    .pattern(" S ")
+                    .pattern(" S ")
                     .input('F',Items.OAK_FENCE)
+                    .input('S',Items.STICK)
+                    .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
                     .criterion(hasItem(Items.OAK_FENCE), conditionsFromItem(Items.OAK_FENCE)));
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.HAT_STAND_ACACIA_BLOCK, 1)
                     .group("hat_stand")
-                    .pattern("FFF")
-                    .pattern(" F ")
-                    .pattern(" F ")
+                    .pattern("FSF")
+                    .pattern(" S ")
+                    .pattern(" S ")
                     .input('F',Items.ACACIA_FENCE)
+                    .input('S',Items.STICK)
+                    .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
                     .criterion(hasItem(Items.ACACIA_FENCE), conditionsFromItem(Items.ACACIA_FENCE)));
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.HAT_STAND_BAMBOO_BLOCK, 1)
                     .group("hat_stand")
-                    .pattern("FFF")
-                    .pattern(" F ")
-                    .pattern(" F ")
+                    .pattern("FSF")
+                    .pattern(" S ")
+                    .pattern(" S ")
                     .input('F',Items.BAMBOO_FENCE)
+                    .input('S',Items.STICK)
+                    .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
                     .criterion(hasItem(Items.BAMBOO_FENCE), conditionsFromItem(Items.BAMBOO_FENCE)));
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.HAT_STAND_BIRCH_BLOCK, 1)
                     .group("hat_stand")
-                    .pattern("FFF")
-                    .pattern(" F ")
-                    .pattern(" F ")
+                    .pattern("FSF")
+                    .pattern(" S ")
+                    .pattern(" S ")
                     .input('F',Items.BIRCH_FENCE)
+                    .input('S',Items.STICK)
+                    .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
                     .criterion(hasItem(Items.BIRCH_FENCE), conditionsFromItem(Items.BIRCH_FENCE)));
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.HAT_STAND_CHERRY_BLOCK, 1)
                     .group("hat_stand")
-                    .pattern("FFF")
-                    .pattern(" F ")
-                    .pattern(" F ")
+                    .pattern("FSF")
+                    .pattern(" S ")
+                    .pattern(" S ")
                     .input('F',Items.CHERRY_FENCE)
+                    .input('S',Items.STICK)
+                    .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
                     .criterion(hasItem(Items.CHERRY_FENCE), conditionsFromItem(Items.CHERRY_FENCE)));
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.HAT_STAND_CRIMSON_BLOCK, 1)
                     .group("hat_stand")
-                    .pattern("FFF")
-                    .pattern(" F ")
-                    .pattern(" F ")
+                    .pattern("FSF")
+                    .pattern(" S ")
+                    .pattern(" S ")
                     .input('F',Items.CRIMSON_FENCE)
+                    .input('S',Items.STICK)
+                    .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
                     .criterion(hasItem(Items.CRIMSON_FENCE), conditionsFromItem(Items.CRIMSON_FENCE)));
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.HAT_STAND_DARK_OAK_BLOCK, 1)
                     .group("hat_stand")
-                    .pattern("FFF")
-                    .pattern(" F ")
-                    .pattern(" F ")
+                    .pattern("FSF")
+                    .pattern(" S ")
+                    .pattern(" S ")
                     .input('F',Items.DARK_OAK_FENCE)
+                    .input('S',Items.STICK)
+                    .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
                     .criterion(hasItem(Items.DARK_OAK_FENCE), conditionsFromItem(Items.DARK_OAK_FENCE)));
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.HAT_STAND_JUNGLE_BLOCK, 1)
                     .group("hat_stand")
-                    .pattern("FFF")
-                    .pattern(" F ")
-                    .pattern(" F ")
+                    .pattern("FSF")
+                    .pattern(" S ")
+                    .pattern(" S ")
                     .input('F',Items.JUNGLE_FENCE)
+                    .input('S',Items.STICK)
+                    .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
                     .criterion(hasItem(Items.JUNGLE_FENCE), conditionsFromItem(Items.JUNGLE_FENCE)));
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.HAT_STAND_MANGROVE_BLOCK, 1)
                     .group("hat_stand")
-                    .pattern("FFF")
-                    .pattern(" F ")
-                    .pattern(" F ")
+                    .pattern("FSF")
+                    .pattern(" S ")
+                    .pattern(" S ")
                     .input('F',Items.MANGROVE_FENCE)
+                    .input('S',Items.STICK)
+                    .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
                     .criterion(hasItem(Items.MANGROVE_FENCE), conditionsFromItem(Items.MANGROVE_FENCE)));
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.HAT_STAND_SPRUCE_BLOCK, 1)
                     .group("hat_stand")
-                    .pattern("FFF")
-                    .pattern(" F ")
-                    .pattern(" F ")
+                    .pattern("FSF")
+                    .pattern(" S ")
+                    .pattern(" S ")
                     .input('F',Items.SPRUCE_FENCE)
+                    .input('S',Items.STICK)
+                    .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
                     .criterion(hasItem(Items.SPRUCE_FENCE), conditionsFromItem(Items.SPRUCE_FENCE)));
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.HAT_STAND_WARPED_BLOCK, 1)
                     .group("hat_stand")
-                    .pattern("FFF")
-                    .pattern(" F ")
-                    .pattern(" F ")
+                    .pattern("FSF")
+                    .pattern(" S ")
+                    .pattern(" S ")
                     .input('F',Items.WARPED_FENCE)
+                    .input('S',Items.STICK)
+                    .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
                     .criterion(hasItem(Items.WARPED_FENCE), conditionsFromItem(Items.WARPED_FENCE)));
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, AITExtrasBlocks.CRYSTAL_ZEITON_BLOCK, 1)
@@ -284,11 +302,11 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
 
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, AITExtrasItems.WHISTLE, 1)
                     .pattern("AAA")
-                    .pattern(" BA")
-                    .pattern("   ")
+                    .pattern(" RA")
                     .input('A',Items.IRON_INGOT)
-                    .input('B',Items.ENDER_EYE)
-                    .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.ENDER_EYE)));
+                    .input('R',AITItems.REMOTE_ITEM)
+                    .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+                    .criterion(hasItem(AITItems.REMOTE_ITEM), conditionsFromItem(AITItems.REMOTE_ITEM)));
 
             provider.addShapelessRecipe(ShapelessRecipeJsonBuilder
                     .create(RecipeCategory.MISC, AITExtrasItems.ZIRCONIUM_INGOT, 4)
@@ -428,9 +446,9 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                             .pattern("Z  ")
                             .input('I', Items.IRON_INGOT)
                             .input('Z', AITExtrasItems.ZIRCONIUM_INGOT)
-                            .input('A', AITItems.ARTRON_COLLECTOR)
+                            .input('A', AITItems.HAZANDRA)
                             .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
-                            .criterion(hasItem(AITItems.ARTRON_COLLECTOR), conditionsFromItem(AITItems.ARTRON_COLLECTOR))
+                            .criterion(hasItem(AITItems.HAZANDRA), conditionsFromItem(AITItems.HAZANDRA))
                             .criterion(hasItem(AITExtrasItems.ZIRCONIUM_INGOT), conditionsFromItem(AITExtrasItems.ZIRCONIUM_INGOT)));
 
             provider.addShapedRecipe(
@@ -1027,13 +1045,11 @@ public class AITExtrasDataGenerator implements DataGeneratorEntrypoint {
                     provider.addTranslation(AITExtrasItems.ATOMIC_SHREDDER, "Atomic Shredder");
                     provider.addTranslation(AITExtrasItems.METAL_MESH_ITEM, "Metal Mesh");
                     provider.addTranslation(AITExtrasItems.METAL_GRATE_ITEM, "Metal Grate");
-                    provider.addTranslation(AITExtrasItems.JELLY_BABIES, "Jelly Babies");
                     provider.addTranslation(AITExtrasItems.CUSTARD_CREAM, "Custard Cream");
                     provider.addTranslation(AITExtrasItems.RICE_PUDDING, "Rice Pudding");
                     provider.addTranslation(AITExtrasItems.CRYSTALLINE_SHARD, "Crystalline Shard");
                     provider.addTranslation(AITExtrasItems.RAW_ZIRCONIUM, "Raw Zirconium");
                     provider.addTranslation(AITExtrasItems.ZIRCONIUM_INGOT, "Zirconium Ingot");
-                    provider.addTranslation(AITExtrasItems.WHISTLE, "Summon Whistle");
                     provider.addTranslation(AITExtrasItems.ATOMIC_SHREDDER, "Atomic Shredder");
                     provider.addTranslation(AITExtrasItems.METAL_GRATE_ITEM, "Metal Grate");
                     provider.addTranslation(AITExtrasItems.METAL_MESH_ITEM, "Metal Mesh");

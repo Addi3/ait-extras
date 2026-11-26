@@ -1,6 +1,15 @@
 # -1.1.1-
 
+### Changes
+
+- fast demat / mat
+- some recipes so they are better balanced
+
 ### Fixes
+
+- scarf and fez recipe conflict
+- made all sounds mono not stereo
+- 
 
 
 
