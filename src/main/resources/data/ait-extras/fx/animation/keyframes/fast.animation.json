@@ -2,7 +2,7 @@
   "format_version": "1.8.0",
   "animations": {
     "fast_demat": {
-      "animation_length": 1,
+      "animation_length": 1.5,
       "bones": {
         "tardis": {
           "rotation": [0, 0, 0],
@@ -21,7 +21,7 @@
       }
     },
     "fast_mat": {
-      "animation_length": 2,
+      "animation_length": 2.5,
       "bones": {
         "tardis": {
           "rotation": [0, 0, 0],
