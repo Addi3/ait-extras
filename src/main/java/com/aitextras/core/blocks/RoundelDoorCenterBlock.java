@@ -140,7 +140,7 @@ public class RoundelDoorCenterBlock extends HorizontalFacingBlock implements Blo
     @Override
     public void neighborUpdate(BlockState state, World world, BlockPos pos,
                                Block sourceBlock, BlockPos sourcePos, boolean notify) {
-        if (world.getBlockEntity(pos) instanceof RoundelDoorBlockEntity be) {
+        if (world.getBlockEntity(pos) instanceof RoundelDoorCenterBlockEntity be) {
 
             if (world.isClient) return;
 
